@@ -1,0 +1,155 @@
+[
+  {
+    "id": "2607.20883",
+    "title": "WhereEdit: Mask-aware Local Latent Editing for One-Step Image Editing",
+    "abstract": "Recent one-step text-to-image (T2I) models enable efficient image synthesis and provide new opportunities for real-time image editing. However, existing one-step editing methods primarily rely on text conditioning for semantic transformation, lacking explicit spatial control over \\textit{where} to edit. More importantly, even when spatial constraints are introduced, these methods often struggle to achieve strong and stable semantic modifications within the target regions. In this work, we revisit one-step image editing from a spatially controlled perspective and identify two key challenges: discovering editable regions and achieving effective localized semantic transformation. We reveal that existing methods perform global semantic transport, which limits high-intensity local editing under the one-step setting. To address this issue, we propose \\textbf{WhereEdit}, a framework that reformulates one-step editing as localized adaptive editing. WhereEdit automatically identifies semantically relevant regions from internal model features and applies adaptive local modulation to enhance target-region editing while preserving non-target areas and structural consistency. Experiments on the PIE-Bench benchmark demonstrate that WhereEdit consistently outperforms existing one-step image editing methods, achieving superior editing quality while maintaining the efficiency of one-step generation. Additional experiments with region-level supervision further highlight the importance of explicit spatial reasoning for high-quality one-step image editing.",
+    "authors": [
+      "Ming Hu",
+      "Mingyu Dou",
+      "Jianfu Yin",
+      "Miaomiao Zhang",
+      "Cong Hu",
+      "Yao Wang",
+      "Bingliang Hu",
+      "Quan Wang"
+    ],
+    "published": "2026-07-23",
+    "updated": "2026-07-23",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.20883.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.20883",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "WhereEdit：面向一步图像编辑的掩码感知局部潜在编辑",
+      "core_contribution": "提出WhereEdit框架，通过自动识别语义相关区域并施加自适应局部调制，解决了现有一步式图像编辑方法在空间控制不足和局部语义变换效果弱的问题。",
+      "method": "首先从内部模型特征中自动识别与编辑目标语义相关的区域，生成空间掩码；然后对掩码覆盖的目标区域施加自适应局部调制，增强语义变换强度；同时保持非目标区域和整体结构的一致性，实现局部化、可控的一步编辑。",
+      "findings": "在PIE-Bench基准上，WhereEdit在编辑质量和结构保持方面一致优于现有一步式图像编辑方法，且保持了一步生成的高效率；引入区域级监督的额外实验进一步表明，显式空间推理对高质量一步式图像编辑至关重要。"
+    }
+  },
+  {
+    "id": "2607.21553",
+    "title": "SANA-Video 2.0: Hybrid Linear Attention with Attention Residuals for Efficient Video Generation",
+    "abstract": "We introduce SANA-Video 2.0, a hybrid video diffusion transformer instantiated at 5B and 14B scales under a unified architecture. Designed to generate high-quality video up to 720p on a single GPU, SANA-Video 2.0 matches full-softmax video DiTs in quality while retaining the favorable long-sequence scaling of linear attention. To avoid quadratic attention throughout, Hybrid Linear-Softmax Attention combines gated linear attention for O(N)-dominated mixing with periodic gated-softmax anchors at a 3:1 ratio, restoring the full-rank token interactions that pure linear attention lacks. To propagate these refreshed representations across depth, Block Attention Residuals (AttnRes) route completed block summaries into later linear layers, enabling anchor-feature reuse and boosting deep-layer effective rank by ~12%. Through from-scratch training, SANA-Video 2.0 learns the complete hybrid directly rather than linearizing pretrained models, with reduced-resolution proxy studies establishing 25% softmax as the optimal quality-efficiency trade-off. With 40-step sampling, SANA-Video 2.0 achieves a VBench score of 84.30 in 13.2s at 480p on a single H100, remaining competitive with far larger softmax video DiTs at a fraction of the latency. Its compiled DiT forward pass is 3.2x faster than a matched full-softmax baseline at 720p/60s, a gap that expands with video duration. Furthermore, full-stack Sol-Engine optimization (kernel fusion, caching, and sparse attention) accelerates this hardware-friendly backbone by a further 3.58x, bringing the 5B pipeline to 13.06s at 720p/5s and making it 120x faster than Wan 2.2-A14B on one H100. Overall, our hybrid design recovers softmax-level expressiveness at substantially reduced cost, unlocking scalable long, high resolution video generation.",
+    "authors": [
+      "Junsong Chen",
+      "Jincheng Yu",
+      "Yitong Li",
+      "Shuchen Xue",
+      "Haozhe Liu",
+      "Jingyu Xin",
+      "Yuyang Zhao",
+      "Tian Ye",
+      "Zhangjie Wu",
+      "Zian Wang",
+      "Daquan Zhou",
+      "Ping Luo",
+      "Song Han",
+      "Enze Xie"
+    ],
+    "published": "2026-07-23",
+    "updated": "2026-07-23",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.21553.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.21553",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "SANA-Video 2.0：结合注意力残差的混合线性注意力机制用于高效视频生成",
+      "core_contribution": "提出了一种混合线性-软注意力机制与块注意力残差方法，在保持线性注意力长序列优势的同时，恢复了全秩令牌交互能力，实现了在单GPU上高效生成高质量720p视频。",
+      "method": "该方法采用混合线性-软注意力（Hybrid Linear-Softmax Attention），以3:1比例交替使用门控线性注意力（O(N)复杂度）和周期性的门控软注意力锚点，弥补纯线性注意力缺失的全秩交互。同时引入块注意力残差（Block Attention Residuals, AttnRes），将已完成块的摘要路由到后续线性层，实现锚点特征复用并提升深层有效秩约12%。模型从零开始训练，通过降分辨率代理实验确定25%软注意力为最优质量-效率平衡点。",
+      "findings": "在40步采样下，SANA-Video 2.0在单块H100上以13.2秒生成480p视频，VBench得分达84.30，与更大规模软注意力视频DiT质量相当但延迟更低。编译后的DiT前向传播在720p/60秒下比全软注意力基线快3.2倍，且差距随视频时长扩大。结合全栈Sol-Engine优化（内核融合、缓存和稀疏注意力），5B模型在720p/5秒下仅需13.06秒，比Wan 2.2-A14B快120倍。"
+    }
+  },
+  {
+    "id": "2607.21326",
+    "title": "SlerpFlow: Spherical Trajectory Correction for Rectified Flow Inversion",
+    "abstract": "Rectified-flow-based diffusion transformers, particularly FLUX, have demonstrated outstanding performance in high-quality image generation. However, achieving fast and accurate inversion--transforming images back to latent noise for faithful reconstruction and editing--remains a challenging bottleneck due to the discretization errors of linear solvers. This paper introduces SlerpFlow, a straightforward yet highly effective zero-shot approach that unlocks the full potential of FLUX for high-fidelity inversion and editing. Unlike existing approaches (e.g., RF-Solver) that rely on complex numerical approximations such as high-order Taylor expansions to correct trajectory errors, we present a geometric view based on the Manifold Hypothesis: the empirically observed trajectory curvature is not a numerical artifact, but rather serves as a necessary \"centripetal force\" that constrains the flow to remain on the data manifold. Guided by this insight, SlerpFlow integrates Spherical Linear Interpolation (Slerp) to rectify flow velocity directions on the hypersphere, strictly adhering to the intrinsic curvature of the latent space. Crucially, by caching the corrected velocity for subsequent steps, SlerpFlow achieves high-precision inversion while maintaining the computational efficiency of a first-order Euler solver. Extensive experiments on FLUX-based reconstruction and editing tasks demonstrate that SlerpFlow improves reconstruction fidelity and achieves stronger semantic alignment in editing without requiring additional training. Code is available at https://github.com/0answer0/SlerpFlow.",
+    "authors": [
+      "Wenbin Duan",
+      "Yan Shu",
+      "Zhuoyuan Fu",
+      "Fangmin Zhao",
+      "Yan Li",
+      "Yaru Zhao",
+      "Binyang Li"
+    ],
+    "published": "2026-07-23",
+    "updated": "2026-07-23",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.21326.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.21326",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "SlerpFlow：用于修正流反演的球形轨迹校正方法",
+      "core_contribution": "提出了一种基于几何视角的零样本方法SlerpFlow，通过球形线性插值（Slerp）校正流速度方向，在不增加训练和计算开销的前提下，显著提升了基于FLUX模型的图像反演与编辑的保真度和语义对齐能力。",
+      "method": "SlerpFlow基于流形假设，认为观测到的轨迹曲率并非数值误差，而是约束流保持在数据流形上的必要“向心力”。该方法在潜空间的超球面上引入球形线性插值（Slerp）来修正流速度方向，使其严格遵循内在曲率。通过缓存修正后的速度用于后续步骤，SlerpFlow在保持一阶欧拉求解器计算效率的同时，实现了高精度反演。",
+      "findings": "在基于FLUX的图像重建和编辑任务上的大量实验表明，SlerpFlow显著提升了重建保真度，并在编辑任务中实现了更强的语义对齐，且无需额外训练。"
+    }
+  },
+  {
+    "id": "2607.20866",
+    "title": "Agentic Designer: Progressive Multi-Agent Collaboration for Structure-Aware Interior Layout Generation",
+    "abstract": "Generating realistic interior furniture layouts that strictly adhere to architectural constraints (e.g., walls, doors, and windows) remains a fundamental challenge in automated spatial design. Existing approaches, primarily based on one-shot generation using diffusion models or Large Language Models (LLMs), lack explicit mechanisms for intermediate geometric constraint verification, often resulting in structural collisions and functionally infeasible arrangements under complex room constraints. To address these challenges, we propose Agentic Designer, a progressive, multi-agent framework that formulates structure-aware interior layout generation as an iterative and constraint-verified decision process. By decomposing layout synthesis into modular stages of proposal, verification, and adjustment, the framework coordinates three specialized agents, a Generator, an Evaluator, and a Refiner, through a Progressive Consensus Mechanism. This mechanism enforces stepwise geometric validation and correction before each placement is committed, thereby preventing error accumulation. To facilitate this structure-aware paradigm and standardize evaluation, we establish InStruct, a comprehensive benchmark that integrates a dataset comprising over 18,000 high-quality, parametrically annotated samples with a novel suite of structure-centric metrics. Extensive quantitative evaluations, qualitative analyses, and user studies show that Agentic Designer significantly outperforms state-of-the-art methods, demonstrating substantial improvements in strict structural adherence and functional design coherence.",
+    "authors": [
+      "Zhijing Yang",
+      "Haocheng Lin",
+      "Zhihua Xu",
+      "Haojie Li",
+      "Keze Wang",
+      "Liang Lin",
+      "Tianshui Chen"
+    ],
+    "published": "2026-07-23",
+    "updated": "2026-07-23",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.20866.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.20866",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "智能体设计师：面向结构感知室内布局生成的渐进式多智能体协作方法",
+      "core_contribution": "提出了一种基于渐进式多智能体协作的框架Agentic Designer，将结构感知的室内布局生成转化为迭代、约束验证的决策过程，显著提升了布局对建筑约束的严格遵循性和功能设计连贯性。",
+      "method": "该方法将布局合成分解为提案、验证和调整三个模块化阶段，通过渐进式共识机制协调三个专门智能体（生成器、评估器、优化器）协作。在每次放置前强制执行逐步的几何验证和修正，从而防止误差累积。同时，构建了包含超过18,000个高质量参数化标注样本的InStruct基准数据集，并引入了一套以结构为中心的新评估指标。",
+      "findings": "大量定量评估、定性分析和用户研究表明，Agentic Designer在严格结构遵循性和功能设计连贯性方面显著优于现有最先进方法，有效避免了结构碰撞和功能不可行的布局问题。"
+    }
+  },
+  {
+    "id": "2607.21072",
+    "title": "Show, Don't Tell: Evaluating Spatial Cognition in Generative Pixels Rather Than LLM Text",
+    "abstract": "Spatial intelligence is essential for agents to move from static semantic understanding toward interacting with the physical world. Many spatial tasks are grounded in continuous visual scenes, where locations, regions, and paths are more naturally expressed by pointing, marking, or drawing than by reporting precise coordinates or discrete textual symbols. Yet existing spatial reasoning benchmarks usually require coordinates, options, or text, creating an answer-interface mismatch for image-generation models. This makes it difficult to evaluate image-generation models under the same task semantics as text-output VLMs, despite their ability to externalize spatial judgments directly in pixel space. We propose ProVisE (Protocolized Visual Evaluation), a benchmark-agnostic framework that elicits protocol-constrained visual answers from image-generation models and parses them into structured predictions compatible with original metrics. ProVisE also includes an Agentic builder that constructs and validates task-specific protocols for new benchmarks. We further introduce SpatialGen-Bench, a curated diagnostic benchmark of 470 samples across 14 spatial subtasks, four capability levels, and diverse answer forms. We evaluate representative text-output VLMs and image-generation models in a unified setting and validate Agentic protocol construction on six external spatial benchmarks. Results show that image-generation models are competitive when spatial answers can be externalized directly in pixel space, while text-output VLMs retain a clear advantage in compositional spatial reasoning. These findings reveal complementary strengths of pixel-space expression and text-based reasoning and establish a metric-compatible testbed for studying spatial cognition in image-generation models.",
+    "authors": [
+      "Xu Wang",
+      "Kaixiang Yao",
+      "Miao Pan",
+      "Xiaohe Zhou",
+      "Xuanyu Liu",
+      "Wenqi Zhang",
+      "Xuhong Zhang"
+    ],
+    "published": "2026-07-23",
+    "updated": "2026-07-23",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.21072.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.21072",
+    "primary_category": "cs.CV",
+    "score": 65,
+    "summary": {
+      "title_zh": "展示而非讲述：在生成像素而非大语言模型文本中评估空间认知",
+      "core_contribution": "提出ProVisE框架，使图像生成模型能够在像素空间中直接表达空间判断，并与文本输出VLM在同一任务语义下进行公平比较；同时构建了SpatialGen-Bench诊断基准，揭示了两种模型在空间认知上的互补优势。",
+      "method": "ProVisE是一个与基准无关的评估框架，通过为图像生成模型设计协议约束的视觉答案格式，并将其解析为与原始指标兼容的结构化预测。框架还包含一个Agentic构建器，可自动为新基准构建和验证任务特定协议。研究在统一设置下评估了文本输出VLM和图像生成模型，并在六个外部空间基准上验证了协议构建的有效性。",
+      "findings": "图像生成模型在空间答案可直接在像素空间中外化时表现具有竞争力，而文本输出VLM在组合空间推理中保持明显优势。这表明像素空间表达与基于文本的推理具有互补优势，为研究图像生成模型的空间认知建立了度量兼容的测试平台。"
+    }
+  }
+]
