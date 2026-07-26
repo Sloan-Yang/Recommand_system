@@ -1,0 +1,137 @@
+[
+  {
+    "id": "2607.19910",
+    "title": "MV-Bench: Benchmarking Multimodal Large Language Models for Coordinated Multi-View Interface Construction",
+    "abstract": "Multimodal large language models (MLLMs) are increasingly expected to automate visualization development by generating code directly from visual designs. However, existing evaluations mainly focus on single-chart generation and overlook coordinated multi-view interface construction, which requires joint reasoning about data semantics, view coordination, and interaction logic. Consequently, MLLM capabilities in this setting remain underexplored, and the field lacks a dedicated benchmark for systematic assessment. We introduce MV-Bench, a benchmark for evaluating MLLMs on coordinated multi-view interface construction. Instead of relying on incomplete or inconsistent open-source implementations, we use Tableau workbook files as ground truth because they explicitly encode data bindings, visual mappings, and interactions. We develop a multi-stage pipeline that converts these specifications into executable web interfaces through structured intermediate representations. The benchmark contains 92 base interfaces and 1,048 verified instances created by recombining chart types, datasets, and interaction patterns. Each instance includes executable code, a rendered interface, a dataset, and interaction annotations. We evaluate five state-of-the-art MLLMs in a single-pass setting using metrics for visual fidelity, data binding correctness, and interaction completeness. The strongest model achieves 75.45 percent accuracy in visual layout reproduction, but only 21.71 percent in data binding and 11.68 percent in interaction completeness. These results show that current MLLMs can reproduce visual appearance but remain limited in generating the data semantics and interactive logic required by coordinated multi-view interfaces. Iterative refinement improves code executability but does not substantially reduce the gap in data binding and interaction generation.",
+    "authors": [
+      "Yue Zhao",
+      "Hongxu Liu",
+      "Feiyu Wang",
+      "Xiaoyu Yang",
+      "Tong Ge",
+      "Zhen Yang",
+      "Chao Wang",
+      "Qiong Zeng"
+    ],
+    "published": "2026-07-22",
+    "updated": "2026-07-22",
+    "categories": [
+      "cs.CV",
+      "cs.HC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.19910.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.19910",
+    "primary_category": "cs.CV",
+    "score": 65,
+    "summary": {
+      "title_zh": "MV-Bench：面向协同多视图界面构建的多模态大语言模型基准测试",
+      "core_contribution": "提出了首个专门评估多模态大语言模型在协同多视图界面构建任务上能力的基准MV-Bench，揭示了当前模型在视觉布局复现上表现尚可，但在数据绑定和交互逻辑生成方面存在显著不足。",
+      "method": "利用Tableau工作簿文件作为真实标注，因其明确编码了数据绑定、视觉映射和交互信息；开发了一个多阶段流水线，将这些规范通过结构化中间表示转换为可执行的Web界面；基准包含92个基础界面和1048个经过验证的实例，通过重组图表类型、数据集和交互模式生成，每个实例包含可执行代码、渲染界面、数据集和交互注释。",
+      "findings": "在单次生成设置下评估五个最先进的多模态大语言模型，最强模型在视觉布局复现上达到75.45%的准确率，但数据绑定正确率仅为21.71%，交互完整性仅为11.68%；迭代优化虽能提升代码可执行性，但无法显著缩小数据绑定和交互生成方面的差距。"
+    }
+  },
+  {
+    "id": "2607.19341",
+    "title": "ExpertVerse: A General-Purpose Benchmark for Expert-Level Reasoning in Knowledge-Intensive Visual Synthesis",
+    "abstract": "Recent advances in multimodal generative models have enabled instruction-based image generation to move beyond semantic manipulation to knowledge-driven visual reasoning. However, these methods focus on explicit commonsense reasoning, shallow causal understanding, and direct knowledge recall, failing at knowledge-intensive generation. We develop \\textbf{ExpertVerse}, a capability-centric benchmark to evaluate generative models via knowledge-intensive lens. ExpertVerse stratifies reasoning generation across an orthogonal taxonomy of \\textit{9 cognitive capabilities} and \\textit{8 expert disciplines}, yielding \\textit{58 sub-disciplines}. We curate 1,611 expert-annotated instances covering single-image editing, multi-image composition, and text-to-image generation. We further develop an automated workflow to produce \\textbf{ExpertVerse-100K}, a large-scale dataset with reasoning traces and knowledge-anchored rationale annotations. Based on this, we train \\textbf{KnowThinker} with RL fine-tuning, a VLM reasoning engine with world knowledge that jointly generates thinking processes and refined instructions. Towards the cross-modal credit misalignment and multi-objective gradient conflicts in multi-reward optimization, we propose a tailored Bootstrapped Pareto Policy Optimization (BPPO), which synergizes Bootstrapping Reward Rectification (BRR) and Conflict-Aware Pareto Advantage Fusion (CPAF). Extensive results of both open-source and proprietary models exposes critical reasoning deficits, highlighting imperative for knowledge-intensive benchmarks towards next-generation visual generation.",
+    "authors": [
+      "Yuan Wang",
+      "Yongchao Du",
+      "Mengting Chen",
+      "Jinsong Lan",
+      "Xuetao Feng",
+      "Xiaoyong Zhu"
+    ],
+    "published": "2026-07-21",
+    "updated": "2026-07-21",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.19341.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.19341",
+    "primary_category": "cs.CV",
+    "score": 65,
+    "summary": {
+      "title_zh": "ExpertVerse：面向知识密集型视觉合成中专家级推理的通用基准",
+      "core_contribution": "提出了ExpertVerse，一个以能力为中心的基准测试，用于评估生成模型在知识密集型视觉推理中的表现，并训练了KnowThinker模型，通过强化学习结合世界知识生成推理过程和精细化指令。",
+      "method": "首先，构建了一个正交分类体系，涵盖9种认知能力和8个专家学科，共58个子学科，并人工标注了1,611个实例。其次，开发了自动化流程生成大规模数据集ExpertVerse-100K，包含推理轨迹和知识锚定的理由注释。最后，基于该数据集训练了KnowThinker模型，采用强化学习微调，并提出了Bootstrapped Pareto Policy Optimization（BPPO）方法，结合Bootstrapping Reward Rectification（BRR）和Conflict-Aware Pareto Advantage Fusion（CPAF）来解决多奖励优化中的跨模态信用错配和多目标梯度冲突问题。",
+      "findings": "实验结果表明，无论是开源还是专有模型，在ExpertVerse基准上都暴露出严重的推理缺陷，凸显了知识密集型基准对下一代视觉生成模型的重要性。"
+    }
+  },
+  {
+    "id": "2607.18227",
+    "title": "FlowMimic: Mask-free Visual Editing and Generation with Pixel-pair Warped Flow Field for Online Video Editing Data Generation and Modality Mimicry",
+    "abstract": "In line with the prevailing direction of vision research, we explore the integration of both generation and editing capabilities for video and image modalities within a single model. Current approaches to collecting video editing data typically depend on labour-intensive, time-consuming curated procedures--involving object mask annotation, the use of error-introducing pair synthesis via I2V model and ControlNet-like guidance, and VLM-based quality filtering or refinement--and demonstrate limited task scalability. As a result, the diversity of editing tasks remains substantially narrower than that available for image editing models. We develop a pixel-pair temporal warped flow field that can directly generate corresponding video editing samples in real time from image editing samples, and we demonstrate across multiple levels of video editing tasks that a model can learn video editing using only such data. We regard the image modality as a particular form of the video modality. Accordingly, we design a modality mimic generation loss and a modality mimic editing loss to relatively align the capabilities--and thereby the output distributions--of the two modalities through mutual imitation. Moreover, language-based visual editing entails the comprehension of the editing instruction and the reference visual content, the localization of the region corresponding to that instruction within the reference visual contents, and the modification of that region alone. Existing approaches predominantly rely on external aids, such as fine-tuning an additional MLLM or explicitly supplying a mask sequence as auxiliary input during inference. In contrast, we aspire for the model to internalize this capability. To that end, we introduce sense-related tasks--for instance, referring expression segmentation--along with corresponding editing-region-aware latent-level loss and attention-level loss.",
+    "authors": [
+      "Dingyun Zhang",
+      "Lixue Gong",
+      "Wei Liu"
+    ],
+    "published": "2026-07-20",
+    "updated": "2026-07-20",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.18227.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.18227",
+    "primary_category": "cs.CV",
+    "score": 65,
+    "summary": {
+      "title_zh": "FlowMimic：基于像素对扭曲流场的无掩码视频编辑与生成——用于在线视频编辑数据生成与模态模仿",
+      "core_contribution": "提出了一种无需掩码标注的像素对时序扭曲流场方法，能够从图像编辑样本实时生成对应的视频编辑训练数据，并设计模态模仿损失函数，使单一模型同时具备图像和视频的生成与编辑能力。",
+      "method": "首先，通过像素对时序扭曲流场，将图像编辑样本直接转换为视频编辑样本，避免了传统方法中繁琐的掩码标注、I2V模型合成和VLM质量过滤。其次，设计了模态模仿生成损失和模态模仿编辑损失，通过相互模仿来对齐图像和视频模态的输出分布。最后，引入了指代表达分割等感知相关任务，并设计了编辑区域感知的潜在层损失和注意力层损失，使模型内化定位和编辑特定区域的能力，无需外部辅助模块。",
+      "findings": "实验表明，仅使用该方法生成的视频编辑数据训练，模型即可在多种视频编辑任务上取得良好效果，且图像和视频模态的能力通过模仿损失得到有效对齐。引入感知任务和区域感知损失后，模型能够自主定位并编辑指令所指区域，无需额外掩码输入或微调多模态大模型。"
+    }
+  },
+  {
+    "id": "2607.21591",
+    "title": "Inference-Time Scaling of Diffusion Models via Progressive Seed Pruning",
+    "abstract": "Diffusion and flow-matching models dominate conditional image generation, yet inference-time scaling for these models is far less developed than for autoregressive language models. Because final quality is highly sensitive to the initial noise seed, many approaches spend extra compute on seed search or resampling under a black-box reward, but typically maintaining a constant memory footprint throughout inference. We show that relaxing this constraint enables an underexplored inference-time scaling axis: by front-loading exploration, evaluating many seeds early, and pruning aggressively, we can use a fixed compute budget more effectively. \\emph{Progressive Seed Pruning} (\\PSP) scores intermediate denoised estimates and progressively narrows the candidate set so that only promising trajectories are fully denoised, while keeping the total number of model evaluations fixed. Across diffusion and flow-matching backbones, \\PSP \\ consistently improves reward-guided selection and achieves higher GenEval scores (automated) and better human evaluation on prompt-alignment than best-of-$N$, importance-sampling, and tree-search baselines at matched compute. Project page: https://www.vision.caltech.edu/psp. Code: https://github.com/rogerioagjr/psp.",
+    "authors": [
+      "Rogerio Guimaraes",
+      "Pietro Perona"
+    ],
+    "published": "2026-07-23",
+    "updated": "2026-07-23",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.21591.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.21591",
+    "primary_category": "cs.CV",
+    "score": 60,
+    "summary": {
+      "title_zh": "通过渐进式种子剪枝实现扩散模型的推理时扩展",
+      "core_contribution": "提出了一种名为渐进式种子剪枝（PSP）的推理时扩展方法，通过在前端探索大量种子并逐步剪枝，在固定计算预算下显著提升了扩散模型的条件图像生成质量。",
+      "method": "PSP方法在推理过程中对中间去噪估计进行评分，并逐步缩小候选种子集，使得只有最有希望的轨迹被完全去噪，同时保持总的模型评估次数固定。该方法通过前端加载探索（早期评估多个种子）和激进剪枝策略，更有效地利用固定计算预算。",
+      "findings": "在扩散和流匹配骨干网络上，PSP方法在奖励引导选择中持续改进，并在自动评估（GenEval分数）和人工评估（提示对齐）上均优于相同计算量下的最佳N选、重要性采样和树搜索基线方法。"
+    }
+  },
+  {
+    "id": "2607.21446",
+    "title": "KroQuant: Kronecker-Structured Block Transforms for Efficient Post-Training Quantization of Diffusion Transformers",
+    "abstract": "Post-training quantization (PTQ) of diffusion transformers (DiTs) to W4A4 severely degrades output quality, because activations entering each linear layer contain outliers that 4-bit formats cannot represent. The standard fix applies an invertible linear transform to the activations and its inverse to the weights before quantizing both. Normalization layers between blocks force this transform to run online at every denoising step, making its inference computation cost the binding design constraint. Existing options trade quantization quality for inference cost: per-channel scaling (SmoothQuant) is computationally cheap but impacts the magnitude of the channels, which can harm quantization accuracy; fixed Hadamard transforms yield better quantization accuracy but require large block sizes that incur a high online cost; learned full-$d$ invertible transforms calibrate best but entail a prohibitive dense $d \\times d$ matrix multiplication (GEMM) per layer per step. We propose KroQuant, a PTQ method that applies a learned Kronecker-structured invertible transform to each 32-element block of the activation, storing less than half the parameters of per-channel scaling. The block-local structure runs as small tensor-core GEMMs, and on an MI350 GPU the KroQuant quantizer kernel is up to $14\\%$ faster than the SmoothQuant kernel. Offline LoRaQ weight calibration then absorbs the residual per-weight quantization error. On PixArt-$Σ$, SANA, and FLUX.1-schnell at W4A4 (MXFP4e2), KroQuant produces outputs closer to the FP reference than SVDQuant and LoRaQ on MJHQ-30K and SDCI, while preserving or improving image quality.",
+    "authors": [
+      "Yann Bouquet",
+      "Alireza Khodamoradi",
+      "Kristof Denolf",
+      "Mathieu Salzmann"
+    ],
+    "published": "2026-07-23",
+    "updated": "2026-07-23",
+    "categories": [
+      "cs.LG",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.21446.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.21446",
+    "primary_category": "cs.LG",
+    "score": 60,
+    "summary": {
+      "title_zh": "KroQuant：用于扩散变换器高效后训练量化的Kronecker结构块变换",
+      "core_contribution": "提出了一种基于Kronecker结构的可逆块变换方法KroQuant，在W4A4量化下显著降低扩散变换器的输出质量损失，同时比现有方法（如SmoothQuant和SVDQuant）具有更低的在线推理成本和更好的量化精度。",
+      "method": "KroQuant对每个32元素激活块应用学习到的Kronecker结构可逆变换，该变换以小型张量核心GEMM运行，存储参数少于通道缩放方法的一半。离线LoRaQ权重校准进一步吸收残差逐权重量化误差，从而在保持低计算开销的同时提升量化效果。",
+      "findings": "在PixArt-Σ、SANA和FLUX.1-schnell模型上以W4A4（MXFP4e2）量化时，KroQuant在MJHQ-30K和SDCI数据集上生成的输出比SVDQuant和LoRaQ更接近FP参考，同时保持或提升了图像质量；其量化核在MI350 GPU上比SmoothQuant核快最多14%。"
+    }
+  }
+]
