@@ -1,0 +1,160 @@
+[
+  {
+    "id": "2607.22531",
+    "title": "Twins: Learn to Predict Unified Representations with Focal Loss",
+    "abstract": "Unified multimodal models seek a shared visual token space that supports both multimodal understanding and image generation. Discrete methods unify the interface via a shared codebook, whereas continuous pipelines often rely on two disparate representations -- semantic features (e.g., ViT) for understanding and low-level latents (e.g., VAE) for synthesis -- resulting in mismatched latent spaces. We propose Twins, a unified continuous token space formed by channel-wise concatenating ViT and VAE features on the same token grid, so the sequence length is unchanged and attention cost does not increase. However, jointly modeling Twins in a Diffusion Transformer exposes a severe optimization imbalance: the model fits the ViT component well but struggles to match the VAE latent distribution. We trace this imbalance to three sources of heterogeneity: frequency bias, intrinsic dimensionality, and condition-aligned vs condition-independent uncertainty. To address it, we adapt a focal regression objective for flow matching that upweights large-error VAE dimensions, better balancing optimization across the ViT and VAE components. On ImageNet, this yields up to 10.57 gFID gain over naive MSE loss without classifier-free guidance. Twins also performs competitively on multimodal understanding benchmarks and improves reconstruction fidelity, narrowing the gap between understanding- and generation-oriented representations.",
+    "authors": [
+      "Kaixiong Gong",
+      "Xin Cai",
+      "Bin Lin",
+      "Hao Wang",
+      "Yunlong Lin",
+      "Mingzhe Zheng",
+      "Bohao Li",
+      "Jian-Wei Zhang",
+      "Miles Yang",
+      "Zhao Zhong",
+      "Liefeng Bo",
+      "Xiangyu Yue"
+    ],
+    "published": "2026-07-24",
+    "updated": "2026-07-24",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.22531.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.22531",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "双胞胎：利用焦点损失学习统一表示",
+      "core_contribution": "提出了一种名为Twins的统一连续令牌空间，通过通道级联ViT和VAE特征，在不增加序列长度和注意力成本的前提下，同时支持多模态理解与图像生成，并针对联合建模中的优化不平衡问题引入了焦点回归目标。",
+      "method": "Twins将ViT的语义特征与VAE的低级潜在特征在相同令牌网格上进行通道级联，形成统一的连续令牌空间。为解决联合建模中扩散变换器对VAE分量拟合困难的问题，论文分析了三种异质性来源（频率偏差、内在维度、条件对齐与非对齐不确定性），并针对流匹配模型调整了焦点回归损失，通过放大VAE维度中的大误差项来平衡优化。",
+      "findings": "在ImageNet上，Twins相比朴素MSE损失在无分类器引导下实现了最高10.57 gFID的提升；在多模态理解基准上表现竞争力，并提升了重建保真度，缩小了理解导向与生成导向表示之间的差距。"
+    }
+  },
+  {
+    "id": "2607.22101",
+    "title": "InnoText: A Unified Model for Visual Text Generation and Editing",
+    "abstract": "Diffusion models have recently achieved remarkable success in high-fidelity image synthesis, yet their application to visual text generation and editing remains relatively underexplored. Unlike general image generation, visual text tasks demand precise structural regularity and legibility, which may pose additional challenges for small-scale text and non-Latin scripts such as Chinese. Existing UNet-based models often struggle to produce clear and coherent text, while DiT-based models, though more expressive, are typically limited to a single task, which may lead to redundant training pipelines, inconsistent visual styles, and reduced cross-task generalization. To address these challenges, we propose InnoText, a unified DiT-based framework capable of performing both text generation and editing within a single model. We introduce a Font Size-Aware Modulation (FSAM) module to enhance representations across font scales, a Small-Character Aware Augmentation strategy to improve fine-grained fidelity, and a Task-Specific Region Weighted Loss for adaptive optimization. To support training and evaluation, we also construct a high-quality bilingual (English-Chinese) visual text dataset covering diverse fonts, sizes, and backgrounds. Experimental results demonstrate that our method achieves superior generation accuracy and editing quality, producing visually appealing and realistic text images.",
+    "authors": [
+      "Haowei Liu",
+      "Runze He",
+      "Jian Lu",
+      "Ao Ma",
+      "Run Ling",
+      "Ke Cao",
+      "Jiasong Feng",
+      "Wei Feng",
+      "Shuo Lu",
+      "Yexing Xu",
+      "Yun Wang",
+      "Jing Wang",
+      "Zhanjie Zhang"
+    ],
+    "published": "2026-07-24",
+    "updated": "2026-07-24",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.22101.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.22101",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "InnoText：一种用于视觉文本生成与编辑的统一模型",
+      "core_contribution": "提出了一种基于DiT的统一框架InnoText，能够在一个模型中同时完成视觉文本生成和编辑任务，解决了现有方法任务单一、训练冗余和跨任务泛化能力不足的问题。",
+      "method": "InnoText采用统一的DiT架构，通过引入字体大小感知调制模块（FSAM）增强不同字体尺度下的表示能力，使用小字符感知增强策略提升细粒度文本的保真度，并设计了任务特定区域加权损失函数进行自适应优化。此外，还构建了一个高质量的中英双语视觉文本数据集，覆盖多种字体、尺寸和背景。",
+      "findings": "实验结果表明，InnoText在文本生成准确性和编辑质量上均优于现有方法，能够生成视觉上美观且逼真的文本图像，尤其在小字体和非拉丁文字（如中文）场景下表现突出。"
+    }
+  },
+  {
+    "id": "2607.21694",
+    "title": "Oxygen-TryOn: Fashion-Native Foundation Model for Any-item Virtual Try-On",
+    "abstract": "We present Oxygen-TryOn, a unified foundation model for any-item virtual try-on. Rather than repurposing a general-purpose image editor, Oxygen-TryOn is fashion-native, built for try-on through a dedicated data engine and try-on-specific training. Given one or more reference items (clean product shots or in-the-wild worn-on photos) and a single target subject image, it synthesizes a photorealistic image of the subject wearing the items across virtually any fashion category. Prior systems handle a single garment category in a studio setting, and recent multi-reference methods remain garment-centric; in contrast, Oxygen-TryOn supports diverse items and scenarios, including full- and half-body views, a variable number of references, and free multi-item composition, while faithfully preserving both subject identity and item appearance. Instead of mask-based inpainting, we reformulate try-on as a multi-reference, understanding-driven generation task. We build a data engine that collects, manufactures, annotates, and filters high-quality try-on data at scale, and design a three-stage recipe of continued pre-training (CPT), supervised fine-tuning (SFT), and reinforcement learning (RL). The RL stage uses a hybrid reward combining an in-house try-on reward model with a proprietary, rubric-guided general-purpose model, jointly supervising fine-grained consistency and instruction-level quality. It also follows general editing instructions (e.g., pose changes) in the same pass. Across public benchmarks and our in-house Oxygen-TryOn Bench, it achieves state-of-the-art consistency and realism on single-item try-on and leads on multi-item try-on, matching or surpassing both leading proprietary systems (Nano Banana Pro, GPT-Image-2, Seedream5 Lite) and open-source models (FLUX.2).",
+    "authors": [
+      "Yong Liu",
+      "Xiaolong Fu",
+      "Zihang Xu",
+      "Wen Xue",
+      "Xueheng Li",
+      "Lin Song",
+      "Yuan Zhang",
+      "Chuyang Zhao",
+      "Haoyang Huang",
+      "Nan Duan",
+      "Yipeng Sun",
+      "Yan Li",
+      "Simiu Gu"
+    ],
+    "published": "2026-07-23",
+    "updated": "2026-07-23",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.21694.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.21694",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "Oxygen-TryOn：面向任意物品虚拟试穿的时尚原生基础模型",
+      "core_contribution": "提出一个统一的、专为虚拟试穿设计的时尚原生基础模型Oxygen-TryOn，支持任意品类物品（包括多物品组合）的试穿，在保持人物身份和物品外观的同时，实现了比现有系统更优的一致性和真实感。",
+      "method": "将试穿重新定义为多参考图像、理解驱动的生成任务，而非基于掩码的图像修复。构建了一个大规模数据引擎，用于收集、制造、标注和过滤高质量试穿数据。采用三阶段训练策略：持续预训练（CPT）、监督微调（SFT）和强化学习（RL），其中RL阶段使用混合奖励模型，结合内部试穿奖励模型和基于评分准则的通用模型，共同监督细粒度一致性和指令级质量。",
+      "findings": "在公开基准和内部Oxygen-TryOn Bench上，单物品试穿达到最先进的一致性和真实感，多物品试穿也领先；性能匹配或超越领先的商业系统（如Nano Banana Pro、GPT-Image-2、Seedream5 Lite）和开源模型（FLUX.2），同时还能遵循通用编辑指令（如姿态变化）。"
+    }
+  },
+  {
+    "id": "2607.22428",
+    "title": "Unboxing Diffusion Models for the Arts: Interactive Model Bending and Practice-Based Explainability",
+    "abstract": "Explainable AI (XAI) in creative practice can be less about technocentric explanation and more about enabling artists to inspect modify and debug models as part of making Yet largescale texttoimage diffusion systems are typically presented as opaque endtoend tools limiting this kind of material engagement We argue that even large models can function as creative materials when their internal structure is made visible and manipulable To support this we propose a handson approach to explainability centred on experimentation and intervention We instantiate this approach with a model bending and an interactive (inspection) interface integrated into ComfyUIs nodebased workflow including interactive layer selection and intervention controls Through qualitative and quantitative analysis of bending interventions in Stable Diffusion 15 we show how manipulating specific components of a diffusion pipeline produces relatively consistent families of visual effects allowing artists to build practical layerlevel intuition about how different parts of the model shape generated images",
+    "authors": [
+      "Ahmed M. Abuzuraiq",
+      "Philippe Pasquier"
+    ],
+    "published": "2026-07-24",
+    "updated": "2026-07-24",
+    "categories": [
+      "cs.HC",
+      "cs.AI",
+      "cs.LG",
+      "cs.MM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.22428.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.22428",
+    "primary_category": "cs.HC",
+    "score": 75,
+    "summary": {
+      "title_zh": "解构艺术扩散模型：交互式模型弯曲与基于实践的的可解释性",
+      "core_contribution": "本文提出一种面向艺术家的实践性可解释AI方法，通过使扩散模型的内部结构可视化和可操控，将大型模型转化为可进行创造性干预的创作材料。",
+      "method": "作者在ComfyUI的节点式工作流中集成了一个交互式模型弯曲与检查界面，支持艺术家对Stable Diffusion 1.5的特定组件进行层选择与干预控制。通过定性与定量分析，研究系统性地评估了不同组件操作对生成图像产生的视觉影响。",
+      "findings": "实验表明，对扩散管道中特定组件的操控会产生相对一致的视觉效果家族，使艺术家能够建立关于模型不同部分如何塑造生成图像的实用层级别直觉，从而支持在创作实践中进行有目的的模型调试与修改。"
+    }
+  },
+  {
+    "id": "2607.22091",
+    "title": "Spectral Prior for Reducing Exposure Bias in Diffusion Models",
+    "abstract": "Diffusion models typically suffer from error accumulation during iterative sampling, commonly referred to as exposure bias. We reveal systematic frequency-dependent discrepancies between training and inference, which can be interpreted as frequency-dependent SNR error. Crucially, the direction of this mismatch varies across models and timesteps, indicating that fixed correction rules do not generalize. We propose Spectral Alignment (SPA), a lightweight, guidance-based method that calibrates the power spectrum of intermediate predictions to a pre-computed prior. Our approach consists of two stages: (1) offline fitting of a parametric spectrum model from training data, and (2) inference-time guidance via efficient FFT-based gradient computation. SPA introduces minimal computational overhead (3-4\\%) and is complementary to Classifier-Free Guidance (CFG). We demonstrate consistent improvements across diverse architectures, from pixel-space models (DDPM, ADM) to latent diffusion models (SD2.0, SDXL) and flow-matching models (SD3.5, FLUX). Our implementation is available at https://github.com/SonyResearch/SPA.",
+    "authors": [
+      "Yuya Kobayashi",
+      "Masato Ishii",
+      "Yuhta Takida",
+      "Takashi Shibuya",
+      "Yuki Mitsufuji"
+    ],
+    "published": "2026-07-24",
+    "updated": "2026-07-24",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.22091.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.22091",
+    "primary_category": "cs.CV",
+    "score": 65,
+    "summary": {
+      "title_zh": "减少扩散模型中曝光偏差的频谱先验方法",
+      "core_contribution": "本文揭示了扩散模型中训练与推理之间系统性的频率依赖性误差（即曝光偏差），并提出了一种轻量级的频谱对齐方法（SPA），通过校准中间预测的功率谱来有效减少该偏差，且与现有方法兼容。",
+      "method": "该方法包含两个阶段：首先，从训练数据中离线拟合一个参数化频谱模型作为先验；其次，在推理阶段，通过基于快速傅里叶变换（FFT）的高效梯度计算，对扩散模型的中间预测进行频谱引导校正。SPA仅增加3-4%的计算开销，并可与无分类器引导（CFG）互补使用。",
+      "findings": "实验表明，SPA在多种架构（包括像素空间模型DDPM、ADM，潜在扩散模型SD2.0、SDXL，以及流匹配模型SD3.5、FLUX）上均能一致提升生成质量，有效缓解了因频率依赖性SNR误差导致的曝光偏差问题。"
+    }
+  }
+]

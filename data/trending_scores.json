@@ -518,5 +518,9 @@
   "sponsors_nodejs": 0,
   "permissionlesstech_bitchat-android": 30,
   "jenkinsci_jenkins": 20,
-  "amnezia-vpn_amnezia-client": 20
+  "amnezia-vpn_amnezia-client": 20,
+  "sponsors_opengeos": 30,
+  "sponsors_vudovn": 0,
+  "apache_cassandra": 20,
+  "ocornut_imgui": 60
 }
