@@ -1,0 +1,150 @@
+[
+  {
+    "id": "2607.24665",
+    "title": "MMOE: Modernizing Diffusion Transformers with Efficient Expert Design",
+    "abstract": "Modern large language models scale successfully by pairing capacity growth with efficiency, keeping per-token and deployment costs under control as capacity grows. AIGC Foundation Models (AFMs), especially diffusion-transformer backbones, have begun to adopt sparse experts, but recent efforts mostly enlarge total parameter counts and sparsity ratios without importing the efficiency mechanisms that made LLM scaling practical, so generation quality is seldom balanced against training and deployment cost. This raises a natural question: can the architectural principles behind efficient LLM scaling be adapted to AFMs in a more balanced way? We introduce ModernMOE (MMOE), a modernization of SiT-style diffusion transformers that systematically adapts routed experts, shared and lightweight experts, gate-residual routing, and attention-residual information reuse to AIGC generation. Rather than treating MoE as a single plug-in replacement, MMOE studies how different modern expert components affect convergence, efficiency, and generation quality when composed inside a diffusion transformer. Every experiment in this paper is trained on a single eight-GPU H100 node with batch size 256 for 400k steps, an accessible single-machine budget. Under matched training and sampling protocols and at this budget, MMOE reaches lower FID at every recorded checkpoint, that is, it converges faster per training step, than dense and intermediate sparse-expert baselines, and among the sparse variants it attains the best quality-cost balance. Routing analysis further shows stable expert specialization across depth, substantial use of lightweight routes, and modest step-to-step routing changes during denoising. These results suggest that AFMs can follow the balanced scaling path of LLMs by importing proven efficiency designs, rather than by simply increasing total parameters and sparsity ratios.",
+    "authors": [
+      "Yanhao Jia",
+      "Jiepeng Wang",
+      "Haibin Huang",
+      "Chi Zhang",
+      "Erik Cambria",
+      "Xuelong Li"
+    ],
+    "published": "2026-07-27",
+    "updated": "2026-07-27",
+    "categories": [
+      "cs.CV",
+      "cs.GR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.24665.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.24665",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "MMOE：通过高效专家设计现代化扩散变换器",
+      "core_contribution": "提出了一种名为ModernMOE（MMOE）的扩散变换器架构，系统性地将大型语言模型中的高效专家设计（如路由专家、共享专家、轻量专家、门控残差路由和注意力残差信息复用）适配到扩散变换器中，在可控计算预算下实现了更快的收敛速度和更好的生成质量-成本平衡。",
+      "method": "MMOE基于SiT风格的扩散变换器，集成了多种现代专家组件：路由专家用于稀疏激活、共享专家和轻量专家用于提高参数效率、门控残差路由用于稳定专家选择、以及注意力残差信息复用用于增强特征传递。所有实验在单台八GPU H100节点上以batch size 256训练40万步，与密集和中间稀疏专家基线在相同训练和采样协议下进行公平比较。",
+      "findings": "在相同训练预算下，MMOE在每个记录检查点都达到了更低的FID（弗雷歇初始距离），即每训练步收敛更快；在稀疏变体中实现了最佳的质量-成本平衡。路由分析显示专家在深度上稳定专业化、轻量路由被大量使用，并且在去噪过程中步骤间路由变化适中。"
+    }
+  },
+  {
+    "id": "2607.24591",
+    "title": "CameraAnything: Refilming Videos with Arbitrary Camera Control",
+    "abstract": "We introduce CameraAnything, the first unified framework for camera controlled video editing that enables joint control of both intrinsic and extrinsic camera parameters. Existing approaches either rely on expensive 3D reconstruction to achieve full camera functionality or restrict editing to extrinsic parameter manipulation. Moreover, the coupled influence of intrinsic and extrinsic parameters on video appearance makes disentangled modeling particularly challenging. To address this, we adopt per-pixel Plücker ray injection alongside resolution-aware 3D RoPE in self-attention, building both camera conditioning and spatial positional encoding on the target latent to jointly control camera position, focal length, and native resolution editing without cropping or outpainting. To overcome the scarcity of paired training data, we further develop a scalable synthetic pipeline that constructs diverse dynamic scenes through structured multi-camera recording and generates synchronized videos with varied camera configurations. With a tailored orthogonal training strategy, CameraAnything enables expressive video reshooting with arbitrary viewpoint control, focal length adjustment, resolution adaptation, and multi-shot transitions within a single generation process, offering strong practical value for cinematic video editing and cross-platform content adaptation in video production.",
+    "authors": [
+      "Yixuan Li",
+      "Yanhong Zeng",
+      "Ka Leong Cheng",
+      "Jiayi Zhu",
+      "Hanlin Wang",
+      "Wen Wang",
+      "Yihao Meng",
+      "Hao Ouyang",
+      "Qiuyu Wang",
+      "Yue Yu",
+      "ZiDong Wang",
+      "Yiyuan Zhang",
+      "Yujun Shen",
+      "Dahua Lin"
+    ],
+    "published": "2026-07-27",
+    "updated": "2026-07-27",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.24591.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.24591",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "CameraAnything：任意相机控制下的视频重拍",
+      "core_contribution": "提出了首个统一框架CameraAnything，能够同时控制视频编辑中的内参（如焦距）和外参（如相机位置），无需昂贵的3D重建或裁剪外扩操作。",
+      "method": "该方法在目标潜空间上采用逐像素的Plücker射线注入以及分辨率感知的3D旋转位置编码（3D RoPE）于自注意力机制中，从而联合控制相机位置、焦距和原生分辨率编辑。为解决配对训练数据稀缺问题，还开发了一个可扩展的合成数据流水线，通过结构化多相机录制构建多样化动态场景，并生成具有不同相机配置的同步视频。最后，采用正交训练策略，使模型在单一生成过程中实现任意视角控制、焦距调整、分辨率适配和多镜头切换。",
+      "findings": "实验表明，CameraAnything能够实现富有表现力的视频重拍，支持任意视角控制、焦距调整、分辨率自适应以及多镜头过渡，在电影级视频编辑和跨平台内容适配中具有强实用价值。"
+    }
+  },
+  {
+    "id": "2607.24353",
+    "title": "PRISM: Prompt Refinement via Image-grounded Self-rewarding Mechanism for Text-to-Image Generation",
+    "abstract": "Text-to-image generation models can synthesize high-quality images from natural language descriptions, but their performance remains highly sensitive to prompt formulation. Existing prompt optimization methods mainly rely on text-side rewriting, prompt expansion, or external reward signals, offering limited image-grounded diagnosis and weak support for learning reusable optimisation policies. In this paper, we propose PRISM, a Prompt Refinement framework via Image-grounded Self-rewarding Mechanism. PRISM closes the prompt-image-feedback loop by interpreting generated images with structured visual diagnosis and scoring them along semantic consistency, aesthetic quality, and human preference alignment. It first initializes a unified VLM through multi-task supervised fine-tuning, and then improves the prompt policy via self-rewarding optimization with a hybrid ideal-point and Chebyshev reward. Extensive experiments show that PRISM improves holistic image quality and fine-grained semantic alignment, while providing interpretable feedback for targeted prompt refinement. The code is available at https://anonymous.4open.science/r/PRISM-FF81.",
+    "authors": [
+      "Guo Tang",
+      "HongJie Luo",
+      "Tianxu Wang",
+      "Ying Zhang",
+      "Hao Wang"
+    ],
+    "published": "2026-07-27",
+    "updated": "2026-07-27",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.24353.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.24353",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "PRISM：基于图像引导的自奖励机制的文本到图像生成提示优化框架",
+      "core_contribution": "提出了一种名为PRISM的提示优化框架，通过图像引导的自奖励机制闭环反馈，同时优化语义一致性、美学质量和人类偏好对齐，无需依赖外部奖励信号。",
+      "method": "PRISM首先通过多任务监督微调初始化一个统一的视觉语言模型（VLM），使其能够对生成图像进行结构化视觉诊断。然后，利用自奖励优化策略，结合混合理想点与切比雪夫奖励函数，迭代改进提示策略，从而在无需外部奖励的情况下实现可学习的优化策略。",
+      "findings": "实验表明，PRISM在整体图像质量和细粒度语义对齐方面均有显著提升，同时能提供可解释的反馈，支持针对性的提示优化。"
+    }
+  },
+  {
+    "id": "2607.24157",
+    "title": "UniGen-AR: Unifying Visual Generation with Auto-Regressive Modeling",
+    "abstract": "Modern computer vision pipelines remain fragmented, with tasks such as text-to-image generation, editing, restoration, and classical perception handled by separate models. We study Unified Visual Generation (UVG), where a single model produces diverse image-valued outputs through a unified multimodal interface. While diffusion-based systems dominate UVG due to strong quality and controllability, their iterative sampling incurs substantial inference latency, limiting practical deployment. To address these limitations, we propose UniGen-AR, a framework that pairs a general-purpose multi-modal language model (MLLM) with an efficient next-scale visual auto-regressive (VAR) decoder. This design retains the flexibility of MLLM-based conditioning while leveraging the sampling efficiency and latent unification properties of VAR models. In our framework, the MLLM encodes free-form instructions and control signals into a unified sequence, which guides the VAR decoder to generate image-valued outputs for over 15 tasks spanning four families. Empirically, UniGen-AR achieves up to $19 \\times$ lower inference latency than diffusion-based baselines while maintaining or improving output quality. Our ablations further reveal that VQ-VAE tokenizer design, particularly codebook size and hierarchy, is a critical factor for VAR scalability in UVG. These results establish visual auto-regressive modeling as a compelling and efficient backbone for unified visual generation. Our project page is at https://zpbao.github.io/projects/unigenar.",
+    "authors": [
+      "Zhipeng Bao",
+      "Zhen Zhu",
+      "Nupur Kumari",
+      "Anurag Bagchi",
+      "Yu-Xiong Wang",
+      "Pavel Tokmakov",
+      "Martial Hebert"
+    ],
+    "published": "2026-07-27",
+    "updated": "2026-07-27",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.24157.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.24157",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "UniGen-AR：通过自回归建模实现统一视觉生成",
+      "core_contribution": "提出UniGen-AR框架，将通用多模态语言模型与高效的下尺度视觉自回归解码器相结合，首次在统一视觉生成任务中实现比扩散模型快19倍的推理速度，同时保持或提升输出质量。",
+      "method": "UniGen-AR采用两阶段架构：首先，一个多模态语言模型将自由形式的指令和控制信号编码为统一的序列表示；然后，一个基于下一尺度预测的视觉自回归解码器（VAR）根据该序列生成图像输出。该方法利用VAR模型的采样效率和潜在空间统一特性，支持超过15种视觉生成任务，包括文本到图像生成、编辑、修复和经典感知任务。",
+      "findings": "实验表明，UniGen-AR在15种以上任务中相比扩散基线模型实现了最高19倍的推理延迟降低，且输出质量相当或更优。消融研究揭示，VQ-VAE分词器的设计（尤其是码本大小和层次结构）是影响VAR模型在统一视觉生成中可扩展性的关键因素。"
+    }
+  },
+  {
+    "id": "2607.23937",
+    "title": "Manifold-Constrained Noise Optimization for Diverse Diffusion Sampling",
+    "abstract": "Few-step distilled diffusion models generate high-quality images quickly, but often lose per-prompt diversity, producing near-identical samples across random seeds. Optimizing the initial noise at inference time offers an appealing way to recover this diversity, yet existing methods directly update the initial noise in an unconstrained Euclidean space, ignoring both the geometry of the Gaussian prior and the model's sensitivity to noise frequencies. They therefore introduce auxiliary quality-control objectives to maintain generation fidelity, adding compute and weighting hyperparameters while still requiring conservative updates to prevent degradation. In this work, we propose MoNO, a training-free method that performs Manifold-constrained Noise Optimization on a low-dimensional, quality-stabilizing noise manifold. MoNO sequentially optimizes each new initial noise so that its predicted visual feature complements previous generations, while Riemannian updates on an affine low-frequency sphere preserve prior likelihood and fix unstable high-frequency components by construction. This enables large geodesic steps, removes the need for auxiliary quality-control objectives, and converges in far fewer iterations than prior noise-optimization methods. Experiments with multiple distilled text-to-image diffusion models show that MoNO consistently improves per-prompt diversity while maintaining image quality.",
+    "authors": [
+      "Qitan Shi",
+      "Cheng Jin",
+      "Ziyuan Liu",
+      "Yuantao Gu"
+    ],
+    "published": "2026-07-27",
+    "updated": "2026-07-27",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.23937.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.23937",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "流形约束的噪声优化用于多样化扩散采样",
+      "core_contribution": "提出了一种无需训练的流形约束噪声优化方法（MoNO），通过将初始噪声限制在低维、质量稳定的流形上进行黎曼优化，在保持生成质量的同时显著提升每提示的多样性，避免了现有方法中辅助质量控制目标和超参数调优的需求。",
+      "method": "MoNO首先构建一个低维、质量稳定的噪声流形，该流形通过仿射低频球面约束固定不稳定高频分量并保持先验似然。然后，它依次优化每个新初始噪声，使其预测的视觉特征与之前生成的样本互补，利用黎曼更新在流形上执行大步长优化。该方法无需训练，且通过流形几何约束自然保证了生成保真度，从而在更少的迭代次数内收敛。",
+      "findings": "在多个蒸馏文本到图像扩散模型上的实验表明，MoNO一致地提升了每提示的多样性，同时保持了图像质量；与现有噪声优化方法相比，它无需辅助质量控制目标，支持更大的优化步长，且收敛速度更快。"
+    }
+  }
+]
