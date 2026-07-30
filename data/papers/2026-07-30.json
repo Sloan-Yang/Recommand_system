@@ -1,0 +1,144 @@
+[
+  {
+    "id": "2607.26647",
+    "title": "Anchoring and Steering Diffusion: Enhancing the Faithfulness of Text-to-Image Generation at Inference Time",
+    "abstract": "While text-to-image diffusion models achieve impressive visual quality, they frequently struggle to maintain precise alignment with complex compositional prompts. An effective strategy is to improve the inference process of diffusion models, thereby better leveraging their pretrained priors to address misalignment. Existing training-free methods can be divided into two categories. The first category focuses on improving the randomly sampled initial noise, either performing costly search over noise pools or manipulating sampled noise without ensuring reliable semantic injection. The second category focuses on improving the denoising trajectory, lacking explicit mechanisms to timely diagnose and correct semantic errors. we propose \\textbf{AnchorSteer}, a training-free framework that exerts fine-grained control over \\textbf{both initialization} and \\textbf{the denoising trajectory}. AnchorSteer consists of two synergistic components: \\textbf{Semantic Anchoring} replaces uninformative Gaussian noise with text-aligned initializations via CLIP-based prior extraction and a novel Latent-Prior Score Distillation Sampling (LP-SDS) objective. Specifically, LP-SDS distills CLIP visual priors into the knowledge distribution of diffusion models, mitigating the domain gap between CLIP-based priors and diffusion-based priors. \\textbf{Reflective Steering} transforms passive denoising with an active Think--Erase--Retouch loop that enables mid-generation self-correction. It leverages VLM-based diagnosis to detect semantic deviations and performs targeted latent refinement to suppress erroneous content and recover missing attributes. Extensive experiments on GenEval and T2I-CompBench++ demonstrate that AnchorSteer consistently outperforms existing baselines in text--image alignment while preserving high visual quality.",
+    "authors": [
+      "Xinyi Wang",
+      "Yuyang Huang",
+      "Yalin Su",
+      "Pengcheng Luan",
+      "Tao Zhang",
+      "Feiming Wei",
+      "Wenxian Yu"
+    ],
+    "published": "2026-07-29",
+    "updated": "2026-07-29",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.26647.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.26647",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "锚定与引导扩散：在推理阶段增强文本到图像生成的忠实度",
+      "core_contribution": "提出了一种无需额外训练的框架AnchorSteer，通过同时改进初始噪声和去噪轨迹，显著提升了文本到图像生成中复杂组合提示的对齐忠实度。",
+      "method": "AnchorSteer包含两个协同组件：语义锚定（Semantic Anchoring）和反射引导（Reflective Steering）。语义锚定通过CLIP提取文本对齐的先验，并利用新颖的潜在先验分数蒸馏采样（LP-SDS）目标将CLIP视觉先验融入扩散模型的知识分布，从而生成语义丰富的初始噪声。反射引导则引入主动的“思考-擦除-润色”循环，在生成过程中利用VLM诊断语义偏差，并通过潜在空间精炼抑制错误内容并恢复缺失属性。",
+      "findings": "在GenEval和T2I-CompBench++基准上的大量实验表明，AnchorSteer在文本-图像对齐方面持续优于现有基线方法，同时保持了较高的视觉质量。"
+    }
+  },
+  {
+    "id": "2607.26735",
+    "title": "Dual Inversion for Text-to-Image Diffusion Models: From Both Prompt and Noise Perspectives",
+    "abstract": "Prompt inversion, as a typical reverse engineering technique, enables text-to-image (T2I) diffusion models to generate the desired target images without extensive prompt engineering. However, existing prompt inversion methods suffer from significant limitations: (1) gradient-based methods are unstable and uninterpretable, often resulting in generated images with severe artifacts; (2) gradient-free methods yield human-readable prompts but still fail to preserve visual fidelity due to the lack of fine-grained detail alignment. We contend that the limitations stem from treating prompt inversion as a sufficient condition for reverse engineering, ignoring the critical role of the latent noise that encodes structural information. Consequently, we propose Dualin (Dual inversion), a two-stage method that jointly recovers both the semantic prompt and latent noise of the target image. In the first stage, we integrate vision-language model, CLIP and large language model to invert a faithful, human-interpretable hard prompt. In the second stage, unconditional DDIM inversion reconstructs the exact latent noise of the target image, guaranteeing the consistency at the structural information level. Theoretically, we prove that the inverted noise enables flexible image editing without re-optimization. Extensive experiments on diverse datasets demonstrate that Dualin simultaneously generates high-quality inverted prompts and achieves state-of-the-art image fidelity. Additionally, Dualin can establish a robust foundation for the precise and controllable image editing.",
+    "authors": [
+      "Xiaolong Liu",
+      "Junjian Li",
+      "Yuan Xiao",
+      "Jiaqi Deng",
+      "Dayong Ye",
+      "Tianqing Zhu",
+      "Huan Huo"
+    ],
+    "published": "2026-07-29",
+    "updated": "2026-07-29",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.MM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.26735.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.26735",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "文本到图像扩散模型的双重反演：从提示和噪声两个角度出发",
+      "core_contribution": "提出了一种名为Dualin的双阶段反演方法，同时恢复目标图像的语义提示和潜在噪声，从而解决了现有提示反演方法在图像保真度和可解释性上的不足。",
+      "method": "该方法分为两个阶段：第一阶段结合视觉语言模型CLIP和大语言模型，将目标图像反演为人类可读的硬提示；第二阶段使用无条件DDIM反演重建目标图像的精确潜在噪声，确保结构信息的一致性。理论上证明了反演噪声无需重新优化即可用于灵活的图像编辑。",
+      "findings": "在多个数据集上的实验表明，Dualin能够同时生成高质量的反演提示，并在图像保真度上达到最先进水平。此外，该方法为精确且可控的图像编辑提供了稳健的基础。"
+    }
+  },
+  {
+    "id": "2607.26004",
+    "title": "Parallel Decoding Distillation for Fast Image and Video Generation",
+    "abstract": "Generation in video diffusion or flow models is computationally expensive due to the slow and iterative sampling process. Current state-of-the-art (SOTA) acceleration methods heavily rely on variational score distillation (VSD) and adversarial losses to distill diffusion models into few-step generators. Albeit achieving high-quality video generation, these training losses are notoriously hard to optimize and suffer from mode collapse, leading to loss of video diversity and lack of motion. In this paper, we introduce Parallel Decoding Distillation (PDD), a simplified and scalable trajectory-based distillation method for fast inference of diffusion and flow matching models. Our architecture and training procedure are compatible with any pre-trained model and support sampling with a varying number of function evaluations (NFE). PDD accelerates generation by predicting multiple denoising steps per network evaluation. Conceptually, it learns a representation of the mean velocity without regressing its derivative using JVPs or finite-difference approximations. Our method achieves SOTA performance with 4-8 NFE on LTX-2.3 Text-to-Video/Audio, Wan 14B Text-to-Video, and Qwen-Image Text-to-Image. Moreover, PDD presents a significant improvement in generated video diversity.",
+    "authors": [
+      "Neta Shaul",
+      "Chao Liu",
+      "Arash Vahdat",
+      "Julius Berner"
+    ],
+    "published": "2026-07-28",
+    "updated": "2026-07-28",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.26004.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.26004",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "并行解码蒸馏：用于快速图像与视频生成",
+      "core_contribution": "提出了一种简化的、可扩展的轨迹式蒸馏方法（PDD），能够将扩散或流匹配模型蒸馏为少步生成器，在保持高质量生成的同时显著提升推理速度，并解决了现有方法中模式崩溃和多样性损失的问题。",
+      "method": "PDD通过并行预测多个去噪步骤来加速生成，每个网络评估输出多个时间步的预测结果。它学习平均速度的表示，而无需通过雅可比向量积或有限差分近似来回归其导数。该方法与任何预训练模型兼容，并支持可变数量的函数评估（NFE）。",
+      "findings": "在LTX-2.3文本到视频/音频、Wan 14B文本到视频以及Qwen-Image文本到图像任务上，PDD在4-8次函数评估下达到了最先进的性能，并且显著提升了生成视频的多样性。"
+    }
+  },
+  {
+    "id": "2607.25527",
+    "title": "Argus-Unified: Towards A Compact and Economical Unified Model for Image Understanding and Generation",
+    "abstract": "Unifying visual understanding and generation in one model holds immense promise, but remains challenging and expensive due to heavy compute and data demands and conflicts between the visual features needed for these two capabilities. To address these challenges, we present Argus-Unified, a compact, effective and unified multimodal model built with low demand on computation and data. Instead of aligning modalities from scratch, Argus-Unified effectively leverages pretrained vision-language models (VLMs) that provide strong multimodal priors. Specifically, we introduce hybrid visual tokens that preserve continuous tokens for understanding while learning discrete tokens for generation from a frozen unified vision encoder. Our training pipeline includes two stages: the first stage learns a quantizer and image decoder on top of the frozen vision encoder, the second stage trains the LLM initialized from a pretrained VLM for the unified multimodal modeling. Using by far the least amount of data (15.6M) and the lowest cost (~$2,000), we demonstrate that unified multimodal models can be trained economically while achieving strong performance in both understanding and generation. Notably, our model attains state-of-the-art multimodal understanding on GQA, POPE, and VQAv2, and competitive generation quality compared to models with dedicated vision encoders (e.g., Janus, Janus-Pro), all at ~10x lower cost and with ~5x less data. We envision Argus-Unified as a useful baseline that lowers the development barrier for unified models.",
+    "authors": [
+      "Weiming Zhuang",
+      "Jiabo Huang",
+      "Jingtao Li",
+      "Zhizhong Li",
+      "Chen Chen",
+      "Sina Sajadmanesh",
+      "Lingjuan Lyu"
+    ],
+    "published": "2026-07-28",
+    "updated": "2026-07-28",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.25527.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.25527",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "Argus-Unified：迈向紧凑且经济的统一图像理解与生成模型",
+      "core_contribution": "提出了一种低成本、数据高效的统一多模态模型Argus-Unified，通过利用预训练视觉语言模型和混合视觉令牌，在显著降低计算和数据需求的同时，实现了图像理解与生成任务的强性能。",
+      "method": "该方法引入混合视觉令牌，保留连续令牌用于理解，同时从冻结的统一视觉编码器中学习离散令牌用于生成。训练分为两阶段：第一阶段在冻结的视觉编码器上学习量化器和图像解码器，第二阶段使用预训练VLM初始化的LLM进行统一多模态建模。",
+      "findings": "使用最少的数据量（15.6M）和最低成本（约2000美元），模型在GQA、POPE和VQAv2上达到了最先进的多模态理解性能，生成质量与使用专用视觉编码器的模型（如Janus、Janus-Pro）相当，但成本降低约10倍，数据量减少约5倍。"
+    }
+  },
+  {
+    "id": "2607.24215",
+    "title": "TreeAdapter: Hierarchical Taxonomy-Guided Adapter Composition for Fine-Grained Species Image Generation",
+    "abstract": "Although general text-to-image models excel in open-domain generation, their performance degrades significantly in specialized downstream domains, particularly when generating images of rare biological species. Hindered by long-tailed distributions, general models struggle to capture subtle fine-grained details, while per-species fine-tuning methods over-isolate individual species and consequently ignore the shared visual features among closely related taxa. To address this, we propose TreeAdapter, a novel framework that explicitly leverages hierarchical taxonomic data. Rather than using a monolithic model or independent per-species modules, TreeAdapter attaches lightweight adapters to every node of the taxonomic tree. Specifically, leaf-node adapters capture species-specific visual traits, while internal-node adapters encapsulate shared semantics among descendant taxa. We introduce a two-stage training paradigm where ancestor adapters are optimized to model only the residual visual features unexplained by their descendants. This model architecture and training paradigm enable the model to fully leverage hierarchical information, ensuring the accurate generation of visual features for each species. Extensive experiments across three large-scale biodiversity benchmarks demonstrate that TreeAdapter achieves state-of-the-art fine-grained generation quality, outperforming both general-purpose and domain-specific baselines.",
+    "authors": [
+      "Yuze Sun",
+      "Zhongjie Duan",
+      "Yingda Chen"
+    ],
+    "published": "2026-07-27",
+    "updated": "2026-07-27",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.24215.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.24215",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "TreeAdapter：基于层次化分类学引导的适配器组合用于细粒度物种图像生成",
+      "core_contribution": "提出了一种利用层次化分类学树结构来指导细粒度物种图像生成的新框架TreeAdapter，通过为树中每个节点分配轻量适配器，有效解决了通用模型在稀有物种生成上细节不足以及逐物种微调忽视类间共享特征的问题。",
+      "method": "TreeAdapter将轻量适配器附加到分类学树的每个节点上：叶节点适配器捕获物种特有的视觉特征，内部节点适配器则封装后代类群间的共享语义。采用两阶段训练范式，其中祖先适配器仅优化建模其后代适配器未解释的残差视觉特征，从而充分利用层次化信息实现精确的物种特征生成。",
+      "findings": "在三个大规模生物多样性基准数据集上的大量实验表明，TreeAdapter在细粒度生成质量上达到了最先进水平，显著优于通用模型和领域专用基线方法。"
+    }
+  }
+]
