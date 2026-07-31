@@ -1,0 +1,156 @@
+[
+  {
+    "id": "2607.28611",
+    "title": "Chimera: Designing and Chinchilla-Scaling Hybrid Visual Diffusion Transformers",
+    "abstract": "Visual generation increasingly requires high-resolution images, long videos, and multimodal context, making the quadratic cost of full attention prohibitive. We introduce Chimera, a hybrid visual diffusion backbone with a principled scaling recipe. Chimera processes text, image, and video tokens in one raster-ordered stream without positional embeddings. It combines Kimi Delta Attention (KDA) for long-context state tracking with O(N) complexity, interleaved Multi-head Latent Attention (MLA) for direct global interaction, and modality-aware short convolutions for local spatiotemporal context. Sparse Mixture-of-Experts (MoE) layers expand capacity while controlling activated compute. To scale this heterogeneous architecture, we introduce HeteroP, a module-wise scheme that transfers hyperparameters across width and depth according to each tensor's functional fan-in and model depth. HeteroP yields a consistently tuned family used to fit Chinchilla-style compute-optimal laws for activated model size, training-token count, and image-video data ratio. Guided by these laws, we train an 11B-parameter Chimera with 2B activated parameters. Experiments show three results. First, measured by pretraining diffusion loss, the dense backbone is 1.7x as compute-efficient as a matched full-attention Wan-2.1 2B baseline, while the complete system reaches 7.3x. Second, without length-specific fine-tuning, Chimera extrapolates zero-shot from 5-second training clips to 30-second videos, with only 6.5% FID degradation in the last five seconds. Third, the fitted laws show that compute-optimal image pretraining divides compute nearly evenly between activated model size and training-token count, whereas video pretraining modestly favors model size at higher budgets. These results establish a foundation for designing and scaling efficient long-context diffusion architectures.",
+    "authors": [
+      "Chongjian Ge",
+      "Hanwen Jiang",
+      "Tianyu Wang",
+      "Jiuxiang Gu",
+      "Yiran Xu",
+      "Ziwen Chen",
+      "Shaoteng Liu",
+      "Jing Shi",
+      "Yicong Hong",
+      "Zefan Cai",
+      "Hailin Jin",
+      "Hao Tan"
+    ],
+    "published": "2026-07-30",
+    "updated": "2026-07-30",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.28611.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.28611",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "Chimera：混合视觉扩散Transformer的设计与Chinchilla缩放",
+      "core_contribution": "提出了一种名为Chimera的混合视觉扩散骨干网络，并引入了一种模块级超参数迁移方案HeteroP，用于在异构架构上拟合Chinchilla风格的计算最优缩放律，从而指导高效的长上下文视觉生成模型训练。",
+      "method": "Chimera将文本、图像和视频令牌按光栅顺序排列为单一流，无需位置编码。它结合了Kim Delta Attention（KDA）实现O(N)复杂度的长上下文状态追踪、交错的多头潜在注意力（MLA）实现直接全局交互，以及模态感知的短卷积处理局部时空上下文。此外，稀疏混合专家（MoE）层在控制激活计算量的同时扩展模型容量。为了缩放这一异构架构，HeteroP根据每个张量的功能扇入和模型深度，在宽度和深度维度上迁移超参数，从而生成一致调优的模型族，用于拟合计算最优的激活模型大小、训练令牌数和图像-视频数据比例。",
+      "findings": "实验表明，在预训练扩散损失上，密集骨干网络的计算效率是匹配的全注意力Wan-2.1 2B基线的1.7倍，完整系统达到7.3倍。无需长度特定微调，Chimera可从5秒训练片段零样本外推至30秒视频，最后五秒的FID仅退化6.5%。拟合的计算最优律显示，图像预训练将计算预算几乎平均分配给激活模型大小和训练令牌数，而视频预训练在更高预算下略微偏向模型大小。"
+    }
+  },
+  {
+    "id": "2607.28073",
+    "title": "GVR-Coder: A Visual-Feedback Framework for Structured SVG Generation in Complex Document and Meeting Scenarios",
+    "abstract": "In demanding professional environments and meeting review scenarios, lengthy text often imposes a high cognitive load. To facilitate efficient information communication, transforming verbose text into logically clear diagrams is essential. Scalable Vector Graphics (SVG) provide an effective representation for this purpose due to their editability and resolution independence. However, current research on Text-to-SVG generation remains hindered by three major challenges: (1) the scarcity of datasets for complex, logic-rich diagrams; (2) the absence of explicit layout priors, which leads to chaotic spatial arrangements; and (3) the lack of fine-grained visual feedback to validate rendered outputs and correct aesthetic defects. To address these challenges, at the data level, we introduce DocMeetSVG-100K, a large-scale SVG dataset tailored for document authoring and meeting review scenarios. At the model level, we propose GVR-Coder, a novel framework designed to generate high-quality logical diagrams from lengthy professional texts. Specifically, we adopt a curriculum-driven rejection sampling fine-tuning to progressively enhance the model's capability in modeling complex structures, while explicitly incorporating layout constraint knowledge during training. In addition, we introduce reinforcement learning from dual rendering feedback, a mechanism that provides implicit feedback through reward signals to jointly optimize structural complexity and visual aesthetics. Furthermore, we design a generate-verify-repair agent loop, which improves generation quality through explicit, fine-grained feedback and targeted refinement. Extensive experiments demonstrate that GVR-Coder outperforms competitive baselines and reliably produces logically coherent and visually appealing diagrams. Code and data are available at https://github.com/CurryaNa/GVR-Coder.",
+    "authors": [
+      "Yiming Xu",
+      "Jihua Kang",
+      "Chunsai Du",
+      "Qifan Zhang",
+      "Wangqiu Zhou",
+      "Yiting Wu",
+      "Tianqi Li",
+      "Qi Song"
+    ],
+    "published": "2026-07-30",
+    "updated": "2026-07-30",
+    "categories": [
+      "cs.LG",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.28073.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.28073",
+    "primary_category": "cs.LG",
+    "score": 85,
+    "summary": {
+      "title_zh": "GVR-Coder：面向复杂文档与会议场景的结构化SVG生成的视觉反馈框架",
+      "core_contribution": "本文提出了一个用于从冗长专业文本生成高质量逻辑图表的框架GVR-Coder，并发布了针对文档撰写和会议回顾场景的大规模SVG数据集DocMeetSVG-100K。",
+      "method": "方法主要包括：1）采用课程驱动的拒绝采样微调策略，逐步提升模型对复杂结构的建模能力，并在训练中显式引入布局约束知识；2）提出基于双重渲染反馈的强化学习机制，通过奖励信号提供隐式反馈，共同优化结构复杂性和视觉美观性；3）设计了一个生成-验证-修复的智能体循环，通过显式的细粒度反馈和针对性修复来提升生成质量。",
+      "findings": "大量实验表明，GVR-Coder在生成逻辑连贯且视觉美观的图表方面优于现有基线方法。该框架能够有效解决复杂逻辑图表数据稀缺、布局先验缺失以及细粒度视觉反馈不足三大挑战，可靠地生成结构化SVG图表。"
+    }
+  },
+  {
+    "id": "2607.27699",
+    "title": "RefineSVG: Visual Feedback-Driven Reinforcement Learning for Image-to-SVG Generation",
+    "abstract": "We propose RefineSVG, a single-step closed-loop visual feedback framework that enables multimodal large language models (MLLMs) to perform high-fidelity image-to-SVG generation through self-correction. Existing MLLM-based approaches rely on single-pass open-loop inference, where the model receives visual input only once and must generate thousands of SVG code tokens without intermediate verification. This paradigm inevitably leads to geometric drift, error accumulation, and visual hallucination on complex images. RefineSVG overcomes this limitation by invoking an external rendering engine after an initial SVG generation pass to compare the rendered output against the target image. The comparison yields a multi-dimensional visual residual map (Diff-Map) that is fed back to the model as a ReAct-style correction signal, driving a targeted correction step. To support this render-observe-correct interaction, we further introduce an SVG-oriented semantic vocabulary that compresses token sequences by over 52%. A progressive training pipeline spanning supervised fine-tuning, rejection-sampling cold-start data construction, and end-to-end agentic reinforcement learning aligns the model with closed-loop visual correction. Extensive experiments show that RefineSVG consistently outperforms existing baselines in reconstruction fidelity, structural accuracy, and code efficiency.Code is available at https://github.com/liuxiaobo66/RefineSVG.",
+    "authors": [
+      "Shaobo Liu",
+      "Feiqiao Mao",
+      "Shuaishuai Zhou",
+      "Yan Zhan",
+      "Weiqi Tan",
+      "Zhiqiong Lu",
+      "Zhengping Liang"
+    ],
+    "published": "2026-07-30",
+    "updated": "2026-07-30",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.27699.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.27699",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "RefineSVG：基于视觉反馈驱动的强化学习实现图像到SVG的生成",
+      "core_contribution": "提出了一种单步闭环视觉反馈框架RefineSVG，使多模态大语言模型能够通过自我修正实现高保真度的图像到SVG生成，有效解决了现有开环推理中几何漂移、错误累积和视觉幻觉的问题。",
+      "method": "RefineSVG在初始SVG生成后调用外部渲染引擎，将渲染输出与目标图像进行比较，生成多维视觉残差图（Diff-Map）作为修正信号反馈给模型。同时引入面向SVG的语义词汇表，将令牌序列压缩超过52%。采用渐进式训练流程，包括监督微调、拒绝采样冷启动数据构建和端到端智能体强化学习，使模型适应闭环视觉修正。",
+      "findings": "实验表明，RefineSVG在重建保真度、结构准确性和代码效率方面持续优于现有基线方法，代码已开源。"
+    }
+  },
+  {
+    "id": "2607.27372",
+    "title": "Explorative Modeling: Unlocking a Third Pretraining Axis and End-to-End Generation",
+    "abstract": "The deep learning revolution, kicked off by AlexNet, taught us that end-to-end training beats decomposing a problem into hand-designed stages. Generative modeling, however, has remained the exception-despite generative models being remarkably capable, they are still not trained end-to-end. This is because, at its core, generative modeling is about handling distributions with many modes, and existing scalable approaches handle this the same way, by factoring the generation procedure, which prevents end-to-end generation. In this work, we introduce Explorative Modeling, a new paradigm that instead factors the training loop, exploring K candidate matches between model generations and data, and training on the best, so predictions commit to modes rather than blurring them. We find Explorative Models (XMs) useful in two settings. First, increasing exploration adds a third pretraining axis beyond parameters and data for existing generative models-where scaling exploration monotonically improves performance across both continuous and discrete domains (images, video, and language). Notably, gains from exploration increase with scale, climbing from 7% to 36% as data scales and from 13% to 23% as models grow, with efficiency gains more than doubling at 3x the compute. Concretely, exploration improves FLOP efficiency by 4.1x, sample efficiency by 6.2x, parameter efficiency by 47%, lifts the strongest of image-generation recipes to a near-state-of-the-art 1.43 FID on ImageNet without guidance, enables scaling how end-to-end existing models are, and unlocks scaling generalization. Second, XMs enable end-to-end reconstructive generative modeling, matching diffusion on control tasks with 16-256x fewer inference steps. Together, these results establish XMs as both a new pretraining axis for existing generative models and a standalone end-to-end generative modeling paradigm.",
+    "authors": [
+      "Alexi Gladstone",
+      "Heng Ji",
+      "Yilun Du"
+    ],
+    "published": "2026-07-29",
+    "updated": "2026-07-29",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.27372.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.27372",
+    "primary_category": "cs.LG",
+    "score": 85,
+    "summary": {
+      "title_zh": "探索性建模：解锁第三个预训练轴与端到端生成",
+      "core_contribution": "提出了一种名为探索性建模（Explorative Modeling）的新范式，通过将生成过程中的模式匹配引入训练循环，既为现有生成模型增加了“探索”这一新的预训练轴，又实现了真正的端到端生成建模。",
+      "method": "该方法在训练过程中引入K个候选匹配（模型生成与真实数据之间的匹配），通过探索这些候选并选择最佳匹配进行训练，使模型预测能够“承诺”于特定模式而非模糊化多模式分布。这种探索机制可以应用于连续域（如图像、视频）和离散域（如语言），并作为现有生成模型的附加预训练轴。",
+      "findings": "实验表明，增加探索规模能持续提升性能：在数据规模扩大时性能提升从7%增至36%，模型规模扩大时从13%增至23%，计算量增加3倍时效率提升超过2倍。具体地，探索带来了4.1倍的FLOP效率提升、6.2倍的样本效率提升和47%的参数效率提升，在ImageNet上无需引导即可达到接近最优的1.43 FID。此外，探索性模型实现了端到端重建生成建模，在控制任务上以16-256倍更少的推理步骤匹配扩散模型性能。"
+    }
+  },
+  {
+    "id": "2607.27348",
+    "title": "Bunraku: Turning a Single Illustration into an Editable Live2D Character",
+    "abstract": "Live2D is the dominant 2D character-animation format for anime characters and virtual avatars, representing each character as a stack of RGBA layers driven by per-layer mesh deformation. Despite its wide use in virtual streaming, mobile games, and interactive characters, authoring a Live2D model still demands weeks of manual layer separation, occlusion completion, mesh placement, and keyframing, and no prior generative method produces such a structured asset end-to-end. We present the first system that, from a single illustration, generates all the structured information a Live2D runtime consumes: ordered RGBA layers, a deformation mesh per layer, and the parameter-driven keypose vertex offsets that make the character move. Stage 1 casts layered decomposition as a layered diffusion process under a Live2D-aware organ-level taxonomy, producing an ordered RGBA stack with hidden-region completion. Stage 2 builds a content-conforming triangle mesh for each layer from its alpha channel alone, then predicts the keypose displacement field of all layers jointly: every vertex of every layer is one token, self-attention spans layer boundaries, and each displacement is factorised into a bounded direction and a log-magnitude. Joint rather than independent prediction is what makes the result a coherent character instead of separately plausible parts, and is our largest gain; scaling the network 112x yields none. On 50 held-out characters, under true generation with no teacher forcing, Stage 2 attains a per-vertex direction cosine of 0.768 (median 0.828). Because a layer's mesh derives from its alpha channel, a clothing layer can be re-textured from a natural-language instruction while the mesh and predicted animation are reused byte-for-byte. We further contribute Live2D-Bench, the first standardized benchmark for the task, and an 8,884-model Live2D corpus with layer and animation supervision.",
+    "authors": [
+      "Junhao Chen",
+      "Jingjia Mao",
+      "Dayong Li",
+      "Chenghai Li",
+      "Saining Zhang",
+      "Zhihao Li",
+      "Hao Zhao",
+      "Yufei Wang",
+      "Ruqi Huang"
+    ],
+    "published": "2026-07-29",
+    "updated": "2026-07-29",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.27348.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.27348",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "文乐：将单张插画转化为可编辑的Live2D角色",
+      "core_contribution": "本文首次提出从单张插画端到端生成完整Live2D角色资产（包括有序RGBA图层、每层变形网格及参数驱动的关键姿态顶点偏移）的系统，并构建了首个标准化基准Live2D-Bench及包含8884个模型的训练语料库。",
+      "method": "方法分为两个阶段：第一阶段将图层分解建模为基于Live2D器官级分类的层次扩散过程，生成带有隐藏区域补全的有序RGBA堆叠；第二阶段先根据每层的alpha通道构建内容适配的三角形网格，然后联合预测所有图层的关键姿态位移场——将每个顶点视为一个token，通过跨层自注意力机制实现全局一致性，并将位移分解为有界方向和对数幅度。",
+      "findings": "在50个保留角色上的真实生成测试中（无教师强制），第二阶段达到每顶点方向余弦0.768（中位数0.828）；联合预测相比独立预测带来最大增益，而将网络规模扩大112倍无进一步提升；此外，由于网格源自alpha通道，可通过自然语言指令对服装层重新纹理化，同时复用原有网格和动画数据。"
+    }
+  }
+]
