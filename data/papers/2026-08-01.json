@@ -1,0 +1,160 @@
+[
+  {
+    "id": "2607.28227",
+    "title": "Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents",
+    "abstract": "GUI agents have the potential to become a general purpose executor over existing digital devices. To advance them toward real-world use, we envision agents that operate reliably on real devices, execute workflows across platforms, combine GUI interaction with CLI execution, complete long-horizon tasks, proactively initiate useful services, and autonomously improve their capabilities with minimal human effort. Guided by this vision, we present Qwen-UI-Agent, a real-world centric foundation GUI agent spanning mobile, computer-use, web, and DeepSearch environments. Qwen-UI-Agent combines diverse sandbox environments with a large-scale real-device mobile runtime. Its unified action space interleaves GUI operations with CLI execution and generates batched actions in a single model turn. An AutoResearch-style data flywheel uses agents to construct tasks and environments, diagnose failures, and plan subsequent iterations. Online RL supports training on trajectories exceeding 100 turns, with over 10,000 concurrent environments accelerating rollout. A lightweight harness layer supports proactive service initiation and stateful workflows across mobile and computer. Across a broad suite of evaluations, Qwen-UI-Agent sets state-of-the-art performance on mobile-use benchmarks while delivering competitive performance on computer- and browser-use tasks against frontier models, including Opus 4.8, Gemini 3.1 Pro, and GPT-5.6 Sol. On mobile use, it achieves 82.1% on MobileWorld, 92.2% on MobileWorld-Real, and 97.5% on AndroidDaily. On computer use, it achieves 79.5% on OSWorld-Verified and a 40.0% partial-progress score on OSWorld-v2. On browser use and GUI grounding, it achieves 73.6% on WebArena and 81.5% on ScreenSpot-Pro, respectively.",
+    "authors": [
+      "Hanzhang Zhou",
+      "Panrong Tong",
+      "Xu Zhang",
+      "Quyu Kong",
+      "Chenglin Cai",
+      "Tianyu Xia",
+      "Gongjie Zhang",
+      "Jianan Zhang",
+      "Long Li",
+      "Long Chen",
+      "Lei Wang",
+      "Gaole Dai",
+      "Pengxiang Li",
+      "Liangyu Chen",
+      "Yue Wang",
+      "Steven Hoi"
+    ],
+    "published": "2026-07-30",
+    "updated": "2026-07-30",
+    "categories": [
+      "cs.AI",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.28227.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.28227",
+    "primary_category": "cs.AI",
+    "score": 70,
+    "summary": {
+      "title_zh": "Qwen-UI-Agent技术报告：迈向下一代以真实世界为中心的基座GUI智能体",
+      "core_contribution": "本文提出了Qwen-UI-Agent，一个以真实世界为中心的基座GUI智能体，覆盖移动端、电脑端、网页和深度搜索环境，通过统一动作空间、数据飞轮和在线强化学习，在多个GUI基准上达到最先进性能，推动了GUI智能体向真实设备可靠操作和跨平台工作流执行的发展。",
+      "method": "Qwen-UI-Agent结合了多样化的沙盒环境和大规模真实设备移动运行时，采用统一动作空间，将GUI操作与命令行执行交错，并在单次模型生成中输出批量动作。它利用AutoResearch风格的数据飞轮，通过智能体自主构建任务和环境、诊断失败并规划迭代；同时，在线强化学习支持超过100步的长轨迹训练，并借助超过10,000个并发环境加速数据收集。此外，轻量级harness层支持主动服务启动和跨移动端与电脑端的有状态工作流。",
+      "findings": "Qwen-UI-Agent在移动端基准上达到最先进性能，如MobileWorld上82.1%、MobileWorld-Real上92.2%、AndroidDaily上97.5%；在电脑端OSWorld-Verified上达到79.5%，OSWorld-v2上部分进度得分40.0%；在浏览器使用和GUI grounding上，WebArena得分73.6%，ScreenSpot-Pro得分81.5%，整体性能与Opus 4.8、Gemini 3.1 Pro和GPT-5.6 Sol等前沿模型相当或更优。"
+    }
+  },
+  {
+    "id": "2607.25641",
+    "title": "OmniPhys: Knowledge-Graph-Driven Benchmarking and Collective Optimization for Physical Commonsense in Text-to-Image Generation",
+    "abstract": "While text-to-image models exhibit remarkable visual fidelity, they frequently violate fundamental physical commonsense. Existing benchmarks often rely on coarse-grained descriptions, failing to diagnose the mastery of specific physical principles. Moreover, the high stochasticity of generative processes causes current prompt optimization methods to suffer from gradient hallucinations, where optimizers are misled by transient visual artifacts rather than systemic flaws. To address these challenges, we introduce OmniPhys, a rigorous benchmark of 1,551 samples grounded in a Physical Knowledge Graph. By aligning PhET simulations with standard curricula, OmniPhys operationalizes a knowledge-to-scenario pipeline that performs diagnostic stress tests via a dual-path verification protocol. We further propose OmniPrompt, an iterative framework that treats physical alignment as a discrete optimization problem. For each query, OmniPrompt aggregates K stochastic images into a per-query feedback buffer. Across training, it further merges feedback from batches of B queries before each meta-policy update, filtering seed and query-local noise. Evaluations across 12 representative text-to-image models reveal universal physical bottlenecks. Results demonstrate that OmniPrompt significantly enhances physical consistency across diverse backbones, proving the transferability and efficacy of our evolved meta-policies. The code and data are available at https://github.com/zjukg/OmniPhys",
+    "authors": [
+      "Yajing Xu",
+      "Yarong Lan",
+      "Jiaoyan Chen",
+      "Yichi Zhang",
+      "Jeff Z. Pan",
+      "Mingchen Tu",
+      "Zhizhen Liu",
+      "Wen Zhang",
+      "Huajun Chen"
+    ],
+    "published": "2026-07-28",
+    "updated": "2026-07-28",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.25641.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.25641",
+    "primary_category": "cs.CV",
+    "score": 65,
+    "summary": {
+      "title_zh": "OmniPhys：基于知识图谱的文本到图像生成物理常识基准测试与集体优化",
+      "core_contribution": "提出了一个基于物理知识图谱的严格基准OmniPhys（包含1551个样本），并设计了OmniPrompt迭代优化框架，通过集体反馈机制解决文本到图像生成中的物理常识缺失问题，显著提升多种模型的物理一致性。",
+      "method": "OmniPhys利用物理知识图谱将PhET模拟与标准课程对齐，通过知识到场景的流水线生成测试样本，并采用双路径验证协议进行诊断性压力测试。OmniPrompt将物理对齐视为离散优化问题，每次查询聚合K张随机图像形成反馈缓冲区，在训练中合并B个查询的反馈以过滤噪声，更新元策略。",
+      "findings": "在12个代表性文本到图像模型上的评估揭示了普遍的物理瓶颈，OmniPrompt在不同骨干模型上显著增强了物理一致性，证明了进化元策略的可迁移性和有效性。"
+    }
+  },
+  {
+    "id": "2607.25522",
+    "title": "I2VShield: An Efficient Proactive Defense Framework against DiT-based Image-to-Video Models",
+    "abstract": "The rapid advancement of video generation models has led to the increasing misuse of image-to-video (I2V) models. Although substantial progress has been made in detecting AI-generated videos, proactive defenses against I2V models remain underexplored. In particular, current proactive defenses against I2V models predominantly rely on gradient-based adversarial attacks, which require defenders to possess GPUs with substantial memory resources (VRAM) to generate adversarial examples. To address this issue, we propose I2VShield, a privacy protection method based on generative adversarial attacks tailored to Diffusion Transformer (DiT)-based I2V models. The proposed method primarily consists of two components: (1) a text-adaptive perturbation generation framework integrating adversarial learning to mitigate computational overhead while maintaining visual imperceptibility; and (2) an untargeted Multimodal Attention Disruption (MAD) attack that exploits the inherent vulnerabilities of DiT-based I2V models, maximizing the deviation of the internal attention features from their clean states. Extensive experiments demonstrate that our approach achieves highly competitive protection performance across various datasets and mainstream DiT-based I2V models, particularly in disrupting spatiotemporal coherence, while substantially reducing computational costs.",
+    "authors": [
+      "Yimao Guo",
+      "Zuomin Qu",
+      "Wei Lu"
+    ],
+    "published": "2026-07-28",
+    "updated": "2026-07-29",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.25522.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.25522",
+    "primary_category": "cs.CV",
+    "score": 65,
+    "summary": {
+      "title_zh": "I2VShield：一种针对基于DiT的图像到视频模型的高效主动防御框架",
+      "core_contribution": "提出了一种基于生成对抗攻击的主动防御方法I2VShield，用于保护图像隐私免受DiT-based图像到视频模型的滥用，同时显著降低计算开销，无需高内存GPU即可生成对抗样本。",
+      "method": "I2VShield包含两个主要组件：一是文本自适应扰动生成框架，结合对抗学习以降低计算成本并保持视觉不可感知性；二是无目标的多模态注意力破坏（MAD）攻击，利用DiT-based I2V模型的内部注意力机制漏洞，最大化内部注意力特征与干净状态的偏差，从而破坏生成视频的时空连贯性。",
+      "findings": "实验表明，I2VShield在多种数据集和主流DiT-based I2V模型上实现了具有竞争力的保护性能，尤其在破坏时空连贯性方面效果显著，同时大幅降低了计算成本。"
+    }
+  },
+  {
+    "id": "2607.27659",
+    "title": "Learning Color Grading, No Photo Sharing: Federated Aesthetic Preference Learning for Personalized Image Enhancement",
+    "abstract": "Personalized image enhancement should reflect individual aesthetic taste, yet learning such preferences commonly depends on private photos and ratings that are unsuitable for centralized collection. The task must infer preference from sparse, heterogeneous feedback and translate it into natural-looking color transformations on resource-constrained user devices. We introduce FedPAIE, a federated personalized aesthetic image enhancement framework for user-adaptive color grading without centralizing raw photos or ratings. FedPAIE trains a lightweight dual-cue aesthetic scorer, calibrates it into a personalized scorer on a small local support set, and freezes it to guide regularized adaptation of a lightweight CLUT enhancer from unpaired local photographs. Fidelity constraints and an excess-gap penalty regularize scorer-guided adaptation to limit proxy-score over-optimization while preserving content and natural appearance. Training remains lightweight throughout the pipeline: scorer learning updates at most 0.787M parameters, enhancer adaptation updates 0.265M, and inference retains only a 0.293M-parameter personalized enhancer. Experiments on MIT-Adobe FiveK and Flickr-AES demonstrate effective open-world personalization and a favorable balance between user preference and image fidelity. FedPAIE thus connects decentralized preference learning with efficient personalized image transformation without requiring paired user retouches.",
+    "authors": [
+      "Chuanzhi Xu",
+      "Ziyuan Tao",
+      "Jean Julien KNell",
+      "Yanrong Chen",
+      "Haolan Guo",
+      "Xuanhua Yin",
+      "Adnan Mahmood",
+      "Weidong Cai"
+    ],
+    "published": "2026-07-30",
+    "updated": "2026-07-30",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.DC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.27659.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.27659",
+    "primary_category": "cs.CV",
+    "score": 55,
+    "summary": {
+      "title_zh": "学习色彩分级，无需共享照片：面向个性化图像增强的联邦美学偏好学习",
+      "core_contribution": "提出了一种联邦个性化美学图像增强框架FedPAIE，在不集中收集原始照片或评分的情况下，实现用户自适应的色彩分级，平衡了用户偏好与图像保真度。",
+      "method": "FedPAIE首先训练一个轻量级双线索美学评分器，并在小型本地支持集上校准为个性化评分器，然后冻结该评分器以指导轻量级CLUT增强器从无配对本地照片中进行正则化自适应。通过保真度约束和超额差距惩罚来限制代理分数过度优化，同时保持内容和自然外观。整个流程保持轻量化，评分器学习更新最多0.787M参数，增强器自适应更新0.265M参数，推理时仅保留0.293M参数的个性化增强器。",
+      "findings": "在MIT-Adobe FiveK和Flickr-AES数据集上的实验表明，FedPAIE实现了有效的开放世界个性化，并在用户偏好与图像保真度之间取得了良好平衡，且无需配对用户修饰数据。"
+    }
+  },
+  {
+    "id": "2607.27084",
+    "title": "SciFigQual-Bench: A Benchmark for Scientific Figure Quality Assessment with Full-Manuscript Context",
+    "abstract": "Scientific images are the core elements of presenting experimental conclusions, elaborating system architecture, and supporting comparative arguments in scientific papers. However, existing image quality assessment (IQA) methods are predominantly designed for natural photographs or AI-generated content, which cannot be directly applied to scientific papers. The few existing studies on scholarly charts remain confined to visual-surface comparisons, failing to verify caption alignment, citation relevance, or visual misleadingness. To address this, we propose SciFigQual-Bench, a full-text contextual benchmark that evaluates scientific images across five dimensions (clarity, layout, caption fit, context relevance, and misleading risk). The data covers top computer-science conferences from 2020 to 2025; 6,308 images were independently scored by multiple domain experts in five dimensions and aggregated into gold-standard annotations. Unlike previous scientific figure benchmarks, our dataset binds each image to its caption, citing sentence, and manuscript context. To enable automated evaluation on this benchmark, we designed a staged cross-modal evaluation framework SFQ-Agent to achieve auditable and refined scoring through the collection and fusion of modal evidence. Multiple mainstream large models were evaluated on the test subset eval1200, and SFQ-Agent (F3) equipped with GPT-5.6-Sol achieved the lowest overall average absolute error (0.418) and the highest consistency rate (93.4%), consistently outperforming both direct evaluation and auxiliary (Sidecar) visual language model evaluation schemes.",
+    "authors": [
+      "Zihan Deng",
+      "Chuanzhi Xu",
+      "Huiqi Liang",
+      "Haoyang Li",
+      "Xiaozhen Zhong",
+      "Lequan Yu"
+    ],
+    "published": "2026-07-29",
+    "updated": "2026-07-29",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.27084.pdf",
+    "abs_url": "https://arxiv.org/abs/2607.27084",
+    "primary_category": "cs.CV",
+    "score": 55,
+    "summary": {
+      "title_zh": "SciFigQual-Bench：基于全文语境的科学图表质量评估基准",
+      "core_contribution": "提出了一个全新的科学图表质量评估基准SciFigQual-Bench，该基准结合全文上下文（包括标题、引用句和手稿内容）对科学图像进行多维度质量评估，填补了现有IQA方法无法有效评估科学论文图表的空白。",
+      "method": "该基准从2020至2025年顶级计算机科学会议中收集了6,308张图像，由多位领域专家在五个维度（清晰度、布局、标题匹配度、上下文相关性、误导风险）进行独立评分，并聚合为金标准标注。同时，设计了一个分阶段的跨模态评估框架SFQ-Agent，通过收集和融合模态证据实现可审计和精细化的评分。",
+      "findings": "在测试子集eval1200上，配备GPT-5.6-Sol的SFQ-Agent（F3）取得了最低的整体平均绝对误差（0.418）和最高的一致性率（93.4%），显著优于直接评估和辅助（Sidecar）视觉语言模型评估方案。"
+    }
+  }
+]
