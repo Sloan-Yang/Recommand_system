@@ -546,5 +546,11 @@
   "sponsors_antirez": 85,
   "esengine_DeepSeek-Reasonix": 85,
   "firecrawl_pdf-inspector": 85,
-  "livekit_agents": 85
+  "livekit_agents": 85,
+  "uber_ADR": 85,
+  "webpack_webpack": 40,
+  "gabime_spdlog": 35,
+  "denoland_deno": 75,
+  "angular_angular": 30,
+  "tailwindlabs_tailwindcss": 75
 }

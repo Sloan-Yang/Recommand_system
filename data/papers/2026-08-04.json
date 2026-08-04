@@ -1,0 +1,141 @@
+[
+  {
+    "id": "2608.01977",
+    "title": "SVGEval: A Vision-Grounded Framework for Perceptual-Quality Benchmarking and Evaluation in Text-to-SVG Generation",
+    "abstract": "Multimodal large models are increasingly used to generate scalable vector graphics (SVG), but reliable evaluation remains underexplored. Existing protocols are often code-centric or borrow raster-image metrics after rendering SVGs, which fail to reflect human perception and overlook SVG-specific qualities such as geometry and spatial composition. We introduce SVGEval, a vision-grounded multimodal benchmark for human-aligned SVG quality assessment. SVGEval explicitly incorporates visual renderings to evaluate whether models can judge the rendered outcome rather than only inspect SVG code, and provides high-quality annotations obtained via multi-round human labeling with expert refinement. Systematic evaluations across representative multimodal models reveal a clear gap: models perform relatively well on semantic alignment and aesthetics, yet struggle on geometry- and layout-related judgments. Building on SVGEval, we train an explainable SVG quality scorer that outputs multi-aspect scores with textual rationales. Ablations show that explicit visual grounding and reasoning supervision are crucial, especially for spatial and geometric assessment. SVGEval offers a reliable testbed and practical scorer for evaluating and improving SVG generation in the era of multimodal models.",
+    "authors": [
+      "Yiming Wang",
+      "Ye Chen",
+      "Hanqi Chen",
+      "Bingbing Ni"
+    ],
+    "published": "2026-08-03",
+    "updated": "2026-08-03",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.01977.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.01977",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "SVGEval：面向文本到SVG生成的视觉基础感知质量基准与评估框架",
+      "core_contribution": "提出了SVGEval，一个基于视觉的多模态基准，用于人类对齐的SVG质量评估，填补了现有评估方法忽视人类感知和SVG特定几何/布局属性的空白，并训练了一个可解释的SVG质量评分器。",
+      "method": "SVGEval通过显式引入视觉渲染，使模型能够评估渲染结果而非仅检查SVG代码；采用多轮人工标注与专家精炼获得高质量标注。基于该基准，训练了一个多方面的可解释评分器，输出多维度分数和文本理由，并通过消融实验验证视觉基础和推理监督的作用。",
+      "findings": "代表性多模态模型在语义对齐和美学方面表现较好，但在几何和布局相关判断上存在明显不足；消融实验表明，显式视觉基础和推理监督对空间和几何评估至关重要。"
+    }
+  },
+  {
+    "id": "2608.01106",
+    "title": "SG-Layout: Structured Scene Graph-Guided Layout Generation with LLMs",
+    "abstract": "Understanding and generating spatially coherent layouts from natural language remains a fundamental yet challenging task for large language models (LLMs). Existing LLMs often struggle to capture explicit geometric relationships and structural dependencies between objects. To address this issue, we propose SG-Layout, a graph-guided layout generation framework that explicitly incorporates structured spatial knowledge into LLMs. SG-Layout follows a two-stage training paradigm: (1) a graph-language feature alignment stage, where a relational graph encoder and a projector are trained to map scene-graph embeddings into the LLM's linguistic space; and (2) an instruction tuning stage, where LoRA-based adapters enable efficient fine-tuning for instruction-driven layout generation while keeping the backbone frozen. We evaluate SG-Layout on image layout generation, indoor scene synthesis and robotic object rearrangement tasks. Experimental results show that SG-Layout improves spatial reasoning accuracy and geometric consistency over the compact open-source backbone, with particularly clear advantages in relation-dense and compositionally complex scenes. These results highlight the effectiveness of graph-structured feature alignment for enhancing controllable layout generation.",
+    "authors": [
+      "Junsheng Wang",
+      "Chao Chen",
+      "Mengying Xie",
+      "Mingyan Li",
+      "Fuqiang Gu"
+    ],
+    "published": "2026-08-02",
+    "updated": "2026-08-02",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.01106.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.01106",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "SG-Layout：基于结构化场景图引导的布局生成与大型语言模型",
+      "core_contribution": "提出SG-Layout框架，通过将结构化场景图知识显式融入大型语言模型，解决了LLM在自然语言布局生成中难以捕捉几何关系和结构依赖的问题，显著提升了空间推理准确性和几何一致性。",
+      "method": "采用两阶段训练范式：首先进行图-语言特征对齐，训练关系图编码器和投影器将场景图嵌入映射到LLM的语言空间；然后进行指令微调，使用基于LoRA的适配器在保持骨干模型冻结的情况下高效微调，实现指令驱动的布局生成。",
+      "findings": "在图像布局生成、室内场景合成和机器人物体重排任务上，SG-Layout相比紧凑开源骨干模型提升了空间推理准确性和几何一致性，尤其在关系密集和组合复杂的场景中优势明显，验证了图结构特征对齐对增强可控布局生成的有效性。"
+    }
+  },
+  {
+    "id": "2608.00562",
+    "title": "Beyond Token-Level Cross-Entropy: Fréchet Distributional Post-Training for Autoregressive Image Generation",
+    "abstract": "Autoregressive image generators are commonly pretrained with token-level cross-entropy under teacher forcing, yet evaluated by the distributional quality of decoded images. This creates an objective mismatch, because categorical errors have unequal image-level consequences, and a context mismatch, because inference conditions on model-generated histories. We introduce FD-loss post-training, which adapts a pretrained discrete generator using representation-space Fréchet distance as the sole objective. A dual-pass scheme first constructs detached rollout contexts through gradient-free generation under the model's native inference configuration, then performs differentiable replay with a probability-level straight-through estimator (STE) that preserves hard argmax decoding in the forward pass while propagating image-level gradients through temperature-scaled probabilities. Only the generator is updated, while the tokenizer and feature extractors remain frozen. Across eight completed configurations from four generator families on class-conditional ImageNet at $256\\times256$, FD-loss post-training reduces FID and $\\mathrm{FD}_{r6}$ by 41.4% and 52.0% on average. The strongest FID result improves from 2.42 to 1.43 without adding parameters or inference steps.",
+    "authors": [
+      "Jinhua Zhang",
+      "Yisong Lin",
+      "Wei Long",
+      "Shuhang Gu"
+    ],
+    "published": "2026-08-01",
+    "updated": "2026-08-01",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.00562.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.00562",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "超越词元级交叉熵：用于自回归图像生成的弗雷歇分布后训练",
+      "core_contribution": "提出了一种名为FD-loss的后训练方法，通过直接优化表示空间中的弗雷歇距离，解决了自回归图像生成器中预训练目标（词元级交叉熵）与评估指标（图像级分布质量）之间的不匹配问题，显著提升了生成图像的分布质量。",
+      "method": "该方法采用双通道方案：首先通过模型自身的推理配置进行无梯度的自回归生成，构建分离的 rollout 上下文；然后使用概率级直通估计器（STE）进行可微重放，在前向传播中保持硬argmax解码，同时通过温度缩放概率传播图像级梯度。仅更新生成器，而分词器和特征提取器保持冻结。",
+      "findings": "在四个生成器家族的八个配置上（类条件ImageNet 256×256），FD-loss后训练平均将FID降低41.4%，FD_r6降低52.0%；最佳FID从2.42提升至1.43，且未增加参数或推理步骤。"
+    }
+  },
+  {
+    "id": "2608.00548",
+    "title": "DrawAI: Agentic Benchmark and Workflow for Making Raster Images Editable",
+    "abstract": "Recent image-generation models and multimodal agents can produce high-quality visuals for increasingly complex visual communication tasks. Yet their raster outputs remain difficult to use directly because meaningful content and relationships are flattened into pixels, preventing users from inspecting, modifying, rearranging, or reusing individual components. We formulate image-to-editable reconstruction, which recovers a structured, directly manipulable artifact from a raster image while preserving its visual and semantic content. The central challenge is to jointly satisfy Fidelity and Editability, which often trade off in practice. To study this task, we introduce DrawAI, comprising an agentic benchmark, DrawAI-Bench, and a reconstruction workflow, DrawAI-Flow. DrawAI-Bench spans scientific figures, presentation slides, posters, and diagrams, combining real and AI-generated images to reflect practical visual-creation scenarios. It evaluates Fidelity and Editability through a hybrid protocol of 39 criteria: deterministic rule-based metrics measure properties with direct correspondences, while asset-specific vision-language rubrics capture semantic and perceptual qualities for which exact matching is misleading. Besides, we propose DrawAI-Flow, a two-stage agentic workflow in which a Parser Agent turns extracted elements evidence into an explicit reconstruction plan, and a Reconstruction Agent realizes the plan as executable graphics code through an iterative code-render-validate-revise loop. On DrawAI-Bench, we systematically evaluate thirteen models across five agent harnesses to study the effects of model capability, harness choice, and workflow design. The results show that reconstruction quality and costs vary substantially across model-harness configurations, while DrawAI-Flow consistently improves editable structure.",
+    "authors": [
+      "Pu Cao",
+      "Qingye Kong",
+      "Xuedan Yin",
+      "Xuekun Zhao",
+      "Rupeng Yan",
+      "Qing Song",
+      "Yao Zhang",
+      "Lu Yang"
+    ],
+    "published": "2026-08-01",
+    "updated": "2026-08-01",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.00548.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.00548",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "DrawAI：面向栅格图像可编辑化的智能体基准与工作流",
+      "core_contribution": "本文提出了图像到可编辑重建任务，并构建了DrawAI基准与工作流，旨在从栅格图像中恢复结构化、可直接操作的对象，同时兼顾保真度与可编辑性。",
+      "method": "DrawAI包含两个部分：DrawAI-Bench基准和DrawAI-Flow工作流。基准涵盖科学图表、演示幻灯片、海报和示意图，采用39项混合评估标准（规则指标与视觉语言评分结合）。工作流采用两阶段智能体流程：解析代理将提取的元素证据转化为显式重建计划，重建代理通过迭代的代码-渲染-验证-修改循环将计划实现为可执行图形代码。",
+      "findings": "在DrawAI-Bench上对13个模型和5种智能体框架的系统评估显示，重建质量和成本在不同模型-框架配置间差异显著，而DrawAI-Flow一致地提升了可编辑结构质量。"
+    }
+  },
+  {
+    "id": "2608.00584",
+    "title": "Element-Aware Group Learning for E-Commerce Image Generation",
+    "abstract": "Recent advances in image generation and editing have made prompt quality a key bottleneck for e-commerce creatives. Vision-language models (VLMs) can generate image-editing prompts from product images and metadata, but further improving their prompt-writing capabilities requires post-training with feedback from the generated images. Group Relative Policy Optimization (GRPO) is a natural framework for such outcome-level reward optimization. However, it assigns credit only at the full-prompt level, even though image quality often depends on specific design elements such as composition, background, and the presentation of selling points. Existing fine-grained credit assignment methods typically require step-level supervision or learned critics. To address this, we propose EAGLE-GRPO (Element-Aware Group Learning for E-Commerce Image Generation), which decomposes the group-centered reward over predefined elements. We cast element-level credit assignment as a kernel ridge regression problem and derive a closed-form solution, without additional rollouts or separate credit-assignment models. This yields interpretable per-element advantages and more precise policy updates. Experiments show that EAGLE-GRPO sustains performance gains over more training steps before plateauing and generates prompts that produce higher-quality e-commerce images than competitive VLM prompt-writing baselines.",
+    "authors": [
+      "Jingtong Chen",
+      "Jiahui Wang",
+      "Xue Zhao",
+      "ShaoGuo Liu",
+      "Minghao Li"
+    ],
+    "published": "2026-08-01",
+    "updated": "2026-08-01",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.00584.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.00584",
+    "primary_category": "cs.CV",
+    "score": 82,
+    "summary": {
+      "title_zh": "元素感知的组学习用于电商图像生成",
+      "core_contribution": "提出了一种名为EAGLE-GRPO的元素感知组学习方法，通过将组级奖励分解为预定义元素级别的奖励，实现了更精细的信用分配，从而提升了电商图像生成中提示词的质量和最终图像的视觉效果。",
+      "method": "该方法基于GRPO框架，将图像生成提示的奖励按元素（如构图、背景、卖点展示等）进行分解，并将元素级信用分配建模为核岭回归问题，推导出闭式解，无需额外的采样或单独的信用分配模型。通过这种方式，为每个元素计算可解释的优势值，并用于更精确的策略更新。",
+      "findings": "实验表明，EAGLE-GRPO在更多训练步骤中持续保持性能提升，直到达到平台期，并且生成的提示词能够产生比竞争性VLM提示词写作基线更高质量的电商图像。"
+    }
+  }
+]
