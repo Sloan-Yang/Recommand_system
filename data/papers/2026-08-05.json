@@ -1,0 +1,152 @@
+[
+  {
+    "id": "2608.03971",
+    "title": "UniWorld-Design: From Pixel Generation to Layer-Native Design",
+    "abstract": "We introduce UniWorld-Design, a framework that redefines image generation from flat pixel synthesis to structured visual composition, with semantic RGBA layers as the atomic units of generation, understanding, and editing. Our key insight is that pixels define how an image is rendered, whereas layers define how an image is created, understood, and edited. Just as human designers create and manipulate visual content through layers rather than raw pixels, UniWorld-Design equips multimodal generative models with a layer-native design space. UniWorld-Design comprises two models. The Text-to-RGBA (T2RGBA) model generates standalone RGBA assets directly from text. The Image-to-Layer (I2L) model conditions on a finished image, a global instruction and per-layer prompts, and jointly produces ordered, complete semantic RGBA layers. Its instruction interface supports top-level decomposition, recursive decomposition and targeted extraction, making layering an instruction-addressable operation for agentic editing. Because I2L learns complete semantic objects rather than visible-pixel partitions, its layers stay usable when moved or removed. On the Crello benchmark, I2L reduces per-layer RGB L1 error by 37% and achieves a 34% relative improvement in Alpha Soft IoU over Qwen-Image-Layered. Separately, T2RGBA achieves the highest CLIP Score, outperforming LayerDiffuse and OmniAlpha.",
+    "authors": [
+      "Zongjian Li",
+      "Zhiyuan Yan",
+      "Chenxu Bai",
+      "Chen Chen",
+      "Haoxiang Sun",
+      "Shaodong Wang",
+      "Feize Wu",
+      "Shenghai Yuan",
+      "Bin Lin",
+      "Zheyuan Liu",
+      "Yuwei Niu",
+      "Li Yuan"
+    ],
+    "published": "2026-08-04",
+    "updated": "2026-08-04",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.03971.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.03971",
+    "primary_category": "cs.CV",
+    "score": 92,
+    "summary": {
+      "title_zh": "UniWorld-Design：从像素生成到图层原生设计",
+      "core_contribution": "提出UniWorld-Design框架，将图像生成从平面像素合成重构为结构化视觉组合，以语义RGBA图层作为生成、理解和编辑的基本单元，使多模态生成模型具备图层原生的设计空间。",
+      "method": "UniWorld-Design包含两个模型：Text-to-RGBA (T2RGBA)模型直接从文本生成独立的RGBA素材；Image-to-Layer (I2L)模型以完整图像、全局指令和每层提示为条件，联合生成有序且完整的语义RGBA图层。I2L的指令接口支持顶层分解、递归分解和定向提取，使分层成为可寻址的编辑操作。由于I2L学习完整的语义对象而非可见像素分割，其图层在移动或移除后仍保持可用。",
+      "findings": "在Crello基准上，I2L将每层RGB L1误差降低37%，Alpha Soft IoU相对Qwen-Image-Layered提升34%；T2RGBA在CLIP Score上达到最高，优于LayerDiffuse和OmniAlpha。"
+    }
+  },
+  {
+    "id": "2608.03474",
+    "title": "MT-Web2Code: Benchmarking Coding Agents on Multi-Turn Regional Reconstruction and Localized Modification",
+    "abstract": "Recent advances in Large Vision-Language Models (LVLMs) have demonstrated impressive capabilities in web UI generation. However, existing benchmarks predominantly focus on single-turn full-page generation from scratch, overlooking the iterative workflow of real-world frontend engineering, where developers repeatedly reconstruct missing regions and modify localized elements within existing codebases. To bridge this gap, we introduce MT-Web2Code, the first multimodal coding benchmark for multi-turn Macro-Level Regional Reconstruction and Micro-Level Localized Modification, which contains 102 tasks spanning 16 vertical domains. To construct deterministic repair trajectories without costly turn-level human annotation, we develop a scalable Reverse-Corruption Trajectory Engine that iteratively injects structural and stylistic defects into golden pages. We further propose a dual-axis evaluation protocol that measures target-region fidelity and the preservation of unaffected content, where regional reconstruction is assessed by a 5-dimensional VLM-based rubric and localized modification by deterministic pixel-grounded alignment. Experiments on 13 frontier coding agents reveal that current agents struggle to faithfully reconstruct target regions while preserving unaffected content, lack fine-grained visual-code alignment for localized edits, and suffer from error snowballing over multiple turns. Beyond benchmarking, our deterministic evaluation metrics provide fine-grained feedback signals that may facilitate future research on training iterative UI coding agents. Our evaluation code and data will soon be released.",
+    "authors": [
+      "Qiming Li",
+      "Shujie Hu",
+      "Haohan Liu",
+      "Xiaocheng Feng",
+      "Songxiang Liu",
+      "Guanglu Wan"
+    ],
+    "published": "2026-08-04",
+    "updated": "2026-08-04",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.03474.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.03474",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "MT-Web2Code：多轮区域重建与局部修改的编码智能体基准测试",
+      "core_contribution": "提出了首个面向多轮宏级区域重建和微级局部修改的多模态编码基准MT-Web2Code，填补了现有基准仅关注单轮全页面生成的空白，并提供了可扩展的轨迹构建方法和双轴评估协议。",
+      "method": "构建了一个包含102个任务、覆盖16个垂直领域的基准数据集，并开发了可扩展的逆向损坏轨迹引擎，通过迭代向黄金页面注入结构和风格缺陷来生成确定性的修复轨迹。评估采用双轴协议：区域重建通过基于VLM的5维评分标准衡量，局部修改通过基于像素的确定性对齐评估，同时检测目标区域保真度和未受影响内容的保留情况。",
+      "findings": "实验表明，13个前沿编码智能体在忠实重建目标区域的同时保留未受影响内容方面表现不佳，缺乏细粒度的视觉-代码对齐能力以进行局部编辑，并且多轮交互中错误会累积恶化。此外，确定性评估指标提供了细粒度反馈信号，有助于未来训练迭代式UI编码智能体。"
+    }
+  },
+  {
+    "id": "2608.03316",
+    "title": "Any-OPD: Heterogeneous On-Policy Distillation for Flow-Matching Models via Representation-Space Bridging",
+    "abstract": "On-policy distillation, in which a teacher corrects samples that the student itself generates, presupposes that the two models speak the same language: identical VAE latents, matching architectures, and a common timestep grid. We ask what happens when none of this holds, as when the strongest teacher available and the student one wishes to deploy come from different model families, and find that the standard recipes have no answer: teacher latents cannot serve as targets in a foreign coordinate system, per-pixel losses against a teacher that stochastically re-draws local detail degenerate into blur or divergence, and timestep indices lose their meaning across mismatched schedules. We present Any-OPD, to our knowledge the first framework for on-policy distillation between arbitrary pairs of latent flow-matching generators. Any-OPD treats the teacher purely as a black-box sampler and connects the two models at exactly one point: a frozen, model-agnostic vision representation in which their independently decoded outputs are compared, sidestepping every assumption about latents, features, or architecture. Trajectory correspondence is recovered by matching continuous noise levels instead of step indices, and a brief anchoring phase, in which teacher samples are re-encoded through the student's own VAE, ensures the on-policy gradient measures sample quality rather than domain mismatch. Distilling the 12B FLUX.1-dev into the 2.5B SD3.5-Medium, Any-OPD lifts the student's PickScore from 0.846 to 0.884 and HPSv3 from 9.12 to 10.97, rivaling the teacher at a fifth of its size, where direct latent regression fails to train at all.",
+    "authors": [
+      "Siming Fu",
+      "Zheming Fu",
+      "Ruizhe He",
+      "Hualiang Wang",
+      "Jie Huang",
+      "Xiaoxiao Ma",
+      "Mingchen Zhong",
+      "Weihu Huang",
+      "Xiaoxuan He",
+      "Haojun Xu"
+    ],
+    "published": "2026-08-04",
+    "updated": "2026-08-04",
+    "categories": [
+      "cs.LG",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.03316.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.03316",
+    "primary_category": "cs.LG",
+    "score": 85,
+    "summary": {
+      "title_zh": "Any-OPD：通过表示空间桥接实现流匹配模型的异构同策略蒸馏",
+      "core_contribution": "提出了首个适用于任意流匹配生成模型对的同策略蒸馏框架Any-OPD，无需假设教师和学生共享潜在空间、架构或时间步网格，仅通过冻结的模型无关视觉表示进行连接，实现了跨模型家族的蒸馏。",
+      "method": "Any-OPD将教师视为黑盒采样器，在冻结的模型无关视觉表示空间中比较教师和学生独立解码的输出，避免了对潜在空间或特征的依赖。通过连续噪声水平匹配恢复轨迹对应关系，并引入短时锚定阶段，将教师样本通过学生自身的VAE重新编码，确保同策略梯度衡量的是样本质量而非域不匹配。",
+      "findings": "将12B的FLUX.1-dev蒸馏到2.5B的SD3.5-Medium时，Any-OPD将学生的PickScore从0.846提升至0.884，HPSv3从9.12提升至10.97，以五分之一大小的模型达到与教师相当的性能，而直接潜在回归则完全无法训练。"
+    }
+  },
+  {
+    "id": "2608.03708",
+    "title": "MultiCompose: Multi-Concept Personalized Composition with Per-Subject Attribute Binding",
+    "abstract": "Text-to-image diffusion models enable personalization of specific visual concepts from a small number of reference images. However, generating a single image that contains multiple personalized subjects, each bound to user-specified attributes such as clothing, accessories, and held objects, remains largely unaddressed. Without explicit spatial constraints, concurrently activated concept checkpoints produce overlapping cross-attention responses, causing per-subject identity degradation and attribute misalignment. Moreover, no established benchmark jointly evaluates these two failure modes in the personalized multi-subject setting. We present MultiCompose, a composition framework that decouples per-concept personalization from multi-subject inference. A semantic preservation regularization maintains attribute binding capacity during fine-tuning, while a two-phase inference procedure automatically establishes subject layout and composes per-concept predictions through spatially exclusive masks. We further introduce MSP-Bench, a benchmark that jointly evaluates identity fidelity (ID), attribute binding accuracy (BIND), and attribute misalignment (MIS) through a dual-pathway protocol. Experiments show that MultiCompose outperforms existing methods on both conventional metrics and MSP-Bench, confirming the benchmark's ability to reveal failure modes that conventional metrics overlook. Code is available at https://github.com/I2-Multimedia-Lab/MultiCompose",
+    "authors": [
+      "Ruirui Zhang",
+      "Zhengkai Zhao",
+      "Pan Gao"
+    ],
+    "published": "2026-08-04",
+    "updated": "2026-08-04",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.03708.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.03708",
+    "primary_category": "cs.CV",
+    "score": 82,
+    "summary": {
+      "title_zh": "MultiCompose：基于逐主体属性绑定的多概念个性化组合",
+      "core_contribution": "提出了一种多概念个性化组合框架MultiCompose，解决了在无显式空间约束下多个个性化主体同时生成时的身份退化与属性错配问题，并引入了首个联合评估身份保真度、属性绑定准确性和属性错配的基准MSP-Bench。",
+      "method": "MultiCompose采用解耦设计，将逐概念个性化与多主体推理分离。在微调阶段，通过语义保持正则化维持属性绑定能力；在推理阶段，采用两阶段流程，先自动建立主体布局，再通过空间互斥掩码组合各概念的预测结果。此外，构建了MSP-Bench基准，通过双路径协议联合评估ID、BIND和MIS三个维度。",
+      "findings": "实验表明，MultiCompose在传统指标和MSP-Bench上均优于现有方法，且MSP-Bench能够揭示传统指标忽略的失败模式，验证了其评估有效性。"
+    }
+  },
+  {
+    "id": "2608.03198",
+    "title": "Bridging Online and Offline Handwriting via Differentiable Physical Rendering",
+    "abstract": "Realistic handwritten text generation plays an important role in numerous applications, such as font design, biometric authentication, and robotic calligraphy. Existing methods are typically divided into two independent paradigms: online approaches that estimate handwriting trajectories and offline approaches that synthesize realistic handwriting images. While online models capture structural and temporal dynamics, they often lack fine-grained textures, whereas offline models reproduce realistic appearance but discard stroke order. However, unifying online and offline models remains challenging due to (1) the lack of an explicit physical model linking stroke kinematics to pixel-level appearance and (2) the absence of paired trajectory-image datasets. Moreover, enabling end-to-end learning requires a differentiable rendering process across motion and appearance domains. To address these challenges, we propose a compact physical brush model that bridges stroke dynamics and visual appearance, together with a differentiable rendering module that converts stroke trajectories into stylized images. By integrating these components, we propose a unified online-offline handwriting generation framework via differentiable brush rendering. The proposed framework consists of four core modules: 1) a text-to-stroke generator that predicts the target stroke conditioned on the given text and style image, 2) a brush parameter observer that extracts brush model parameters from style references, 3) a differentiable brush renderer that maps a stroke sequence and physical brush parameters into a handwritten image, and 4) a zero-shot image refiner that refines rendered images via diffusion models. Extensive experiments and real-world robotic calligraphy demonstrations validate our approach, achieving both structural and visual fidelity.",
+    "authors": [
+      "Seonmi Park",
+      "Seunghyun Shin",
+      "Vihaan Misra",
+      "Dongmin Shin",
+      "Ukcheol Shin",
+      "Jean Oh",
+      "Hae-Gon Jeon"
+    ],
+    "published": "2026-08-04",
+    "updated": "2026-08-04",
+    "categories": [
+      "cs.CV",
+      "cs.RO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.03198.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.03198",
+    "primary_category": "cs.CV",
+    "score": 82,
+    "summary": {
+      "title_zh": "通过可微分物理渲染连接在线与离线手写",
+      "core_contribution": "提出了一种统一的在线-离线手写生成框架，通过可微分物理笔刷模型将笔迹轨迹与图像外观桥接，实现了端到端学习，同时兼顾结构准确性和视觉逼真度。",
+      "method": "方法包括四个核心模块：1) 文本到笔迹生成器，根据给定文本和风格图像预测目标笔迹；2) 笔刷参数观察器，从风格参考中提取物理笔刷参数；3) 可微分笔刷渲染器，将笔迹序列和物理参数映射为手写图像；4) 零样本图像精化器，利用扩散模型对渲染图像进行细化。整个框架通过可微分渲染实现运动域和外观域的联合优化。",
+      "findings": "大量实验和真实机器人书法演示验证了该方法在结构和视觉保真度上的有效性，表明其能够生成既保留笔迹动态结构又具有真实纹理的手写图像，并成功应用于实际机器人书写场景。"
+    }
+  }
+]
