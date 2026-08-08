@@ -1,0 +1,135 @@
+[
+  {
+    "id": "2608.04818",
+    "title": "Rethinking Pixel Mean Flows via Interval Denoiser",
+    "abstract": "Modern diffusion and flow-based models are increasingly moving toward few-step, latent-free generation to bypass the computational overhead of multi-step sampling and the reconstruction bottlenecks of external autoencoders. We propose the Interval Denoiser, a theoretically rigorous framework for latent-free generation. Derived directly from the flow matching ODE, it establishes an exact analytical mapping for intermediate trajectory states. Unlike prior formulations, our prediction is shown to reside on a low-dimensional manifold across any time interval, making the regression tractable for a network operating directly on pixels. Furthermore, by avoiding empirical algebraic substitutions, our formulation correctly isolates the pure time derivative to prevent biased gradient evaluations and ensure exact first-order optimization. By analyzing this objective, we equip our framework with residual clipping and a time-sampling curriculum, enabling effective long-interval training and improving few-step performance. Trained from scratch on ImageNet 256x256, our model achieves an FID of 4.55 in one step (1-NFE) and 3.98 in two steps (2-NFE) without perceptual losses.",
+    "authors": [
+      "Alexander Zaytsev",
+      "Dmitry Baranchuk",
+      "Alexander Korotin",
+      "Aibek Alanov"
+    ],
+    "published": "2026-08-05",
+    "updated": "2026-08-05",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.04818.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.04818",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "重新思考像素均值流：基于区间去噪器的方法",
+      "core_contribution": "提出了一种名为区间去噪器（Interval Denoiser）的理论框架，用于无潜在表示的少步生成，直接从流匹配ODE推导出中间轨迹状态的精确解析映射，从而在像素空间实现可训练的回归，并避免梯度偏差。",
+      "method": "该方法从流匹配ODE出发，推导出任意时间区间内中间状态的精确解析表达式，并证明该预测位于低维流形上，使得网络在像素空间直接回归变得可行。通过避免经验性的代数替换，正确分离纯时间导数，确保一阶优化的精确性。此外，引入了残差裁剪和时间采样课程，以支持长区间训练并提升少步性能。",
+      "findings": "在ImageNet 256x256上从零训练，模型在一步（1-NFE）时达到FID 4.55，两步（2-NFE）时达到FID 3.98，且无需感知损失，显著优于现有少步生成方法。"
+    }
+  },
+  {
+    "id": "2608.04750",
+    "title": "Simile Understanding in Text-to-Image Models: An Evaluation Framework",
+    "abstract": "Similes provide a compact and expressive way to describe visual characteristics in text prompts. Recent text-to-image models (t2i models) can produce visually compelling outputs from simile prompts, yet even frontier models frequently misinterpret the metaphorical vehicle and confuse it with the object. These systematic failures reveal a gap between figurative language and object-level visual grounding in t2i models. To investigate this issue, we propose a scalable evaluation framework for simile understanding. Our framework includes (1) a controlled simile dataset in which metaphorical vehicles are drawn from a predefined set of object-detectable categories and combined with diverse templates, (2) automatic grounding metrics based on YOLO (You Only Look Once) detection, and (3) text encoder layer analysis using Diffusion Lens to track how metaphorical vehicles emerge during generation. Experiments across architecturally diverse t2i models reveal consistent literalization failure patterns. We further discuss potential mitigation strategies for improving simile grounding in t2i models.",
+    "authors": [
+      "Luecheng Wang",
+      "Shintaro Ozaki",
+      "Hidetaka Kamigaito",
+      "Katsuhiko Hayashi",
+      "Jingun Kwon",
+      "Manabu Okumura",
+      "Taro Watanabe"
+    ],
+    "published": "2026-08-05",
+    "updated": "2026-08-05",
+    "categories": [
+      "cs.CV",
+      "cs.CL",
+      "cs.MM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.04750.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.04750",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "文本到图像模型中的明喻理解：一个评估框架",
+      "core_contribution": "提出了一个可扩展的评估框架，用于系统性地评估文本到图像模型对明喻（simile）的理解能力，并揭示了模型在将比喻性语言映射到视觉对象时的系统性失败模式。",
+      "method": "该框架包括三个部分：首先，构建了一个受控的明喻数据集，其中比喻载体（metaphorical vehicle）来自预定义的可检测对象类别，并与多种模板组合；其次，基于YOLO检测的自动接地（grounding）指标用于评估生成图像中对象的存在与位置；最后，利用Diffusion Lens进行文本编码器层分析，以追踪比喻载体在生成过程中的出现情况。",
+      "findings": "实验表明，多种架构不同的文本到图像模型在明喻理解上存在一致的“字面化”（literalization）失败模式，即模型倾向于将比喻载体误解为字面对象，导致生成图像与明喻意图不符。此外，分析揭示了比喻载体在生成过程中的动态演变，并提出了改进明喻接地效果的潜在策略。"
+    }
+  },
+  {
+    "id": "2608.05213",
+    "title": "StyleComposer: Training-Free Multi-Reference Style Composition",
+    "abstract": "The style of a painting is not monolithic: color, texture, and structure may come from different sources. Existing reference-guided methods transfer them as one style signal, leaving each attribute's source and strength outside the user's control. We ask where in a diffusion model one attribute can change while the others hold, and find that no single representation isolates all three. The proposed StyleComposer therefore routes each style attribute through the representation where it separates best and coordinates the routes over denoising time. Without training or inversion, it satisfies three references and the prompt jointly more closely than prior methods, and exposes one strength slider per attribute. Project page: https://lexxsh.github.io/StyleComposer",
+    "authors": [
+      "Sanghyeok Lee",
+      "Jihye Kang",
+      "Namhyuk Ahn"
+    ],
+    "published": "2026-08-05",
+    "updated": "2026-08-05",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.05213.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.05213",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "StyleComposer：无需训练的多参考风格组合",
+      "core_contribution": "提出一种无需训练或反转的扩散模型方法，允许用户独立控制绘画风格中的颜色、纹理和结构三个属性，并分别调节每个属性的强度，同时满足多个参考图像和文本提示的联合约束。",
+      "method": "该方法首先在扩散模型中定位每个风格属性（颜色、纹理、结构）最能独立分离的表示层，然后为每个属性选择最优的表示路径，并在去噪过程中协调这些路径，使得不同属性分别从不同参考图像中提取，同时保持其他属性不变。通过这种方式，无需训练或反转即可实现多参考风格组合，并为每个属性提供独立的强度滑块。",
+      "findings": "实验表明，StyleComposer在同时满足三个参考图像和文本提示的联合约束方面优于现有方法，且能够更精确地控制每个风格属性的来源和强度，而现有方法往往将风格视为单一信号，无法独立调节各属性。"
+    }
+  },
+  {
+    "id": "2608.04448",
+    "title": "When does training on downscaled images yield the same gradients?",
+    "abstract": "Diffusion transformers deliver strong image generation, but their training cost grows superlinearly with resolution. Recent work justifies training or sampling at reduced resolution on a spectral premise: at high noise, a downscaled latent preserves almost the full surviving signal. Whether a downscaled step also preserves the native training gradient signal, however, has remained unresolved. We reduce how that signal changes under downscaling to two terms: a noise-dependent term governed by the downscale ratio, which decays at high noise as the spectral premise predicts, and a σ-independent floor governed by the target grid's absolute token count, carried by the compute graph itself and removed by no noise level. The measured (route, σ) map corroborates the account and uncovers structure the spectral picture cannot express: on the 1024->768 route, a window (0.65 < σ< 0.95), predicted by no spectral criterion at any tolerance, where the downscaled gradient stays within a small margin of the native one. Training LoRA adapters with downscaled steps restricted to the routes and noise windows the map validates reduces training time by 14.6% at a fixed step budget while remaining near-native in weight space. Code is available at https://github.com/sorryhyun/anima_lora.",
+    "authors": [
+      "Seunghyun Ji"
+    ],
+    "published": "2026-08-05",
+    "updated": "2026-08-05",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.04448.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.04448",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "何时在降采样图像上训练会产生相同的梯度？",
+      "core_contribution": "本文首次系统分析了扩散Transformer在降采样图像上训练时梯度信号的变化，揭示了降采样梯度与原始梯度一致的条件，并提出了一种基于该分析的训练加速方法。",
+      "method": "作者将降采样导致的梯度变化分解为两项：一项依赖于噪声水平，随噪声增大而衰减；另一项与噪声无关，由目标网格的绝对token数决定。通过测量不同降采样路径和噪声水平下的梯度差异，构建了（路径，σ）映射图，并据此设计训练策略，将降采样步骤限制在映射图验证有效的路径和噪声窗口内。",
+      "findings": "实验发现，在1024->768降采样路径上存在一个噪声窗口（0.65 < σ < 0.95），在该窗口内降采样梯度与原始梯度非常接近，而这一窗口无法通过纯频谱分析预测。利用该窗口训练LoRA适配器，在固定步数预算下训练时间减少14.6%，且权重空间中的结果接近原始训练质量。"
+    }
+  },
+  {
+    "id": "2608.04435",
+    "title": "Revisiting Channel Effectiveness: A Multi-Dimensional Evaluation with Primitive Visual Stimuli",
+    "abstract": "Established channel effectiveness rankings primarily assess magnitude estimation accuracy in complete chart contexts, often neglecting other perceptual tasks such as discriminability, separability, and pop-out. To address this gap, we conducted crowdsourced experiments on seven core visual channels (position, length, tilt, area, curvature, luminance, and saturation) using primitive visual stimuli, a set of visual marks without chart-specific scaffolding to isolate channel-level variation. We evaluated these channels across four perceptual tasks (accuracy, discriminability, separability, and pop-out) and found that channel effectiveness is fundamentally multi-dimensional, with rankings shifting substantially across tasks. For instance, while spatial channels maintain an overall advantage, accuracy depends strongly on whether a fixed spatial anchor is available. Discriminability varies dramatically across channels and value ranges, a pattern we formalized with a novel Anchored Harmonic Weber model. Pairwise channel interactions are often strongly asymmetric. Finally, we identify a dissociation between estimation accuracy and preattentive detection: length shows only moderate detection effectiveness despite top-tier accuracy, while area achieves the highest detection rates despite poor quantitative accuracy, though the latter advantage may partly reflect stimulus-level cues. We synthesize these findings into a scenario-driven perspective for context-sensitive channel selection.",
+    "authors": [
+      "Soohyun Lee",
+      "Seokhyeon Park",
+      "Minsuk Chang",
+      "Jinwook Seo"
+    ],
+    "published": "2026-08-05",
+    "updated": "2026-08-05",
+    "categories": [
+      "cs.HC",
+      "cs.GR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.04435.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.04435",
+    "primary_category": "cs.HC",
+    "score": 75,
+    "summary": {
+      "title_zh": "重新审视通道有效性：基于原始视觉刺激的多维度评估",
+      "core_contribution": "本文通过使用原始视觉刺激（无图表框架的视觉标记）对七种核心视觉通道进行四种感知任务的系统评估，揭示了通道有效性的多维度本质，并提出了场景驱动的通道选择视角，挑战了传统单一排序的有效性观点。",
+      "method": "作者设计并开展了众包实验，使用原始视觉刺激（如位置、长度、倾斜、面积、曲率、亮度和饱和度）作为刺激材料，分别评估了四种感知任务：准确性（幅度估计）、可辨别性、可分离性和弹出效应。实验通过控制图表脚手架，隔离了通道级别的变化，并基于结果提出了新的模型（如Anchored Harmonic Weber模型）来形式化可辨别性模式。",
+      "findings": "研究发现通道有效性在不同任务间存在显著差异：空间通道整体占优，但准确性依赖于固定空间锚点的存在；可辨别性在不同通道和值域间变化剧烈，且通道间交互作用常呈强不对称性；此外，长度在准确性上表现优异但弹出检测效果一般，而面积在检测上表现最佳但定量准确性较差，表明估计准确性与前注意检测之间存在分离现象。"
+    }
+  }
+]
