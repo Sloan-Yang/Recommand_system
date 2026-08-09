@@ -1,0 +1,146 @@
+[
+  {
+    "id": "2608.04424",
+    "title": "Thinking with Anchors: Grounded and Efficient Document Reasoning",
+    "abstract": "Existing document understanding benchmarks have largely focused on locating page elements, yet real-world document intelligence requires models to reason jointly about region semantics, spatial relations, and visual structure. We present ADOPD 2026, a reasoning-oriented extension of ADOPD that turns page decomposition into spatially grounded document understanding. ADOPD 2026 enriches page anchors inherited from ADOPD 2024 dataset with human-cleaned captions, semantic tags, and generated chain-of-thought (CoT) traces grounded to document regions. Instead of treating boxes, masks, and tags as independent supervision signals, we cast text blocks, visual entities, semantic labels, bounding boxes, and polygon masks as a shared vocabulary of visual anchors. This representation supports three connected capabilities. First, region-level semantic tagging asks models to identify document element types from both page context and local appearance, revealing long-tail semantic failures that standard layout benchmarks often hide. Second, unified vision-language grounding generates text regions and visual entities together with coordinates or polygonal outlines, transforming detection and segmentation outputs into structured anchors that can be reused by downstream reasoning systems. Third, current state-of-the-art models still struggle with dense counting tasks evaluated on DocCount, a benchmark derived from ADOPD 2026, highlighting the need for the Thinking-with-Anchors pipeline in document semantic understanding. By connecting page decomposition to verifiable visual-anchor reasoning, ADOPD 2026 provides a task framework that moves document understanding beyond localization toward anchor-grounded document intelligence.",
+    "authors": [
+      "Sichen Zhu",
+      "Yuchen Zhu",
+      "Wenzhuo Xu",
+      "Jason Kuen",
+      "Wanrong Zhu",
+      "Jing Shi",
+      "Xuan Shen",
+      "Quanyi Wang",
+      "Yiwei Wang",
+      "Yujun Cai",
+      "Bing Shuai",
+      "Qin Zhang",
+      "Yongxin Chen",
+      "Shilong Liu",
+      "Molei Tao",
+      "Jiuxiang Gu"
+    ],
+    "published": "2026-08-05",
+    "updated": "2026-08-05",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.04424.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.04424",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "以锚点思考：基于锚点的扎实且高效的文档推理",
+      "core_contribution": "本文提出了ADOPD 2026，一个面向推理的文档理解基准，将页面分解转化为空间锚定的文档理解，通过引入视觉锚点共享词汇表，支持区域级语义标注、统一视觉语言锚定和密集计数任务，推动文档理解从定位走向锚定推理。",
+      "method": "方法上，ADOPD 2026在ADOPD 2024数据集的基础上，为页面锚点添加了人工清洗的标题、语义标签和基于文档区域的思维链（CoT）轨迹。它将文本块、视觉实体、语义标签、边界框和多边形掩码统一为视觉锚点的共享词汇表，从而支持三种能力：区域级语义标签（结合页面上下文和局部外观识别元素类型）、统一视觉语言锚定（生成文本区域和视觉实体及其坐标或多边形轮廓）、以及密集计数任务（通过DocCount基准评估）。",
+      "findings": "关键发现包括：现有最先进模型在DocCount基准上的密集计数任务中仍表现困难，暴露了长尾语义失败和计数能力的不足；ADOPD 2026揭示了标准布局基准常隐藏的语义缺陷，并强调了Thinking-with-Anchors流程在文档语义理解中的必要性，为可验证的视觉锚定推理提供了新框架。"
+    }
+  },
+  {
+    "id": "2608.04329",
+    "title": "An Analysis and Implementation of Seam Carving for Content-Aware Image Resizing",
+    "abstract": "Seam carving is a classical content-aware image resizing operator that modifies the width or height of an image by repeatedly removing (or inserting) seams, i.e., 8-connected monotonic paths of pixels of locally minimal importance. Because seams bend around salient content rather than uniformly scaling or cropping it, the operator preserves vital image structures while discarding (or duplicating) low-energy regions. This article describes a C++ implementation of the operator that follows the original formulation of Avidan and Shamir (2007), including the optional forward-energy criterion subsequently introduced by Rubinstein, Shamir and Avidan (2008). The implementation supports image reduction, image enlargement via ordered seam insertion, multi-pass enlargement for large scale factors, a user-supplied weight mask for object protection and removal, along with dumping of energy maps and visualisation of seams. We detail the algorithm, its parameters and its computational complexity, discuss design choices with respect to the original descriptions, and illustrate the behaviour of the operator on natural images.",
+    "authors": [
+      "Francesco Tosoni"
+    ],
+    "published": "2026-08-05",
+    "updated": "2026-08-05",
+    "categories": [
+      "cs.CV",
+      "cs.GR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.04329.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.04329",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "接缝雕刻用于内容感知图像缩放的分析与实现",
+      "core_contribution": "本文详细描述了一个基于C++的接缝雕刻（Seam Carving）实现，该实现遵循Avidan和Shamir（2007）的原始算法，并集成了Rubinstein等人（2008）提出的前向能量准则，支持图像缩小、放大、多轮放大、对象保护与移除等功能，为内容感知图像缩放提供了完整的工程参考。",
+      "method": "方法基于动态规划，通过计算图像的能量图（如梯度幅值），寻找并移除或插入8连通、单调的像素路径（接缝），这些路径具有局部最小能量。实现中包括前向能量计算以减少视觉伪影，支持用户定义权重掩码以保护或删除特定区域，并通过有序插入接缝实现图像放大，对于大尺度放大采用多轮策略。算法复杂度为O(n*m)（每轮处理），并提供了能量图和接缝的可视化输出。",
+      "findings": "实验表明，接缝雕刻在自然图像上能有效保留重要结构，避免均匀缩放或裁剪造成的失真；前向能量准则相比原始后向能量能减少视觉伪影；实现支持灵活的参数调整（如掩码、缩放因子），且计算效率适合实际应用。文章还讨论了实现细节与原始算法的差异，为后续优化提供了基础。"
+    }
+  },
+  {
+    "id": "2608.03929",
+    "title": "Latent Reward Registers for Diffusion Preference Alignment",
+    "abstract": "Aligning diffusion models with human preferences usually relies on a sparse terminal reward evaluated on the final generated samples, presenting a severe temporal credit-assignment challenge across the multi-step denoising process. We propose Latent Reward Registers, a mechanism that estimates terminal preference directly from intermediate noisy latents by prepending learnable, position-free register tokens to the input sequence of a frozen Diffusion Transformer (DiT). This independent readout mechanism extracts latent reward evidence without altering the generator's hidden states or velocity field. The resulting dense, differentiable reward signal throughout the full denoising process facilitates two alignment strategies. For training, Reward-Gradient On-Policy Distillation (RG-OPD) distills reward-guided updates along on-policy trajectories, bypassing the computationally expensive rollouts of standard policy gradients. For inference, Reward-Guided Sampling (RGS) steers trajectories via magnitude-matched reward gradients without parameter updates. Empirically, at high noise levels (u = 0.8), the registers reach the highest pairwise accuracy among the evaluated latent reward models. Furthermore, RG-OPD outperforms online reinforcement learning baselines while reducing GPU hours by up to 33x, and RGS establishes a new state-of-the-art among training-free methods, strictly enhancing both alignment and perceptual metrics. Code and weights are available at https://github.com/Guanys-dar/latent-reward-register",
+    "authors": [
+      "Yuanshen Guan",
+      "Zipeng Feng",
+      "Chengru Song",
+      "Zhiwei Xiong",
+      "Peiqin Sun"
+    ],
+    "published": "2026-08-04",
+    "updated": "2026-08-05",
+    "categories": [
+      "cs.LG",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.03929.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.03929",
+    "primary_category": "cs.LG",
+    "score": 75,
+    "summary": {
+      "title_zh": "用于扩散模型偏好对齐的潜在奖励寄存器",
+      "core_contribution": "提出一种名为潜在奖励寄存器（Latent Reward Registers）的机制，通过从中间噪声潜在表示直接估计终端偏好，解决了扩散模型多步去噪过程中的时间信用分配问题，并支持训练与推理两种对齐策略。",
+      "method": "该方法在冻结的扩散Transformer（DiT）输入序列前添加可学习的、位置无关的寄存器令牌，利用独立的读出机制从中间噪声潜在表示中提取密集且可微的奖励信号，不改变生成器的隐藏状态或速度场。基于此奖励信号，训练阶段采用奖励梯度在线策略蒸馏（RG-OPD），沿在线轨迹蒸馏奖励引导的更新，避免标准策略梯度的高计算成本；推理阶段采用奖励引导采样（RGS），通过幅度匹配的奖励梯度引导轨迹，无需参数更新。",
+      "findings": "在高噪声水平（u=0.8）下，寄存器在潜在奖励模型中达到最高的成对准确率；RG-OPD优于在线强化学习基线，同时将GPU时间减少最多33倍；RGS在无训练方法中达到新最优性能，同时提升对齐度和感知质量指标。"
+    }
+  },
+  {
+    "id": "2608.04821",
+    "title": "Global Attention-Fused Image Cropping with Attention-Guided and Global-Aligned Crop Evaluator",
+    "abstract": "Image cropping aims to improve image aesthetics by preserving important content within an appropriately composed region. However, most existing methods focus primarily on salient regions and therefore have limited sensitivity to the global relationships among the main image components. To address this limitation, we propose Global Attention-Fused Image Cropping (GAFIC), which consists of an Attention-Guided Feature Fusion (AGFF) and a Global-Aligned Crop Evaluator (GACE). AGFF aggregates the importance of local regions to construct a global representation that captures both image structure and local details. GACE aligns candidate crop features with this global representation, enabling crop evaluation to remain sensitive to boundary changes. We further combine three ranking losses across multiple scales to obtain accurate and stable crop scores. Extensive experiments on the GAIC and CPC datasets demonstrate that GAFIC outperforms existing image-cropping methods, particularly in terms of accuracy and stability. Unlike pixel-level retargeting methods such as seam carving, inpainting, and diffusion-based synthesis, GAFIC does not synthesize or modify the retained pixels; instead, it selects an aesthetically preferred crop from the source image, making it suitable for scenarios where pixel integrity and efficient batch processing are important. The source code is available at https://github.com/AIVRC/GAFIC.git.",
+    "authors": [
+      "Haotian Yang",
+      "Zhile Yang",
+      "Kin-Man Lam",
+      "Patrick Le Callet",
+      "Xin Sun"
+    ],
+    "published": "2026-08-05",
+    "updated": "2026-08-05",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.04821.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.04821",
+    "primary_category": "cs.CV",
+    "score": 72,
+    "summary": {
+      "title_zh": "全局注意力融合的图像裁剪：基于注意力引导与全局对齐的裁剪评估器",
+      "core_contribution": "提出了一种名为GAFIC的图像裁剪方法，通过全局注意力融合和全局对齐的裁剪评估器，有效捕捉图像组件间的全局关系，提升了裁剪的准确性和稳定性。",
+      "method": "GAFIC包含两个关键模块：注意力引导特征融合（AGFF）和全局对齐裁剪评估器（GACE）。AGFF聚合局部区域的重要性以构建同时包含图像结构和局部细节的全局表示；GACE将候选裁剪特征与该全局表示对齐，使裁剪评估对边界变化敏感。此外，结合多尺度的三种排序损失以获得准确且稳定的裁剪分数。",
+      "findings": "在GAIC和CPC数据集上的大量实验表明，GAFIC在准确性和稳定性方面优于现有图像裁剪方法。与像素级重定向方法不同，GAFIC不合成或修改保留像素，而是从源图像中选择美学上更优的裁剪区域，适用于需要像素完整性和高效批量处理的场景。"
+    }
+  },
+  {
+    "id": "2608.04504",
+    "title": "GeoReward: Mitigating Contextual Variable Overestimation in Vision-Language Models for Cross-Market Preference Prediction",
+    "abstract": "Vision-language models excel in many multimodal tasks but remain prone to a subtle yet impactful failure mode: they tend to overestimate dominant visual-textual cues while underestimating sparse but decision-critical contextual variables. This issue, which we term Contextual Variable Overestimation (CVE), becomes particularly evident in real-world applications such as predicting advertisement image preferences across diverse geographic markets. For instance, when a VLM is asked to choose between two product images tailored for different countries, it often defaults to a consistent output, ignoring ground-truth regional variations. This collapse occurs because pervasive high-volume signals, such as product attributes and dense image patches, overwhelm the few but critical tokens that encode market-specific context. To address CVE, we first collect a new multimodal dataset of real advertising creatives and their click-through performance across multiple countries. We then introduce GeoReward, a reward model designed to predict ad image preferences across diverse geographic markets. GeoReward integrates three purpose-built mechanisms: (1) Market-Aware Retrieval Augmentation, (2) Context-Guided Visual Modulation, (3) Selective Sensitivity Loss. Furthermore, we demonstrate how GeoReward can guide the fine-tuning of RL for a VLM to generate background designs for text-to-image models, producing market-aware advertising creatives. Experiments validate that our framework mitigates CVE and outperforms existing baselines. This work not only diagnoses a systematic bias in VLMs toward dominant perceptual features but also delivers a targeted solution for applications where sparse contextual variables govern decision-making.",
+    "authors": [
+      "Shuo Liu",
+      "Huixiang Cai",
+      "Weiru Zhang",
+      "Xiaoyi Zeng"
+    ],
+    "published": "2026-08-05",
+    "updated": "2026-08-05",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.04504.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.04504",
+    "primary_category": "cs.CV",
+    "score": 65,
+    "summary": {
+      "title_zh": "GeoReward：缓解视觉语言模型中的上下文变量过估计以实现跨市场偏好预测",
+      "core_contribution": "本文首次诊断了视觉语言模型（VLM）在跨市场广告偏好预测中存在的上下文变量过估计（CVE）问题，并提出了一种名为GeoReward的奖励模型，通过三种专门机制有效缓解该问题，从而提升跨市场广告图像偏好的预测准确性。",
+      "method": "GeoReward模型整合了三种机制：市场感知检索增强（Market-Aware Retrieval Augmentation）用于引入市场特定的上下文信息；上下文引导的视觉调制（Context-Guided Visual Modulation）用于调整视觉特征以突出关键上下文变量；选择性敏感损失（Selective Sensitivity Loss）用于增强模型对稀疏但关键特征的敏感性。此外，作者还展示了如何利用GeoReward指导VLM的强化学习微调，以生成市场感知的广告背景设计。",
+      "findings": "实验表明，GeoReward能够有效缓解CVE问题，并在跨市场广告偏好预测任务上优于现有基线模型。此外，通过GeoReward引导的VLM微调生成的广告创意具有更好的市场适应性，验证了该框架在稀疏上下文变量主导决策场景中的有效性。"
+    }
+  }
+]
