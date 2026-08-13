@@ -1,0 +1,142 @@
+[
+  {
+    "id": "2608.12276",
+    "title": "XYZFlow:Scaling Multi dimensional Shortcut Flows for Efficient Generative Modeling",
+    "abstract": "High-fidelity image generation faces a trade-off between speed and quality. Diffusion models produce strong visuals but require costly iterative sampling. Existing efficient methods mainly distill pretrained models into few-step samplers, a challenging process that depends heavily on teacher-model quality. In this paper, we introduce XYZFlow, a framework that rethinks efficient generation through multidimensional scaling of flow matching. Unlike single-step mappings, XYZFlow enhances expressivity by making probability paths more identifiable and learnable through structured multidimensional conditioning. We view autoregressive modeling as implicit flow straightening, where richer context reduces trajectory ambiguity. XYZFlow realizes this idea through two orthogonal dimensions: temporal scaling, which uses non-Markovian conditioning on the full denoising history; and spatial scaling, enabled by Next Shortcut Prediction, which sequentially generates patches using preceding patches' denoising trajectories as priors. Experiments show that XYZFlow achieves state-of-the-art performance, with 7.2-8.5X teacher speedups and competitive FID, while Next Shortcut Prediction delivers superior quality-latency trade-offs over model scaling or step reduction.",
+    "authors": [
+      "Jinxiu Liu",
+      "Xuanming Liu",
+      "Kangfu Mei",
+      "Yandong Wen",
+      "Weiyang Liu"
+    ],
+    "published": "2026-08-12",
+    "updated": "2026-08-12",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.12276.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.12276",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "XYZFlow：扩展多维捷径流以实现高效生成建模",
+      "core_contribution": "提出XYZFlow框架，通过多维缩放流匹配（时间缩放和空间缩放）实现高效生成建模，在不依赖教师模型蒸馏的情况下，显著提升生成速度并保持高质量输出。",
+      "method": "XYZFlow通过两个正交维度增强概率路径的可识别性和可学习性：时间缩放采用非马尔可夫条件，利用完整去噪历史进行条件生成；空间缩放通过Next Shortcut Prediction，顺序生成图像块，并将前序图像块的去噪轨迹作为先验。这种方法将自回归建模视为隐式流直线化，通过丰富上下文减少轨迹歧义。",
+      "findings": "实验表明，XYZFlow在生成质量和速度上均达到最先进水平，实现7.2-8.5倍的教师模型加速，同时保持竞争力的FID分数。与模型缩放或减少步数相比，Next Shortcut Prediction在质量-延迟权衡上表现更优。"
+    }
+  },
+  {
+    "id": "2608.12064",
+    "title": "Draw This First",
+    "abstract": "We invert the typical formulation of sketch generation: instead of drawing strokes in order, we predict a 2D field that defines the order in which strokes are drawn. We use a pretrained latent flow-matching transformer to supply the image prior to predict an intermediate representation, while training the VAE's decoder to predict the order field, stroke mask, and stroke segmentation. We vectorize the predicted segmentation into polylines and sort them by the field, producing an ordered vector sketch. Our model can predict an ordered vector sketch from a text description or derender an image into ordered vectors; for either, it follows text instructions specifying the order of drawing.",
+    "authors": [
+      "Dazhi Zhong",
+      "Rowan Bradbury",
+      "Grant Davis"
+    ],
+    "published": "2026-08-12",
+    "updated": "2026-08-12",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.12064.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.12064",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "先画这个",
+      "core_contribution": "该论文提出了一种新颖的草图生成方法，通过预测二维顺序场来定义笔画绘制顺序，而非按顺序逐笔生成，从而实现了从文本或图像生成有序矢量草图。",
+      "method": "方法利用预训练的潜在流匹配变换器提供图像先验，以预测中间表示；同时训练VAE的解码器来预测顺序场、笔画掩码和笔画分割。随后，将预测的分割矢量化为折线，并根据顺序场进行排序，最终生成有序的矢量草图。整个过程支持从文本描述生成草图，或从图像反渲染为有序矢量，并遵循文本指令指定绘制顺序。",
+      "findings": "实验表明，该模型能够有效生成遵循指定顺序的矢量草图，无论是从文本描述还是从图像反渲染，均能准确控制绘制顺序，验证了顺序场作为中间表示的有效性。"
+    }
+  },
+  {
+    "id": "2608.11546",
+    "title": "Through Van Gogh's Eyes: Global Style Transfer with Diffusion Mod",
+    "abstract": "Artistic image synthesis aims to recreate the expressive visual identity of a target artist, yet existing methods often fail to capture an artist's global style. Conventional style transfer methods transfer the style of one or a few reference artworks to a content image in a One-to-One manner, making them effective for artwork-level stylization but limited in representing the broader stylistic distribution of an artist. Text-to-image diffusion models conditioned on artist names, such as '~ in Van Gogh style', offer greater flexibility, but they often suffer from text-induced bias and reproduce patterns from only a few iconic works. To address these limitations, we introduce Global Style Transfer (GST), an artistic image synthesis paradigm, in a Many-to-One manner, that aggregates multiple artworks from a target artist and transfers their shared global style to a single content image. For GST, we propose Global Style Guidance (GSG), which learns a residual global style offset in the intermediate feature space, or h-space, of a diffusion model under a fixed prompt. By learning artist-level style semantics purely from visual statistics, GSG mitigates text-dependent artistic bias. We further propose Content Alignment Guidance (CAG), a training-free perceptual guidance mechanism that preserves the semantic structure of the content image while allowing artist-specific geometric deformation. Experiments on WikiArt demonstrate that GST achieves superior stylistic fidelity, content preservation, and output diversity compared to existing style transfer and diffusion-based artistic synthesis methods.",
+    "authors": [
+      "Jeongha Lee",
+      "Yujin Kim",
+      "Ghazanfar Ali",
+      "Suhyun Kim",
+      "Jae-In Hwang"
+    ],
+    "published": "2026-08-12",
+    "updated": "2026-08-12",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.11546.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.11546",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "透过梵高之眼：基于扩散模型的全局风格迁移",
+      "core_contribution": "提出了一种新的艺术图像合成范式——全局风格迁移（GST），以多对一的方式聚合目标艺术家的多幅作品，学习其共享的全局风格并迁移到内容图像上，克服了传统风格迁移和文本引导扩散模型在捕捉艺术家整体风格上的局限性。",
+      "method": "方法包括两个关键组件：全局风格引导（GSG）在扩散模型的中间特征空间（h-space）中学习残差全局风格偏移，仅从视觉统计中提取艺术家级别的风格语义，避免文本依赖偏差；内容对齐引导（CAG）是一种无需训练感知机制，在允许艺术家特定几何变形的同时保持内容图像的语义结构。",
+      "findings": "在WikiArt数据集上的实验表明，与现有风格迁移和基于扩散的艺术合成方法相比，GST在风格保真度、内容保留和输出多样性方面均取得了更优的性能。"
+    }
+  },
+  {
+    "id": "2608.11205",
+    "title": "AdvFD: Boosting Visual Generation via Adversarial Fr'echet Distance Loss",
+    "abstract": "Fréchet distance has recently emerged as an effective distribution-level objective for generator post-training, complementing the conventional sample-level diffusion and flow-matching losses. However, directly optimizing Fréchet objectives can cause Fréchet hacking. The target metrics keep improving, but visual quality and Fréchet alignment in other feature spaces may stagnate or deteriorate. We attribute this failure to the static pretrained feature spaces used by existing Fréchet losses. These feature spaces provide incomplete and fixed views of the differences between real and generated distributions. To address this limitation, we propose Adversarial Fréchet Distance (AdvFD), which complements the static representation targets in FD-Loss with a calibrated adversarially learned representation. AdvFD augments the original static Fréchet objective with a learnable representation that adversarially maximizes the Fréchet discrepancy between real and generated samples, while the generator minimizes the same discrepancy in the resulting adaptive feature space. To prevent the adversarial representation from trivially increasing the objective through feature amplification, we further introduce real-feature whitening, which normalizes its scale and covariance geometry and stabilizes the min--max optimization. Extensive experiments show that AdvFD consistently improves one-step generator post-training across both JiT and pMF backbones and across different model scales.",
+    "authors": [
+      "Mingju Gao",
+      "Jingkai Zhou",
+      "Kun Gai",
+      "Changqian Yu",
+      "Hao Tang"
+    ],
+    "published": "2026-08-11",
+    "updated": "2026-08-11",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.11205.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.11205",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "AdvFD：通过对抗性弗雷歇距离损失提升视觉生成",
+      "core_contribution": "提出了一种名为对抗性弗雷歇距离（AdvFD）的新型损失函数，通过引入可学习的对抗性表示来补充静态特征空间，解决了现有弗雷歇距离损失在生成器后训练中出现的“弗雷歇黑客”问题，从而在多种骨干网络和模型规模下一致提升了一步生成器的性能。",
+      "method": "AdvFD在原有的静态弗雷歇距离损失（FD-Loss）基础上，增加了一个可学习的表示模块，该模块通过对抗性训练最大化真实样本与生成样本之间的弗雷歇距离，而生成器则在该自适应特征空间中最小化相同的距离。为了防止对抗性表示通过特征放大导致目标函数无意义地增大，方法引入了真实特征白化操作，对特征的尺度和协方差几何进行归一化，从而稳定最小-最大优化过程。",
+      "findings": "实验表明，AdvFD在JiT和pMF两种骨干网络以及不同模型规模下，均能一致地改善一步生成器的后训练效果，相比现有方法在视觉质量和弗雷歇距离对齐方面均有显著提升，且避免了静态特征空间导致的性能停滞或退化问题。"
+    }
+  },
+  {
+    "id": "2608.12262",
+    "title": "Diagram-MMU: A Multi-Modal Benchmark for Scientific Diagrams",
+    "abstract": "Multimodal Large Language Models (MLLMs) have been growing the capability for scientific writing and collaboration. For example, OpenAI Prism is a free workspace for scientific writing and collaboration. One important feature in Prism is turning scientific diagrams directly into LaTeX TikZ code. In this paper, we build a benchmark, Diagram-MMU, a multi-modal benchmark designed to assess MLLMs' ability for scientific diagram parsing and understanding. Diagram-MMU features 3.7k curated diagrams and 18.3k human-validated questions across six domains. It evaluates MLLMs on three tasks common in vibe writing workspaces: diagram-to-code parsing, diagram-to-code editing, and diagram question answering, alongside agentic settings per task. The evaluation of 12 MLLMs reveals that diagram-to-code tasks are more challenging than diagram question answering: models can reason well over diagrams but struggle to parse and edit them, underscoring the need for methods to enhance MLLMs' capability in diagram-to-code generation. Under agentic settings, most models improve parsing and editing performance but degrade on question answering, while Claude-4.6 Opus consistently improves across all three tasks. Project Page: https://vi-ocean.github.io/projects/diagram-mmu.",
+    "authors": [
+      "Weihao Bo",
+      "Shan Zhang",
+      "Yanpeng Sun",
+      "Jie Liu",
+      "Yongke Yao",
+      "Jinhao Du",
+      "Wei He",
+      "Kai Zou",
+      "Zechao Li",
+      "Jingdong Wang"
+    ],
+    "published": "2026-08-12",
+    "updated": "2026-08-12",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.12262.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.12262",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "Diagram-MMU：面向科学图表的多模态基准",
+      "core_contribution": "构建了一个包含3.7k个精选图表和18.3k个人工验证问题的多模态基准Diagram-MMU，用于评估多模态大语言模型在科学图表解析与理解方面的能力，涵盖图表到代码解析、图表到代码编辑和图表问答三项任务。",
+      "method": "该基准覆盖六个科学领域，设计了三种任务（图表到代码解析、图表到代码编辑、图表问答），并为每项任务提供代理（agentic）设置。作者对12个多模态大语言模型进行了系统评估，比较它们在标准设置和代理设置下的表现差异。",
+      "findings": "研究发现，图表到代码任务比图表问答更具挑战性：模型能够较好地推理图表内容，但在解析和编辑图表代码方面表现不佳，表明需要增强MLLMs的图表到代码生成能力。在代理设置下，大多数模型在解析和编辑任务上有所提升，但问答性能下降；而Claude-4.6 Opus在所有三项任务上均持续改进。"
+    }
+  }
+]
