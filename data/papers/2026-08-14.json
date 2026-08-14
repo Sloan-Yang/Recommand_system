@@ -1,0 +1,154 @@
+[
+  {
+    "id": "2608.13560",
+    "title": "AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design",
+    "abstract": "Transforming multimodal sources into condensed and structured media outputs can be fundamentally conceptualized as a long-horizon agentic process centered on a model-harness system. While an ideal harness system should align with human design priors and accumulate reusable experience through empirical exploration to drive recursive self-improvement, existing paradigms remain static and fall short of this capability. In this paper, we present AutoDesign, a framework that aligns with human design priors, where a meta-harness optimizer guides a code agent to recursively improve harness based on rollout feedback. To instantiate and evaluate this framework, we focus on the academic paper-to-poster generation task and introduce PosterBench, comprising a 100-paper Main Track spanning five disciplines and PosterBench-mini, a shared 10-paper subset for controlled evaluation. On the PosterBench Main Track, AutoDesign achieves the highest score of 78.32, surpassing the closed-source commercial system Claude Design by 7.45 points. Across seven controlled code-agent-model configurations, integrating the learned DesignHarness consistently improves performance, increasing the average PosterBench Score from 54.99 to 67.39 (+12.4%). In a fully autonomous long-horizon loop, it executes 253 tool calls and 11 editing turns within 40 minutes for under $3, reaching average conference-poster quality in human evaluation. A system-blind human study further demonstrates that AutoDesign achieves the highest human preference among evaluated systems.",
+    "authors": [
+      "Yaxin Luo",
+      "Haobin Jiang",
+      "Jialv Zou",
+      "Xu Huang",
+      "Wenhao Yan",
+      "Haodong Li",
+      "Zhengrong Yue",
+      "Jing Li",
+      "Xiaofu Chen",
+      "Xiaohan Zhao",
+      "Jiacheng Liu",
+      "Jiacheng Cui",
+      "Zhiqiang Shen",
+      "Xiaotong Li"
+    ],
+    "published": "2026-08-13",
+    "updated": "2026-08-13",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.13560.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.13560",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "AutoDesign：面向长周期智能体设计的元框架优化",
+      "core_contribution": "提出AutoDesign框架，通过元框架优化器指导代码智能体基于反馈递归改进模型-框架系统，首次将学术论文到海报生成任务作为长周期智能体设计问题，并构建了PosterBench基准，显著超越现有商业系统。",
+      "method": "AutoDesign采用元框架优化器，该优化器根据人类设计先验初始化，并利用来自rollout（执行轨迹）的反馈信号，指导一个代码智能体对模型-框架系统（即harness）进行递归改进。具体地，在论文到海报生成任务中，框架通过迭代编辑工具调用和生成步骤，逐步优化海报布局与内容，同时记录反馈以驱动下一轮改进。",
+      "findings": "在PosterBench主测试集上，AutoDesign得分78.32，超过闭源商业系统Claude Design 7.45分；在七种受控代码智能体-模型配置下，集成学习到的DesignHarness平均将PosterBench分数从54.99提升至67.39（+12.4%）。在完全自主的长周期循环中，AutoDesign在40分钟内执行253次工具调用和11次编辑轮次，成本低于3美元，达到人类评估中的平均会议海报质量。系统盲测中，AutoDesign获得最高的人类偏好率。"
+    }
+  },
+  {
+    "id": "2608.13441",
+    "title": "Edit2TikZ: A Comprehensive and Challenging Benchmark for Scientific Figure Editing with TikZ",
+    "abstract": "Although multimodal large language models (MLLMs) have shown substantial potential in visual understanding and graphic code generation, editing scientific figures through code presents a greater challenge: a model must jointly recover visual structure, ground the requested change, generate compilable code, and preserve all unrelated content. While existing TikZ benchmarks mainly focus on figure reconstruction and generation, few systematically evaluate instruction-guided scientific figure editing with compilable code. We introduce Edit2TikZ, a comprehensive benchmark for scientific figure editing tasks, featuring 1,548 diverse and high-quality samples. Edit2TikZ combines real-world and controlled synthetic edit cases, supports both textual and visual localization request, and contains multi-step editing, each with step-level annotations. We further construct a human-aligned evaluation framework to measure whether a requested edit is completed while irrelevant content is preserved. Utilizing Edit2TikZ, we evaluate 14 mainstream MLLMs and find that current systems remain unreliable: on average, proprietary models achieve a compilation success rate of merely 75% and remain limited in both figure restoration and edit correctness, while compact models below 9B struggle further with instruction following and complete figure generation. Therefore, we build a mixed training set TikZEditMix and adopt reconstruction-then-editing curriculum learning for compact models. On Qwen3.5-4B, this training improves the compilation success rate from 45.35% to 83.40% and yields an average improvement of 18.7 points across our proposed evaluation metrics. The code and data will be released at https://github.com/Solunny/Edit2TikZ.",
+    "authors": [
+      "Zongyun Zhang",
+      "Jiacheng Ruan",
+      "Xian Gao",
+      "Ruizhu Zhou",
+      "Lingcheng Meng",
+      "Lining Hu",
+      "Ting Liu",
+      "Yuzhuo Fu"
+    ],
+    "published": "2026-08-13",
+    "updated": "2026-08-13",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.13441.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.13441",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "Edit2TikZ：面向TikZ科学图形编辑的综合且具有挑战性的基准",
+      "core_contribution": "提出了Edit2TikZ，首个系统评估指令引导的科学图形编辑（以可编译TikZ代码为输出）的基准，包含1,548个高质量样本，并构建了人类对齐的评估框架，以衡量编辑完成度与无关内容保留度。",
+      "method": "构建了结合真实世界与受控合成编辑案例的基准，支持文本和视觉定位请求，并包含多步编辑及逐步注释。评估了14个主流多模态大模型，并针对紧凑模型设计了混合训练集TikZEditMix，采用重构-再编辑的课程学习策略进行训练。",
+      "findings": "现有模型在科学图形编辑上不可靠：专有模型平均编译成功率仅75%，且图形恢复和编辑正确性有限；9B以下紧凑模型在指令跟随和完整图形生成上表现更差。通过所提训练方法，Qwen3.5-4B的编译成功率从45.35%提升至83.40%，在评估指标上平均提升18.7分。"
+    }
+  },
+  {
+    "id": "2608.12611",
+    "title": "From Visual Widgets to UI Code: Efficient Tool-Grounded Generation",
+    "abstract": "Existing screenshot-to-code systems face a trade-off between flexibility and controllability. Direct multimodal generation can hallucinate visible details, whereas structured pipelines reduce such errors through component-wise decomposition, predefined templates, and customized intermediate representations. These structures, however, introduce additional generative orchestration and restrict outputs to designs covered by the representation. We investigate whether selective tool grounding can improve the fidelity--efficiency trade-off of direct widget-to-code generation. We introduce \\textbf{WidgetGen}, a lightweight tool-grounded framework that extracts observable text and color evidence, performs high-level layout and optional chart reasoning, and directly generates executable JavaScript XML (\\emph{JSX}). This design reduces reliance on component-wise generation while avoiding a fixed UI schema. Across six multimodal models and \\(1{,}000\\) held-out widgets, WidgetGen outperforms direct prompting and the structured Widget2Code pipeline on most visual reconstruction metrics, with consistent gains in area, legibility, and style. Finally, reconstruction-derived image-code pairs improve six Qwen-family open-weight models across every reported metric through supervised fine-tuning. These results establish WidgetGen as a strong lightweight baseline and show that selective evidence grounding offers an effective alternative to extensive representation constraints.",
+    "authors": [
+      "Houston H. Zhang",
+      "Tao Zhang",
+      "Li Gu",
+      "Linfeng Ye",
+      "Yuanhao Yu",
+      "Xinxin Zuo",
+      "Yang Wang",
+      "Zhixiang Chi"
+    ],
+    "published": "2026-08-12",
+    "updated": "2026-08-12",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.12611.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.12611",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "从视觉控件到UI代码：高效的工具接地生成",
+      "core_contribution": "提出WidgetGen框架，通过选择性工具接地（提取文本和颜色证据）在直接生成与结构化流水线之间取得平衡，显著提升截图到代码生成的保真度和效率，并验证了重建数据对开源模型微调的有效性。",
+      "method": "WidgetGen首先使用工具提取界面中的可见文本和颜色信息作为证据，然后进行高层布局规划和可选的图表推理，最后直接生成可执行的JSX代码。该方法避免了组件级分解和固定UI模式，减少了生成编排的复杂性，同时保持了对视觉细节的忠实度。",
+      "findings": "在六个多模态模型和1000个保留控件上，WidgetGen在大多数视觉重建指标上优于直接提示和结构化Widget2Code流水线，尤其在面积、可读性和风格方面持续提升。此外，由重建生成的图像-代码对通过监督微调显著改善了六个Qwen系列开源模型的性能，表明选择性证据接地是广泛表示约束的有效替代方案。"
+    }
+  },
+  {
+    "id": "2608.13186",
+    "title": "SketchSense: Learning to Interpret Imperfect Sketch Guidance for Image Inpainting",
+    "abstract": "Sketch-guided image inpainting provides intuitive structural control, yet real sketches often mix reliable global intent with locally crowded, displaced, incomplete, or deliberately unconventional strokes. Existing approaches typically either retain the input sketch as a fixed condition throughout denoising or refine it into a clean structure before RGB synthesis. The former assumes uniformly reliable strokes and can propagate local errors throughout generation; the latter must resolve ambiguous structure before emerging appearance and semantic context become available. We propose SketchSense, a framework that interprets imperfect sketch guidance by synchronously denoising interacting RGB and structure streams. Bidirectional Attention Fusion couples appearance generation with structural recovery, producing a refined structure that exposes the model's evolving sketch interpretation. A phrase-level objective aligns the semantic grounding of the two streams. Sketch-Aware Spatial Regulation further adapts sketch use to local generation states by modulating attention and the fusion process, while an optional signed prior injects preserve-versus-correct intent into feature representations and attention behavior. Experiments on natural and structurally complex imagery show substantial gains over existing methods in both restoration quality and structural fidelity.",
+    "authors": [
+      "Zian Yang"
+    ],
+    "published": "2026-08-13",
+    "updated": "2026-08-13",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.13186.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.13186",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "SketchSense：学习解读不完美草图引导的图像修复",
+      "core_contribution": "提出SketchSense框架，通过同步去噪RGB和结构流来解读不完美的草图引导，克服了现有方法在草图不可靠时传播错误或过早解析歧义的问题，显著提升了修复质量和结构保真度。",
+      "method": "SketchSense采用双向注意力融合机制，在去噪过程中同时生成外观和结构流，使结构恢复与外观生成相互耦合，并暴露模型对草图的动态解读。引入短语级目标对齐两流的语义基础，通过草图感知空间调节根据局部生成状态调整注意力与融合过程，可选的有符号先验将保留或修正意图注入特征表示和注意力行为。",
+      "findings": "在自然图像和结构复杂图像上的实验表明，SketchSense在修复质量和结构保真度上均显著优于现有方法，有效处理了局部拥挤、位移、不完整或故意非传统的草图输入。"
+    }
+  },
+  {
+    "id": "2608.13043",
+    "title": "From Local Mismatch to Global Impact: Optimizing Cache Reuse Policy for Efficient Diffusion",
+    "abstract": "Diffusion models have achieved dominant performance in visual generation but suffer from substantial inference overhead. While cache-based acceleration has emerged as a promising solution, existing policies rely on local similarity heuristics, which we identify as being significantly misaligned with final generation quality. This discrepancy stems from the non-uniform propagation and accumulation of errors along the denoising trajectory. To address this, we propose Global-Impact Cache (GCache). We first establish a rigorous theoretical characterization of the error propagation upper bound. Recognizing that this bound can be overly conservative for complex, highly non-convex diffusion models, we further reparameterize the propagation exponent with a Bernstein form and reformulate cache policy search as a bilevel optimization problem. In detail, GCache identifies an optimal reuse policy in the inner objective while aligning the error-weighting function with generation quality loss in the outer objective. This framework effectively reconciles theoretical rigor with empirical performance, learning to prioritize computation where it most impacts visual fidelity. Extensive experiments demonstrate that GCache consistently outperforms prior caching strategies on both video and image generation. Notably, on the state-of-the-art Wan2.1 video diffusion model, GCache maintains a 2.17x speedup while significantly enhancing generation quality, reducing LPIPS from 0.1095 to 0.0316.",
+    "authors": [
+      "Xichen Ye",
+      "Yifan Wu",
+      "Zhikang Xie",
+      "Xiangyu Yue",
+      "Cheng Jin",
+      "Weizhong Zhang"
+    ],
+    "published": "2026-08-13",
+    "updated": "2026-08-13",
+    "categories": [
+      "cs.AI",
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.13043.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.13043",
+    "primary_category": "cs.AI",
+    "score": 75,
+    "summary": {
+      "title_zh": "从局部失配到全局影响：优化缓存重用策略以实现高效扩散生成",
+      "core_contribution": "本文提出了一种名为Global-Impact Cache (GCache)的缓存重用策略优化框架，通过理论误差传播分析和双层优化，解决了现有缓存策略中局部相似性启发式与最终生成质量之间的失配问题，从而在加速扩散模型推理的同时提升生成质量。",
+      "method": "首先，作者建立了误差传播上界的严格理论表征，并针对高度非凸的扩散模型，将该上界中的传播指数用Bernstein形式重新参数化，使理论更贴合实际。然后，将缓存策略搜索建模为双层优化问题：内层目标寻找最优重用策略，外层目标将误差权重与生成质量损失对齐，从而学习在影响视觉保真度的关键位置优先分配计算资源。",
+      "findings": "在视频和图像生成任务上的大量实验表明，GCache一致优于现有缓存策略。特别是在最先进的Wan2.1视频扩散模型上，GCache在保持2.17倍加速的同时显著提升生成质量，将LPIPS从0.1095降至0.0316。"
+    }
+  }
+]
