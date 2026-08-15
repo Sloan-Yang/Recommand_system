@@ -1,0 +1,137 @@
+[
+  {
+    "id": "2608.12898",
+    "title": "NaviDC-OCR: Navigating Document Parsing Across Digital and Camera-Captured Documents",
+    "abstract": "Document parsing aims to transform unstructured documents into structured and machine-readable representations. Recent advances in Vision-Language Models (VLMs) have significantly advanced document parsing. However, existing approaches still face two major challenges. First, decoupled VLM-based methods heavily rely on accurate layout analysis, where geometric distortions in camera-captured documents can introduce cascading errors. Second, although end-to-end VLM-based methods alleviate the dependence on explicit layout detection, they often suffer from redundant generation, hallucinations, and insufficient structural reasoning in high-resolution scenarios. To address these challenges, we propose NaviDC-OCR, a unified framework for document parsing. NaviDC-OCR introduces deformation-aware learning to incorporate geometric perception into VLMs and proposes an adaptive sampling mechanism for complex layout representation. Furthermore, a content-structure decoupled learning strategy is developed to explicitly model formula grammars and table structures, enabling more effective structured representation learning. Extensive experiments demonstrate that NaviDC-OCR achieves state-of-the-art performance across diverse document parsing benchmarks. It obtains overall scores of 96.87, 88.53 and 78.41 on OmniDocBench v1.6, Wild-OmniDocBench, and PureDocBench, respectively, and ranks first in the ICDAR 2026 Sci-ImageMiner Challenge. These results validate the effectiveness and generalization capability of NaviDC-OCR in complex document parsing scenarios.",
+    "authors": [
+      "Peng Cai",
+      "Zhaofan Zou",
+      "Shifa Liu",
+      "Yikun Wang",
+      "Jiawei Tang",
+      "Kaicheng Yang",
+      "Meng Tong",
+      "Zhongjiang He",
+      "Hao Sun"
+    ],
+    "published": "2026-08-13",
+    "updated": "2026-08-13",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.12898.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.12898",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "NaviDC-OCR：跨越数字与相机拍摄文档的解析导航",
+      "core_contribution": "提出一个统一的文档解析框架NaviDC-OCR，通过引入形变感知学习、自适应采样机制和内容-结构解耦学习策略，解决了现有VLM方法在相机拍摄文档中的几何失真误差累积以及高分辨率场景下的冗余生成和结构推理不足问题，在多个基准上达到最先进性能。",
+      "method": "NaviDC-OCR采用端到端的VLM框架，首先引入形变感知学习，将几何形变感知能力融入VLM，以应对相机拍摄文档的扭曲；其次提出自适应采样机制，用于复杂布局的表示，减少高分辨率下的冗余；最后设计内容-结构解耦学习策略，显式建模公式语法和表格结构，增强结构化表示学习。",
+      "findings": "在OmniDocBench v1.6、Wild-OmniDocBench和PureDocBench上分别取得96.87、88.53和78.41的总分，并在ICDAR 2026 Sci-ImageMiner挑战赛中排名第一，验证了其在复杂文档解析场景中的有效性和泛化能力。"
+    }
+  },
+  {
+    "id": "2608.11452",
+    "title": "TangPoetryBench: A Multi-Dimensional Benchmark and Rubric-Conditioned Evaluator for Poetry-to-Image Generation",
+    "abstract": "Text-to-image (T2I) models are increasingly asked to illustrate literary and cultural content, yet we cannot measure how well an image renders the meaning of a poem. The task is many-sided: a good illustration must be visually sound, faithful to the poem's imagery and scene, culturally and stylistically apt, free of spurious text, and true to its emotion, and its deepest requirements, imagery and especially implicit emotion, are never stated in the words. Existing metrics (CLIPScore, BLIPScore, VQAScore) reward literal text-image correspondence and so cannot tell whether an illustration succeeds, let alone why, or even separate the best model from the worst. We introduce TangPoetryBench, a multi-dimensional benchmark of 1,280 images (320 classical Chinese Tang poems x 4 state-of-the-art T2I models) with quality-controlled human annotations across ten dimensions. Analyzing this data, we reveal the shared and model-specific strengths and weaknesses of current T2I models, including their ability to evoke a poem's implicit emotion. We further introduce PoemAutoEvaluator (PAE), an open, rubric-conditioned evaluator that reaches parity with a strong proprietary judge (Claude), generalizes to an unseen generator and a second poetic tradition (Song Ci), and lets the benchmark scale to new images without fresh human annotation. We release the benchmark, annotations, and evaluator.",
+    "authors": [
+      "Haoqi Hu",
+      "Tongji Luo",
+      "Li Zhang",
+      "Boning Zhou"
+    ],
+    "published": "2026-08-11",
+    "updated": "2026-08-11",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.11452.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.11452",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "TangPoetryBench：面向诗歌到图像生成的多维度基准与基于评分标准的评估器",
+      "core_contribution": "本文提出了首个针对古典诗歌插图生成的多维度基准TangPoetryBench，并开发了开放、基于评分标准的评估器PoemAutoEvaluator，能够自动评估图像对诗歌意象和隐含情感的还原程度，达到与专有强评估器相当的水平。",
+      "method": "作者构建了包含320首唐诗和4种先进文本到图像模型生成的1280张图像的数据集，并进行了十个维度的人工标注。基于该数据，他们训练了PoemAutoEvaluator，该评估器采用评分标准（rubric）条件化设计，能够根据具体维度标准对图像进行打分，并支持泛化到未见过的生成器和另一诗歌传统（宋词）。",
+      "findings": "实验揭示了当前T2I模型在诗歌插图任务中的共性和特定模型弱点，包括对隐含情感的表达能力不足；PoemAutoEvaluator与Claude等专有评估器表现相当，且能有效泛化到新生成器和宋词数据，无需额外人工标注即可扩展基准规模。"
+    }
+  },
+  {
+    "id": "2608.12088",
+    "title": "RA-ClipScore: Making Generative Model Evaluation More Interpretable",
+    "abstract": "Generative models can produce images nearly indistinguishable from real data, yet rigorous and interpretable evaluation remains challenging. Conventional metrics such as FID provide only scalar scores with limited diagnostic insight. Widely adopted CLIP-based metrics enable semantic evaluation beyond simple training class labels, but inherit limitations from CLIP's training paradigm that restrict attribute-wise analysis. We propose RA-CLIPScore, a novel metric that mitigates these issues and extends CLIP-based evaluation to spatial distribution alignment, measuring whether generated objects adhere to the positional priors found in the training data. RA-CLIPScore introduces dual prompts to decouple competing attributes and leverages local patch tokens to capture fine-grained regional semantics. We evaluate image generative models on their ability to match both attribute and spatial distributions of the training data. Extensive experiments show that RA-CLIPScore provides more robust and interpretable evaluations than prior methods, particularly under distribution misalignment or partially irrelevant textual attributes. We further demonstrate how it reveals spatial biases in generative models. User evaluations confirm that Regional Single Attribute Divergence based on our RA-CLIPScore aligns more closely with human perception of visual diversity than existing semantic metrics.",
+    "authors": [
+      "Yifan Lu",
+      "Taras Kucherenko",
+      "Hedvig Kjellström",
+      "Judith Bütepage"
+    ],
+    "published": "2026-08-12",
+    "updated": "2026-08-12",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.12088.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.12088",
+    "primary_category": "cs.CV",
+    "score": 65,
+    "summary": {
+      "title_zh": "RA-CLIPScore：使生成模型评估更具可解释性",
+      "core_contribution": "提出RA-CLIPScore指标，通过解耦属性和空间分布对齐，增强生成模型评估的可解释性，并揭示模型的空间偏差。",
+      "method": "RA-CLIPScore引入双提示（dual prompts）机制以解耦竞争属性，并利用局部补丁令牌（patch tokens）捕捉细粒度区域语义，从而同时评估生成图像与训练数据在属性和空间分布上的对齐程度。该方法扩展了CLIP-based评估，使其能处理分布错位或部分无关文本属性的情况。",
+      "findings": "实验表明，RA-CLIPScore比现有方法更稳健且更具可解释性，尤其在分布错位或属性无关时；它能有效揭示生成模型中的空间偏差。用户评估证实，基于RA-CLIPScore的区域单属性差异（Regional Single Attribute Divergence）比现有语义指标更符合人类对视觉多样性的感知。"
+    }
+  },
+  {
+    "id": "2608.13037",
+    "title": "Spatially-Grounded Text-to-Video Generation via Inference-Time Gradient-Free Optimization",
+    "abstract": "Diffusion Transformer Text-to-Video models have achieved remarkable synthesis quality, yet fine-grained spatial controllability remains a significant challenge. While existing training-free methods produce solid overall results in spatially grounded generation, \\ie, placing a specific object in a designated location, they rely on gradient-based optimization techniques that incur prohibitive computational overhead, a bottleneck amplified in modern large-scale architectures. To address this limitation, we present Gradient-free Analytical Trajectory Optimization Video Generation (GATO-Vid), a novel training-free and gradient-free approach for precise spatial guidance. Rather than relying on costly backward passes, we introduce an alternative cross-attention score and solve it analytically to obtain an exact, closed-form solution. To use our analytical solution, we propose an on-the-fly injection mechanism tailored to the topological manifold of the transformer's latent space. Our experiments demonstrate that GATO-Vid significantly outperforms existing baselines in localization accuracy while introducing minimal computational overhead.",
+    "authors": [
+      "Guillaume Jeanneret",
+      "Mathis Koroglu",
+      "Hugo Caselles-Dupré",
+      "Arnaud Dapogny",
+      "Matthieu Cord"
+    ],
+    "published": "2026-08-13",
+    "updated": "2026-08-13",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.13037.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.13037",
+    "primary_category": "cs.CV",
+    "score": 62,
+    "summary": {
+      "title_zh": "基于推理时无梯度优化的空间锚定文本到视频生成",
+      "core_contribution": "提出一种无需训练且无需梯度的空间可控文本到视频生成方法GATO-Vid，通过解析闭式解替代昂贵的梯度优化，在保持高定位精度的同时大幅降低计算开销。",
+      "method": "GATO-Vid引入一种替代的交叉注意力分数，并通过解析方法求解其闭式解，避免反向传播。该解析解通过一个针对Transformer潜在空间拓扑流形设计的即时注入机制，在生成过程中动态调整注意力分布，从而实现精确的空间引导。",
+      "findings": "实验表明，GATO-Vid在空间定位准确性上显著优于现有基线，同时仅引入极小的额外计算开销，验证了其高效性和有效性。"
+    }
+  },
+  {
+    "id": "2608.13446",
+    "title": "Blue Noise as a Lattice Gibbs Ensemble",
+    "abstract": "Blue-noise sampling is widely used in computer graphics, but existing methods separate statistical modeling from scalable generation. Optimization and transport methods produce high-quality point sets by coupling all samples together. Procedural and tile-based samplers are local, but define their output only implicitly. We formulate blue-noise generation as sampling from a Gibbs distribution over binary lattice occupancies with pairwise repulsive interactions. Density, repulsion strength, interaction scale, and kernel hardness are parameters of this distribution. Because the energy sums over pairs, distant interactions can be dropped with a bounded change to the distribution, leaving a Markov random field of bounded degree. To sample it, we trace the Markov chain backward from the state we want, following Coupling Towards The Past, and cut the trace at a fixed depth. This bounds the cost, and it bounds the region each sample depends on. A tile generated on its own, with a sufficient halo, is then bit-identical to the same region generated on any larger domain, in any order and with no communication between tiles. Memory is set by the tile size, not by the output size, and accuracy is traded against cost through parameters with a proven error bound rather than by switching algorithms. We validate the model, the sampler, and these guarantees separately. The ensemble reproduces standard blue-noise spectra and moves continuously between them as its parameters vary. The sampler matches its predicted work and memory. Tiled output is verified bit-identical to full-domain generation. We demonstrate adaptive stippling at 14K, where existing methods need memory proportional to the output, along with multi-class extensions.",
+    "authors": [
+      "Zhuoran Yi"
+    ],
+    "published": "2026-08-13",
+    "updated": "2026-08-13",
+    "categories": [
+      "cs.GR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.13446.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.13446",
+    "primary_category": "cs.GR",
+    "score": 55,
+    "summary": {
+      "title_zh": "蓝噪声作为格点吉布斯系综",
+      "core_contribution": "本文提出了一种将蓝噪声生成建模为格点吉布斯分布采样的新方法，实现了可扩展、可验证的蓝噪声生成，并支持平铺生成且保证位级一致性。",
+      "method": "该方法将蓝噪声采样定义为二元格点占用上的吉布斯分布，其中包含成对排斥相互作用，密度、排斥强度、交互尺度和核硬度作为分布参数。通过截断远距离交互，模型转化为有界度的马尔可夫随机场。采样时采用“向过去耦合”的马尔可夫链回溯方法，并在固定深度截断，从而限制计算成本和每个样本的依赖区域。平铺生成时，每个瓦片独立生成并带有足够的光环，确保与全域生成结果位级一致。",
+      "findings": "实验验证了模型、采样器和保证的独立性。该系综能够重现标准蓝噪声频谱，并随参数变化连续过渡。采样器的工作量和内存与理论预测一致。平铺输出与全域生成结果位级相同。此外，该方法在14K分辨率下实现了自适应点画，而现有方法需要与输出大小成比例的内存，同时支持多类扩展。"
+    }
+  }
+]
