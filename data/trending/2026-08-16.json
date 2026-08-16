@@ -1,0 +1,93 @@
+[
+  {
+    "id": "sponsors_unslothai",
+    "full_name": "sponsors/unslothai",
+    "owner": "sponsors",
+    "name": "unslothai",
+    "url": "https://github.com/sponsors/unslothai",
+    "description": "Sponsor\n    \n  \n\n\n\n      \n            \n    \n\n    \n\n        \n          Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        unslothai /\n\n      unsloth  \n\n    \n      Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
+    "language": "Python",
+    "stars": 72516,
+    "stars_today": 580,
+    "relevance_score": 90,
+    "summary": "Unsloth 是一个本地 UI 工具，用于运行和训练大语言模型及扩散模型（如 Qwen3.8、Kimi K3、Gemma 4、DeepSeek-V4、FLUX 等），因其高效微调优化和易用界面而备受关注。"
+  },
+  {
+    "id": "cactus-compute_needle",
+    "full_name": "cactus-compute/needle",
+    "owner": "cactus-compute",
+    "name": "needle",
+    "url": "https://github.com/cactus-compute/needle",
+    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        cactus-compute /\n\n      needle  \n\n    \n      14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
+    "language": "Python",
+    "stars": 6523,
+    "stars_today": 447,
+    "relevance_score": 85,
+    "summary": "Needle 是一个专为手机、可穿戴设备、智能家居和机器人等微型设备设计的14MB基础模型，以极小体积实现高效AI推理，值得关注因为它让边缘端智能部署成为可能。"
+  },
+  {
+    "id": "cordiverse_cordis",
+    "full_name": "cordiverse/cordis",
+    "owner": "cordiverse",
+    "name": "cordis",
+    "url": "https://github.com/cordiverse/cordis",
+    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        cordiverse /\n\n      cordis  \n\n    \n      Meta-Framework of Spatiotemporal Composability",
+    "language": "TypeScript",
+    "stars": 4678,
+    "stars_today": 719,
+    "relevance_score": 75,
+    "summary": "Cordis 是一个基于 TypeScript 的时空组合元框架，用于构建可组合、可编排的时空数据应用。它值得关注，因为它提供了统一处理空间与时间维度的抽象能力，有望简化复杂地理与实时系统的开发。"
+  },
+  {
+    "id": "sponsors_OpenCut-app",
+    "full_name": "sponsors/OpenCut-app",
+    "owner": "sponsors",
+    "name": "OpenCut-app",
+    "url": "https://github.com/sponsors/OpenCut-app",
+    "description": "Sponsor\n    \n  \n\n\n\n      \n            \n    \n\n    \n\n        \n          Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        OpenCut-app /\n\n      OpenCut  \n\n    \n      The open-source CapCut alternative",
+    "language": "TypeScript",
+    "stars": 83833,
+    "stars_today": 134,
+    "relevance_score": 65,
+    "summary": "OpenCut-app 是一个开源的 CapCut 替代品，基于 TypeScript 开发，旨在提供免费、可自托管的视频剪辑工具。它值得关注，因为其开源特性让用户摆脱商业软件限制，同时具备高度可定制性和社区驱动的持续改进潜力。"
+  },
+  {
+    "id": "public-apis_public-apis",
+    "full_name": "public-apis/public-apis",
+    "owner": "public-apis",
+    "name": "public-apis",
+    "url": "https://github.com/public-apis/public-apis",
+    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        public-apis /\n\n      public-apis  \n\n    \n      A collective list of free APIs",
+    "language": "Python",
+    "stars": 461618,
+    "stars_today": 1583,
+    "relevance_score": 60,
+    "summary": "这是一个汇集了大量免费公开API的列表，涵盖各类领域，方便开发者快速查找和集成所需接口，是开发中极为实用的资源库。"
+  },
+  {
+    "id": "basecamp_omarchy",
+    "full_name": "basecamp/omarchy",
+    "owner": "basecamp",
+    "name": "omarchy",
+    "url": "https://github.com/basecamp/omarchy",
+    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        basecamp /\n\n      omarchy  \n\n    \n      Beautiful, Modern &amp; Opinionated Linux",
+    "language": "Shell",
+    "stars": 25334,
+    "stars_today": 225,
+    "relevance_score": 40,
+    "summary": "omarchy 是一个由 Basecamp 打造的、美观且现代的 Linux 发行版，强调高度定制化的“有主见”设计。它值得关注，因为其将优雅的桌面体验与极简的 Shell 脚本配置结合，适合追求高效与美感的开发者。"
+  },
+  {
+    "id": "sponsors_ToolJet",
+    "full_name": "sponsors/ToolJet",
+    "owner": "sponsors",
+    "name": "ToolJet",
+    "url": "https://github.com/sponsors/ToolJet",
+    "description": "Sponsor\n    \n  \n\n\n\n      \n            \n    \n\n    \n\n        \n          Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        ToolJet /\n\n      ToolJet  \n\n    \n      ToolJet is the open-source foundation of ToolJet AI - the enterprise app generation platform for building internal tools, dashboard, business applications, workflows and AI agents 🚀",
+    "language": "JavaScript",
+    "stars": 39977,
+    "stars_today": 446,
+    "relevance_score": 40,
+    "summary": "ToolJet 是一个开源的企业级应用生成平台，用于快速构建内部工具、仪表盘、业务应用、工作流和 AI 智能体。它值得关注，因为其开源基础结合 AI 能力，能显著降低企业开发复杂应用的难度和成本。"
+  }
+]
