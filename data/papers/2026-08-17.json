@@ -1,0 +1,160 @@
+[
+  {
+    "id": "2608.14403",
+    "title": "CRAFT: Constrained Reward via Attention Fine-Tuning for Subject Personalization without Composed Targets",
+    "abstract": "Subject-driven image personalization---generating new images that preserve the identity of one or several reference subjects in novel scenes---is a foundational capability for modern visual content creation. It is currently dominated by generalized methods that fine-tune a pretrained multimodal diffusion transformer (MMDiT) on hundreds of thousands to millions of paired \\emph{(reference, composed-target)} examples, where each composed target is a synthesized image of the subject in a novel scene. Producing such targets demands a costly multi-stage curation pipeline---LLM-based prompt generation, T2I-based composed-target synthesis, reference-subject extraction, VLM-based quality filtering, and correspondence labeling---and tightly couples each method to a particular target synthesizer and curation choice. We introduce \\emph{CRAFT} (Constrained Reward via Attention Fine-Tuning), a single-step ReFL framework that fine-tunes a pre-trained \\emph{reference-aware} MMDiT via LoRA adapters using a compact reference-only data construction---$10$K reference images and subject masks, with no composed-target supervision. CRAFT realizes a \\emph{Where to look} principle: attention-level rewards align noise- and phrase-token attention with the correct reference subject, and the resulting per-subject attention masks gate a pixel-level identity reward to keep image-space supervision consistent with the learned attention routing. Applied to FLUX.2-klein-9B, CRAFT achieves state-of-the-art performance on XVerseBench \\rev{while using no composed-target supervision---only $10$K reference-only samples, whereas prior generalized methods require $150$K to over $2$M composed-target pairs}. The same recipe transfers to other reference-aware backbones, consistently improving performance. Project page: https://jihun999.github.io/projects/CRAFT/.",
+    "authors": [
+      "Jihun Park",
+      "Kyoungmin Lee",
+      "Jongmin Gim",
+      "Hyeonseo Jo",
+      "Jaeyeul Kim",
+      "Han Zou",
+      "Zhenpeng Zhan",
+      "Yan Zhang",
+      "Sunghoon Im"
+    ],
+    "published": "2026-08-14",
+    "updated": "2026-08-14",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.14403.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.14403",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "CRAFT：通过注意力微调的约束奖励实现无需合成目标的主体个性化",
+      "core_contribution": "提出了一种无需合成目标监督的主体个性化方法CRAFT，仅使用10K参考图像和掩码即可达到甚至超越依赖大规模合成数据（150K至2M对）的现有方法，显著降低了数据构建成本并提升了性能。",
+      "method": "CRAFT采用单步ReFL框架，通过LoRA适配器微调预训练的参考感知多模态扩散Transformer（MMDiT）。其核心是'看哪里'原则：利用注意力级别的奖励将噪声和短语令牌的注意力对齐到正确的参考主体，并用生成的主体注意力掩码门控像素级身份奖励，确保图像空间监督与注意力路由一致。",
+      "findings": "在FLUX.2-klein-9B上，CRAFT在XVerseBench基准上取得了最先进性能，且仅使用10K参考样本（无合成目标），而先前方法需要150K至2M对合成目标。该配方可迁移至其他参考感知骨干网络，并一致提升性能。"
+    }
+  },
+  {
+    "id": "2608.14172",
+    "title": "Concept Guidance: Precise, Training-Free Latent Control for Text-to-Image Generation",
+    "abstract": "Text-to-image diffusion models have two major drawbacks that severely limit their practical utility: (1) standard models lack an intrinsic mechanism for continuous, concept-specific guidance (e.g., for precisely controlling how aesthetically pleasing an image looks), and (2) they lack reliability for tasks requiring high local coherence (e.g., generating text or human hands). To tackle these issues, we introduce a novel notion of concept-wise mutual information and find large, concept-dependent differences between individual layers, demonstrating that the generation of specific structures is localized in distinct parts of the network. We exploit this insight by reinforcing the impact of concept-relevant layers in Concept Guidance (CoG), a precise, target-specific guidance method that works for models out-of-the-box without additional training, external models, gradients, or prompt engineering. CoG first quantifies each layer's concept-specific impact and then guides denoising using a weighted combination of predictions generated with concept-relevant layers skipped. We demonstrate performance increases across various targets and popular models like PixArt-alpha, SD3, SD3.5, and FLUX.1-dev. Code is available at https://github.com/CompVis/concept_guidance",
+    "authors": [
+      "Nikolai Röhrich",
+      "Isabell Hans",
+      "Felix Krause",
+      "Björn Ommer"
+    ],
+    "published": "2026-08-14",
+    "updated": "2026-08-14",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.14172.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.14172",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "概念引导：用于文本到图像生成的精确、无需训练的潜在控制",
+      "core_contribution": "提出一种名为概念引导（CoG）的无需训练、无需外部模型或梯度的方法，通过强化概念相关层的影响，实现对文本到图像扩散模型的精确、概念特定控制，并提升局部一致性（如文本或手部生成）。",
+      "method": "该方法首先引入概念级互信息的概念，量化每个层对特定概念（如美学质量）的影响，发现不同层在生成特定结构时存在显著差异。然后，在去噪过程中，通过跳过概念相关层并加权组合预测结果，增强这些层的贡献，从而引导生成过程。整个过程无需额外训练或提示工程，适用于现有模型。",
+      "findings": "实验表明，CoG在多个目标（如美学质量、文本生成、手部细节）和流行模型（PixArt-alpha、SD3、SD3.5、FLUX.1-dev）上均显著提升了生成性能，验证了层间概念特异性差异的利用有效性，并提供了公开代码。"
+    }
+  },
+  {
+    "id": "2608.14546",
+    "title": "CPI-Bench: A Comprehensive,Practical and Intelligent Benchmark for Real-World Image Editing",
+    "abstract": "With the rapid advancement of image editing models and their widespread application across various domains, there is an increasingly urgent need to deploy these model capabilities directly into real-world scenarios. However, existing benchmarks remain confined to simple single-image tasks, suffering from limited coverage dimensions and an inability to effectively differentiate performance among diverse models. Consequently, they fail to reliably evaluate model performance in complex multi-image editing, highly demanding reasoning instructions, and practical deployment settings. To address these limitations, we propose CPI-Bench, a Comprehensive, Practical andIntelligent benchmark for real-world image editing. CPI-Bench comprises three core subsets: CPI-General-Bench, which comprehensively covers diverse editing tasks and pioneers the inclusion of multi-image editing evaluation; CPI-Practical-Bench, which focuses on high-frequency real-user application scenarios; and CPI-Intelligent-Bench, which is dedicated to evaluating capabilities in highly demanding reasoning-based editing. Evaluation results of mainstream image editing models based on CPI-Bench demonstrate that CPI-Bench enhances performance differentiation among models. It provides a comprehensive and reliable quantification of gaps in general editing capabilities, practical deployment efficacy, and advanced reasoning-based editing, offering invaluable guidance for the future optimization of image editing models. Crucially, our ranking analysis reveals that CPI-Bench achieves the highest alignment with the Arena Image Edit Leaderboard, indicating it faithfully captures the preferences and perceptual judgments of human evaluators, serving as a robust proxy for real-world user experience.",
+    "authors": [
+      "Qinye Zhou",
+      "Jun Zheng",
+      "Yongchao Du",
+      "Yuan Wang",
+      "Zhengrui Chen",
+      "Zuan Gao",
+      "Taihang Hu",
+      "Chao Lin",
+      "Yefeng Shen",
+      "Xingjian Wang",
+      "Zhao Wang",
+      "Zhengtao Wu",
+      "Xiaoli Xu",
+      "Zhengze Xu",
+      "Hao Yan",
+      "Denghui Yang",
+      "Yuhang Yu",
+      "Huayu Zhang",
+      "Mingzhou Zhang",
+      "Mengting Chen"
+    ],
+    "published": "2026-08-14",
+    "updated": "2026-08-14",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.14546.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.14546",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "CPI-Bench：面向真实世界图像编辑的全面、实用且智能的基准",
+      "core_contribution": "提出CPI-Bench基准，首个涵盖多图像编辑、实际应用场景和高推理需求编辑的综合评估框架，能有效区分不同模型的性能，并与人类评估高度一致。",
+      "method": "CPI-Bench包含三个子集：CPI-General-Bench覆盖多种编辑任务并首创多图像编辑评估；CPI-Practical-Bench聚焦高频真实用户场景；CPI-Intelligent-Bench评估高推理需求编辑。通过主流图像编辑模型在基准上的表现，进行性能差异化和排名分析。",
+      "findings": "CPI-Bench增强了模型间的性能区分度，全面量化了通用编辑、实际部署和高级推理编辑的差距；排名分析与Arena Image Edit Leaderboard高度一致，表明其能忠实反映人类评估者的偏好和感知判断，可作为真实用户体验的可靠代理。"
+    }
+  },
+  {
+    "id": "2608.14543",
+    "title": "MagnifiQ: Patch-aware Text Guided Progressive Upscaling for High-Resolution Image Restoration",
+    "abstract": "High-resolution image restoration from degraded inputs is challenging because it must preserve global structural consistency while recovering fine-grained local details, especially at 4K resolution where direct diffusion-based restoration is computationally expensive and prone to repeated or inconsistent textures. In this work, we introduce MagnifiQ, an image restoration framework that progressively upscales and restores images across resolutions, e.g., from 1024x1024 to 4096x4096. Our approach leverages a pre-trained text-to-image diffusion model such as SDXL and adapts it for more scalable high-resolution inference by replacing its original self-attention layers with convolutional operations whose computational cost grows linearly with image resolution. We further propose a progressive upscaling strategy that iteratively restores images over multiple resolution stages, refining each intermediate output rather than directly hallucinating the final 4K image, thereby improving global coherence and reducing high-resolution artifacts. To enhance local details while controlling content drift, MagnifiQ uses patch-specific text prompts that provide spatially localized semantic guidance during restoration. Extensive experiments on synthetic and real-world degraded images show that MagnifiQ outperforms prior diffusion-based restoration methods in perceptual quality and human preference, producing sharper textures and more coherent 4K results while offering practical speed--quality trade-offs through its scalable backbone and progressive design.",
+    "authors": [
+      "Mahesh Reddy",
+      "Yashesh Savani",
+      "Antoine Mercier",
+      "Hong Cai",
+      "Fatih Porikli",
+      "Guillaume Berger"
+    ],
+    "published": "2026-08-14",
+    "updated": "2026-08-14",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.14543.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.14543",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "MagnifiQ：基于补丁感知文本引导的渐进式高分辨率图像恢复放大",
+      "core_contribution": "提出了一种名为MagnifiQ的图像恢复框架，通过渐进式多分辨率放大和补丁感知文本提示，实现了高效且高质量的4K图像恢复，优于现有扩散模型方法。",
+      "method": "MagnifiQ利用预训练的文本到图像扩散模型（如SDXL），将其自注意力层替换为卷积操作，使计算成本随分辨率线性增长。采用渐进式放大策略，从1024x1024到4096x4096分阶段恢复，每阶段细化中间输出。同时，使用补丁特定的文本提示提供空间局部语义指导，以增强细节并控制内容漂移。",
+      "findings": "在合成和真实退化图像上的实验表明，MagnifiQ在感知质量和人类偏好上优于先前的扩散恢复方法，产生更清晰的纹理和更连贯的4K结果，并通过可扩展骨干和渐进设计提供实用的速度-质量权衡。"
+    }
+  },
+  {
+    "id": "2608.14430",
+    "title": "Designing Reinforcement Learning for Diffusion Models: A Unified Path-Space View",
+    "abstract": "Reinforcement learning (RL) post-training provides a direct way to align diffusion models with human preferences and task-specific rewards. However, current RL algorithms for diffusion models remain fragmented: reverse-trajectory methods rely on discretized likelihood ratios, whereas forward-matching methods train on reward-labeled noising versions of the rollout samples. This paper shows that these seemingly different losses arise from a single path-space principle. Starting from the regularized diffusion-RL objective, we use importance sampling between sampling SDEs to obtain an explicit policy-gradient estimator on trajectory space. The estimator contains the stochastic Itô integral underlying Flow-GRPO-type updates; we derive an equivalent variance-reduced value-gradient form that recovers the forward-matching structure of AWM and DiffusionNFT. This identifies the empirical gap between these method families as a variance-reduction effect rather than a difference in RL principle. The derivation yields a unified design space organized by value-gradient estimation, weight functions, and sampling choices. Within this space, we propose a multi-sample KDE value-gradient estimator that reuses rollout groups, together with scale-bounded weight families that retain stable existing recipes while excluding singular ones. Experiments on SD3.5-M and Qwen-Image models validate the variance-reduction explanation and show that the resulting recipe improves over prior diffusion-RL baselines.",
+    "authors": [
+      "Yixian Xu",
+      "Yuanrui Zhang",
+      "Shengjie Luo",
+      "Liwei Wang",
+      "Di He"
+    ],
+    "published": "2026-08-14",
+    "updated": "2026-08-14",
+    "categories": [
+      "cs.LG",
+      "cs.CV",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.14430.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.14430",
+    "primary_category": "cs.LG",
+    "score": 75,
+    "summary": {
+      "title_zh": "为扩散模型设计强化学习：一种统一的路径空间视角",
+      "core_contribution": "本文提出了一种统一的路径空间视角，将现有扩散模型强化学习算法（如Flow-GRPO、AWM和DiffusionNFT）统一为同一原理下的不同变体，并指出它们之间的差异主要源于方差缩减效应而非RL原则的不同，从而为设计更优的扩散模型RL算法提供了统一的设计空间。",
+      "method": "本文从正则化的扩散RL目标出发，利用采样SDE之间的重要性采样，在轨迹空间上推导出显式的策略梯度估计器。该估计器包含Flow-GRPO型更新中的随机Itô积分，并进一步推导出等价的方差缩减值梯度形式，从而恢复AWM和DiffusionNFT的前向匹配结构。基于此，作者提出了一种多样本KDE值梯度估计器，并设计了尺度有界的权重族，以保留稳定配方并排除奇异情况。",
+      "findings": "在SD3.5-M和Qwen-Image模型上的实验验证了方差缩减解释，并表明所提出的方法在扩散模型RL基线上取得了改进，证明了统一设计空间的有效性。"
+    }
+  }
+]
