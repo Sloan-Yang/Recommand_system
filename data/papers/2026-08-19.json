@@ -1,0 +1,168 @@
+[
+  {
+    "id": "2608.18076",
+    "title": "From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation",
+    "abstract": "Large-scale image generation has benefited from advances in data scale, quality, rebalancing, and recaptioning, yet conventional pipelines typically optimize task-specific datasets in isolation. A central challenge is not only how to curate each task-specific corpus, but also how to organize heterogeneous supervision according to the dependencies among generative capabilities. We present a \\textbf{capability-driven data infrastructure} that couples capability-specific supervision construction with capability-aligned curriculum scheduling. Its three specialized yet interoperable data engines build complementary relational supervision for text-image grounding, inter-image transformation, and image-knowledge association, while caption experts align T2I and editing supervision across tasks and granularities. A multi-stage curriculum jointly evolves task composition, visual-concept distribution, data quality, and image resolution along the dependency order of capability acquisition, with capability-aware evaluation closing the loop through targeted retrieval, expert construction, and gap-aware resampling. At scale, the framework curates a 440M-image T2I corpus, 120M editing pairs, and over 27M image-entity pairs. With this infrastructure, we train multimodal diffusion models at two scales from scratch, with 3B and 6B sizes respectively. We conduct quantitative evaluation on CPI-Bench, along with qualitative evaluations across diverse text-to-image and editing scenarios. Experimental results present broad visual coverage, versatile rendering, and effective transfer across generative capabilities.",
+    "authors": [
+      "Xingjian Wang",
+      "Zhao Wang",
+      "Taihang Hu",
+      "Jun Zheng",
+      "Qing Jin",
+      "Qinye Zhou",
+      "Zhengtao Wu",
+      "Yongchao Du",
+      "Zuan Gao",
+      "Chao Lin",
+      "Yefeng Shen",
+      "Xiaoli Xu",
+      "Zhengze Xu",
+      "Hao Yan",
+      "Yuhang Yu",
+      "Mingzhou Zhang",
+      "Mengting Chen"
+    ],
+    "published": "2026-08-18",
+    "updated": "2026-08-18",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.18076.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.18076",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "从语料库到协同演进的能力：面向通用图像生成的能力中心化数据设计",
+      "core_contribution": "提出了一种能力驱动的数据基础设施，通过构建能力特定的监督数据并设计能力对齐的课程调度，实现多种生成能力（如文本-图像对齐、图像间变换、图像-知识关联）的协同演进，从而提升通用图像生成模型的性能。",
+      "method": "该方法包含三个专门且可互操作的数据引擎，分别构建关系监督数据以支持文本-图像接地、图像间变换和图像-知识关联；同时，字幕专家在不同任务和粒度上对齐T2I和编辑监督。多阶段课程按能力获取的依赖顺序共同演进任务组成、视觉概念分布、数据质量和图像分辨率，并通过能力感知评估（包括目标检索、专家构建和差距感知重采样）形成闭环。最终，利用该基础设施从零训练了3B和6B两种规模的多模态扩散模型。",
+      "findings": "在CPI-Bench上的定量评估以及多种文本到图像和编辑场景的定性评估表明，该框架实现了广泛的视觉覆盖、多样的渲染效果，并展示了生成能力之间的有效迁移，验证了能力中心化数据设计的有效性。"
+    }
+  },
+  {
+    "id": "2608.17995",
+    "title": "AViTS: Adaptive Spatiotemporal Token Selection for Efficient Dynamic-Resolution Generation",
+    "abstract": "Diffusion Transformers (DiTs) achieve high-quality generation but are costly due to iterative sampling. Dynamic-resolution sampling reduces early-stage cost by denoising at low resolution; however, uniformly upsampling all latent tokens at resolution transitions incurs redundant computation and may degrade fine-detail consistency. Existing partial upsampling strategies typically rely on local latent structure cues or single-step statistics, making it difficult to jointly capture token-text semantic relevance and token-wise representation dynamics across diffusion steps. We propose AViTS, an adaptive spatiotemporal token selection framework for dynamic-resolution DiTs. AViTS models spatial importance via latent-text attention and temporal importance via token-level feature variation across diffusion timesteps, and fuses them to enable spatiotemporal importance-aware selective upsampling: it prioritizes resolution refinement for critical tokens while deferring less important ones, thereby reducing redundant high-resolution computation and improving the quality-efficiency trade-off. AViTS achieves up to 6.34x on FLUX and nearly 9x FLOPs reduction on Qwen-Image-Edit and FLUX.1-Kontext-dev, orthogonal to distillation, quantization, and feature caching, and reaching 14.76x with distilled models. Code: https://github.com/QHR69/AViTS",
+    "authors": [
+      "Haoran Qin",
+      "Zhengan Yan",
+      "Shikang Zheng",
+      "Xiaobing Tu",
+      "Jiacheng Liu",
+      "Yuqi Lin",
+      "Chang Zou",
+      "JinShan Liu",
+      "Peiliang Cai",
+      "Xiantao Zhang",
+      "Jinkui Ren",
+      "Linfeng Zhang"
+    ],
+    "published": "2026-08-18",
+    "updated": "2026-08-18",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.17995.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.17995",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "AViTS：用于高效动态分辨率生成的自适应时空令牌选择",
+      "core_contribution": "提出了一种自适应时空令牌选择框架AViTS，用于动态分辨率扩散Transformer（DiTs），通过联合建模令牌的文本语义相关性和跨扩散步骤的表示动态，实现重要性感知的选择性上采样，从而在减少冗余高分辨率计算的同时提升生成质量与效率的权衡。",
+      "method": "AViTS首先利用潜在文本注意力计算空间重要性，并利用令牌特征在扩散时间步上的变化计算时间重要性，然后将两者融合形成时空重要性分数。基于该分数，在分辨率转换时优先对关键令牌进行上采样，而延迟次要令牌的上采样，从而减少高分辨率下的冗余计算。该方法与蒸馏、量化和特征缓存等技术正交，可组合使用。",
+      "findings": "在FLUX上实现了高达6.34倍的FLOPs减少，在Qwen-Image-Edit和FLUX.1-Kontext-dev上实现了近9倍的FLOPs减少，与蒸馏模型结合时可达14.76倍，同时保持了生成质量或改善了质量-效率权衡。"
+    }
+  },
+  {
+    "id": "2608.17973",
+    "title": "LinCa: Accelerating Diffusion Models via Learnable Decomposed Feature Caching",
+    "abstract": "Diffusion models have achieved remarkable success in image and video generation, yet the high computational cost of iterative sampling remains a critical bottleneck for practical deployment. Feature caching has emerged as a promising acceleration paradigm by reusing or predicting intermediate features across timesteps. However, existing training-free methods apply uniform prediction strategies that cannot adapt to the heterogeneous feature dynamics, causing significant quality degradation under high acceleration ratios. We propose LinCa, a feature caching framework based on learnable invertible networks. LinCa decomposes cached features into sub-components with distinct continuity properties via a lightweight invertible network and applies differentiated prediction orders matched to each component. The strict invertibility guarantees lossless reconstruction back to the original feature space, forming a unified Decompose-Predict-Reconstruct pipeline. By training separate predictors for different models and timestep segments, LinCa adapts to heterogeneous feature dynamics. Experiments on FLUX, Qwen-Image, and HunyuanVideo demonstrate that LinCa, with less than 0.2% additional parameters, significantly outperforms existing methods and maintains near-lossless quality at 5-7x speedup. Code: https://github.com/QHR69/LinCa",
+    "authors": [
+      "Jinshan Liu",
+      "Haoran Qin",
+      "Xiaobing Tu",
+      "Jiacheng Liu",
+      "Jiahui Hu",
+      "Zhengan Yan",
+      "Yukun Xie",
+      "Kerui Shen",
+      "Jinkui Ren",
+      "Yuqi Lin",
+      "Xiantao Zhang",
+      "Linfeng Zhang"
+    ],
+    "published": "2026-08-18",
+    "updated": "2026-08-18",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.17973.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.17973",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "LinCa：通过可学习分解特征缓存加速扩散模型",
+      "core_contribution": "提出了一种基于可学习可逆网络的特征缓存框架LinCa，通过分解缓存特征并采用差异化预测策略，在极低额外参数下显著提升扩散模型加速比，同时保持近无损生成质量。",
+      "method": "LinCa利用轻量级可逆网络将缓存特征分解为具有不同连续性的子组件，并为每个组件匹配不同的预测顺序，通过严格可逆性保证特征空间的无损重建，形成统一的分解-预测-重建流程。针对不同模型和时间步段训练独立的预测器，以适应异构特征动态。",
+      "findings": "在FLUX、Qwen-Image和HunyuanVideo上，LinCa以不到0.2%的额外参数，显著优于现有方法，并在5-7倍加速下保持近无损质量。"
+    }
+  },
+  {
+    "id": "2608.15705",
+    "title": "PixelControl: Fine-Grained Condition Fidelity in Text-to-Image Diffusion",
+    "abstract": "Controllable text-to-image diffusion models can often follow the global layout of spatial conditions, yet still violate fine-grained structures such as object boundaries, thin contours, and medium/small conditioned regions. This limitation is especially problematic for VAE-based latent diffusion, where spatial compression can weaken high-frequency and low-area condition signals. We propose PixelControl, a pixel-space controllable diffusion framework for fine-grained condition fidelity. Built on a PixelDiT-style backbone, PixelControl avoids the latent bottleneck and introduces two complementary designs. First, Structure-Aware Control Injection derives a condition structure map and uses it to strengthen injected control residuals around spatially sensitive regions. Second, Multi-Scale Pyramid Cycle Loss verifies generated images against condition-derived structures across multiple resolutions, balancing global layout consistency with local boundary and detail accuracy. PixelControl supports depth, segmentation, edge, and their combinations through modality-specific control branches with lightweight gated fusion. Experiments across depth, segmentation, and edge control show that PixelControl improves structural fidelity and visual quality over existing controllable generation methods, with especially strong gains on boundaries and medium/small conditioned regions. The project page can be found at: https://linxin0.github.io/pixelcontrol_homepage/pixelcontrol-site/",
+    "authors": [
+      "Xin Lin",
+      "Haodong Li",
+      "Zhifei Zhang",
+      "Yutong Yang",
+      "Haitian Zheng",
+      "Juanxi Tian",
+      "Zhe Lin",
+      "Truong Nguyen"
+    ],
+    "published": "2026-08-16",
+    "updated": "2026-08-16",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.15705.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.15705",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "PixelControl：文本到图像扩散中的细粒度条件保真度控制",
+      "core_contribution": "提出PixelControl，一种像素空间的可控扩散框架，旨在解决现有文本到图像扩散模型在细粒度结构（如物体边界、细轮廓和中小尺寸条件区域）上保真度不足的问题，显著提升结构保真度和视觉质量。",
+      "method": "PixelControl基于PixelDiT风格的骨干网络，避免VAE潜在瓶颈，并引入两种互补设计：结构感知控制注入（Structure-Aware Control Injection）通过推导条件结构图来增强敏感区域的控制残差；多尺度金字塔循环损失（Multi-Scale Pyramid Cycle Loss）在多个分辨率下验证生成图像与条件结构的一致性，平衡全局布局与局部细节。此外，通过模态特定控制分支和轻量级门控融合支持深度、分割、边缘及其组合条件。",
+      "findings": "在深度、分割和边缘控制实验中，PixelControl相比现有可控生成方法在结构保真度和视觉质量上均有提升，尤其在边界和中小尺寸条件区域上表现显著优势。"
+    }
+  },
+  {
+    "id": "2608.15583",
+    "title": "PoseAdapter: Dual-Stream 2.5D Controllable Image Generation for Complex Multi-Object Scenes",
+    "abstract": "While Text-to-Image (T2I) diffusion models have achieved remarkable success, precise spatial and orientational control in multi-object scenes remains a persistent challenge. Existing methods either rely on computationally expensive dense 3D maps or suffer from severe attribute leakage and \"cut-and-paste\" artifacts. To address these limitations, we propose PoseAdapter, a lightweight framework for high-fidelity 2.5D controllable image generation. Instead of dense spatial maps, it establishes precise spatial-angular anchors using an efficient condition layout: individual object captions, 2D bounding boxes, and 3D angles. To resolve the generative trade-off between strict instance isolation and global coherence, we introduce a Context-Aware Dual-Stream Representation. By injecting local object tokens and relation-enriched scene tokens into the visual stream of modern MM-DiT architectures via parallel masked and unmasked pathways, PoseAdapter eliminates attribute leakage while preserving natural inter-object relationships and scene-level coherence. To support this paradigm, we construct OrientLayout, a high-quality dataset featuring standardized 2.5D annotations and instance-level decoupled semantics. Extensive experiments demonstrate that PoseAdapter outperforms state-of-the-art baselines in spatial accuracy, orientational precision, and multi-object visual fidelity. Code and dataset will be available at https://github.com/cyf23/PoseAdapter.",
+    "authors": [
+      "Yufeng Chi",
+      "Huimin Ma",
+      "Fan Gao",
+      "Zhice Niu",
+      "Keqin Li",
+      "Jianmin Li"
+    ],
+    "published": "2026-08-16",
+    "updated": "2026-08-16",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.15583.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.15583",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "PoseAdapter：用于复杂多对象场景的双流2.5D可控图像生成",
+      "core_contribution": "提出了一种轻量级框架PoseAdapter，通过高效的2.5D条件布局（对象描述、2D边界框和3D角度）实现高保真可控图像生成，解决了多对象场景中空间和方向控制难、属性泄漏和拼接伪影等问题。",
+      "method": "PoseAdapter采用上下文感知的双流表示，将局部对象令牌和关系增强的场景令牌分别通过并行掩码和未掩码路径注入到现代MM-DiT架构的视觉流中，从而在保持对象间自然关系和场景连贯性的同时，避免属性泄漏。此外，构建了OrientLayout数据集，提供标准化的2.5D注释和实例级解耦语义，以支持该训练范式。",
+      "findings": "实验表明，PoseAdapter在空间准确性、方向精度和多对象视觉保真度上均优于现有最先进基线，有效解决了多对象生成中的属性泄漏和拼接伪影问题，同时保持了场景级连贯性。"
+    }
+  }
+]
