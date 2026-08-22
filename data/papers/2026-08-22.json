@@ -1,0 +1,138 @@
+[
+  {
+    "id": "2608.17414",
+    "title": "REChart: Reasoning-Efficient Chart Editing with Large Reasoning Models",
+    "abstract": "Chart editing requires inferring and modifying visualization code from a reference chart image based on an editing instruction, challenging fine-grained visual reasoning, instruction following, and executable code synthesis capabilities of MLLMs. Large reasoning models (LRMs) with extended Chain-of-Thought (CoT) reasoning are suitable for tackling such complex multimodal tasks. However, our preliminary study reveals an ``inverted-U'' relationship between reasoning length and chart-editing performance: Excessive reasoning often leads to ``overthinking,'' where models drift toward hallucinated visual details or get stuck in redundant reasoning loops. To address the gap, we introduce REChart, a two-stage training framework that provides process-level supervision over intermediate reasoning steps, improving both editing fidelity and reasoning efficiency. First, we synthesize 200k high-quality reasoning trajectories for supervised fine-tuning from a large image-instruction-code pool, using a role-specialized agentic Reason-Score-Refine workflow that iteratively refine the chart code toward higher quality. Second, we optimize the model via reinforcement learning with two complementary rewards: a \\emph{fidelity} reward evaluating code correctness, visual fidelity, and structural consistency, and an \\emph{efficiency} reward that assigns each rollout a random thinking budget, truncates the reasoning process, and credits the final reasoning segment according to its contribution to the output. On the ChartEdit and ChartMIMIC benchmarks, our model achieves state-of-the-art chart-editing performance among open-source models of comparable scale, while mitigating overthinking and reducing average reasoning token usage by 79.0\\% under a maximum thinking budget of 16,384 tokens compared with the base model.",
+    "authors": [
+      "Yuanbang Liu",
+      "Chenxi Ruan",
+      "Yihan Hou",
+      "Qiong Luo",
+      "Wei Zeng"
+    ],
+    "published": "2026-08-18",
+    "updated": "2026-08-18",
+    "categories": [
+      "cs.CV",
+      "cs.PL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.17414.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.17414",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "REChart：面向大型推理模型的高效图表编辑",
+      "core_contribution": "本文提出REChart，一个两阶段训练框架，通过过程级监督和强化学习优化大型推理模型（LRM）在图表编辑任务中的推理效率与编辑保真度，有效缓解了过度推理（overthinking）问题，并在多个基准上达到开源模型的最优性能。",
+      "method": "REChart首先利用角色专用的智能体工作流（Reason-Score-Refine）从大规模图像-指令-代码池中合成20万条高质量推理轨迹，用于监督微调。随后，通过强化学习优化模型，设计两个互补奖励：保真度奖励（评估代码正确性、视觉保真度和结构一致性）和效率奖励（为每次采样分配随机思考预算，截断推理过程，并根据最终推理段对输出的贡献进行信用分配）。",
+      "findings": "在ChartEdit和ChartMIMIC基准上，REChart在同等规模的开源模型中取得了最先进的图表编辑性能，同时显著减少了过度推理：在最大思考预算为16,384个token时，平均推理token使用量相比基础模型降低了79.0%。"
+    }
+  },
+  {
+    "id": "2608.16765",
+    "title": "TRACE-Bench: Decomposing and Diagnosing Multi-Reference Image Generation",
+    "abstract": "Despite recent advances in unified multimodal models for multi-reference image generation, existing benchmarks remain organized around predefined task types (e.g., \"subject composition\"), which are ill-suited to this combinatorial setting and lead to fragmented coverage, uncontrolled complexity, and little diagnostic value. Recognizing that diverse multi-reference tasks share a common set of atomic operations, we adopt a capability-oriented perspective and formalize four operators: Anchor ($f$), Disentangle ($g$), Apply ($\\oplus$), and Compose ($C$). Any multi-reference prompt can then be represented as a compositional formula over these operators, whose structural complexity is quantified by the number of operator slots. Building on this formulation, we construct TRACE-Bench, comprising approximately 1,600 evaluation cases across slot counts 1--8, built from 631 formula templates and around 4,000 reference images spanning diverse artistic styles and real-world subjects. The formula structure directly drives an operator-aligned evaluation protocol for per-capability scoring and a diagnostic tree analysis for recursive failure localization. Evaluating 9 leading models reveals insights invisible to holistic scoring: the primary bottleneck lies in disentanglement ($g$) and attribute binding ($\\oplus$) rather than scene-level composition ($C$), with even the best model scoring only 0.74 on attribute fidelity. Project page: https://amuseum-whr.github.io/TraceBench",
+    "authors": [
+      "Haoran Wang",
+      "Chaofan Ma",
+      "Ran Yi",
+      "Lizhuang Ma"
+    ],
+    "published": "2026-08-17",
+    "updated": "2026-08-17",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.16765.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.16765",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "TRACE-Bench：多参考图像生成的分解与诊断",
+      "core_contribution": "提出了一个基于能力导向的多参考图像生成基准TRACE-Bench，通过形式化四个原子操作（锚定、解耦、应用、组合）来统一表示多样化的多参考任务，并实现了细粒度的能力评估与故障诊断。",
+      "method": "首先定义了四个原子操作符（Anchor f、Disentangle g、Apply ⊕、Compose C），将任意多参考提示表示为这些操作符的组合公式，并用操作符槽位数量量化结构复杂度。基于此构建了包含约1600个评估案例、631个公式模板和约4000张参考图像的基准，并设计了与操作符对齐的评估协议和诊断树分析，用于逐能力评分和递归故障定位。",
+      "findings": "对9个领先模型的评估显示，主要瓶颈在于解耦（g）和属性绑定（⊕），而非场景级组合（C）；即使最佳模型在属性保真度上仅得0.74分，揭示了整体评分无法发现的深层问题。"
+    }
+  },
+  {
+    "id": "2608.19739",
+    "title": "Question-Guided Evidence Acquisition for Multimodal Visual Question Answering",
+    "abstract": "Multimodal LLMs can see a document, but they often can't read it reliably. Small text, tables, visual cues, and topological elements still trip them up under direct visual inference, even when the page is already sitting in the model's context. Most document-VQA systems treat perception as fixed: they encode the page once, ask the question, and answer from whatever the model happened to extract in that single fast pass. We think document VQA needs slower, more deliberate perception: rather than answering from one fixed encoding, the model should spend a bit of extra compute at inference time working out what to look at next, and only then answer. We build this into \\textbf{Q-Guide}, a small agent that reads a question, works out what evidence it is still missing, and calls targeted tool(s) to recover it---reading text where text is needed, zooming in where detail is needed, or grounding a region where position matters. On DocVQA2026 and Manga109, Q-Guide outperforms both direct prompting and recent multi-agent document systems ($65.0\\%$ vs.\\ $40.0\\%$ on DocVQA2026, $32.4\\%$ vs.\\ $24.4\\%$ on Manga109), and the improvement holds across three Claude backbones (Opus 4.6, Sonnet 4.6, and Opus 4.5). We find that accuracy scales with the perception budget---most of the gain appears within two to three deliberate rounds---and that the gain comes from directing perception to the right place, not from complex control logic: adding planners, routers, or multiple collaborating agents does not help.",
+    "authors": [
+      "Alin-Ionut Popa"
+    ],
+    "published": "2026-08-20",
+    "updated": "2026-08-20",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.19739.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.19739",
+    "primary_category": "cs.CV",
+    "score": 55,
+    "summary": {
+      "title_zh": "问题引导的多模态视觉问答证据获取",
+      "core_contribution": "提出Q-Guide，一个轻量级智能体，通过推理时逐步获取缺失证据来提升文档视觉问答的准确性，在DocVQA2026和Manga109上显著优于直接提示和现有多智能体系统。",
+      "method": "Q-Guide首先读取问题，判断当前编码中缺失的证据类型，然后调用针对性工具（如文本读取、区域放大、位置定位）获取所需信息，经过两到三轮迭代后生成最终答案。该方法不依赖复杂的规划器或路由器，而是通过简单的循环机制引导感知聚焦于关键区域。",
+      "findings": "在DocVQA2026上，Q-Guide达到65.0%的准确率，远超直接提示的40.0%；在Manga109上达到32.4%，优于基线24.4%。性能随感知预算增加而提升，主要收益集中在两到三轮内；增益源于正确的感知定位，而非复杂控制逻辑，增加规划器或多智能体协作无益。"
+    }
+  },
+  {
+    "id": "2608.19540",
+    "title": "Continuous Adversarial MeanFlow Transfer",
+    "abstract": "Training fast generators on new domains with limited data remains challenging for two reasons. First, adapting a pretrained diffusion or flow model to a new domain leaves its costly multi-step sampling unaddressed, and existing acceleration methods are tied to the source parameterization--$ε$, $x$, $v$, or $u$--leaving heterogeneous pretrained models with no common acceleration target. Second, while adversarial refinement is proven effective for few-step quality, it is formulated only for instantaneous-velocity flows, not for the finite-interval average velocities that MeanFlow (MF) models predict. We address both problems. We propose MeanFlow-Transfer, which maps heterogeneous source outputs into a shared velocity representation, uses it to initialize an MF generator from the source weights, and optimizes an MF objective on the target domain. This unifies adaptation and acceleration in a single training loop across a broad range of pretrained models. We then introduce Continuous Adversarial MeanFlow, a post-training stage that extends continuous adversarial flow models from instantaneous velocities to MF's finite-interval average velocities. CAMF contrasts changes in a learned potential between real and predicted interval endpoints, recovering fine detail that MF regression averages away, and reduces to the instantaneous criterion in the vanishing-interval limit. Adapting four ImageNet-based source models--DiT ($ε$), SiT ($v$), JiT ($x$), iMF ($u$)--to five target domains, MF-T with CAMF matches or exceeds the fine-tuned teacher in FID and FDD at up to $125\\times$ fewer Neural Function Evaluations (NFEs), while CAMF improves MF-T's few-step FID by $29\\%$ on average.",
+    "authors": [
+      "Yara Bahram",
+      "Zahra Dehghani",
+      "Mélodie Desbos",
+      "Eric Granger",
+      "Pablo Piantanida",
+      "Mohammadhadi Shateri"
+    ],
+    "published": "2026-08-20",
+    "updated": "2026-08-20",
+    "categories": [
+      "cs.LG",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.19540.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.19540",
+    "primary_category": "cs.LG",
+    "score": 55,
+    "summary": {
+      "title_zh": "连续对抗均值流迁移",
+      "core_contribution": "提出了一种统一的框架，将预训练扩散/流模型适配到新域并同时加速采样，解决了异构模型参数化（ε, x, v, u）导致的加速目标不一致问题，并首次将对抗精炼扩展到均值流（MeanFlow）的有限区间平均速度上。",
+      "method": "首先，MeanFlow-Transfer将异构源模型的输出映射到共享的速度表示，并利用源权重初始化均值流生成器，在目标域上优化均值流目标，从而统一适配与加速。然后，引入连续对抗均值流（CAMF）作为后训练阶段，通过对比真实与预测区间端点之间的学习势能变化，恢复回归平均丢失的细节，并在区间趋近于零时退化为瞬时速度的对抗准则。",
+      "findings": "在四个ImageNet预训练源模型（DiT、SiT、JiT、iMF）适配到五个目标域的实验中，MF-T结合CAMF在最多125倍更少的神经函数评估（NFEs）下，FID和FDD指标匹配或超过微调教师模型，且CAMF平均将MF-T的少步FID提升了29%。"
+    }
+  },
+  {
+    "id": "2608.19504",
+    "title": "A Plug-in Interpretation of Conditioning in Score-Based Diffusion Models",
+    "abstract": "We propose a conditioning mechanism for diffusion models based on multi-speed joint diffusion of the target and the condition. The mechanism learns an unconditional joint score network and enforces conditioning at inference via a plug-in correction term. The plug-in term separates the conditioning contribution from the learned unconditional dynamics, offering a transparent view of how the condition steers generation of the target distribution. Building on this, we derive explicit conditional reverse-time SDEs and approximate probability-flow ODEs, enabling principled and directly comparable conditional samplers. To reduce the induced ODE--SDE discrepancy, we introduce a log-Fokker--Planck residual regularization that improves ODE sampling quality. Experiments on conditional image generation tasks demonstrate competitive performance and support the effectiveness of the plug-in conditioning view. Additional ODE--SDE comparison experiments show that the log-Fokker--Planck residual regularization improves deterministic ODE sampling.",
+    "authors": [
+      "Libo Chen",
+      "Souvik Ghosh",
+      "Teo Deveney",
+      "Chris Budd",
+      "Vinay P. Namboodiri"
+    ],
+    "published": "2026-08-19",
+    "updated": "2026-08-19",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.19504.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.19504",
+    "primary_category": "cs.CV",
+    "score": 55,
+    "summary": {
+      "title_zh": "基于得分扩散模型中条件作用的即插即用解释",
+      "core_contribution": "提出了一种基于多速联合扩散的条件机制，通过即插即用修正项在推理时施加条件，从而透明地解释条件如何引导目标分布生成，并推导出显式的条件反向SDE和近似概率流ODE。",
+      "method": "该方法学习一个无条件联合得分网络，并在推理时通过即插即用修正项将条件贡献从无条件动力学中分离出来。基于此，推导出显式的条件反向SDE和近似概率流ODE，并引入对数Fokker-Planck残差正则化以减少ODE与SDE之间的差异，提高确定性ODE采样的质量。",
+      "findings": "在条件图像生成任务上，该方法表现出竞争性能，验证了即插即用条件观点的有效性。额外的ODE-SDE对比实验表明，对数Fokker-Planck残差正则化显著改善了确定性ODE采样的质量。"
+    }
+  }
+]
