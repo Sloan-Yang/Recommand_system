@@ -1,0 +1,145 @@
+[
+  {
+    "id": "2608.18622",
+    "title": "PALATE: Personalized Aesthetic Learning through Adaptive Taste Evolution for Multi-User Portrait Retouching",
+    "abstract": "Automatic portrait retouching has advanced rapidly, yet its objective is inherently subjective: the same portrait admits multiple professionally valid results, and users disagree about which one is best. Most existing methods optimize a population-level aesthetic standard and therefore cannot capture individual taste, while fine-tuning a separate editing model for every user incurs prohibitive training, storage, and data costs. We propose PALATE, a shared reward-evolution framework that keeps the image editor fixed and instead personalizes the selection among retouched candidates of the same source portrait. PALATE decomposes the reward for each user into a global backbone shared by all users, category-level residuals shared by aesthetically similar users, and a lightweight user adapter, with anti-collapse regularizers keeping the three levels complementary.A cyclic dual-level distillation scheme first distills user-specific preferences into category rewards and then consolidates the resulting category-level knowledge into the global backbone, which is redistributed to initialize the next evolution round. In this way, the shared initialization improves progressively across rounds, enabling unseen users to be calibrated from only a few rankings. On expert-retouched candidates from PPR10K with held-out users and held-out images, PALATE attains 72.83% pairwise preference-prediction accuracy, surpassing all reward, aesthetic, and image-quality baselines, of which the strongest, PickScore, reaches 58.06%. Each new user costs only 512 bytes of user-specific parameters and millisecond-level scoring.",
+    "authors": [
+      "Jingxuan Wang",
+      "Yifan Mei",
+      "Yuxia Niu",
+      "Chaowan Jiao",
+      "Qijin Shen"
+    ],
+    "published": "2026-08-19",
+    "updated": "2026-08-19",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.18622.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.18622",
+    "primary_category": "cs.CV",
+    "score": 55,
+    "summary": {
+      "title_zh": "PALATE：通过自适应品味演化实现多用户人像修图的个性化美学学习",
+      "core_contribution": "提出了一种共享奖励演化框架PALATE，在不修改图像编辑器的情况下，通过个性化选择同一源人像的修图候选结果来适应不同用户的审美偏好，显著提升了多用户场景下的偏好预测准确性，且每个新用户仅需极少的参数和计算开销。",
+      "method": "PALATE将每个用户的奖励分解为全局共享骨干、类别级残差和轻量级用户适配器，并引入防坍缩正则化保持三者互补。采用循环双级蒸馏方案：先蒸馏用户特定偏好到类别奖励，再整合类别知识到全局骨干，并重新分配以初始化下一轮演化，从而逐步改进共享初始化，使新用户仅需少量排序即可校准。",
+      "findings": "在PPR10K专家修图候选上，针对留出用户和留出图像，PALATE达到72.83%的成对偏好预测准确率，超过所有奖励、美学和图像质量基线（最强基线PickScore为58.06%）。每个新用户仅需512字节的用户特定参数和毫秒级评分时间。"
+    }
+  },
+  {
+    "id": "2608.18593",
+    "title": "ReX-Shot: Single-Image Rephotography via Geometry- and Camera-Grounded Generation",
+    "abstract": "Single-image rephotography aims to synthesize new shots of a scene from a single reference image with specified viewpoints, focal lengths, and photographic effects, which are intrinsically coupled in imaging. Existing methods typically treat these factors separately and struggle under joint control: novel-view synthesis may introduce geometric distortions under focal-length changes, while super-resolution and instruction-guided editing remain confined to 2D and cannot reliably extend detail restoration or appearance control to novel viewpoints. We attribute these limitations to imperfect single-image 3D reconstruction and the sampling limit of continuous focal-length enlargement. To reduce projection bias from geometric errors, we use implicitly transformed foundation-model features for robust target-view guidance. We further formulate focal-length enlargement as a geometry-guided super-resolution problem and exploit generative detail priors to recover details lost during sparse 3D resampling. Built on this 3D-aware generative backbone, we lift photographic-effect control from 2D filtering to 3D-aware appearance editing, preserving content consistency across viewpoints and focal lengths. These components form ReX-Shot, a geometry- and camera-grounded generative framework for single-image rephotography. To our knowledge, ReX-Shot is the first unified framework to jointly control viewpoint, focal length, and parameterized photographic effects from a single image. Experiments show that ReX-Shot outperforms representative baselines across all three controls while enabling near-real-time interactive rephotography.",
+    "authors": [
+      "Ruiqi Zhang",
+      "Hao Zhu",
+      "Wenhao Zhang",
+      "Qi Zhang",
+      "Junqi Shi",
+      "Ming Lu",
+      "Xun Cao",
+      "Zhan Ma"
+    ],
+    "published": "2026-08-19",
+    "updated": "2026-08-19",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.18593.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.18593",
+    "primary_category": "cs.CV",
+    "score": 55,
+    "summary": {
+      "title_zh": "ReX-Shot：基于几何与相机约束的生成式单图重拍",
+      "core_contribution": "提出了一个统一的生成式框架ReX-Shot，首次实现从单张图像同时控制视角、焦距和参数化摄影效果，解决了现有方法在联合控制下几何失真和细节恢复不足的问题。",
+      "method": "方法包括三个关键部分：首先，利用隐式变换的预训练基础模型特征来提供鲁棒的目标视角引导，减少几何误差导致的投影偏差；其次，将焦距放大建模为几何引导的超分辨率问题，利用生成式细节先验恢复稀疏3D重采样中丢失的细节；最后，将摄影效果控制从2D滤波提升为3D感知的外观编辑，确保跨视角和焦距的内容一致性。整体构建在3D感知的生成骨干网络上，实现联合控制。",
+      "findings": "实验表明，ReX-Shot在视角、焦距和摄影效果三种控制任务上均优于代表性基线方法，并支持近实时的交互式重拍，验证了其有效性和实用性。"
+    }
+  },
+  {
+    "id": "2608.18560",
+    "title": "SemanticSlider3D: Training-Free Continuous Semantic Editing for 3D Objects",
+    "abstract": "Fine-grained control over continuous semantic attributes of 3D objects is essential for 3D content creation, but is not well supported by conventional 3D modeling workflows or prompt-based interaction with existing generative AI tools. While slider-based methods have proven effective for fine-grained semantic control in 2D image generation, no equivalent approach exists for 3D. Extending these 2D methods to 3D is non-trivial due to challenges unique to 3D, including geometric integrity and cross-view coherence. We present SemanticSlider3D, a technique for continuous semantic attribute editing of 3D objects that requires no per-attribute training. Given a user-specified attribute, our pipeline constructs a semantic editing direction in the latent space of a state-of-the-art 3D generation model, presenting a diverse and coherent spectrum of 3D variations. A technical validation on a dataset of 50 3D object-attribute pairs shows our method was preferred by all five human assessors across variation range, consistency, 3D object quality, and attribute disentanglement, over a baseline combining a 2D slider with an image-to-3D model. An exploratory study with six participants demonstrates that SemanticSlider3D supported decision-making in 3D prototyping and was perceived as a valuable addition to existing workflows.",
+    "authors": [
+      "Ru Wang",
+      "Rahul Jain",
+      "Koichiro Niinuma",
+      "Aakar Gupta"
+    ],
+    "published": "2026-08-19",
+    "updated": "2026-08-19",
+    "categories": [
+      "cs.HC",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.18560.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.18560",
+    "primary_category": "cs.HC",
+    "score": 55,
+    "summary": {
+      "title_zh": "SemanticSlider3D：无需训练的三维物体连续语义编辑",
+      "core_contribution": "提出了一种无需逐属性训练的三维物体连续语义属性编辑技术，通过构建语义编辑方向实现多样且连贯的三维变体生成，填补了三维细粒度语义控制方法的空白。",
+      "method": "该方法利用最先进的三维生成模型的潜在空间，针对用户指定的属性构建语义编辑方向，从而生成连续的三维变体。无需针对每个属性进行训练，通过保持几何完整性和跨视图一致性来应对三维编辑的独特挑战。",
+      "findings": "在50个三维物体-属性对上的技术验证表明，该方法在变化范围、一致性、三维物体质量和属性解耦方面均优于基线（结合二维滑块和图像转三维模型），所有五位人类评估者均偏好该方法。探索性研究（六名参与者）显示，该方法支持三维原型设计中的决策，并被视为现有工作流程的有价值补充。"
+    }
+  },
+  {
+    "id": "2608.17975",
+    "title": "aDSL: Agentic 3D Creation via Joint Agent-Program Design",
+    "abstract": "Programmatic representations provide a compelling paradigm for 3D content creation, enabling fine-grained edits, interpretability, and explicit structural control. Yet, agentic workflows that rely on large language models (LLMs) to author 3D programs remain brittle, often failing to translate high-level intent into consistent low-level geometry. We attribute this fragility to a mismatch between existing programmatic interfaces and the reasoning strengths of LLMs, which favor semantic structure and spatial relations over fragile numeric choices. In this paper, we jointly design an Agent-centric Domain-Specific Language (aDSL) and a role-specialized multi-agent system to close this gap. aDSL bridges semantic logic and geometric constraints by emphasizing composability and spatial reasoning; it enables agents to manipulate geometry through relational operators instead of brittle absolute coordinates. Building on aDSL, our training-free multi-agent system follows a Plan-Execute-Critic loop to decompose requests, synthesize code, and iteratively repair errors and constraint violations using execution feedback. Experiments show that this co-design improves robustness, controllability, and faithfulness to user intent. Our method outperforms prior LLM-based baselines on text-to-shape and image-to-shape tasks while preserving explicit structure, editability, and interpretability. It also enables downstream applications such as articulated object creation and structured scene composition. Our code is available at https://github.com/sig-pku/aDSL.",
+    "authors": [
+      "Rui-Huan Wang",
+      "Si-Tong Wei",
+      "Jia-Qi He",
+      "Heng-Yi Wei",
+      "Baoquan Chen",
+      "Peng-Shuai Wang"
+    ],
+    "published": "2026-08-18",
+    "updated": "2026-08-18",
+    "categories": [
+      "cs.GR",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.17975.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.17975",
+    "primary_category": "cs.GR",
+    "score": 55,
+    "summary": {
+      "title_zh": "aDSL：通过联合智能体-程序设计实现智能体化3D创作",
+      "core_contribution": "本文提出了一种智能体中心领域特定语言（aDSL）与角色专业化多智能体系统的联合设计，以解决大语言模型在3D程序生成中因接口不匹配而导致的脆弱性问题，从而提升3D内容创建的鲁棒性、可控性和用户意图保真度。",
+      "method": "方法包括两个核心部分：一是设计aDSL，它通过强调可组合性和空间推理，用关系运算符替代绝对坐标，使智能体能够更自然地操作几何结构；二是构建一个无需训练的多智能体系统，该系统遵循计划-执行-批评（Plan-Execute-Critic）循环，将用户请求分解为子任务，合成代码，并利用执行反馈迭代修复错误和约束违规。",
+      "findings": "实验表明，该联合设计在文本到形状和图像到形状任务上优于先前的基于LLM的基线方法，同时保持了显式结构、可编辑性和可解释性。此外，该方法还支持下游应用，如铰接物体创建和结构化场景组合，验证了其通用性和实用性。"
+    }
+  },
+  {
+    "id": "2608.17695",
+    "title": "Magnitude-Direction Decoupling for Fast Video Generation with Flow Matching Models",
+    "abstract": "Flow matching models for video generation achieve impressive performance but suffer from high computational overhead due to iterative denoising. In fact, the original model is not necessary for all denoising steps, allowing some steps to use lightweight alternatives for faster sampling. However, directly using caching or lightweight models can deviate from the original denoising trajectory, resulting in suboptimal performance. Through empirical analysis, we find that lightweight models can robustly capture the magnitude components of the original model's output, while caching provides reliable directional guidance. Building on this insight, we propose the Magnitude-Direction Decoupling (MDD) method, which adaptively employs a direction-calibrated lightweight model as a substitute for the original model to accelerate inference and effectively correct deviations in the denoising trajectory. Moreover, MDD further reduces inference costs by reusing magnitude information under classifier-free guidance (CFG). As a result, MDD offers a more reliable and lightweight solution to accelerate sampling. Experiments show that MDD outperforms existing acceleration methods, delivering promising speedups (e.g., up to 2.95x on Wan2.1) while preserving high visual fidelity and content richness.",
+    "authors": [
+      "Haonan Xu",
+      "Feiyang Chen",
+      "Songkui Chen",
+      "Hongpeng Pan",
+      "Zhefeng Wang",
+      "Xinyu Duan",
+      "Baoxing Huai",
+      "Yang Yang"
+    ],
+    "published": "2026-08-18",
+    "updated": "2026-08-18",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.17695.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.17695",
+    "primary_category": "cs.CV",
+    "score": 55,
+    "summary": {
+      "title_zh": "幅度-方向解耦用于基于流匹配模型的快速视频生成",
+      "core_contribution": "提出了一种名为幅度-方向解耦（MDD）的加速方法，通过利用轻量级模型捕捉幅度分量和缓存提供方向指导，自适应地替代原始模型进行去噪，从而在不牺牲视频质量的前提下显著加速视频生成。",
+      "method": "MDD方法首先通过经验分析发现轻量级模型能稳健地捕捉原始模型输出的幅度分量，而缓存能提供可靠的方向指导。基于此，MDD自适应地采用方向校准的轻量级模型替代原始模型，以加速推理并纠正去噪轨迹的偏差。此外，MDD在分类器自由引导（CFG）下重用幅度信息，进一步降低推理成本。",
+      "findings": "实验表明，MDD在多个基准上优于现有加速方法，例如在Wan2.1上实现了高达2.95倍的加速，同时保持了高视觉保真度和内容丰富性。"
+    }
+  }
+]
