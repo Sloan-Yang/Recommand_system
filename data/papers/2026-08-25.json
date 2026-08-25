@@ -1,0 +1,144 @@
+[
+  {
+    "id": "2608.21893",
+    "title": "A Scalable Vector Graphics Latent Space",
+    "abstract": "Scalable Vector Graphics are a fundamental medium for resolution-independent visual content, yet the deep learning community lacks a continuous, dense, and invertible latent space for vector representations, the kind of foundational building block that Variational Autoencoders and their descendants have long provided for raster images. We introduce SLS (SVG Latent Space), a Transformer-based autoencoder that learns compact dense representations of individual SVG paths, the atomic visual elements from which any SVG image can be composed. By modeling SVG commands, coordinate data, and visual properties within a unified BPE-based token vocabulary, SLS learns fixed-size latent representations that jointly capture structure and appearance, and can be decoded back into valid, style-consistent SVG paths with high fidelity. The resulting embedding space is robust, invertible, and structured: embeddings lie on a unit hypersphere, enabling efficient similarity search, composition, and downstream conditioning through simple vector-space operations. Finally, we demonstrate that SLS generalizes across diverse tasks reducing their FLOPs by over 150 times compared to token-based approaches, and establishing a general-purpose latent foundation for vector graphics research.",
+    "authors": [
+      "Leonardo Zini",
+      "Elia Frigieri",
+      "Lorenzo Baraldi"
+    ],
+    "published": "2026-08-22",
+    "updated": "2026-08-22",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.21893.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.21893",
+    "primary_category": "cs.CV",
+    "score": 90,
+    "summary": {
+      "title_zh": "可缩放矢量图形的潜在空间",
+      "core_contribution": "提出了SLS（SVG潜在空间），首次为矢量图形建立了连续、密集且可逆的潜在表示空间，填补了深度学习在矢量图形领域的空白。",
+      "method": "基于Transformer的自编码器架构，通过统一的BPE（字节对编码）词汇表对SVG路径的指令、坐标数据和视觉属性进行建模，学习固定大小的潜在表示，能够高保真地解码回风格一致的SVG路径。潜在空间嵌入位于单位超球面上，支持高效的相似性搜索和向量空间操作。",
+      "findings": "SLS生成的潜在空间具有鲁棒性、可逆性和结构性，相比基于令牌的方法可将任务计算量降低150倍以上，并为矢量图形研究提供了通用基础。"
+    }
+  },
+  {
+    "id": "2608.21659",
+    "title": "SketchFlow: Zero-Shot Vector Sketch Generation via GMM Prior Flow in CLIP Latent Space",
+    "abstract": "Vector sketches remain one of the most concise and immediate mediums for abstract human expression. However, generating high-quality vector strokes that exhibit human-like drawing styles remains an open challenge due to the severe scarcity of fine-grained, high-quality text-to-sketch paired data. Existing text-conditioned generation methods often rely on unstable, time-consuming optimization or struggle to generalize to unseen categories in a zero-shot manner. To address these limitations, we present SketchFlow, a novel generative framework rooted in Optimal Transport (OT) theory and flow matching. By leveraging pre-trained CLIP models to bypass labor-intensive image-level text annotations, we formulate cross-modal alignment as a continuous mapping problem directly within the CLIP latent space. To bridge the inevitable modality gap between discrete text concepts and continuous sketch features, we first inject noise into discrete category embeddings to construct a continuous Gaussian Mixture Model (GMM) prior. We then utilize an Optimal Transport Conditional Flow Matching (OT-CFM) model to learn a deterministic vector field mapping from this continuous GMM prior to the target sketch feature distribution. Finally, a Hybrid Diffusion Decoder, fusing 1D U-Net and Transformer architectures, is designed to decode these features into fast and high-fidelity stroke trajectories. Extensive experiments demonstrate that SketchFlow substantially outperforms existing baselines in visual quality and adherence to natural human drawing styles. Furthermore, our geometry-preserving framework demonstrates promising local zero-shot synthesis for prompts beyond the QuickDraw training vocabulary, including unseen concept labels and semantic modifiers, while enabling smooth, continuous semantic interpolation between distinct concepts. Source code is available at: https://github.com/QiuHong-1202/SketchFlow.",
+    "authors": [
+      "Jin Zhou",
+      "Hongliang Yang",
+      "Pengfei Xu",
+      "Hui Huang"
+    ],
+    "published": "2026-08-21",
+    "updated": "2026-08-21",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.21659.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.21659",
+    "primary_category": "cs.CV",
+    "score": 90,
+    "summary": {
+      "title_zh": "SketchFlow: 基于CLIP潜在空间中GMM先验流的零样本矢量草图生成",
+      "core_contribution": "提出SketchFlow框架，通过结合最优传输理论和流匹配方法，实现了无需文本-草图配对数据的零样本高质量矢量草图生成。",
+      "method": "1. 利用预训练CLIP模型避免人工标注，将跨模态对齐建模为CLIP潜在空间中的连续映射问题；2. 通过向离散类别嵌入注入噪声构建连续高斯混合模型(GMM)先验；3. 采用最优传输条件流匹配(OT-CFM)模型学习从GMM先验到目标草图特征的确定性向量场映射；4. 设计融合1D U-Net和Transformer的混合扩散解码器生成笔画轨迹。",
+      "findings": "1. 在视觉质量和拟人化绘图风格上显著超越现有基线；2. 支持QuickDraw训练词汇外的未见概念标签和语义修饰符的局部零样本合成；3. 可实现不同概念间的平滑连续语义插值。"
+    }
+  },
+  {
+    "id": "2608.22757",
+    "title": "Object-Uni: A Unified Model for Object-Centric Spatial Understanding and Controllable Generation",
+    "abstract": "Unified models for visual understanding and generation have made rapid progress, yet they still lack the ability to understand and manipulate the spatial states of object instances. Existing models can describe objects in natural language, but they struggle to precisely represent continuous object poses and generate geometrically consistent images under target viewpoints. To mitigate this, we propose \\emph{Object-Uni}, a unified model for object-centric spatial understanding and controllable generation. Specifically, we formulate object-centric spatial intelligence as a unified problem connecting pose perception, spatial reasoning, pose-conditioned generation, and object-centric novel view synthesis. We treat object pose as an explicit geometric variable shared by understanding and generation, rather than merely a prediction label or control signal. To make pose usable by multimodal large language models, we propose a viewpoint-based orientation abstraction that maps orientation into structured viewpoint descriptions while preserving continuous geometric supervision. We further construct an object-centric spatial benchmark (UniSpatial-80K) and train a unified model with an object-token-grounded pose anchor to associate each instance with its pose state. Experiments show that our model improves object-level pose understanding and pose-controllable generation, moving unified models from describing objects toward manipulating spatial states.",
+    "authors": [
+      "Mining Tan",
+      "Yinuo Wang",
+      "Ziqi Zhou",
+      "Weize Quan",
+      "Sifei Li",
+      "Jingdong Chen",
+      "DanDan Zheng",
+      "Libin Wang",
+      "Weiming Dong"
+    ],
+    "published": "2026-08-24",
+    "updated": "2026-08-24",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.22757.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.22757",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "Object-Uni：面向以对象为中心的空间理解与可控生成的统一模型",
+      "core_contribution": "提出Object-Uni统一模型，将对象实例的空间状态理解与可控生成整合为单一框架，通过显式几何变量关联理解与生成任务。",
+      "method": "1. 将对象姿态作为理解与生成共享的显式几何变量；2. 提出基于视角的方位抽象方法，将连续姿态映射为结构化描述；3. 构建包含80K样本的对象中心空间基准(UniSpatial-80K)；4. 采用基于对象令牌的姿态锚点机制关联实例与姿态状态。",
+      "findings": "实验表明模型显著提升对象级姿态理解能力，在姿态可控生成任务中实现几何一致性更高的图像合成，推动统一模型从对象描述向空间状态操控的演进。"
+    }
+  },
+  {
+    "id": "2608.22521",
+    "title": "VISTA: Test-Time Compositional Alignment for Visual Autoregressive Generation",
+    "abstract": "Visual autoregressive (VAR) models have emerged as a fast, high-quality alternative to diffusion for text-to-image generation, but like diffusion models they exhibit persistent compositional failures, producing images that violate the attribute bindings and spatial relations specified in the prompt. While a rich line of test-time alignment methods has developed for diffusion, no comparable approach exists for next-scale VAR generation, whose stateful, discrete, multi-resolution sampling process makes existing techniques inapplicable. We close this gap with \\textbf{VISTA} (\\textbf{Vi}sual Autoregressive \\textbf{S}emantic \\textbf{T}est-time \\textbf{A}lignment), the first gradient-based test-time alignment framework for next-scale autoregressive image generation. Built on Infinity, VISTA intervenes directly in the generation process, optimizing intermediate representations through the frozen transformer to steer visual predictions toward compositional constraints, without modifying model parameters or requiring additional training. VISTA introduces the mechanisms needed to make such optimization stable across scales, together with an extensible objective space that any differentiable constraint on cross-attention can plug into. Across two benchmarks and two model scales, VISTA improves every targeted compositional category, raising the mean targeted score by nearly 20\\% on a 2B backbone and almost 6\\% on an 8B backbone, with the largest gains on spatial relations. Image quality is preserved: an independent preference model VISTA never optimizes scores its outputs nearly 20\\% higher. Notably, the 2B model with VISTA surpasses a backbone four times its size, indicating that a substantial part of the compositional gap between model scales is recoverable at test time.",
+    "authors": [
+      "Hossein Shahabadi",
+      "Niki Sepasian",
+      "Mahdieh Soleymani Baghshah"
+    ],
+    "published": "2026-08-23",
+    "updated": "2026-08-23",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.22521.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.22521",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "VISTA：视觉自回归生成中的测试时组合对齐",
+      "core_contribution": "提出了首个基于梯度的测试时对齐框架VISTA，用于解决下一代自回归图像生成中的组合失败问题，无需修改模型参数或额外训练。",
+      "method": "VISTA基于Infinity框架，通过在生成过程中直接干预，优化冻结变换器的中间表示，以引导视觉预测满足组合约束。该方法引入了跨尺度稳定的优化机制，并支持可扩展的目标空间，任何可微的跨注意力约束均可嵌入。",
+      "findings": "在两个基准测试和两种模型规模下，VISTA显著提升了所有目标组合类别的性能：2B骨干模型的平均目标分数提升近20%，8B模型提升近6%，其中空间关系改进最大。图像质量保持良好，独立偏好模型对VISTA输出的评分高出近20%。值得注意的是，配备VISTA的2B模型性能甚至超过其四倍规模的骨干模型，表明模型规模间的组合差距可通过测试时优化大幅弥补。"
+    }
+  },
+  {
+    "id": "2608.21885",
+    "title": "Pixel-Space Diffusion via Observation Operators",
+    "abstract": "Pixel-space diffusion models directly model image distributions but remain difficult to optimize. Recent methods alleviate this challenge through target reparameterization, while still relying on a fixed clean-image target throughout denoising. Through empirical analysis, we identify a scale-time mismatch: image structures become predictable from coarse to fine as noise decreases, whereas existing models are forced to predict the full image even under high noise, resulting in low-SNR gradients that hinder optimization. To resolve this mismatch, we propose Observation Operator Diffusion, a unified framework that aligns both the supervision trajectory and feature refinement with the intrinsic recovery order of image structures. Specifically, we replace fixed full-image supervision along the standard flow path with a time-indexed observation trajectory that evolves from coarse structures to the full image during denoising. This trajectory is instantiated with a family of Gaussian-Lanczos operators at varying observation scales, yielding a path-consistent training objective. We further introduce GL-CoDA, a decoder that injects scale-specific Gaussian-Lanczos observations across decoding stages for coarse-to-fine feature refinement. Extensive experiments show that the proposed approach converges substantially faster while consistently improving generation quality, achieving an FID of 1.52 on ImageNet-256.",
+    "authors": [
+      "Shaojie Guo",
+      "Lichen Ma",
+      "Haoyang Tong",
+      "Yu He",
+      "Zipeng Guo",
+      "Xiaoan Liu",
+      "Feng Yan",
+      "Yu Guo",
+      "Fei Wang",
+      "Junshi Huang",
+      "Yan Wang"
+    ],
+    "published": "2026-08-22",
+    "updated": "2026-08-22",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.21885.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.21885",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "通过观测算子的像素空间扩散",
+      "core_contribution": "提出观测算子扩散框架，通过动态调整监督轨迹和特征细化顺序，解决了像素空间扩散模型中尺度-时间不匹配的问题，显著提升了优化效率和生成质量。",
+      "method": "1. 提出观测算子扩散框架，用时间索引的观测轨迹替代固定全图像监督，使监督轨迹从粗结构逐步过渡到完整图像。\n2. 采用高斯-兰佐斯算子族在不同观测尺度下实例化轨迹，确保路径一致的训练目标。\n3. 设计GL-CoDA解码器，在解码阶段注入尺度特定的高斯-兰佐斯观测，实现从粗到细的特征细化。",
+      "findings": "实验表明，该方法收敛速度显著加快，生成质量持续提升，在ImageNet-256上达到1.52的FID分数。"
+    }
+  }
+]
