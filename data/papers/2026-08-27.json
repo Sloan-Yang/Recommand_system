@@ -1,0 +1,166 @@
+[
+  {
+    "id": "2608.25933",
+    "title": "When Composition Doesn't Add Up: Humans Identifying Defects in AI-Generated Images",
+    "abstract": "*Chulin Zhao and Ruoqi Hu contributed equally to this work. State-of-the-art text-to-image (T2I) models exhibit pronounced and systematic defects when prompts involve intricate compositional factors such as multiple entities and multiple attributes. In this paper, we investigate how humans identify such defects. Specifically, we manually select 651 reference images from the four categories of people, hand, object, and scene that exhibit complex compositional characteristics, from which prompts emphasizing compositional factors are derived by manually editing ChatGPT-generated prompts. We then feed the prompts into three selected T2I models to generate AI images and conduct a comprehensive subjective study to identify their defects. For each image, 29 participants provide multi-label assessments specifying defect types and locations. The study yields the compositional AI-generated image defect (CO-AID) dataset, including reference images, prompts, AI-generated images, and information on defect locations and types. Experimental results show that training a deep model on CO-AID can both predict defects in AI-generated images and optimize AI image generation, demonstrating its usability and effectiveness. The database and supplementary materials are available at: https://github.com/Future-IQA/CO-AID .",
+    "authors": [
+      "Ruoqi Hu",
+      "Chulin Zhao",
+      "Jiashuo Chang",
+      "Ramon Ruiz-Dolz",
+      "Hanhe Lin"
+    ],
+    "published": "2026-08-26",
+    "updated": "2026-08-26",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.25933.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.25933",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "当组合性失效时：人类识别AI生成图像中的缺陷",
+      "core_contribution": "揭示了当前文本生成图像（T2I）模型在复杂组合性提示下的系统性缺陷，并构建了首个针对此类缺陷的标注数据集CO-AID。",
+      "method": "1. 人工筛选651张具有复杂组合特征的参考图像（人物/手部/物体/场景），通过编辑ChatGPT生成的提示词构建强调组合性的文本提示。\n2. 使用三种T2I模型生成对应图像，组织29名参与者进行多标签缺陷标注（类型+位置）。\n3. 基于标注数据训练深度学习模型，验证其缺陷预测和图像生成优化的双重功能。",
+      "findings": "1. 发现T2I模型在涉及多实体/多属性的组合提示时会产生显著缺陷。\n2. CO-AID数据集能有效支持缺陷预测模型的训练，并提升生成图像质量。"
+    }
+  },
+  {
+    "id": "2608.25386",
+    "title": "Efficient Training with Foresight: Multi-Token Auxiliary Supervision for Autoregressive Image Generation",
+    "abstract": "Autoregressive (AR) image generation has shown strong potential for scalable high-fidelity synthesis by modeling images as discrete token sequences. However, traditional next token prediction (NTP) continues to suffer from sparse and myopic supervision, insufficiently discriminative representations, and high training cost caused by dense computation over the full token sequence. To address these issues, we propose multi-token autoregressive (MTAR), a unified training framework that improves autoregressive image generation from three aspects: prediction objectives, representation regularization, and training efficiency. Specifically, MTAR introduces multi-token prediction (MTP) to alleviate the sparsity and myopia of traditional NTP by imposing joint supervision on multiple future tokens; employs token-level contrastive regularization (TCR) to explicitly enhance the separability of sampled token representations and thereby improve representation discriminability; and incorporates semantic dropping (SD) as a semantics-aware training acceleration strategy to reduce redundant computation on low-information tokens while preserving informative learning signals. All three components are applied only during training and introduce no additional overhead during autoregressive inference. On ImageNet, MTAR achieves a better balance between generation quality and training efficiency. Compared with LlamaGen, MTAR achieves up to 0.95 lower FID and 39\\% faster training. Moreover, even with only 1/3 of the training iterations, it still attains performance comparable to or better than the baseline, substantially reducing training time.",
+    "authors": [
+      "Guo Niu",
+      "Xiongfei Yao",
+      "Teng Wang",
+      "Nannan Zhu"
+    ],
+    "published": "2026-08-26",
+    "updated": "2026-08-26",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.25386.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.25386",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "高效前瞻性训练：自回归图像生成的多令牌辅助监督",
+      "core_contribution": "提出多令牌自回归（MTAR）训练框架，通过多令牌预测、令牌级对比正则化和语义丢弃策略，显著提升自回归图像生成的训练效率和生成质量。",
+      "method": "1. 引入多令牌预测（MTP）对多个未来令牌进行联合监督，缓解传统单令牌预测的稀疏性和短视问题；2. 采用令牌级对比正则化（TCR）增强采样令牌表征的可分离性；3. 设计语义丢弃（SD）策略，通过跳过低信息量令牌的计算加速训练。所有改进仅作用于训练阶段，不影响推理效率。",
+      "findings": "在ImageNet上，MTAR实现了生成质量与训练效率的最佳平衡：相比LlamaGen，FID降低0.95且训练加速39%；仅用1/3训练轮次即可达到或超越基线性能，大幅减少训练时间。"
+    }
+  },
+  {
+    "id": "2608.24138",
+    "title": "Rubrics as Visual-Repair Context for Self-Evolving UI-to-Code Generation",
+    "abstract": "Large vision-language models have shown strong progress in UI-to-code generation, yet their test-time self-evolution remains unstable. We first identify a fundamental obstacle, termed visual repair coupling: a local code edit may propagate through layout, style, and component dependencies, correcting one visual mismatch while degrading regions that were previously faithful. To address this issue, we present RubSE, a Rubric-guided Self-Evolution framework that uses rubrics to represent visual feedback as a structured visual-repair context. At each refinement round, RubSE generates typed candidate rubrics, selects one prioritized repair target, and stores previously selected rubrics as history, thereby steering each revision toward a well-scoped visual repair while discouraging repeated or over-broad changes. Evaluations across six VLMs and three UI-to-code benchmarks demonstrate that RubSE substantially outperforms naïve self-evolution in final-round and best-round settings, achieving more stable refinement trajectories and a higher trajectory-level performance ceiling. Further analysis shows that RubSE mitigates trajectory collapse by improving recovery from severe visual regressions, and that stronger rubric generators can transfer effective visual-repair guidance to weaker code improvers.",
+    "authors": [
+      "Tianyi Xiong",
+      "Zhengyuan Yang",
+      "Xiaofei Wang",
+      "Chung-Ching Lin",
+      "Ruichun Ma",
+      "Kevin Lin",
+      "Zhendong Wang",
+      "Linjie Li",
+      "Chenxi Liu",
+      "Ruibo Chen",
+      "Ramani Duraiswami",
+      "Heng Huang",
+      "Lijuan Wang"
+    ],
+    "published": "2026-08-25",
+    "updated": "2026-08-25",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.24138.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.24138",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "评分标准作为视觉修复上下文的自演进UI到代码生成",
+      "core_contribution": "提出了RubSE框架，通过结构化评分标准指导UI到代码生成的自演进过程，解决了视觉修复耦合问题。",
+      "method": "RubSE框架在每轮优化中生成类型化评分标准候选，选择优先修复目标，并存储历史评分标准以限制修复范围。该方法通过结构化视觉反馈上下文，避免重复或过大的修改，确保每次修订针对明确范围的视觉修复。",
+      "findings": "在六个视觉语言模型和三个UI到代码基准测试中，RubSE在最终轮和最佳轮设置中显著优于原始自演进方法，实现了更稳定的优化轨迹和更高的性能上限。分析表明RubSE通过改善严重视觉退化的恢复能力缓解了轨迹崩溃问题，且更强的评分标准生成器可将有效视觉修复指导传递给较弱的代码改进器。"
+    }
+  },
+  {
+    "id": "2608.23864",
+    "title": "AffineTok: Semantic Affine Consistency for Diffusion-Friendly Visual Tokenizer",
+    "abstract": "Visual tokenizers increasingly inject semantic supervision into latent spaces to make downstream diffusion easier. Yet how these semantics should be organized to facilitate denoising remains underexplored. In this paper, we define the semantic recovery objective: the denoising process should recover the semantic content of the clean image from noisy latent, and a good tokenizer should make it easier. Existing approaches train a projector to predict the semantics directly from the noisy latent. We argue that this predicts the average of clean-image semantics, whereas what really needs to be aligned is the semantics of averaged clean latents. More importantly, we demonstrate that the semantic recovery error orthogonally decomposes into the error of the optimal semantic prediction directly from the noisy latent and the error between these two predictions. We therefore identify their consistency as the missing requirement and call it Semantic Affine Consistency (SAC). To examine whether this overlooked requirement is closely related to downstream generation, we introduce M_SAC, a tokenizer-side proxy for SAC. Across the evaluated tokenizers and diffusion model scales, M_SAC closely tracks generation quality, reaching a Pearson correlation of 0.960 with SiT-XL gFID, thereby motivating SAC-guided tokenizer training. We then introduce AffineTok, which promotes SAC through two complementary, training-only components. Global Semantic Coordination Token (GSCT) coordinates the semantic organization of clean latents, keeping semantic averaging meaningful, while Posterior-Mean Semantic Alignment (PMSA) predicts posterior-mean latents from noisy inputs and supervises their semantics. On ImageNet 256, compared with the baseline, AffineTok reduces gFID by 26% at 20 epochs and, with continued training, achieves a new state-of-the-art gFID of 1.21 without classifier-free guidance and 1.10 with guidance.",
+    "authors": [
+      "Junqiu Yu",
+      "Pandeng Li",
+      "Yikai Wang",
+      "Jiaxing Zhao",
+      "Yujie Wei",
+      "Kaixun Jiang",
+      "Quanhao Li",
+      "Hongtao Yu",
+      "Zhihang Liu",
+      "Zhaohe Liao",
+      "Junjie Zhou",
+      "Yun Zheng",
+      "Yu Liu",
+      "Yanwei Fu"
+    ],
+    "published": "2026-08-24",
+    "updated": "2026-08-24",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.23864.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.23864",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "AffineTok：面向扩散友好型视觉分词器的语义仿射一致性",
+      "core_contribution": "提出语义仿射一致性（SAC）作为视觉分词器的新训练目标，显著提升下游扩散模型的生成质量；设计AffineTok方法通过全局语义协调与后验均值对齐实现SAC。",
+      "method": "1. 定义语义恢复目标，指出现有方法预测干净图像语义平均值的缺陷；2. 提出SAC理论框架，分解语义恢复误差并证明其正交性；3. 设计M_SAC指标验证SAC与生成质量强相关性；4. 开发AffineTok方法，结合GSCT（协调干净潜在空间语义）和PMSA（对齐后验均值语义）优化分词器。",
+      "findings": "1. M_SAC指标与SiT-XL生成质量（gFID）皮尔逊相关性达0.960；2. AffineTok在ImageNet 256上：20轮训练降低26% gFID，持续训练后无分类器引导达1.21 gFID（SOTA），有引导时达1.10。"
+    }
+  },
+  {
+    "id": "2608.24646",
+    "title": "On-Policy Self-Distillation in Diffusion Models",
+    "abstract": "Reinforcement learning can align diffusion models with human preferences and task-specific objectives, but endpoint rewards do not specify how an intermediate denoising prediction should change. We introduce DiffusionOPSD as an on-policy self-distillation framework that converts image-level reward guidance into explicit targets for clean-output predictions at sampled queries. At each outer iteration, a frozen behavior policy generates trajectories and supplies query states and anchors. Reward gradients construct bounded positive and negative targets around each anchor. The trainable policy fits these targets as detached supervision through finite fitting before an exponential moving average update refreshes the behavior policy. This setup lets us measure target construction and finite realization separately. Controlled same-query experiments show that larger target-construction gains do not necessarily translate into larger realized gains after a single fitting update. Across SD 3.5-M and the step-distilled Z-Image-Turbo, our approach achieves the best final held-out scores in 19 of 20 reward-matched settings across two backbones and ten evaluators. It outperforms the strongest competing method by up to 44.0% and reduces training GPU-hours relative to DiffusionNFT by 40% on SD 3.5-M and 63% on Z-Image-Turbo. These results support on-policy self-distillation as an efficient and analyzable approach to diffusion post-training by converting image-level reward guidance into explicit and continually refreshed intermediate supervision, thereby opening a path toward more efficient and diagnosable alignment.",
+    "authors": [
+      "Wei Zhou",
+      "Xiongwei Zhu",
+      "Lingdong Kong",
+      "Bo Chen",
+      "Lei Zhang",
+      "Yongyuan Liang",
+      "Xiaoxia Hou",
+      "Ye Tian",
+      "Xian Sun",
+      "Yingshuo Wang",
+      "Linfeng Li",
+      "Shengqiong Wu",
+      "Leigang Qu",
+      "Feng Li",
+      "Wei Liu",
+      "Julian McAuley",
+      "Tat-Seng Chua"
+    ],
+    "published": "2026-08-25",
+    "updated": "2026-08-25",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.24646.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.24646",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "扩散模型中的同策略自蒸馏方法",
+      "core_contribution": "提出DiffusionOPSD框架，将图像级奖励引导转化为明确的中间监督目标，提升扩散模型与人类偏好及任务目标的对齐效率。",
+      "method": "1. 通过冻结行为策略生成轨迹并提供查询状态与锚点；2. 利用奖励梯度构建锚点周围的有界正负目标；3. 可训练策略通过有限拟合以分离监督方式匹配目标，随后通过指数移动平均更新行为策略。",
+      "findings": "1. 在SD 3.5-M和Z-Image-Turbo上，20项奖励匹配设置中19项取得最佳最终保留分数；2. 对比最强基线方法性能提升达44.0%，训练GPU耗时减少40%-63%；3. 目标构建增益与单次拟合后的实际增益无必然关联。"
+    }
+  }
+]
