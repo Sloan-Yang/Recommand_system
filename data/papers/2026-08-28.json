@@ -1,0 +1,141 @@
+[
+  {
+    "id": "2608.26716",
+    "title": "Beyond Atomic Layouts: Compositional Design Understanding with Vision-Language Models",
+    "abstract": "Layout understanding, or the interpretation of element organization, is essential for document analysis, user interface (UI) creation, and graphic design. While recent vision-language models (VLMs) excel at interpreting atomic layouts composed of independent elements, they struggle with compositional layouts that require reasoning over visually entangled elements within hierarchical multi-layer structures. In this paper, we introduce a new task, compositional layout understanding, and present CoDeLayout, a VQA dataset of ~20K real-world multi-layer layouts annotated with compositional element pairs and design intent. Through empirical analysis on CoDeLayout, we identify two key challenges for existing VLMs: semantic drift between textual metadata and visual content, and structural ambiguity in hierarchical inter-element relationships. To address these challenges, we propose MASON, a post-training paradigm that integrates multimodal alignment (MA) and structural perception (SP). MA enhances element interpretation by grounding metadata-defined elements to their visual counterparts, mitigating semantic drift, while SP models layer-aware inter-element spatial relationships to improve hierarchical understanding and reduce structural ambiguity. Experiments reveal substantial gaps in existing VLMs: even the strongest baseline, GPT-o3, achieves only 79.68% accuracy, whereas Qwen2.5-VL 7B with MASON reaches 91.66%. Notably, MASON surpasses full-data Direct Finetune using only 30% of the training data and scales better with additional data.",
+    "authors": [
+      "Yiyang Huang",
+      "Zhaowen Wang",
+      "Simon Jenni",
+      "Jing Shi",
+      "Yitian Zhang",
+      "Yizhou Wang",
+      "Yun Fu"
+    ],
+    "published": "2026-08-27",
+    "updated": "2026-08-27",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.26716.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.26716",
+    "primary_category": "cs.CV",
+    "score": 90,
+    "summary": {
+      "title_zh": "超越原子布局：基于视觉语言模型的组合式设计理解",
+      "core_contribution": "提出组合式布局理解新任务，并构建CoDeLayout数据集及MASON训练范式，显著提升视觉语言模型对多层复杂布局的解析能力。",
+      "method": "1. 构建包含2万真实多层布局的CoDeLayout问答数据集，标注组合元素对和设计意图；2. 提出MASON训练范式，通过多模态对齐（MA）解决文本-视觉语义漂移问题；3. 引入结构感知（SP）模块建模层级化元素空间关系。",
+      "findings": "1. 现有VLM在组合布局任务表现欠佳（GPT-4o仅79.68%准确率）；2. MASON使Qwen2.5-VL 7B达到91.66%准确率；3. 仅用30%训练数据即超越全数据微调，且数据扩展性更优。"
+    }
+  },
+  {
+    "id": "2608.27280",
+    "title": "Sidecar: Training-Free Semantic Reuse for Character-Consistent Free-form Visual Storytelling",
+    "abstract": "Visual storytelling requires generating images that follow a narrative while preserving consistent character identities across frames. In free-form story generation, a character is fully described only when first introduced and is later referred to by a type-level mention or pronoun. Although this setting better reflects natural storytelling, later prompts may omit important identity-related semantics, making character consistency more difficult to maintain. We propose \\textbf{Sidecar}, a plug-and-play semantic augmentation module that preserves entity-level information from the initial description and injects the missing semantics into later prompt embeddings. Sidecar requires no additional training and does not modify the architecture of the base diffusion model. Experiments on FreeStoryBench show that Sidecar consistently improves prompt-image alignment and character consistency across multiple SDXL- and FLUX-based baselines, with negligible computational overhead.",
+    "authors": [
+      "Sibo Dong",
+      "Sarah Adel Bargal"
+    ],
+    "published": "2026-08-27",
+    "updated": "2026-08-27",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.27280.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.27280",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "Sidecar：免训练语义重用实现角色一致的自由视觉叙事",
+      "core_contribution": "提出Sidecar模块，无需训练即可通过语义增强保持角色一致性，提升自由视觉叙事中的提示-图像对齐。",
+      "method": "Sidecar是一个即插即用的语义增强模块，通过从初始描述中提取实体级信息，并将其注入后续提示嵌入中补充缺失语义。该方法无需额外训练，也不修改基础扩散模型结构。",
+      "findings": "在FreeStoryBench测试中，Sidecar显著提升了基于SDXL和FLUX模型的提示-图像对齐与角色一致性，且计算开销可忽略不计。"
+    }
+  },
+  {
+    "id": "2608.26956",
+    "title": "RubricRM: Generative Reward Modeling via Dynamic Rubrics for Image Generation and Editing",
+    "abstract": "Reward models play an essential role in aligning visual generative models, yet most existing visual reward models use a single scalar score or rely on fixed criteria that cannot adapt to different instructions. This limits both interpretability and task sensitivity, especially for text-to-image generation and instruction-based image editing, where different inputs require different evaluation dimensions. We propose RubricRM, a pairwise generative reward modeling framework that first produces an input-specific rubric with evaluation dimensions, weights, and scoring criteria, and then applies the rubric to score candidate images. We train dedicated RubricRM models for text-to-image generation and image editing using a two-stage training pipeline: supervised fine-tuning teaches the model the rubric-based scoring paradigm, while GRPO further improves scoring through fine-grained dimension-level rewards. Experiments on multiple generation and editing benchmarks show that RubricRM outperforms existing specialized reward models and remains competitive with strong proprietary MLLM judges despite using smaller backbones. Our models, data, and code are available at https://github.com/zijiankan/RubricRM.",
+    "authors": [
+      "Zijian Kan",
+      "Wei Wang",
+      "Long Luo",
+      "Bing Zhao",
+      "Xuan Ren",
+      "Weixu Qiao",
+      "Wenbo Li",
+      "Hu Wei",
+      "Lin Qu"
+    ],
+    "published": "2026-08-27",
+    "updated": "2026-08-27",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.26956.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.26956",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "RubricRM：基于动态评分标准的生成式奖励建模方法用于图像生成与编辑",
+      "core_contribution": "提出RubricRM框架，通过动态生成输入特定的评分标准（包括评估维度、权重和评分准则）来提升视觉生成模型奖励机制的适应性和可解释性。",
+      "method": "1. 采用成对生成式奖励建模框架，首先生成包含多维评估指标的动态评分标准；2. 使用两阶段训练流程：监督微调学习基于评分标准的评估范式，GRPO算法通过细粒度维度奖励优化评分能力；3. 针对文本到图像生成和基于指令的图像编辑分别训练专用模型。",
+      "findings": "在多个生成和编辑基准测试中，RubricRM优于现有专用奖励模型，且使用更小骨干网络时仍能与强大的专有多模态大语言模型评估者竞争。"
+    }
+  },
+  {
+    "id": "2608.26624",
+    "title": "Text-to-seed generation: Training-free open-vocabulary seeded semantic segmentation via re-purposing diffusion as text-guided seed generator",
+    "abstract": "Open-vocabulary semantic segmentation (OVSS) aims to segment image regions corresponding to arbitrary text queries. Although the Segment Anything Model (SAM) is a powerful foundation model for segmentation, its standalone performance on OVSS remains limited. Existing methods therefore often use SAM to refine coarse masks predicted by other models, but this strategy is unreliable when the initial masks are inaccurate. In this work, we argue that more reliable segmentation can be achieved by exploiting SAM as a region expansion module guided by accurate object points (i.e., seeds) rather than inaccurate coarse masks. Inspired by classical seeded segmentation, we reformulate OVSS as text-guided seed localization followed by seed-based region expansion. To realize this idea, we propose Text-to-Seed (T2S), a training-free framework that leverages the text-to-region correspondence of Stable Diffusion to generate attention-based seed points for target categories described by text. These sparse seeds are then used as point prompts for SAM to produce full object masks. Without task-specific training or additional annotations, T2S achieves strong performance on standard OVSS benchmarks, demonstrating the effectiveness of combining semantic grounding with seed-driven spatial segmentation.",
+    "authors": [
+      "Kumju Jo",
+      "Heesun Jung",
+      "Sungyong Baik"
+    ],
+    "published": "2026-08-27",
+    "updated": "2026-08-27",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.26624.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.26624",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "文本到种子生成：通过将扩散模型重新用作文本引导的种子生成器实现免训练开放词汇种子语义分割",
+      "core_contribution": "提出了一种免训练的开放词汇语义分割框架T2S，通过利用Stable Diffusion的文本-区域对应关系生成种子点，并结合SAM实现精确分割。",
+      "method": "该方法将开放词汇语义分割重新定义为文本引导的种子定位和基于种子的区域扩展。首先利用Stable Diffusion生成目标类别的注意力种子点，然后将这些稀疏种子作为点提示输入SAM以生成完整对象掩码。整个过程无需任务特定训练或额外标注。",
+      "findings": "T2S在标准开放词汇语义分割基准测试中表现出色，证明了将语义基础与种子驱动的空间分割相结合的有效性。"
+    }
+  },
+  {
+    "id": "2608.24563",
+    "title": "X-MULTI: VLM-based Imaging Factor Disentanglement for Factor-Aware Image Synthesis",
+    "abstract": "Imaging factor disentanglement in text-to-image generation aims to independently control image acquisition properties such as types of camera lenses, sensor types, viewpoints, and domains to enable combinatorial generalization. This should let the model synthesize novel factor combinations unobserved in the training data, such as pairing a fisheye lens with an event sensor never observed in training data. Recent work, MULTI, introduced learnable, factor-specific embeddings to disentangle imaging factors, along with the Factor Alignment Accuracy (FAA) metric to evaluate disentanglement quality. We identify and address two independent limitations. First, MULTI's pixel-level reconstruction objective supervises the model only on observed imaging factor combinations, providing no direct training signal for novel combinations. We therefore propose X-MULTI, which uses a pretrained vision-language model (VLM) to supervise novel factor combinations synthesized during training. Second, we show the FAA metric exhibits severe cross-factor correlation leakage, misrepresenting true disentanglement quality. We therefore propose Improved-FAA (I-FAA), which employs factor-specific augmentation strategies to break these correlations and enables more rigorous evaluation. Experiments demonstrate that X-MULTI achieves improved factor alignment on novel combinations compared to MULTI. Moreover, we show that correlation leakage in FAA distorts the evaluation of true factor disentanglement and I-FAA reduces this leakage and therefore provides a more robust assessment of factor alignment.",
+    "authors": [
+      "Sonali Godavarthy",
+      "Matthias Neuwirth-Trapp",
+      "Tim-Felix Faasch",
+      "Maarten Bieshaar",
+      "Michael Moeller",
+      "Kristof Van Laerhoven",
+      "Danda Pani Paudel"
+    ],
+    "published": "2026-08-25",
+    "updated": "2026-08-25",
+    "categories": [
+      "cs.CV",
+      "cs.RO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.24563.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.24563",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "X-MULTI：基于视觉语言模型的成像因子解耦以实现因子感知的图像合成",
+      "core_contribution": "提出X-MULTI方法，利用预训练视觉语言模型监督训练中合成的未知因子组合，并改进因子对齐评估指标（I-FAA），以更准确地评估解耦质量。",
+      "method": "1. 通过引入预训练视觉语言模型（VLM）提供对未知成像因子组合的监督信号；2. 提出改进的因子对齐精度指标（I-FAA），采用因子特异性增强策略消除跨因子相关性泄漏；3. 结合学习因子特定嵌入实现成像因子的解耦。",
+      "findings": "1. X-MULTI在未知因子组合上的因子对齐性能优于MULTI；2. 原FAA指标存在严重的跨因子相关性泄漏问题，而I-FAA能有效减少泄漏，提供更鲁棒的评估。"
+    }
+  }
+]
