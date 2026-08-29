@@ -623,5 +623,10 @@
   "sponsors_abi": 85,
   "tailscale_tailcat": 75,
   "NationalSecurityAgency_ghidra": 40,
-  "sponsors_swoole": 0
+  "sponsors_swoole": 0,
+  "THU-MAIC_OpenMAIC": 85,
+  "sponsors_bigskysoftware": 75,
+  "Osmantic_ODS": 85,
+  "sponsors_kaifcodec": 0,
+  "workweave_router": 85
 }

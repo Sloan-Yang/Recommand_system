@@ -1,144 +1,154 @@
 [
   {
-    "id": "2608.24119",
-    "title": "TransPhy: Visual In-Context Learning for Physically Grounded Image Editing",
-    "abstract": "Visual demonstrations provide a natural interface for specifying image transformations that are difficult to describe exhaustively with text. However, existing visual in-context learning (VICL) methods primarily focus on appearance-level relation transfer and provide limited support for physically grounded transformations, whose outcomes depend on material properties, geometry, object interactions, and environmental conditions. Given a source--target exemplar pair and a query image, physically grounded VICL requires a model to infer the demonstrated transformation, adapt its effects to the query-specific scene context, and preserve rule-irrelevant content. We introduce PhysVICL-74, comprising 74 physically grounded transformation rules and 5,240 source--target image pairs that form nearly 75K training and evaluation contexts. Its benchmark split separately evaluates novel-instance transfer and unseen-rule generalization. We further propose TransPhy, a framework that decomposes physically grounded VICL into physical-rule induction and transition-aligned rendering. TransPhy first predicts the demonstrated rule and an explicit query-specific target-state description, and then synthesizes the target image through token-wise mixture-of-experts adaptation, with expert routing guided by localized transition cues. Experiments show that TransPhy improves physical-rule adherence, query consistency, and unseen-rule generalization over existing visual in-context editing methods.",
+    "id": "2608.25924",
+    "title": "Visual General Intelligence: A White Paper",
+    "abstract": "This paper reconsiders intelligence from a vision-centered perspective and examines whether intelligence emerging from visual experience and learning may provide a pathway toward AGI. In the language domain, beginning with the introduction of the Transformer architecture, the GPT series has demonstrated transfer to unseen tasks through autoregressive language modeling on web-scale text combined with aggressive scaling. This raises a natural question, namely, what capabilities and forms of intelligence can emerge from visual modalities such as images, videos, and geometry? In this paper, we discuss whether visual intelligence can serve as a pathway toward AGI, referred to in this paper as visual general intelligence (VGI), by bringing together contributors from diverse standpoints and affiliations. Our aim is not to offer a single definition of visual intelligence, but to clarify the principles that computer vision should pursue in the AGI era, the visual input modalities, the benchmarks, the learning paradigms, and the relationship between vision, when taken as the core, and other modalities such as language.",
     "authors": [
-      "Siyi Xie",
-      "Xuanke Shi",
-      "Jinsheng Quan",
-      "Haoran Tang",
-      "Zukai Chen",
-      "Lei Yang",
-      "Quan Wang"
+      "Hirokatsu Kataoka",
+      "Yoshihiro Fukuhara",
+      "Yonglong Tian",
+      "Shangzhe Wu",
+      "Oishi Deb",
+      "Ryousuke Yamada",
+      "Christian Rupprecht",
+      "Jianyuan Wang",
+      "Kohsuke Ide",
+      "Koichi Namekata",
+      "Xianzheng Ma",
+      "Yiming Chen",
+      "Robert Geirhos",
+      "Aditi Raghunathan",
+      "Yuki M. Asano",
+      "Deva Ramanan",
+      "David Fouhey",
+      "Andrew J. Davison",
+      "Yilun Du",
+      "Jiajun Wu",
+      "Zhuang Liu"
     ],
-    "published": "2026-08-25",
-    "updated": "2026-08-25",
+    "published": "2026-08-26",
+    "updated": "2026-08-26",
     "categories": [
-      "cs.CV",
-      "cs.AI"
+      "cs.CV"
     ],
-    "pdf_url": "https://arxiv.org/pdf/2608.24119.pdf",
-    "abs_url": "https://arxiv.org/abs/2608.24119",
+    "pdf_url": "https://arxiv.org/pdf/2608.25924.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.25924",
     "primary_category": "cs.CV",
-    "score": 75,
+    "score": 70,
     "summary": {
-      "title_zh": "TransPhy：面向物理接地图像编辑的视觉上下文学习",
-      "core_contribution": "本文提出了PhysVICL-74基准数据集和TransPhy框架，首次系统性地解决物理接地图像编辑中的视觉上下文学习问题，显著提升了物理规则遵循、查询一致性和未见规则泛化能力。",
-      "method": "TransPhy将物理接地VICL分解为物理规则归纳和过渡对齐渲染两个阶段。首先预测演示的物理规则及查询特定的目标状态描述，然后通过基于局部过渡线索的token级混合专家适配来合成目标图像，其中专家路由由局部过渡线索引导。",
-      "findings": "实验表明，TransPhy在物理规则遵循、查询一致性和未见规则泛化方面均优于现有的视觉上下文编辑方法，验证了分解式框架和混合专家适配的有效性。"
+      "title_zh": "视觉通用智能：白皮书",
+      "core_contribution": "本文从视觉中心视角重新审视智能，探讨视觉经验与学习能否通向通用人工智能（AGI），并提出“视觉通用智能”（VGI）概念，旨在明确AGI时代计算机视觉应遵循的原则、输入模态、基准、学习范式以及视觉与语言等模态的关系。",
+      "method": "本文采用白皮书形式，汇集多位不同立场和背景的贡献者，通过综合分析现有视觉与语言模型（如GPT系列）的成功经验，讨论视觉模态（图像、视频、几何）中可能涌现的智能能力，并系统阐述VGI的核心理念、研究方向和开放问题，而非提出单一定义或具体算法。",
+      "findings": "论文指出，语言领域的成功（如GPT系列通过自回归建模和规模扩展实现任务迁移）为视觉智能提供了类比，但视觉智能可能具有独特的能力和形式；视觉作为核心模态，与语言等其他模态的关系需要重新定义，且视觉通用智能可能成为通向AGI的重要路径，但需明确其原则、基准和学习范式。"
     }
   },
   {
-    "id": "2608.24068",
-    "title": "Representation Learning in Diffusion and Flow-based Model: An Application Aspect",
-    "abstract": "Diffusion models and flow-based models have recently become the dominant paradigms in generative modeling, largely due to their ability to learn rich, multi-level visual representations through large-scale training. This creates a bidirectional relationship between generative models and representation learning: improving representation learning enhances generation quality, while the learned representations can be leveraged for broader understanding tasks. This survey systematically explores this interplay with a focus on applications. We propose a three-tier progressive framework that organizes existing works from three perspectives: using representation learning to improve generative capabilities, exploiting generative models to extract representations for perception tasks, and ultimately moving toward general-purpose unified applications. We systematically categorize representative methods across a wide range of downstream tasks, including image classification, dense visual prediction, instance-level perception, and annotation-scarce scenarios. By providing a unified taxonomy and identifying key challenges, this survey aims to clarify the underlying logic of current research and suggest promising directions for future exploration. We hope this work can serve as a valuable reference for researchers interested in harnessing the representation power of generative models for applications beyond generation.",
+    "id": "2608.25876",
+    "title": "Do Vision-Language Models Agree on the Affective Qualities of Shape? A Cross-Model Audit for Generative Design Interfaces",
+    "abstract": "Generative design interfaces increasingly expose semantic controls that let users steer output with concepts such as \"more elegant\" or \"more minimalist,\" typically encoded by a vision-language model (VLM). A practical question is whether state-of-the-art VLMs represent objects consistently in terms of the same concept. We audit 6 VLMs by ranking untextured 3D objects along Kansei adjective pairs, where Kansei describes affective impressions of product form, with each axis defined as the difference between the text representations of its two poles. Geometric pairs serve as positive controls, and pairs of unrelated adjectives establish an empirical null. Across 10 categories of ShapeNet database, affective axes converge above the null (mean pairwise rank correlation 0.36 vs. 0.14) but below the geometric ceiling (0.44). The agreement between models is partial and highly uneven: on the three axes shared by all categories, mean convergence ranges from 0.21 for bookshelves to 0.51 for jars. Convergence depends primarily on whether a category's representational variation aligns with the semantic direction being evaluated, rather than simply on how much the objects vary in shape overall. Cross-model convergence does not imply agreement with human judgments. Based on our findings, we implement a UI prototype that shows how the audit can inform which Kansei descriptors to expose as controls for a given object class and which to withhold.",
     "authors": [
-      "Yanchen Xu",
-      "Sida Huang",
-      "Zhenyu Gu",
-      "Ruishu Zhu",
-      "Yilan Gao",
-      "Hongyuan Zhang"
+      "Luca Bux",
+      "Thiago Rios",
+      "Ingo Scholtes",
+      "Stefan Menzel"
+    ],
+    "published": "2026-08-26",
+    "updated": "2026-08-26",
+    "categories": [
+      "cs.HC",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.25876.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.25876",
+    "primary_category": "cs.HC",
+    "score": 70,
+    "summary": {
+      "title_zh": "视觉语言模型在形状的情感品质上是否一致？生成式设计界面的跨模型审计",
+      "core_contribution": "本文首次系统审计了6种视觉语言模型在三维物体形状的情感品质（Kansei形容词对）排序上的一致性，揭示了模型间部分且不均匀的收敛性，并据此提出了一种用于生成式设计界面的UI原型，以指导哪些情感描述符应作为控制项。",
+      "method": "作者使用6种视觉语言模型，对ShapeNet数据库中10个类别的无纹理3D物体，按照Kansei形容词对（如优雅-粗俗）进行排序，每个轴由两个极点的文本表示差异定义。几何形状对作为阳性对照，不相关形容词对作为经验零假设。通过计算模型间排序的秩相关性来评估一致性，并分析收敛性与类别形状变异的关系。",
+      "findings": "情感轴的平均秩相关性（0.36）显著高于零假设（0.14），但低于几何对照（0.44），表明模型间部分一致。一致性高度不均匀：不同类别上平均收敛范围从书架（0.21）到罐子（0.51）不等，且主要取决于类别形状变异是否与语义方向对齐，而非整体形状变异量。此外，跨模型一致性与人类判断并不等同。"
+    }
+  },
+  {
+    "id": "2608.25461",
+    "title": "GLOSS: Geometric Local Self-Similarity Learning for Faithful Reference-Guided Texture Fill",
+    "abstract": "Using conditional image generators, texture artists can explore many single-view looks for an existing 3D shape. Despite impressive progress, state-of-the-art generative methods still struggle to generate a full object texture while closely adhering to fine scale geometric detail and single view references, leaving little room for artists guidance. Furthermore, current automatic models lack the flexibility for artist to explore multiple textures from varied sources in an interactive and controllable manner. Unlike methods trained on large 3D datasets that generate full object textures from global guidance, our work explores a local and less data-hungry approach to texture with explicit artist control. We leverage the geometric self-similarity and geometry-texture correlation existing in many natural and man-made shapes; and train a shape-specific local texture generation and completion model. This model learns from existing image model priors and a single 3D shape, and is guided by attending to a set of geometry-aware reference patches. The trained shape-specific network can transfer any novel reference to the full target object texture through patchwise inpainting. We show improved or comparable quality to strong image-conditioned texture generation baselines, suggesting local texturing as a promising research direction. Our model also enables local geometry-conditioned texture inpainting, guided by artist-selected references, and generalizes to PBR materials and unseen meshes for texture transfer. We piloted our novel texture fill capability as a Blender addon with several 3D texturing professionals who reported positive feedback on the model's controllability, practical usefulness, and creative affordances.",
+    "authors": [
+      "Chenyue Cai",
+      "Anita Hu",
+      "James Lucas",
+      "Szymon Rusinkiewicz",
+      "Masha Shugrina"
+    ],
+    "published": "2026-08-26",
+    "updated": "2026-08-26",
+    "categories": [
+      "cs.GR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.25461.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.25461",
+    "primary_category": "cs.GR",
+    "score": 70,
+    "summary": {
+      "title_zh": "GLOSS：几何局部自相似性学习用于保真的参考引导纹理填充",
+      "core_contribution": "提出了一种基于几何自相似性和局部纹理学习的形状特定纹理生成方法，无需大规模3D数据集，即可从单张参考图生成完整物体纹理，并支持艺术家可控的局部纹理修复与迁移。",
+      "method": "该方法利用自然和人造形状中存在的几何自相似性及几何-纹理相关性，训练一个形状特定的局部纹理生成与补全模型。模型结合现有图像模型先验和单个3D形状，通过关注一组几何感知的参考补丁进行学习，并采用补丁式修复将任意新参考纹理迁移到完整目标物体上。",
+      "findings": "实验表明，该方法在纹理生成质量上达到或超过强图像条件基线，同时支持局部几何条件纹理修复、PBR材质泛化和未见网格的纹理迁移。与3D纹理专业艺术家的Blender插件试点反馈显示，模型在可控性、实用性和创造性方面获得积极评价。"
+    }
+  },
+  {
+    "id": "2608.24372",
+    "title": "Bridging Adversarial and Collaborative Learning for AI-Generated Image Quality Assessment",
+    "abstract": "AI-generated image quality assessment (AIGIQA) requires jointly reasoning about perceptual fidelity and prompt alignment, two quality dimensions that are often treated as independent in existing AIGIQA models. However, by re-examining human ratings, we uncover a previously overlooked phenomenon: the two dimensions are interdependent and exhibit both competitive and cooperative interactions during human rating. This observation suggests that a unified model should neither collapse the two dimensions nor rigidly separate them, but rather adaptively negotiate their interplay. Motivated by this insight, we introduce an interaction-aware learning framework that models perception-alignment relations through adversarial and collaborative inference pathways. Instead of designing a rigid dual-branch architecture, our method employs a gated interaction module that dynamically routes features according to the inferred relationship between the two dimensions. Task-aware prompts further modulate the gating behaviour, enabling the model to switch between competition and cooperation when necessary. Experiments across multiple AIGIQA benchmarks demonstrate that our approach not only achieves state-of-the-art accuracy but also yields interpretable interaction patterns, offering a more faithful approximation of human judgment. The codes are available at https://github.com/LQAMEI/ACL-IQA.",
+    "authors": [
+      "Baoliang Chen",
+      "Qing Lin",
+      "Sijie Mai"
     ],
     "published": "2026-08-25",
     "updated": "2026-08-25",
     "categories": [
       "cs.CV"
     ],
-    "pdf_url": "https://arxiv.org/pdf/2608.24068.pdf",
-    "abs_url": "https://arxiv.org/abs/2608.24068",
-    "primary_category": "cs.CV",
-    "score": 75,
-    "summary": {
-      "title_zh": "扩散模型与流模型中的表示学习：应用视角",
-      "core_contribution": "本文系统综述了生成模型（扩散模型和流模型）与表示学习之间的双向关系，并提出了一个三层渐进框架，从应用角度统一了现有研究，为利用生成模型进行感知任务提供了清晰的分类和未来方向。",
-      "method": "本文采用综述方法，通过构建三层渐进框架（即用表示学习提升生成能力、用生成模型提取表示用于感知任务、以及迈向通用统一应用），系统分类了涵盖图像分类、密集视觉预测、实例级感知和标注稀缺场景等下游任务的代表性方法，并提供了统一的分类体系和关键挑战分析。",
-      "findings": "主要发现包括：生成模型通过大规模训练能学习丰富的多层级视觉表示，这些表示可有效用于多种感知任务；表示学习与生成质量相互促进；当前研究已从单一生成或感知任务向通用统一应用演进，但仍面临标注稀缺、任务适配等挑战，未来需探索更通用的表示提取与利用方式。"
-    }
-  },
-  {
-    "id": "2608.27417",
-    "title": "Retrieval Heads Meet Vision: Uncovering How VLMs Locate and Extract Visual Information",
-    "abstract": "Vision-language models (VLMs) can locate an image region referred to by a text prompt and route the corresponding visual evidence to the output, yet the internal mechanism behind this behavior is not understood. Inspired by retrieval heads in large language models, we ask whether VLMs contain an analogous mechanism for visual retrieval. We answer affirmatively by introducing Visual Retrieval Heads (VRHs), a small subset of attention heads (about 1.7-2.6%) that are causally responsible for grounding text descriptions to image regions. To find them, we recast existing head-scoring methods under a unified design space over query tokens, key aggregation, and cross-sample aggregation. We then show that scoring attention from output prediction tokens with a sum over the ground-truth referent region most reliably identifies causal heads. Across eleven VLMs and five referring-expression benchmarks, masking only the top 20 VRHs reduces grounding accuracy by up to 80 percentage points, while masking the same number of random heads has little effect. Beyond replicating the causal-sparse-universal triad established for text retrieval heads, VRHs exhibit several properties not previously reported: they generalize across visual reference tasks, remaining causal on attribute, spatial, counting, and visual-math benchmarks despite being discovered through bounding-box prediction; they are functionally specific, preserving output format while corrupting localization; and they are architecturally shared, transferring causally across VLMs that share an LLM backbone but differ in vision encoder, projector, and instruction tuning.",
-    "authors": [
-      "Chanho Park",
-      "Daehyeon Choi",
-      "Jihyun Lee",
-      "Minhyuk Sung"
-    ],
-    "published": "2026-08-27",
-    "updated": "2026-08-27",
-    "categories": [
-      "cs.CV"
-    ],
-    "pdf_url": "https://arxiv.org/pdf/2608.27417.pdf",
-    "abs_url": "https://arxiv.org/abs/2608.27417",
+    "pdf_url": "https://arxiv.org/pdf/2608.24372.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.24372",
     "primary_category": "cs.CV",
     "score": 70,
     "summary": {
-      "title_zh": "检索头遇见视觉：揭示视觉语言模型如何定位与提取视觉信息",
-      "core_contribution": "本文首次在视觉语言模型（VLMs）中发现并验证了视觉检索头（Visual Retrieval Heads, VRHs）的存在，这是一小部分注意力头（约1.7%-2.6%）因果性地负责将文本描述与图像区域关联，并揭示了其跨任务、跨架构的通用性与功能性特异性。",
-      "method": "作者将现有的头部评分方法统一到一个设计空间中，涵盖查询令牌、键聚合和跨样本聚合三个维度，通过从输出预测令牌对真实参照区域的注意力得分求和来识别因果头部。随后，在11个VLMs和5个指代表达基准上，通过掩蔽（masking）顶部20个VRHs来验证其因果作用，并与随机掩蔽头部进行对比。",
-      "findings": "掩蔽仅20个VRHs即可将指代表达的准确率降低高达80个百分点，而随机掩蔽相同数量的头部影响甚微。VRHs不仅复制了文本检索头的因果-稀疏-普遍三元特性，还展现出新属性：它们跨视觉参考任务（如属性、空间、计数和视觉数学）保持因果性；功能上具有特异性，仅破坏定位而不影响输出格式；并且架构上共享，能在共享LLM骨干但视觉编码器、投影器和指令调优不同的VLMs之间迁移因果性。"
+      "title_zh": "弥合对抗与协作学习：AI生成图像质量评估",
+      "core_contribution": "本文提出了一种交互感知的学习框架，用于AI生成图像质量评估，该框架通过对抗和协作推理路径动态建模感知质量与提示对齐之间的竞争与合作关系，从而在多个基准上达到最先进性能，并提供可解释的交互模式。",
+      "method": "方法采用门控交互模块，根据推断的两个质量维度间关系动态路由特征，而非使用固定的双分支架构。任务感知提示进一步调节门控行为，使模型能够在竞争与协作模式间切换。训练过程结合对抗和协作学习路径，以自适应地平衡感知保真度和提示对齐。",
+      "findings": "实验表明，该方法在多个AIGIQA基准上取得了最先进的准确性，同时生成了可解释的交互模式，更贴近人类评分中的竞争与协作行为，验证了感知与对齐维度间存在动态交互的假设。"
     }
   },
   {
-    "id": "2608.26714",
-    "title": "LiveVVT: High-Fidelity Video Virtual Try-On in Real Time",
-    "abstract": "Diffusion-based Video Virtual Try-On (VVT) achieves high visual fidelity through bidirectional spatio-temporal modeling, but complete-clip dependence incurs prohibitive latency and computational overhead in practical continuous deployment. Naively enforcing causality disrupts pretrained bidirectional priors and substantially degrades synthesis quality. We introduce LiveVVT, a rolling streaming diffusion framework that preserves bounded bidirectional modeling within causal recurrent generation. Within a fixed-size window, LiveVVT jointly denoises multiple video chunks under bounded look-ahead, preserving local bidirectional interactions while emitting one clean chunk per iteration. Beyond the window, two complementary memories sustain long-term consistency: a bounded temporal memory propagates recent dynamics and occlusion context, whereas a persistent global appearance memory, constructed once from the target garment and a frontal try-on keyframe, anchors garment details and dressed appearance throughout the stream. We further introduce a progressive distillation framework integrating bidirectional VVT learning, teacher-trajectory regression for causal few-step adaptation, and Collaborative Matching Distillation, which couples teacher-distribution matching with rolling flow matching on real videos to align optimization with recurrent inference. Experiments on paired and unpaired long-sequence benchmarks demonstrate superior generation quality over similarly sized models, with $26\\times$ lower latency and $11\\times$ higher throughput, enabling high-fidelity real-time streaming VVT.",
+    "id": "2608.24169",
+    "title": "ViSculpt: Visual-Centric Agentic Geometry Editing",
+    "abstract": "3D geometry editing is a critical yet labor-intensive part of the graphics pipeline, requiring artists to translate creative intent into precise operations in complex professional software. Large language models (LLMs) have shown promise for script-based 3D creation, but script generation is less suited to perception-driven editing of arbitrary existing meshes, where execution must remain visually grounded and untouched regions should be preserved. We present a \\emph{visual-centric}, training-free multi-agent system that edits existing 3D meshes directly in Blender by emulating the iterative workflow of human artists. Rather than generating scripts or regenerating geometry, our system operates through the Blender GUI: multimodal LLM agents observe the viewport, reason about the current mesh state, and execute localized edits through simulated user interactions. Experiments on a curated benchmark provide initial evidence that this agentic approach can follow natural language instructions, perform representative localized mesh edits, and preserve the overall identity of the input asset. Our results highlight a complementary regime for language-driven 3D editing: direct in-place modification of existing meshes within the native 3D editing workflow. We view this work as an exploratory step toward visual-centric agentic geometry editing in professional graphics software.",
     "authors": [
-      "Yushe Cao",
-      "Shikun Feng",
-      "Ruxiang Duan",
-      "Liyong Wang",
-      "Dianxi Shi",
-      "Chun Yu",
-      "Junliang Xing"
+      "Bo Pang",
+      "Jiaqi Pan",
+      "Xiaocheng Zhang",
+      "Jiacheng Xu",
+      "Guoping Wang",
+      "Peng-Shuai Wang"
     ],
-    "published": "2026-08-27",
-    "updated": "2026-08-27",
+    "published": "2026-08-25",
+    "updated": "2026-08-25",
     "categories": [
       "cs.CV",
-      "cs.AI"
+      "cs.GR",
+      "cs.HC"
     ],
-    "pdf_url": "https://arxiv.org/pdf/2608.26714.pdf",
-    "abs_url": "https://arxiv.org/abs/2608.26714",
+    "pdf_url": "https://arxiv.org/pdf/2608.24169.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.24169",
     "primary_category": "cs.CV",
     "score": 70,
     "summary": {
-      "title_zh": "LiveVVT：实时高保真视频虚拟试穿",
-      "core_contribution": "提出了一种滚动流式扩散框架LiveVVT，在保持有界双向建模的同时实现因果循环生成，显著降低延迟并提高吞吐量，首次实现高保真实时流式视频虚拟试穿。",
-      "method": "LiveVVT采用固定大小窗口内的联合去噪，每个迭代输出一个干净块，窗口外使用两种互补记忆（有界时间记忆和全局外观记忆）维持长期一致性。同时引入渐进式蒸馏框架，结合双向VVT学习、教师轨迹回归和协作匹配蒸馏，以对齐优化与循环推理。",
-      "findings": "在成对和未成对的长序列基准上，LiveVVT相比同规模模型生成质量更优，延迟降低26倍，吞吐量提高11倍，实现了高保真实时流式视频虚拟试穿。"
-    }
-  },
-  {
-    "id": "2608.26580",
-    "title": "Visual Information-Guided Parallel Decoding for Diffusion Multimodal Large Language Models",
-    "abstract": "Diffusion multimodal large language models (dMLLMs) have recently emerged as a new decoding paradigm for multimodal generation. Starting from a fully masked sequence, dMLLMs progressively decode the sequence by unmasking a subset of the remaining masked positions at each step. Since the selected tokens serve as the prediction context for subsequent steps, deciding which tokens to decode is crucial to the quality of the final output. The most common strategy prioritizes tokens based on a certainty measure that tends to favor tokens frequently observed in the training data. Recent approaches instead order tokens according to their influence on subsequent predictions, but do not explicitly account for the input image. We propose the Visual Information-Guided Sampler (VIG-Sampler), which prioritizes tokens based on their attention to image tokens. We further impose a constraint that penalizes candidate tokens whose image-attention distributions are similar to those of previously selected tokens, thereby increasing the information gain of the decoded subset. Extensive experiments on 7 captioning and VQA benchmarks with 3 open-source dMLLMs demonstrate the effectiveness of VIG-Sampler, which outperforms the Info-Gain Sampler by an average of 19.3 CIDEr points across the captioning benchmarks and surpasses it on COCO Caption while using only half as many decoding steps.",
-    "authors": [
-      "Insu Lee",
-      "Wooje Park",
-      "Wonseok Shin",
-      "Jinwoo Son",
-      "Byonghyo Shim"
-    ],
-    "published": "2026-08-27",
-    "updated": "2026-08-27",
-    "categories": [
-      "cs.CV",
-      "cs.CL"
-    ],
-    "pdf_url": "https://arxiv.org/pdf/2608.26580.pdf",
-    "abs_url": "https://arxiv.org/abs/2608.26580",
-    "primary_category": "cs.CV",
-    "score": 70,
-    "summary": {
-      "title_zh": "视觉信息引导的扩散多模态大语言模型并行解码",
-      "core_contribution": "提出了一种名为VIG-Sampler的采样器，通过利用图像注意力信息来指导扩散多模态大语言模型中的令牌解码顺序，从而提升生成质量并减少解码步骤。",
-      "method": "VIG-Sampler根据令牌对图像令牌的注意力强度进行优先级排序，优先解码与图像关联更紧密的令牌。同时，它引入一个约束项，惩罚那些与已选令牌图像注意力分布相似的候选令牌，以增加解码子集的信息增益。该方法在解码过程中逐步选择令牌，替代了传统的基于确定性或后续影响的无图像感知策略。",
-      "findings": "在7个图像描述和视觉问答基准测试上，使用3个开源dMLLMs进行评估，VIG-Sampler在图像描述基准上平均比Info-Gain Sampler高出19.3个CIDEr点，并且在COCO Caption上仅用一半解码步骤就超越了后者，证明了其高效性和有效性。"
+      "title_zh": "ViSculpt：以视觉为中心的智能体几何编辑",
+      "core_contribution": "提出了一种无需训练的多智能体系统，通过模拟人类艺术家的迭代工作流程，直接在Blender中编辑现有3D网格，实现了基于自然语言指令的局部几何编辑，同时保持输入资产的整体身份。",
+      "method": "该系统采用多模态大语言模型（LLM）智能体，通过Blender图形用户界面（GUI）进行操作：智能体观察视口，推理当前网格状态，并通过模拟用户交互执行局部编辑。系统不生成脚本或重新生成几何体，而是直接进行视觉引导的原地修改，确保未触及区域保持不变。",
+      "findings": "在精心设计的基准测试上，实验表明该方法能够遵循自然语言指令，执行代表性的局部网格编辑，并保持输入资产的整体身份。结果强调了语言驱动3D编辑的一种互补范式：在原生3D编辑工作流中对现有网格进行直接原地修改，为专业图形软件中的视觉中心智能体几何编辑提供了探索性证据。"
     }
   }
 ]

@@ -1,5 +1,18 @@
 [
   {
+    "id": "THU-MAIC_OpenMAIC",
+    "full_name": "THU-MAIC/OpenMAIC",
+    "owner": "THU-MAIC",
+    "name": "OpenMAIC",
+    "url": "https://github.com/THU-MAIC/OpenMAIC",
+    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        THU-MAIC /\n\n      OpenMAIC  \n\n    \n      Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+    "language": "TypeScript",
+    "stars": 22203,
+    "stars_today": 907,
+    "relevance_score": 85,
+    "summary": "OpenMAIC 是一个一键启动的沉浸式多智能体交互课堂项目，通过多个AI角色模拟真实教学互动，让用户快速体验多智能体协作学习场景，因其低门槛和教学创新性而值得关注。"
+  },
+  {
     "id": "sponsors_calesthio",
     "full_name": "sponsors/calesthio",
     "owner": "sponsors",
@@ -7,10 +20,23 @@
     "url": "https://github.com/sponsors/calesthio",
     "description": "Sponsor\n    \n  \n\n\n\n      \n            \n    \n\n    \n\n        \n          Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        calesthio /\n\n      OpenMontage  \n\n    \n      World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
     "language": "Python",
-    "stars": 53392,
-    "stars_today": 1144,
+    "stars": 54052,
+    "stars_today": 809,
     "relevance_score": 85,
-    "summary": "这是一个开源的智能体视频制作系统，提供12条生产流水线、100多个工具和700多个智能体技能文件，能将AI编程助手变成完整的视频制作工作室。"
+    "summary": "这是一个开源的智能体视频制作系统，提供12条生产流水线、100多个工具和700多个智能体技能文件，可将AI编程助手变成完整的视频制作工作室。它值得关注，因为这是全球首个此类系统，能大幅降低视频制作门槛并实现全流程自动化。"
+  },
+  {
+    "id": "Osmantic_ODS",
+    "full_name": "Osmantic/ODS",
+    "owner": "Osmantic",
+    "name": "ODS",
+    "url": "https://github.com/Osmantic/ODS",
+    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        Osmantic /\n\n      ODS  \n\n    \n      Turn your PC, Mac, or Linux box into an AI server. LLM inference, chat UI, voice, agents, workflows, RAG, and image generation.",
+    "language": "Python",
+    "stars": 4905,
+    "stars_today": 35,
+    "relevance_score": 85,
+    "summary": "ODS 能将你的 PC、Mac 或 Linux 电脑变成一台全能 AI 服务器，支持 LLM 推理、聊天界面、语音、智能体、工作流、RAG 和图像生成，一站式集成且本地化运行，值得关注。"
   },
   {
     "id": "sponsors_abi",
@@ -20,75 +46,36 @@
     "url": "https://github.com/sponsors/abi",
     "description": "Sponsor\n    \n  \n\n\n\n      \n            \n    \n\n    \n\n        \n          Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        abi /\n\n      screenshot-to-code  \n\n    \n      Drop in a screenshot and convert it to clean code (HTML/Tailwind/React/Vue)",
     "language": "Python",
-    "stars": 75621,
-    "stars_today": 326,
+    "stars": 76034,
+    "stars_today": 558,
     "relevance_score": 85,
-    "summary": "这是一个将截图自动转换为干净代码（支持HTML/Tailwind/React/Vue）的工具，只需拖入截图即可生成前端代码，极大提升开发效率，值得关注。"
+    "summary": "这是一个将截图自动转换为干净代码（HTML/Tailwind/React/Vue）的工具，只需拖入截图即可生成前端代码，极大提升开发效率，值得关注。"
   },
   {
-    "id": "freestylefly_awesome-gpt-image-2",
-    "full_name": "freestylefly/awesome-gpt-image-2",
-    "owner": "freestylefly",
-    "name": "awesome-gpt-image-2",
-    "url": "https://github.com/freestylefly/awesome-gpt-image-2",
-    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        freestylefly /\n\n      awesome-gpt-image-2  \n\n    \n      Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+    "id": "addyosmani_agent-skills",
+    "full_name": "addyosmani/agent-skills",
+    "owner": "addyosmani",
+    "name": "agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        addyosmani /\n\n      agent-skills  \n\n    \n      Production-grade engineering skills for AI coding agents.",
     "language": "JavaScript",
-    "stars": 24362,
-    "stars_today": 1687,
+    "stars": 90708,
+    "stars_today": 188,
     "relevance_score": 85,
-    "summary": "这是一个GPT-Image2工业级提示词引擎与模板库，包含530+逆向工程案例和20+套模板，能显著提升AI图像生成质量与效率，值得关注。"
+    "summary": "这是一个为AI编程代理提供生产级工程技能的开源项目，通过可复用的技能库提升代理处理真实代码任务的能力。它值得关注，因为能显著增强AI代理在复杂工程场景下的实用性和可靠性。"
   },
   {
-    "id": "marin-community_marin",
-    "full_name": "marin-community/marin",
-    "owner": "marin-community",
-    "name": "marin",
-    "url": "https://github.com/marin-community/marin",
-    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        marin-community /\n\n      marin  \n\n    \n      Open-source framework for the research and development of foundation models.",
-    "language": "Python",
-    "stars": 2912,
-    "stars_today": 236,
+    "id": "workweave_router",
+    "full_name": "workweave/router",
+    "owner": "workweave",
+    "name": "router",
+    "url": "https://github.com/workweave/router",
+    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        workweave /\n\n      router  \n\n    \n      Model router for agentic systems. Routes every prompt to the right model in &lt;50ms. Cut costs 40-70% with just an endpoint change.",
+    "language": "Go",
+    "stars": 2702,
+    "stars_today": 284,
     "relevance_score": 85,
-    "summary": "marin 是一个用于基础模型研究与开发的开源框架，提供模块化工具以支持模型训练、评估和部署。它值得关注，因为其社区驱动设计降低了构建和实验前沿AI模型的门槛。"
-  },
-  {
-    "id": "tashfeenahmed_freellmapi",
-    "full_name": "tashfeenahmed/freellmapi",
-    "owner": "tashfeenahmed",
-    "name": "freellmapi",
-    "url": "https://github.com/tashfeenahmed/freellmapi",
-    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        tashfeenahmed /\n\n      freellmapi  \n\n    \n      7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
-    "language": "TypeScript",
-    "stars": 21678,
-    "stars_today": 433,
-    "relevance_score": 85,
-    "summary": "freellmapi 聚合了34个免费LLM提供商、635个模型端点，统一封装成兼容OpenAI的/v1接口，并提供智能路由、自动故障转移和加密密钥管理，每月可处理74亿token，适合个人实验使用。"
-  },
-  {
-    "id": "sponsors_rohitg00",
-    "full_name": "sponsors/rohitg00",
-    "owner": "sponsors",
-    "name": "rohitg00",
-    "url": "https://github.com/sponsors/rohitg00",
-    "description": "Sponsor\n    \n  \n\n\n\n      \n            \n    \n\n    \n\n        \n          Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        rohitg00 /\n\n      ai-engineering-from-scratch  \n\n    \n      Learn it. Build it. Ship it for others.",
-    "language": "Python",
-    "stars": 50661,
-    "stars_today": 703,
-    "relevance_score": 85,
-    "summary": "这是一个从零开始学习AI工程的开源项目，涵盖理论到实战部署的完整路径，适合想系统掌握AI构建与交付能力的开发者。"
-  },
-  {
-    "id": "livekit_agents",
-    "full_name": "livekit/agents",
-    "owner": "livekit",
-    "name": "agents",
-    "url": "https://github.com/livekit/agents",
-    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        livekit /\n\n      agents  \n\n    \n      A framework for building realtime voice AI agents 🤖🎙️📹",
-    "language": "Python",
-    "stars": 13361,
-    "stars_today": 22,
-    "relevance_score": 85,
-    "summary": "LiveKit Agents 是一个用于构建实时语音 AI 代理的 Python 框架，支持音频和视频交互。它因提供低延迟、高可扩展的语音助手开发能力而备受关注，适合快速搭建类人对话应用。"
+    "summary": "workweave/router 是一个为智能体系统设计的模型路由器，能在50毫秒内将每个提示词路由到最合适的模型，仅需更换端点即可降低40-70%的成本。它值得关注，因为能显著优化多模型调用的效率与费用，且部署极简。"
   },
   {
     "id": "tailscale_tailcat",
@@ -98,9 +85,22 @@
     "url": "https://github.com/tailscale/tailcat",
     "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        tailscale /\n\n      tailcat  \n\n    \n      like netcat, but over Tailscale's data plane, without Tailscale's control plane",
     "language": "Go",
-    "stars": 2806,
-    "stars_today": 965,
+    "stars": 3472,
+    "stars_today": 790,
     "relevance_score": 75,
-    "summary": "tailcat 是一个类似 netcat 的工具，但通过 Tailscale 的数据平面直接传输数据，无需依赖其控制平面。它值得关注，因为能在 Tailscale 网络中快速建立临时连接，兼具安全性与轻量性。"
+    "summary": "tailcat 是一个基于 Tailscale 数据平面、但无需其控制平面的 netcat 替代工具，可直接在 Tailscale 网络内进行原始 TCP/UDP 通信。它值得关注，因为能在不依赖中心协调服务的情况下，利用现有 Tailscale 加密通道实现轻量级、低延迟的临时端口转发和调试。"
+  },
+  {
+    "id": "sponsors_bigskysoftware",
+    "full_name": "sponsors/bigskysoftware",
+    "owner": "sponsors",
+    "name": "bigskysoftware",
+    "url": "https://github.com/sponsors/bigskysoftware",
+    "description": "Sponsor\n    \n  \n\n\n\n      \n            \n    \n\n    \n\n        \n          Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        bigskysoftware /\n\n      htmx  \n\n    \n      &lt;/&gt; htmx - high power tools for HTML",
+    "language": "JavaScript",
+    "stars": 49114,
+    "stars_today": 32,
+    "relevance_score": 75,
+    "summary": "htmx 是一个轻量级 JavaScript 库，让你直接用 HTML 属性实现 AJAX、CSS 过渡和 WebSocket 等强大交互，无需写复杂前端代码；它因极简、后端友好且能大幅简化现代 Web 开发而备受关注。"
   }
 ]
