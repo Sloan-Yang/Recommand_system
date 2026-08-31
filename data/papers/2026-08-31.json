@@ -1,0 +1,145 @@
+[
+  {
+    "id": "2608.27199",
+    "title": "Vision-centric generative AI models: A software-hardware perspective",
+    "abstract": "Vision generative artificial intelligence (AI) has emerged as one of the most rapidly advancing areas of deep learning. The explosion of multimodal models has made them widely associated with text-to-image applications running on large datacentres. However, vision generative models are equally needed in applications that operate under strict hardware constraints at the edge, including autonomous vehicles, agricultural sensors, and mobile devices. In this Perspective, we argue that progress in vision generative AI has been driven by output quality, with hardware evolving reactively to accommodate growing model demands. We quantify the parameter cost and energy efficiency of these models across a range of accelerator platforms, and map four generative model families against seven real-world application domains. Finally, we advocate a software-hardware co-design approach, where deployment constraints are considered from the start of the design process, ensuring that the \"right model\" runs on the \"right hardware\" to serve the \"right application\", making generative AI deployment sustainable and accessible across a much broader range of platforms.",
+    "authors": [
+      "Eleni Tselepi",
+      "Cristian Sestito",
+      "Shady Agwa",
+      "Themis Prodromakis"
+    ],
+    "published": "2026-08-27",
+    "updated": "2026-08-27",
+    "categories": [
+      "cs.CV",
+      "cs.AR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.27199.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.27199",
+    "primary_category": "cs.CV",
+    "score": 65,
+    "summary": {
+      "title_zh": "以视觉为中心的生成式AI模型：软件-硬件视角",
+      "core_contribution": "本文从软件-硬件协同设计的角度，系统分析了视觉生成式AI模型在不同硬件平台上的参数成本与能效，并提出了在边缘设备上实现可持续部署的协同设计原则。",
+      "method": "作者量化了多种生成模型家族（如扩散模型、GAN等）在各类加速器平台上的参数规模和能量效率，并将四种生成模型家族映射到七个实际应用领域（如自动驾驶、农业传感器、移动设备），通过对比分析揭示硬件与模型需求之间的不匹配。",
+      "findings": "研究发现，视觉生成式AI的进展主要由输出质量驱动，硬件被动适应模型增长，导致边缘设备上的能效瓶颈；因此，作者主张从设计初期就考虑部署约束，实现“正确模型”在“正确硬件”上运行，以支持“正确应用”，从而提升生成式AI在更广泛平台上的可持续性和可访问性。"
+    }
+  },
+  {
+    "id": "2608.27154",
+    "title": "ReViCo: Unveiling the Limitations of VLMs in Visual Text Understanding via Error Correction",
+    "abstract": "Vision Language Models (VLMs) have shown great success in general visual tasks, yet they still struggle to deeply understand text within images. In this paper, we introduce ReViCo (Real Visual Correction), a benchmark designed to evaluate VLM text understanding through a novel task of visual text error correction. ReViCo challenges models to identify and fix text errors in real-world images, which requires a profound understanding of the interplay between visual text and its surrounding visual context. We benchmark various VLMs using two distinct paradigms: prompt-based strategy and targeted model training, both aimed at pushing the limits of current models. Our experiments reveal a striking performance gap between even the best VLMs and human, and further analysis also shows that most models struggle to accurately perceive the visual text, resulting in frequent correction errors. By highlighting these gaps, ReViCo provides a new benchmark foundation for developing more robust and text-aware VLMs.",
+    "authors": [
+      "Bojun Zhang",
+      "Junhong Liang",
+      "Feifei Zhai",
+      "Fengxian Ji",
+      "Yu Zhou"
+    ],
+    "published": "2026-08-27",
+    "updated": "2026-08-27",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.27154.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.27154",
+    "primary_category": "cs.CV",
+    "score": 65,
+    "summary": {
+      "title_zh": "ReViCo：通过错误纠正揭示视觉语言模型在视觉文本理解中的局限性",
+      "core_contribution": "提出了一个名为ReViCo的新基准，通过视觉文本错误纠正任务评估视觉语言模型（VLMs）对图像中文本的深度理解能力，并揭示了当前模型与人类表现之间的显著差距。",
+      "method": "ReViCo基准要求模型识别并纠正真实世界图像中的文本错误，这需要模型深入理解视觉文本与其周围视觉上下文的交互。作者采用两种范式评估多种VLM：基于提示的策略和针对性的模型训练，以测试现有模型的极限。",
+      "findings": "实验表明，即使是最先进的VLM在ReViCo任务上的表现也远低于人类，且大多数模型难以准确感知视觉文本，导致频繁的纠正错误。这些发现凸显了当前VLM在视觉文本理解方面的不足，为开发更鲁棒、更文本感知的模型提供了基准基础。"
+    }
+  },
+  {
+    "id": "2608.27121",
+    "title": "How AI Experiences Art: Emergent Aesthetic Structure in a Self-Supervised Multimodal Embedding Space",
+    "abstract": "Aesthetics are an important part of the symbolism of artistic works. Although subjective, humans categorize art based on the emotion evoked regardless of modality. What remains under-explored is how AI models form their own aesthetic categorization of human-produced media without explicit labels or cross-modal supervision. We present a self-supervised framework that projects four modalities (text, audio, image and video) into a shared 256-dimensional embedding space and applies iterative clustering to discover aesthetic structure. We discuss the divergence between AI-generated cluster assignments and human affective register labels on a weakly supervised multimodal dataset. This work has applications in understanding how AI structures cross-modal similarity, organizing heterogeneous media collections for Retrieval-Augmented Generation (RAG), and automated data labeling.",
+    "authors": [
+      "Corey D. C. Heath"
+    ],
+    "published": "2026-08-27",
+    "updated": "2026-08-27",
+    "categories": [
+      "cs.MM",
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.27121.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.27121",
+    "primary_category": "cs.MM",
+    "score": 65,
+    "summary": {
+      "title_zh": "AI如何体验艺术：自监督多模态嵌入空间中的涌现美学结构",
+      "core_contribution": "本文提出了一种无需显式标签或跨模态监督的自监督框架，能够将文本、音频、图像和视频四种模态投影到共享嵌入空间，并发现其中涌现的美学结构，从而揭示AI如何对人工创作媒体进行美学分类。",
+      "method": "该方法首先使用自监督学习将四种模态（文本、音频、图像和视频）映射到一个256维的共享嵌入空间，然后通过迭代聚类算法（如k-means或层次聚类）在嵌入空间中自动发现美学相关的结构。整个过程不依赖人工标注或跨模态监督，仅利用数据本身的模态内和模态间相似性。",
+      "findings": "实验表明，AI生成的聚类分配与人类情感标注（affective register）存在显著差异，说明AI的美学分类与人类主观感受并不完全一致。该工作有助于理解AI如何构建跨模态相似性，并可用于异构媒体集合的组织（如RAG）和自动化数据标注。"
+    }
+  },
+  {
+    "id": "2608.27073",
+    "title": "SpatialCrafter: Single Image World Modeling with Generative 3D Proxies",
+    "abstract": "Explorable image-to-scene generation is essential for applications in gaming, robotics, and virtual reality. Existing methods based on video diffusion model (VDM) commonly rely on incomplete conditioning signals such as sparse point clouds or 2D panoramas, leading to stochastic hallucinations, long-term drifts and suboptimal 3D consistency. We present SpatialCrafter, a novel two-stage framework that addresses these issues by introducing a global 3D proxy for high-fidelity image-to-scene generation. Specifically, we decompose the generation process into global proxy generation and appearance refinement. For proxy generation, we propose a Point-anchored Sparse Structure~(PaSS) Flow module that predicts a spatially aligned and geometrically consistent 3D proxy. For appearance refinement, we re-frame the VDM as a Generative Deferred Refiner which synthesizes high-frequency photorealistic details upon proxy-defined scene geometry. To better integrate the proxy with the pre-trained VDM, we introduce Parallel Geometry Injection and Proxy-Aware Corruption training strategies, which improve robustness to proxy artifacts without disrupting the pretrained generative manifold. Furthermore, as no suitable dataset exists for this explorable scene generation task, we construct a new large-scale dataset of 115K scenes. To the best of our knowledge, it is the first hybrid dataset for image-to-scene generation. Extensive experiments on both synthetic and real-world datasets show that SpatialCrafter outperforms state-of-the-art methods, mitigates long-term drift, and remains robust and consistent under rapid camera motion and extreme viewpoint changes. Code, models, and the newly constructed dataset will be publicly released. See more at https://fangchuan.github.io/SpatialCrafter/.",
+    "authors": [
+      "Chuan Fang",
+      "Lingteng Qiu",
+      "Yixun Liang",
+      "Rui Chen",
+      "Kunming Luo",
+      "Zhaohua Zheng",
+      "Tongyuan Bai",
+      "Feipeng Tian",
+      "Zilong Dong",
+      "Zihan Zhou",
+      "Ping Tan"
+    ],
+    "published": "2026-08-27",
+    "updated": "2026-08-27",
+    "categories": [
+      "cs.CV",
+      "cs.RO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.27073.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.27073",
+    "primary_category": "cs.CV",
+    "score": 65,
+    "summary": {
+      "title_zh": "SpatialCrafter：基于生成式3D代理的单图像世界建模",
+      "core_contribution": "提出了一种两阶段框架SpatialCrafter，通过引入全局3D代理（proxy）实现高保真、几何一致的可探索图像到场景生成，解决了现有视频扩散模型在稀疏条件信号下的随机幻觉、长期漂移和3D一致性问题，并构建了首个大规模混合场景数据集。",
+      "method": "SpatialCrafter将生成过程分解为全局代理生成和外观细化。代理生成阶段使用点锚定稀疏结构（PaSS）流模块预测空间对齐且几何一致的3D代理；外观细化阶段将视频扩散模型重新定义为生成式延迟细化器，在代理定义的场景几何上合成高频逼真细节。为整合代理与预训练VDM，引入了并行几何注入和代理感知损坏训练策略，增强对代理伪影的鲁棒性而不破坏预训练生成流形。",
+      "findings": "在合成和真实世界数据集上的大量实验表明，SpatialCrafter优于现有最先进方法，有效缓解了长期漂移，并在快速相机运动和极端视角变化下保持鲁棒性和一致性。此外，构建的115K场景数据集是首个用于图像到场景生成的混合数据集，将公开代码、模型和数据集。"
+    }
+  },
+  {
+    "id": "2608.26971",
+    "title": "TempJail: Temporal Jailbreak Attacks against Image-to-Video Generation Models",
+    "abstract": "In recent years, image-to-video (I2V) generation models have made remarkable progress in subject consistency and temporal coherence, enabling high quality video synthesis. However, these advances also introduce new safety risks. Existing studies mainly focus on jailbreak attacks involving single frame violations, while largely overlooking the temporal dimension unique to video generation models. In this paper, we investigate three attack scenarios and uncover a temporal vulnerability in I2V systems: unsafe semantics may emerge not from a single frame, but from semantic composition over time. We further identify two key challenges in such attacks: temporal abstraction and semantic camouflage. To address these issues, we propose TempJail, a novel temporal jailbreak framework for I2V systems. For temporal abstraction, we decompose a target malicious caption into an initial frame visual condition and a temporal text instruction. For semantic camouflage, on the image side we model semantic injection as controlled latent perturbation in diffusion sampling and introduce gradient guidance from pretrained encoders. On the text side, we rewrite the caption into an innocuous ``subject-action-scene'' template that bypasses safety filters while preserving temporal guidance. In the black-box inference phase, these two modalities jointly enable malicious semantics to be gradually triggered over time. Experiments on closed-source commercial models, including Kling, Seedance, Veo and PixVerse, show that TempJail improves attack success rate over prior state-of-the-art methods by 23.3\\% under GPT-5.2 evaluation and 22.0\\% under human evaluation. Our codes are available at \\href{https://github.com/luqi-glory/TempJail}{GitHub}.",
+    "authors": [
+      "Qi Lu",
+      "Zehui Guo",
+      "David Yuanda Gan",
+      "Zijing Li",
+      "Hengda Zhang",
+      "Weijun Xu",
+      "Qiankun Zhang"
+    ],
+    "published": "2026-08-27",
+    "updated": "2026-08-27",
+    "categories": [
+      "cs.CV",
+      "cs.MM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.26971.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.26971",
+    "primary_category": "cs.CV",
+    "score": 65,
+    "summary": {
+      "title_zh": "TempJail：针对图像到视频生成模型的时序越狱攻击",
+      "core_contribution": "本文首次系统性地研究了图像到视频（I2V）生成模型中的时序越狱攻击，揭示了不安全语义可通过跨帧时间组合而非单帧出现的安全漏洞，并提出了首个针对该漏洞的时序越狱框架TempJail，显著提升了攻击成功率。",
+      "method": "TempJail框架包含两个关键模块：时序抽象和语义伪装。时序抽象将目标恶意描述分解为初始帧视觉条件和时序文本指令；语义伪装在图像侧通过扩散采样中的可控潜在扰动和预训练编码器的梯度引导注入语义，在文本侧将描述改写为无害的“主体-动作-场景”模板以绕过安全过滤器。在黑盒推理阶段，两种模态协同作用，使恶意语义随时间逐步触发。",
+      "findings": "在闭源商业模型（Kling、Seedance、Veo和PixVerse）上的实验表明，TempJail相比现有最先进方法，在GPT-5.2评估下攻击成功率提升23.3%，在人工评估下提升22.0%，验证了时序越狱攻击的有效性和通用性。"
+    }
+  }
+]
