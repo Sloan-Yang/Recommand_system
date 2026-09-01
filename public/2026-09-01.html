@@ -316,7 +316,7 @@
         <div class="page-date">📅 2026-09-01</div>
         <h2>每日精选 · arXiv · Hacker News · GitHub Trending</h2>
         <p class="page-stats">
-            计算机视觉: 4 | 多媒体: 1
+            计算机视觉: 5
             <a href="archive.html">归档 →</a>
         </p>
     </div>
@@ -328,35 +328,30 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge">计算机视觉</span>
-          <span class="paper-id">2608.28206</span>
+          <span class="paper-id">2608.30689</span>
         </div>
         <span class="score-badge">相关性 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://arxiv.org/abs/2608.28206" target="_blank">NumBench: Diagnosing Counting Failures in Text-to-Image Models</a>
+        <a href="https://arxiv.org/abs/2608.30689" target="_blank">CANVAS: Consistency-Aware Navigation via Visual Adaptive Sampling for Long-Context Text-to-SVG Generation</a>
       </h3>
-      <p class="paper-title-zh">NumBench：文本到图像模型计数故障诊断</p>
-      <p class="paper-authors">Sandeep Wadhwa, Mayank Vatsa, Richa Singh, Parrva Chirag Shah, Prakhar Galriya</p>
+      <p class="paper-title-zh">CANVAS：基于视觉自适应采样的长上下文文本到SVG生成的一致性感知导航</p>
+      <p class="paper-authors">Yichen Wu, Haoxuan Qu, Yihang Lou, Hossein Rahmani, Jun Liu</p>
       
       <div class="paper-summary">
-        <div class="summary-section"><strong>核心贡献:</strong> 提出了NumBench基准测试框架，用于系统评估文本到图像模型在生成对象数量上的准确性，并开发了竞争性区域解析的过程模型。</div>
-        <div class="summary-section"><strong>方法:</strong> 1. 构建包含64万提示、覆盖1600个类别（数量1-100）的基准数据集，通过因子设计控制对象组合、空间引导和外观条件。
-2. 提出过程模型，假设请求的实例会竞争有限的可解析图像区域，预测低占用率下的近二次方碰撞缺陷。
-3. 设计置信加权数值精度评分（CWNP），整合三个校准检测器并降低不确定提案的权重。</div>
-        <div class="summary-section"><strong>关键发现:</strong> 1. 所有测试模型在生成超过50个对象时性能急剧下降。
-2. 数量范围对性能影响最大，其次是布局和对象组合。
-3. 网格引导在空间布局中效果最佳（符合过程模型的协调预测），但碰撞并非唯一原因。
-4. 自动化评估在50个对象内与人类研究结果一致，且在243个自然语言提示上展现泛化能力。</div>
+        <div class="summary-section"><strong>核心贡献:</strong> 提出了一种无需训练的、渲染感知的推理框架CANVAS，通过结合功率锐化的轨迹似然和渲染未来的视觉反馈，有效提升自回归模型在长上下文文本到SVG生成中的全局一致性（包括几何关系、空间布局、遮挡顺序和整体构图）。</div>
+        <div class="summary-section"><strong>方法:</strong> CANVAS框架采用功率锐化的轨迹似然作为候选笔画的先验评分，并利用渲染未来的视觉反馈来估计每个候选笔画的未来价值。在有限的生成和渲染预算下，它根据候选不确定性、决策影响和展开成本自适应地分配采样资源，从而推导出笔画级别的导航规则，指导生成过程。</div>
+        <div class="summary-section"><strong>关键发现:</strong> 在多个自回归SVG骨干模型和互补基准上的实验表明，CANVAS显著提升了全局一致性，包括几何关系、空间布局、遮挡顺序和整体构图，且无需额外训练，验证了框架的有效性和泛化能力。</div>
       </div>
       
       <details class="paper-abstract">
         <summary>查看原文摘要</summary>
-        <p>Text-to-image (T2I) models often generate the wrong number of objects, yet existing benchmarks are too small or weakly controlled to explain why. We introduce \textbf{NumBench}, a benchmark of 640{,}000 prompts spanning 1{,}600 categories and counts from 1 to 100. Its factorial design varies object composition, spatial guidance, and appearance conditions while balancing counts and category exposure. We also develop a process model in which requested instances compete for a finite set of resolvable image regions. The model predicts a near-quadratic collision deficit at low occupancy and shows how coordinated placement reduces it. For scalable evaluation, we propose the Confidence-Weighted Numeric Precision Score (\cwnps), which aggregates three calibrated detectors and discounts uncertain proposals. Across five commercial systems, two open models, and two specialized counting methods, performance declines sharply with requested count; all evaluated methods are weak above 50 objects. Count range has the largest measured effect, followed by layout and composition. Grid guidance is strongest among guided layouts, consistent with the coordination prediction, although the analysis does not establish collision as the sole cause. A 14{,}400-image human study supports automated evaluation through count 50, while results on 243 natural-language prompts show transfer beyond NumBench templates.</p>
+        <p>Autoregressive large models have recently advanced Text-to-SVG generation from simple icons to complex, long-context graphics, yet standard autoregressive decoding often fails to maintain global consistency across geometry, layout, occlusion, and composition. We introduce CANVAS (Consistency-Aware Navigation via Visual Adaptive Sampling), a training-free, render-aware inference framework that combines power-sharpened trajectory likelihood with visual feedback from rendered futures and derives a stroke-wise navigation rule. It effectively estimates each candidate stroke's future value under a limited generation and rendering budget and adaptively allocates samples according to candidate uncertainty, decision influence, and rollout cost. Experiments across multiple autoregressive SVG backbones and complementary benchmarks demonstrate improvements in global consistency, which includes sound geometric relationships, spatial layouts, occlusion ordering, and overall composition, without additional training, demonstrating the effectiveness and generalization ability of our framework.</p>
       </details>
       
       <div class="paper-links">
-        <a href="https://arxiv.org/abs/2608.28206" target="_blank" class="link-btn">📄 arXiv</a>
-        <a href="https://arxiv.org/pdf/2608.28206.pdf" target="_blank" class="link-btn">📥 PDF</a>
+        <a href="https://arxiv.org/abs/2608.30689" target="_blank" class="link-btn">📄 arXiv</a>
+        <a href="https://arxiv.org/pdf/2608.30689.pdf" target="_blank" class="link-btn">📥 PDF</a>
       </div>
     </article>
     
@@ -365,30 +360,30 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge">计算机视觉</span>
-          <span class="paper-id">2608.28082</span>
+          <span class="paper-id">2608.28814</span>
         </div>
         <span class="score-badge">相关性 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://arxiv.org/abs/2608.28082" target="_blank">Attribute Token Arithmetic: Disentangled and Continuous Semantic Control for Visual Autoregressive Models</a>
+        <a href="https://arxiv.org/abs/2608.28814" target="_blank">FigMirror: Ground It, Code It, Plot It</a>
       </h3>
-      <p class="paper-title-zh">属性标记算术：视觉自回归模型中解耦与连续的语义控制</p>
-      <p class="paper-authors">Xindi Yang, Yicheng Wu, Cheng Zhang, Jianfei Cai, Tien-Tsin Wong</p>
+      <p class="paper-title-zh">FigMirror：定位它，编码它，绘制它</p>
+      <p class="paper-authors">Xiaohan Zhao, Jiacheng Liu, Yaxin Luo, Zhiqiang Shen</p>
       
       <div class="paper-summary">
-        <div class="summary-section"><strong>核心贡献:</strong> 提出属性标记算术（ATA）方法，实现了视觉自回归模型中解耦且连续的属性控制，无需模型重新训练或大规模监督。</div>
-        <div class="summary-section"><strong>方法:</strong> 受词嵌入向量算术特性的启发，ATA在预训练自回归潜在空间中识别与视觉属性（如年龄、体型、情绪）对应的语义方向。这些方向仅需从单张参考图像学习，通过简单算术操作即可实现属性的连续调整和组合。</div>
-        <div class="summary-section"><strong>关键发现:</strong> 实验表明，ATA能实现身份保持、细粒度及多属性调整，在可控性、通用性和计算效率上优于现有自回归编辑基线方法。</div>
+        <div class="summary-section"><strong>核心贡献:</strong> 提出FigMirror框架，利用现代计算机使用模型中的坐标定位和编码能力，实现将参考图的视觉风格（如配色和排版）迁移到新数据的绘图任务，并引入专家级基准PlotTwin-Bench用于评估。</div>
+        <div class="summary-section"><strong>方法:</strong> FigMirror采用智能体框架，通过Grounded Measurement（接地测量）方法，先使用坐标定位视觉元素，再通过可执行代码测量其属性（如颜色、字体等），从而提取参考图的风格特征，并应用于新数据的绘图。该方法避免了像素级优化，直接利用模型的编码能力生成风格一致的图表。</div>
+        <div class="summary-section"><strong>关键发现:</strong> 在参考条件风格迁移任务上，FigMirror一致优于现有方法；论文中的所有图表（除对比方法生成的）均由FigMirror自动生成，验证了其实际可用性。</div>
       </div>
       
       <details class="paper-abstract">
         <summary>查看原文摘要</summary>
-        <p>Autoregressive text-to-image generation has recently achieved remarkable progress, offering high-fidelity synthesis via a unified generative framework. However, fine-grained semantic control remains challenging due to the attribute entanglement and the misalignment between textual and fine-grained visual representations. In this paper, we introduce Attribute Token Arithmetic (ATA), a method that enables disentangled and continuous attribute control in visual autoregressive modelling. Inspired by the vector arithmetic property observed in word embeddings, ATA identifies semantic directions corresponding to visual attributes (e.g., aging, fatness, emotion) directly within the pretrained autoregressive latent space. These directions are learned from a single reference image, without model retraining or large-scale supervision. During generation, attributes can be continuously adjusted and compositionally combined through simple arithmetic operations with other attribute tokens. Extensive experiments demonstrate that ATA achieves identity-preserving, fine-grained, and multi-attribute adjustment, outperforming existing autoregressive editing baselines in controllability, generality, and computational efficiency. Our code will be available at https://github.com/Madaoer/ATA.</p>
+        <p>Converting scientific figures into executable code has gained increasing attention, yet existing methods primarily focus on reproducing the reference figure itself. A more practical setting is to plot new data while preserving the visual style of a reference figure (e.g., color scheme and typography). Prior approaches mimic the reference through pixel-level optimization and struggle to carry its style to new data. We show that the key to this task lies in the coordinate grounding and coding capabilities present in modern computer-use models. We propose FigMirror, an agentic framework that unlocks these capabilities through Grounded Measurement, which locates visual elements by coordinates and measures their properties through executable code. We further introduce PlotTwin-Bench, an expert-curated benchmark with fine-grained code and image-level style metrics. Experiments show that FigMirror consistently outperforms existing methods on reference-conditioned style transfer. All plots in this paper are generated by FigMirror, except those produced by other methods for comparison. Our code and data are available at: https://github.com/VILA-Lab/FigMirror.</p>
       </details>
       
       <div class="paper-links">
-        <a href="https://arxiv.org/abs/2608.28082" target="_blank" class="link-btn">📄 arXiv</a>
-        <a href="https://arxiv.org/pdf/2608.28082.pdf" target="_blank" class="link-btn">📥 PDF</a>
+        <a href="https://arxiv.org/abs/2608.28814" target="_blank" class="link-btn">📄 arXiv</a>
+        <a href="https://arxiv.org/pdf/2608.28814.pdf" target="_blank" class="link-btn">📥 PDF</a>
       </div>
     </article>
     
@@ -397,30 +392,30 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge">计算机视觉</span>
-          <span class="paper-id">2608.27893</span>
+          <span class="paper-id">2608.29281</span>
         </div>
-        <span class="score-badge">相关性 85/100</span>
+        <span class="score-badge">相关性 82/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://arxiv.org/abs/2608.27893" target="_blank">CommerceVibe: Learning to Design E-Commerce Creatives as Executable Visual Code via Dual-Feedback Reinforcement Learning</a>
+        <a href="https://arxiv.org/abs/2608.29281" target="_blank">Elastic Token Compression for Pixel-Space Diffusion Transformers</a>
       </h3>
-      <p class="paper-title-zh">CommerceVibe：通过双反馈强化学习将电商创意设计转化为可执行视觉代码</p>
-      <p class="paper-authors">Yajiao Xu, Jin Zhang, Jiangbo Ai, Tao Jiang, Mo Xu 等 (7 位作者)</p>
+      <p class="paper-title-zh">像素空间扩散Transformer的弹性令牌压缩</p>
+      <p class="paper-authors">Eduard Zamfir, Christian Reisswig, Zongwei Wu, Yongqin Xian, Radu Timofte</p>
       
       <div class="paper-summary">
-        <div class="summary-section"><strong>核心贡献:</strong> 提出CommerceVibe框架，将电商创意表示为可执行的HTML/CSS视觉代码，并通过双反馈强化学习提升生成创意的可编辑性、可控性和感知质量。</div>
-        <div class="summary-section"><strong>方法:</strong> 1. 将创意生成建模为条件式HTML/CSS程序合成任务，输出可渲染、可编辑的代码形式创意；2. 设计双反馈强化学习机制：规则反馈评估代码渲染后的文本可读性、产品可见性和布局有效性，视觉反馈通过视觉语言模型(VLM)从六个感知与商业维度评估创意与输入规格的匹配度；3. 基于28,000+电商案例对Qwen3.5-9B模型进行监督微调后实施强化学习优化。</div>
-        <div class="summary-section"><strong>关键发现:</strong> 1. 在1,300例测试集上，优化后的模型加权得分达94.0/100，显著优于仅监督微调的基线(87.3)；2. 盲测中五位电商设计专家一致认可生成质量；3. 生成的创意具备渲染精确性（无文本/产品失真）、结构可编辑性及商业需求符合度。</div>
+        <div class="summary-section"><strong>核心贡献:</strong> 提出了一种针对像素空间扩散Transformer的弹性令牌压缩方法（Region Token Interface, RTI），通过基于内容的自适应令牌分组，在保持生成质量的同时显著提升推理速度，并支持单一模型适配多种计算预算。</div>
+        <div class="summary-section"><strong>方法:</strong> 该方法首先通过探测预训练模型，发现中间层令牌在图像平坦区域存在冗余，且冗余区域具有连通性和内容形状。利用希尔伯特曲线对图像块进行排序，使得连续位置对应图像邻域，从而将二维区域分组转化为一维切割。根据特征变化最大的位置进行切割，将每个连续区域池化为一个区域令牌。在微调过程中，区域数量随机采样，使模型能够适应不同的计算预算。</div>
+        <div class="summary-section"><strong>关键发现:</strong> 实验表明，RTI在匹配的计算预算下优于现有缩减方法，在2.0倍加速时达到与密集模型相当的质量，在2.6倍加速时仍保持接近的质量。</div>
       </div>
       
       <details class="paper-abstract">
         <summary>查看原文摘要</summary>
-        <p>High-quality e-commerce creatives are essential for presenting products and conveying marketing messages. Recent diffusion models enable scalable creative generation and produce visually compelling images, but their flattened raster outputs often contain distorted text and inconsistent product details, requiring refinement before deployment. Moreover, without explicit structure, the resulting creatives are difficult to edit and reuse, while complex design requirements remain challenging to encode as verifiable training signals. To address these challenges, we present CommerceVibe, which represents creatives as executable visual code and formulates generation as conditional HTML/CSS program synthesis. Given product images, design requirements, and product information, it produces renderable, editable, and reusable creatives. We further introduce dual-feedback reinforcement learning, in which rule-based feedback evaluates rendered programs for text readability, product visibility, and layout validity, while visual feedback from a vision-language model (VLM) assesses rendered creatives against input specifications across six perceptual and commercial dimensions. Together, these complementary feedback signals improve both constraint satisfaction and perception-dependent quality. We perform supervised fine-tuning (SFT) of Qwen3.5-9B on over 28,000 e-commerce examples, followed by dual-feedback reinforcement learning. On a 1,300-case benchmark, the optimized CommerceVibe model achieves a weighted score of 94.0/100, compared with 87.3 for the SFT-only variant, and outperforms strong external models. Blind evaluations by five e-commerce design experts further validate these improvements. CommerceVibe supports controllable, editable, and scalable e-commerce creative production.</p>
+        <p>Natural images concentrate their detail in a small fraction of the frame, yet diffusion models spend a full token on every patch, in every layer and at every timestep. The waste is largest in pixel-space models, with no autoencoder to absorb low-level redundancy first. Probing a pretrained pixel text-to-image transformer, we find its middle-block tokens redundant wherever the image is flat. The redundancy occupies connected, content-shaped regions, and exploiting it requires tokens with the same geometry. Cutting a Hilbert ordering of the patches provides them. Consecutive positions are always image neighbours, so any contiguous run is a connected region whose size and shape follow the content, and grouping in two dimensions becomes a cut in one. Existing reductions each lose part of this. Similarity merging scatters its groups, latent bottlenecks discard position, and skipping deletes what it should summarize. We cut where the model's features change most and pool each run into one region token. Our Region Token Interface (\method{}) adapts a diffusion model to these tokens, with the region count drawn at random during fine-tuning so one checkpoint serves every budget. \method{} leads prior reduction methods at matched budgets, matches dense quality at $2.0\times$ the speed, and stays close at $2.6\times$. The code and models are open-sourced at https://eduardzamfir.github.io/rti</p>
       </details>
       
       <div class="paper-links">
-        <a href="https://arxiv.org/abs/2608.27893" target="_blank" class="link-btn">📄 arXiv</a>
-        <a href="https://arxiv.org/pdf/2608.27893.pdf" target="_blank" class="link-btn">📥 PDF</a>
+        <a href="https://arxiv.org/abs/2608.29281" target="_blank" class="link-btn">📄 arXiv</a>
+        <a href="https://arxiv.org/pdf/2608.29281.pdf" target="_blank" class="link-btn">📥 PDF</a>
       </div>
     </article>
     
@@ -429,30 +424,30 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge">计算机视觉</span>
-          <span class="paper-id">2608.28339</span>
+          <span class="paper-id">2608.29160</span>
         </div>
-        <span class="score-badge">相关性 70/100</span>
+        <span class="score-badge">相关性 82/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://arxiv.org/abs/2608.28339" target="_blank">Abstract4D: A Large-Scale Dataset and Framework for Understanding the Visual Language of Abstract Art</a>
+        <a href="https://arxiv.org/abs/2608.29160" target="_blank">Training-Free Hidden-State Refinement for Flow-Matching Image Generators</a>
       </h3>
-      <p class="paper-title-zh">Abstract4D：大规模数据集与框架——理解抽象艺术的视觉语言</p>
-      <p class="paper-authors">Haowei Zhang, Yuanpei Zhao, Ji-Zhe Zhou, Mao Li</p>
+      <p class="paper-title-zh">无需训练的流匹配图像生成器隐藏状态精炼方法</p>
+      <p class="paper-authors">Yuanyi Yan, Xinzhe Rao, Canyu Shen, Yang Chen, Yunlu Chen 等 (8 位作者)</p>
       
       <div class="paper-summary">
-        <div class="summary-section"><strong>核心贡献:</strong> 提出了目前最大的抽象绘画数据集Abstract4D，并构建了多维度评估框架，用于探索AI对抽象艺术视觉语言的表征与解释能力。</div>
-        <div class="summary-section"><strong>方法:</strong> 1. 通过混合人类-VLM（视觉语言模型）标注流程生成高质量数据集，包含12万+图像及描述形式、色彩、纹理、构图的元数据；2. 利用大规模嵌入可视化分析抽象艺术的语义结构；3. 设计分类、跨模态检索和文本生成图像三大基准任务评估模型性能。</div>
-        <div class="summary-section"><strong>关键发现:</strong> 1. 揭示了感知关系如何组织抽象艺术的意义结构；2. 验证了Abstract4D在定量评估AI模型对抽象视觉语言的感知与生成能力方面的有效性。</div>
+        <div class="summary-section"><strong>核心贡献:</strong> 提出一种无需训练、仅增加推理计算量的方法，通过循环精炼冻结的流匹配生成器内部隐藏状态，提升图像生成质量，而不改变模型权重或外部采样器。</div>
+        <div class="summary-section"><strong>方法:</strong> 该方法在每次去噪调用中，重复应用选定的Transformer层，形成循环框架。具体包括：密集和稀疏令牌循环（Dense/Sparse Token Loop）控制令牌范围；采样进度门控（Sampling-Progress Gating）和循环层范围决定循环激活的时间和位置；循环次数和强度控制重复更新的程度；循环引导（Loop Guidance）结合普通和循环的向量场预测。</div>
+        <div class="summary-section"><strong>关键发现:</strong> 在两种Scale-RAE模型规模上，循环变体提升了主要和辅助质量指标，且质量-效率权衡具有竞争力。Loop Guidance在所有三个测试模型上均提升了主要指标；在Scale-RAE DiT2.4B上，GenEval从0.4471提升至0.5691，DPG-Bench从0.7656提升至0.8053。</div>
       </div>
       
       <details class="paper-abstract">
         <summary>查看原文摘要</summary>
-        <p>Artificial intelligence can classify artistic styles and synthesize images, but it still lacks a model of the visual language that gives art meaning. Abstract painting minimizes object semantics and foregrounds structural cues, making it an ideal testbed for computational perception. We introduce \textbf{Abstract4D}, the largest dataset of abstract paintings to date: more than 120,000 images paired with rich metadata and multi-dimensional prompts that capture each work's perceptual attributes---\textit{form, color, texture, and composition}. Annotations are produced by a hybrid human--VLM pipeline for quality and consistency. Using Abstract4D, we (i) analyze the semantic structure of abstract art through large-scale embedding visualization, uncovering how perceptual relationships organize artistic meaning, and (ii) establish benchmark tasks for classification, cross-modal retrieval, and text-to-image generation to evaluate how AI models perceive and reproduce abstract visual language. Together, these analyses demonstrate how Abstract4D enables both exploration and quantitative assessment of AI's ability to represent and interpret abstract art.</p>
+        <p>We aim to improve frozen flow-matching image generators by adding inference computation inside the denoiser, without changing model weights or the outer sampler. Existing generators usually spend extra test-time computation by increasing the number of sampling steps, which repeatedly evaluates the entire denoiser and couples quality gains to sampler cost. A key challenge is how to use extra computation inside a frozen transformer denoiser: the method must decide which tokens, layers, and sampling times receive repeated updates while preserving the original generation pipeline. We introduce a training-free looping framework that repeatedly applies selected transformer layers inside each denoising call. Dense and Sparse Token Loop vary the token scope; Sampling-Progress Gating and the loop layer range specify when and where looping is active; loop count and strength control the repeated updates; and Loop Guidance combines ordinary and looped vector-field predictions. Across two Scale-RAE model scales, loop variants improve primary and auxiliary quality metrics with competitive quality--efficiency trade-offs. Loop Guidance further improves both primary metrics across all three tested models; on Scale-RAE DiT2.4B, it raises GenEval from 0.4471 to 0.5691 and DPG-Bench from 0.7656 to 0.8053. Code will be released.</p>
       </details>
       
       <div class="paper-links">
-        <a href="https://arxiv.org/abs/2608.28339" target="_blank" class="link-btn">📄 arXiv</a>
-        <a href="https://arxiv.org/pdf/2608.28339.pdf" target="_blank" class="link-btn">📥 PDF</a>
+        <a href="https://arxiv.org/abs/2608.29160" target="_blank" class="link-btn">📄 arXiv</a>
+        <a href="https://arxiv.org/pdf/2608.29160.pdf" target="_blank" class="link-btn">📥 PDF</a>
       </div>
     </article>
     
@@ -460,31 +455,31 @@
     <article class="paper-card">
       <div class="paper-header">
         <div class="left-header">
-          <span class="category-badge">多媒体</span>
-          <span class="paper-id">2608.28122</span>
+          <span class="category-badge">计算机视觉</span>
+          <span class="paper-id">2608.29809</span>
         </div>
-        <span class="score-badge">相关性 70/100</span>
+        <span class="score-badge">相关性 75/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://arxiv.org/abs/2608.28122" target="_blank">Agentic Artifact Creation: Systems, Evaluation, Principles, and Opportunities</a>
+        <a href="https://arxiv.org/abs/2608.29809" target="_blank">RegionCache: Semantic-Aware Region Reuse for Efficient Multi-Turn Image Generation</a>
       </h3>
-      <p class="paper-title-zh">能动性人工制品创建：系统、评估、原则与机遇</p>
-      <p class="paper-authors">Tianfu Wang, Zhezheng Hao, Xilin Xia, Lixin Liu, Mengkang Hu 等 (12 位作者)</p>
+      <p class="paper-title-zh">区域缓存：语义感知的区域复用用于高效多轮图像生成</p>
+      <p class="paper-authors">Peizheng Li, Xin Ai, Hanyuan Liu, Qiange Wang, Yanfeng Zhang</p>
       
       <div class="paper-summary">
-        <div class="summary-section"><strong>核心贡献:</strong> 该论文系统性地综述了AI系统在创建和修订可交付成果过程中的能动性角色，提出了将操作表示、构建策略和运行时验证相结合的框架，并分析了不同领域中的构建挑战与评估实践。</div>
-        <div class="summary-section"><strong>方法:</strong> 研究通过分析截至2026年8月的259篇文献（包括230个符合定义的系统和29个基准测试），比较了六类人工制品家族的构建特点。方法上聚焦于状态化构建过程，其中AI系统通过中间观察反馈动态调整后续操作，整合了运行时验证与策略迭代机制。</div>
-        <div class="summary-section"><strong>关键发现:</strong> 关键发现包括：1) 构建挑战不仅取决于模态差异，还与决策耦合度及失败可修复性相关；2) 任务分解可能降低局部复杂度但增加协调成本；3) 若学习型评估者与生成器存在偏好或盲点重叠，其独立证据价值有限。论文还提出了保持责任显性化、反馈定向修复及变更后状态重验证等原则。</div>
+        <div class="summary-section"><strong>核心贡献:</strong> 提出了一种语义感知的区域复用框架RegionCache，用于多轮图像编辑，通过选择性复用未变化区域的扩散状态，显著减少计算冗余，同时保持图像质量。</div>
+        <div class="summary-section"><strong>方法:</strong> RegionCache通过语义重叠和交叉注意力定位检测可复用区域，基于连续提示之间的语义相似性和上下文一致性，采用自适应复用调度策略，在扩散变换器（DiT）编辑流程中跳过未变化区域的重计算。</div>
+        <div class="summary-section"><strong>关键发现:</strong> 在PixArt-alpha上的实验表明，RegionCache实现了1.43倍至2.55倍的端到端加速，同时保持了与原始方法相当的图像质量。</div>
       </div>
       
       <details class="paper-abstract">
         <summary>查看原文摘要</summary>
-        <p>Generative models can turn natural-language prompts into images, text, code, and other content, lowering the cost of producing drafts and components. Their practical impact increasingly depends on whether those pieces can become complete, dependable deliverables. This survey examines agentic artifact creation, which we define as stateful construction in which an AI system materially constructs or revises a deliverable and intermediate observations redirect later work. Functionally, the process links an operational representation of the artifact, a construction policy, and runtime verification whose feedback can redirect later actions. We reviewed 259 works available through August 20, 2026: 230 systems meeting this definition and 29 benchmarks of agentic artifact construction. We compare six artifact families, then analyze application settings and evaluation practice as separate dimensions. Across families, construction challenges reflect not only modality but also how tightly decisions are coupled and whether failures become visible while they remain repairable. Decomposition can reduce local complexity while increasing coordination and reassembly costs. Learned judges may add little independent evidence when they share the generator's preferences or blind spots. We formulate principles for keeping commitments and responsibility explicit, turning feedback into targeted repair, and revalidating affected state after change. We also identify opportunities for sustaining coherent, accountable control as artifacts, creator intent, and construction systems evolve. A curated paper list is available at https://github.com/GeminiLight/awesome-agentic-artifact-creation.</p>
+        <p>Real-world image generation often involves multi-turn editing, where users iteratively modify small regions while most image content remains unchanged. However, existing diffusion transformer (DiT)-based editing pipelines recompute the entire image at every turn, causing substantial redundant computation. Existing DiT acceleration methods further ignore semantic correspondence across prompts, leading to unnecessary recomputation or unsafe reuse that harms editing quality. To address this, we propose RegionCache, a semantic-aware reuse framework for multi-turn image editing that selectively reuses diffusion states from unchanged regions. RegionCache detects reusable regions through semantic overlap between consecutive prompts and cross-attention localization, and adopts an adaptive reuse schedule based on prompt similarity and contextual consistency. Experiments on PixArt-alpha demonstrate that RegionCache achieves 1.43x--2.55x end-to-end speedup while maintaining comparable image quality. Code is available at https://github.com/hebutBryant/RegionCache.</p>
       </details>
       
       <div class="paper-links">
-        <a href="https://arxiv.org/abs/2608.28122" target="_blank" class="link-btn">📄 arXiv</a>
-        <a href="https://arxiv.org/pdf/2608.28122.pdf" target="_blank" class="link-btn">📥 PDF</a>
+        <a href="https://arxiv.org/abs/2608.29809" target="_blank" class="link-btn">📄 arXiv</a>
+        <a href="https://arxiv.org/pdf/2608.29809.pdf" target="_blank" class="link-btn">📥 PDF</a>
       </div>
     </article>
     
@@ -493,18 +488,18 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 175 &nbsp;💬 19</span>
+          <span class="paper-id">▲ 847 &nbsp;💬 808</span>
         </div>
-        <span class="score-badge">推荐度 90/100</span>
+        <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49503956" target="_blank">How to build a diffusion language model</a>
+        <a href="https://news.ycombinator.com/item?id=49525378" target="_blank">Claude Fable 5.1 and Claude Mythos 5.1</a>
       </h3>
-      <p class="paper-authors">by volodia</p>
-      <div class="paper-summary"><div class="summary-section">这篇文章介绍了如何构建扩散语言模型，重点讲解了其原理和实现步骤。</div></div>
+      <p class="paper-authors">by denysvitali</p>
+      <div class="paper-summary"><div class="summary-section">Anthropic发布了Claude Fable 5.1和Claude Mythos 5.1模型，包含新特性文档与系统卡，看点在于其性能升级和官方安全评估细节。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49503956" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://kuleshov-group.github.io/blog/blog/2026/how-to-build-a-diffusion-language-model/" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49525378" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://www.anthropic.com/claude-fable-and-mythos-5-1" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -512,18 +507,18 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 193 &nbsp;💬 28</span>
+          <span class="paper-id">▲ 210 &nbsp;💬 106</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49512975" target="_blank">A walkable ASCII cyberpunk city in one HTML file [video]</a>
+        <a href="https://news.ycombinator.com/item?id=49527396" target="_blank">The ChatGPT/Codex app bundles a full copy of LibreOffice</a>
       </h3>
-      <p class="paper-authors">by keithcarolus</p>
-      <div class="paper-summary"><div class="summary-section">一个仅用单个HTML文件实现的赛博朋克风格ASCII可步行城市，包含动态交通、建筑内部和摩天大楼等细节更新。</div></div>
+      <p class="paper-authors">by timpera</p>
+      <div class="paper-summary"><div class="summary-section">该帖指出ChatGPT/Codex应用内置了完整版LibreOffice，看点在于AI工具竟捆绑完整办公套件，引发对软件体积、功能冗余及潜在用途的讨论。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49512975" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://www.youtube.com/watch?v=3YtygAx_C6A" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49527396" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://simonwillison.net/2026/Sep/1/codex-libreoffice/" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -531,18 +526,18 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 112 &nbsp;💬 24</span>
+          <span class="paper-id">▲ 70 &nbsp;💬 28</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49489376" target="_blank">Show HN: Laser Graffiti</a>
+        <a href="https://news.ycombinator.com/item?id=49527595" target="_blank">Path to Astra: critical capabilities and frontier safeguards</a>
       </h3>
-      <p class="paper-authors">by con</p>
-      <div class="paper-summary"><div class="summary-section">该帖子展示了一个名为"Laser Graffiti"的项目，允许用户通过激光在现实环境中进行虚拟涂鸦，结合了增强现实技术创造互动艺术体验。</div></div>
+      <p class="paper-authors">by jithinraj</p>
+      <div class="paper-summary"><div class="summary-section">OpenAI发布“Astra”路径，概述其前沿AI系统的关键能力与安全防护措施，看点在于首次系统披露了模型在自主性与风险控制间的平衡策略。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49489376" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://laser.consti.de" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49527595" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://openai.com/index/path-to-astra/" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -550,18 +545,18 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 177 &nbsp;💬 50</span>
+          <span class="paper-id">▲ 19 &nbsp;💬 1</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49510000" target="_blank">ChatGPT Work Tool and Skill Reference</a>
+        <a href="https://news.ycombinator.com/item?id=49529132" target="_blank">My local model setup on an M4 Pro Mac Mini</a>
       </h3>
-      <p class="paper-authors">by ijidak</p>
-      <div class="paper-summary"><div class="summary-section">该帖子介绍了一个名为“ChatGPT Work Tool and Skill Reference”的工具网站，提供ChatGPT的工作技巧和使用参考。</div></div>
+      <p class="paper-authors">by raybb</p>
+      <div class="paper-summary"><div class="summary-section">作者分享了在M4 Pro Mac Mini上搭建本地大模型的完整配置方案，重点展示了性能优化和内存管理技巧，对追求本地化AI部署的开发者很有参考价值。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49510000" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://codex-tool-reference.simonw.chatgpt.site/" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49529132" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://lws.io/blog/my-local-model-setup/" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -569,18 +564,18 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 341 &nbsp;💬 113</span>
+          <span class="paper-id">▲ 110 &nbsp;💬 38</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49506819" target="_blank">Breaking Claude Code Opus 5 Auto Mode</a>
+        <a href="https://news.ycombinator.com/item?id=49525153" target="_blank">Launch HN: Nori Robotics (YC S26) – A low-cost humanoid robot for development</a>
       </h3>
-      <p class="paper-authors">by Recursing</p>
-      <div class="paper-summary"><div class="summary-section">该帖子揭露了如何破解Claude Code Opus 5的自动模式，展示了其安全漏洞和潜在风险。</div></div>
+      <p class="paper-authors">by AntonioLi</p>
+      <div class="paper-summary"><div class="summary-section">Nori Robotics推出售价1688美元的双臂移动机器人，专为开发者与研究人员设计，旨在解决实验室硬件昂贵、难以大规模采集数据的问题。其亮点是低成本、19自由度，经过七次迭代，适合机器人学习与实验。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49506819" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49525153" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://www.norirobotics.com/" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -588,18 +583,18 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 30 &nbsp;💬 22</span>
+          <span class="paper-id">▲ 14 &nbsp;💬 1</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49475159" target="_blank">Show HN: FnScribe – Open-source, offline dictation for macOS</a>
+        <a href="https://news.ycombinator.com/item?id=49482099" target="_blank">Sonic Pi</a>
       </h3>
-      <p class="paper-authors">by modagent</p>
-      <div class="paper-summary"><div class="summary-section">开源离线macOS听写工具FnScribe，支持本地隐私保护，通过fn键快捷录音转文字并插入当前应用，采用量化Whisper模型，无账户和历史记录。</div></div>
+      <p class="paper-authors">by Bluestein</p>
+      <div class="paper-summary"><div class="summary-section">Sonic Pi是一款用代码实时创作音乐的编程工具，将编程与音乐合成结合，适合教学和现场演出。其看点是可通过Ruby语言编写循环、采样和效果，实现即兴电子音乐创作。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49475159" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://github.com/AlgorithmicResearchGroup/fnscribe" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49482099" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://sonic-pi.net/" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -607,18 +602,18 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 20 &nbsp;💬 4</span>
+          <span class="paper-id">▲ 183 &nbsp;💬 67</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49483436" target="_blank">Show HN: An HN client that summarises long threads and lets you chat with them</a>
+        <a href="https://news.ycombinator.com/item?id=49523387" target="_blank">Ambient CSS v3 – Blender meets CSS</a>
       </h3>
-      <p class="paper-authors">by kamranahmedse</p>
-      <div class="paper-summary"><div class="summary-section">这是一个Hacker News客户端工具，能自动总结长讨论帖内容并支持用户与帖子对话，整合了Claude Code和Codex技术提供跨平台桌面体验。</div></div>
+      <p class="paper-authors">by kikkupico</p>
+      <div class="paper-summary"><div class="summary-section">Ambient CSS v3 将 Blender 的 3D 建模与渲染理念引入 CSS，让开发者能用纯 CSS 创建实时 3D 场景和动画。看点在于它打破了传统 CSS 的平面限制，为网页交互带来全新的立体视觉体验。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49483436" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://github.com/nilbuild/rundown" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49523387" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://ambientcss.vercel.app/" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -626,18 +621,18 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 319 &nbsp;💬 182</span>
+          <span class="paper-id">▲ 551 &nbsp;💬 147</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49504625" target="_blank">Understanding ChatGPT Work</a>
+        <a href="https://news.ycombinator.com/item?id=49519939" target="_blank">I trained a small transformer in 1.5hrs and it beats many LLMs</a>
       </h3>
-      <p class="paper-authors">by gmays</p>
-      <div class="paper-summary"><div class="summary-section">这篇文章探讨了ChatGPT的工作原理，重点解析了其内部机制和运作方式。</div></div>
+      <p class="paper-authors">by porridgeraisin</p>
+      <div class="paper-summary"><div class="summary-section">该帖展示了作者仅用1.5小时训练的小型Transformer模型，在ARC基准上超越了众多大型语言模型，看点在于其高效训练策略与模型性能的惊人对比。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49504625" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49519939" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://mvakde.github.io/blog/44-on-arc-1/" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -646,7 +641,7 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge gh-badge">TypeScript</span>
-          <span class="paper-id">⭐ 27,089 &nbsp;+2824 today</span>
+          <span class="paper-id">⭐ 29,445 &nbsp;+3122 today</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
@@ -670,7 +665,7 @@
 
     
       Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click</p>
-      <div class="paper-summary"><div class="summary-section">OpenMAIC 是一个提供沉浸式多智能体互动课堂体验的开源项目，值得关注因为它能一键实现高效的多智能体学习环境。</div></div>
+      <div class="paper-summary"><div class="summary-section">OpenMAIC 是一个一键启动的沉浸式多智能体交互课堂项目，通过多智能体模拟真实教学场景，让用户快速获得互动式学习体验。它值得关注，因为其将AI代理与教育结合，降低了构建复杂多智能体环境的门槛。</div></div>
       <div class="paper-links">
         <a href="https://github.com/THU-MAIC/OpenMAIC" target="_blank" class="link-btn">⭐ GitHub</a>
       </div>
@@ -680,7 +675,7 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge gh-badge">Python</span>
-          <span class="paper-id">⭐ 56,130 &nbsp;+495 today</span>
+          <span class="paper-id">⭐ 57,031 &nbsp;+1005 today</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
@@ -704,7 +699,7 @@
 
     
       🧠 Train a 64M-parameter LLM from scratch in just 2h!</p>
-      <div class="paper-summary"><div class="summary-section">minimind 是一个用 Python 编写的项目，能够在短短 2 小时内从头训练一个 6400 万参数的轻量级大语言模型，因其高效训练能力而值得关注。</div></div>
+      <div class="paper-summary"><div class="summary-section">minimind 是一个从零开始、仅需2小时即可训练出64M参数大语言模型的开源项目，旨在以极低门槛复现GPT式LLM的训练全流程。它值得关注，因为其精简高效的实现让个人开发者也能快速上手并理解大模型的核心原理。</div></div>
       <div class="paper-links">
         <a href="https://github.com/jingyaogong/minimind" target="_blank" class="link-btn">⭐ GitHub</a>
       </div>
@@ -714,12 +709,12 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge gh-badge">Python</span>
-          <span class="paper-id">⭐ 5,503 &nbsp;+77 today</span>
+          <span class="paper-id">⭐ 92,542 &nbsp;+74 today</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://github.com/Osmantic/ODS" target="_blank">Osmantic/ODS</a>
+        <a href="https://github.com/3b1b/manim" target="_blank">3b1b/manim</a>
       </h3>
       <p class="paper-authors">Star
 
@@ -732,15 +727,15 @@
 
 
       
-        Osmantic /
+        3b1b /
 
-      ODS  
+      manim  
 
     
-      Turn your PC, Mac, or Linux box into an AI server. LLM inference, chat UI, voice, agents, workflows, RAG, and image generation.</p>
-      <div class="paper-summary"><div class="summary-section">ODS 是一个 Python 项目，能将个人电脑转变为多功能 AI 服务器，支持大模型推理、聊天界面、语音交互、智能代理、工作流、检索增强生成和图像生成，功能全面且实用。</div></div>
+      Animation engine for explanatory math videos</p>
+      <div class="paper-summary"><div class="summary-section">manim 是一个用于制作数学讲解视频的动画引擎，由知名数学博主 3Blue1Brown 开发，能通过 Python 代码精确生成高质量数学可视化动画，是教育内容创作和数学演示的利器。</div></div>
       <div class="paper-links">
-        <a href="https://github.com/Osmantic/ODS" target="_blank" class="link-btn">⭐ GitHub</a>
+        <a href="https://github.com/3b1b/manim" target="_blank" class="link-btn">⭐ GitHub</a>
       </div>
     </article>
     
@@ -748,7 +743,7 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge gh-badge">Rust</span>
-          <span class="paper-id">⭐ 17,369 &nbsp;+228 today</span>
+          <span class="paper-id">⭐ 17,904 &nbsp;+545 today</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
@@ -772,7 +767,7 @@
 
     
       Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.</p>
-      <div class="paper-summary"><div class="summary-section">该项目是一个高效的Rust库，用于PDF检查、分类和文本提取，能智能识别扫描版与文本版PDF以支持智能路由决策。</div></div>
+      <div class="paper-summary"><div class="summary-section">pdf-inspector 是一个用 Rust 编写的快速 PDF 检测库，能智能区分扫描版和文本版 PDF 并提取文本，帮助开发者做出智能路由决策。它性能优异且分类精准，适合需要高效处理混合 PDF 类型的应用场景。</div></div>
       <div class="paper-links">
         <a href="https://github.com/firecrawl/pdf-inspector" target="_blank" class="link-btn">⭐ GitHub</a>
       </div>
@@ -781,13 +776,13 @@
     <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
       <div class="paper-header">
         <div class="left-header">
-          <span class="category-badge gh-badge">Python</span>
-          <span class="paper-id">⭐ 1,141 &nbsp;+385 today</span>
+          <span class="category-badge gh-badge">HTML</span>
+          <span class="paper-id">⭐ 7,632 &nbsp;+21 today</span>
         </div>
         <span class="score-badge">推荐度 75/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://github.com/pollen-robotics/microduck_rl" target="_blank">pollen-robotics/microduck_rl</a>
+        <a href="https://github.com/averygan/reclip" target="_blank">averygan/reclip</a>
       </h3>
       <p class="paper-authors">Star
 
@@ -800,49 +795,15 @@
 
 
       
-        pollen-robotics /
+        averygan /
 
-      microduck_rl  
+      reclip  
 
     
-      RL training environments for Microduck (mjlab)</p>
-      <div class="paper-summary"><div class="summary-section">该项目为Microduck机器人提供强化学习训练环境，值得关注因其结合了机器人控制与前沿RL技术。</div></div>
+      Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.</p>
+      <div class="paper-summary"><div class="summary-section">reclip 是一个轻量级、可自托管的媒体下载工具，支持从几乎所有网站下载视频，并配有简洁的网页界面。它值得关注，因为无需依赖第三方服务，即可方便地保存网络视频。</div></div>
       <div class="paper-links">
-        <a href="https://github.com/pollen-robotics/microduck_rl" target="_blank" class="link-btn">⭐ GitHub</a>
-      </div>
-    </article>
-    
-    <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
-      <div class="paper-header">
-        <div class="left-header">
-          <span class="category-badge gh-badge">JavaScript</span>
-          <span class="paper-id">⭐ 38,762 &nbsp;+3991 today</span>
-        </div>
-        <span class="score-badge">推荐度 60/100</span>
-      </div>
-      <h3 class="paper-title">
-        <a href="https://github.com/tt-a1i/archify" target="_blank">tt-a1i/archify</a>
-      </h3>
-      <p class="paper-authors">Star
-
-
-  
-
-  
-    
-    
-
-
-      
-        tt-a1i /
-
-      archify  
-
-    
-      Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.</p>
-      <div class="paper-summary"><div class="summary-section">该项目是一个用于生成美观、可验证的架构图、流程图、时序图、数据流图和生命周期图的工具，支持动态效果和高质量导出，值得关注因其能创建自包含的HTML图表并保持清晰展示。</div></div>
-      <div class="paper-links">
-        <a href="https://github.com/tt-a1i/archify" target="_blank" class="link-btn">⭐ GitHub</a>
+        <a href="https://github.com/averygan/reclip" target="_blank" class="link-btn">⭐ GitHub</a>
       </div>
     </article>
     
@@ -850,7 +811,88 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge gh-badge">Python</span>
-          <span class="paper-id">⭐ 40,737 &nbsp;+1980 today</span>
+          <span class="paper-id">⭐ 80,841 &nbsp;+179 today</span>
+        </div>
+        <span class="score-badge">推荐度 70/100</span>
+      </div>
+      <h3 class="paper-title">
+        <a href="https://github.com/sponsors/unclecode" target="_blank">sponsors/unclecode</a>
+      </h3>
+      <p class="paper-authors">Sponsor
+    
+  
+
+
+
+      
+            
+    
+
+    
+
+        
+          Star
+
+
+  
+
+  
+    
+    
+
+
+      
+        unclecode /
+
+      crawl4ai  
+
+    
+      🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler &amp; Scraper. Don't be shy, join here: https://discord.gg/jP8KfhDhyN</p>
+      <div class="paper-summary"><div class="summary-section">crawl4ai 是一个面向大语言模型的开源网络爬虫与抓取工具，能高效提取网页数据并转换为 LLM 友好的格式。它值得关注，因为专为 AI 应用设计，支持智能解析和结构化输出，极大简化了模型训练和推理时的数据获取流程。</div></div>
+      <div class="paper-links">
+        <a href="https://github.com/sponsors/unclecode" target="_blank" class="link-btn">⭐ GitHub</a>
+      </div>
+    </article>
+    
+    <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
+      <div class="paper-header">
+        <div class="left-header">
+          <span class="category-badge gh-badge">Python</span>
+          <span class="paper-id">⭐ 22,914 &nbsp;+509 today</span>
+        </div>
+        <span class="score-badge">推荐度 60/100</span>
+      </div>
+      <h3 class="paper-title">
+        <a href="https://github.com/browser-use/video-use" target="_blank">browser-use/video-use</a>
+      </h3>
+      <p class="paper-authors">Star
+
+
+  
+
+  
+    
+    
+
+
+      
+        browser-use /
+
+      video-use  
+
+    
+      Edit videos with coding agents</p>
+      <div class="paper-summary"><div class="summary-section">video-use 是一个让编码代理通过编程方式编辑视频的 Python 项目，它值得关注，因为它将 AI 代理与视频处理无缝结合，大幅简化了自动化视频编辑流程。</div></div>
+      <div class="paper-links">
+        <a href="https://github.com/browser-use/video-use" target="_blank" class="link-btn">⭐ GitHub</a>
+      </div>
+    </article>
+    
+    <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
+      <div class="paper-header">
+        <div class="left-header">
+          <span class="category-badge gh-badge">Python</span>
+          <span class="paper-id">⭐ 41,519 &nbsp;+914 today</span>
         </div>
         <span class="score-badge">推荐度 60/100</span>
       </div>
@@ -874,43 +916,9 @@
 
     
       Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.</p>
-      <div class="paper-summary"><div class="summary-section">该项目是一个科学AI技能库，能将任何AI代理转化为科学家助手，提供165种现成验证技能和100多个科学数据库，覆盖生物、化学、医药和药物发现领域，全球19万科学家使用。</div></div>
+      <div class="paper-summary"><div class="summary-section">该项目提供165个经过验证的科学技能和100多个科学数据库，可将任意AI代理转化为“AI科学家”，兼容Cursor、Claude Code等主流工具，已服务全球19万+科学家，是科学领域最全面的Agent技能库。</div></div>
       <div class="paper-links">
         <a href="https://github.com/K-Dense-AI/scientific-agent-skills" target="_blank" class="link-btn">⭐ GitHub</a>
-      </div>
-    </article>
-    
-    <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
-      <div class="paper-header">
-        <div class="left-header">
-          <span class="category-badge gh-badge">Python</span>
-          <span class="paper-id">⭐ 29,661 &nbsp;+537 today</span>
-        </div>
-        <span class="score-badge">推荐度 60/100</span>
-      </div>
-      <h3 class="paper-title">
-        <a href="https://github.com/p-e-w/heretic" target="_blank">p-e-w/heretic</a>
-      </h3>
-      <p class="paper-authors">Star
-
-
-  
-
-  
-    
-    
-
-
-      
-        p-e-w /
-
-      heretic  
-
-    
-      Fully automatic censorship removal for language models</p>
-      <div class="paper-summary"><div class="summary-section">Heretic 是一个用于语言模型的自动审查移除工具，值得关注因为它能帮助用户绕过内容限制，实现更自由的文本生成。</div></div>
-      <div class="paper-links">
-        <a href="https://github.com/p-e-w/heretic" target="_blank" class="link-btn">⭐ GitHub</a>
       </div>
     </article>
     

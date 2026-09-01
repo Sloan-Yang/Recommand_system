@@ -7,10 +7,10 @@
     "url": "https://github.com/THU-MAIC/OpenMAIC",
     "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        THU-MAIC /\n\n      OpenMAIC  \n\n    \n      Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
     "language": "TypeScript",
-    "stars": 27089,
-    "stars_today": 2824,
+    "stars": 29445,
+    "stars_today": 3122,
     "relevance_score": 85,
-    "summary": "OpenMAIC 是一个提供沉浸式多智能体互动课堂体验的开源项目，值得关注因为它能一键实现高效的多智能体学习环境。"
+    "summary": "OpenMAIC 是一个一键启动的沉浸式多智能体交互课堂项目，通过多智能体模拟真实教学场景，让用户快速获得互动式学习体验。它值得关注，因为其将AI代理与教育结合，降低了构建复杂多智能体环境的门槛。"
   },
   {
     "id": "jingyaogong_minimind",
@@ -20,23 +20,23 @@
     "url": "https://github.com/jingyaogong/minimind",
     "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        jingyaogong /\n\n      minimind  \n\n    \n      🧠 Train a 64M-parameter LLM from scratch in just 2h!",
     "language": "Python",
-    "stars": 56130,
-    "stars_today": 495,
+    "stars": 57031,
+    "stars_today": 1005,
     "relevance_score": 85,
-    "summary": "minimind 是一个用 Python 编写的项目，能够在短短 2 小时内从头训练一个 6400 万参数的轻量级大语言模型，因其高效训练能力而值得关注。"
+    "summary": "minimind 是一个从零开始、仅需2小时即可训练出64M参数大语言模型的开源项目，旨在以极低门槛复现GPT式LLM的训练全流程。它值得关注，因为其精简高效的实现让个人开发者也能快速上手并理解大模型的核心原理。"
   },
   {
-    "id": "Osmantic_ODS",
-    "full_name": "Osmantic/ODS",
-    "owner": "Osmantic",
-    "name": "ODS",
-    "url": "https://github.com/Osmantic/ODS",
-    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        Osmantic /\n\n      ODS  \n\n    \n      Turn your PC, Mac, or Linux box into an AI server. LLM inference, chat UI, voice, agents, workflows, RAG, and image generation.",
+    "id": "3b1b_manim",
+    "full_name": "3b1b/manim",
+    "owner": "3b1b",
+    "name": "manim",
+    "url": "https://github.com/3b1b/manim",
+    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        3b1b /\n\n      manim  \n\n    \n      Animation engine for explanatory math videos",
     "language": "Python",
-    "stars": 5503,
-    "stars_today": 77,
+    "stars": 92542,
+    "stars_today": 74,
     "relevance_score": 85,
-    "summary": "ODS 是一个 Python 项目，能将个人电脑转变为多功能 AI 服务器，支持大模型推理、聊天界面、语音交互、智能代理、工作流、检索增强生成和图像生成，功能全面且实用。"
+    "summary": "manim 是一个用于制作数学讲解视频的动画引擎，由知名数学博主 3Blue1Brown 开发，能通过 Python 代码精确生成高质量数学可视化动画，是教育内容创作和数学演示的利器。"
   },
   {
     "id": "firecrawl_pdf-inspector",
@@ -46,36 +46,49 @@
     "url": "https://github.com/firecrawl/pdf-inspector",
     "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        firecrawl /\n\n      pdf-inspector  \n\n    \n      Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
     "language": "Rust",
-    "stars": 17369,
-    "stars_today": 228,
+    "stars": 17904,
+    "stars_today": 545,
     "relevance_score": 85,
-    "summary": "该项目是一个高效的Rust库，用于PDF检查、分类和文本提取，能智能识别扫描版与文本版PDF以支持智能路由决策。"
+    "summary": "pdf-inspector 是一个用 Rust 编写的快速 PDF 检测库，能智能区分扫描版和文本版 PDF 并提取文本，帮助开发者做出智能路由决策。它性能优异且分类精准，适合需要高效处理混合 PDF 类型的应用场景。"
   },
   {
-    "id": "pollen-robotics_microduck_rl",
-    "full_name": "pollen-robotics/microduck_rl",
-    "owner": "pollen-robotics",
-    "name": "microduck_rl",
-    "url": "https://github.com/pollen-robotics/microduck_rl",
-    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        pollen-robotics /\n\n      microduck_rl  \n\n    \n      RL training environments for Microduck (mjlab)",
-    "language": "Python",
-    "stars": 1141,
-    "stars_today": 385,
+    "id": "averygan_reclip",
+    "full_name": "averygan/reclip",
+    "owner": "averygan",
+    "name": "reclip",
+    "url": "https://github.com/averygan/reclip",
+    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        averygan /\n\n      reclip  \n\n    \n      Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
+    "language": "HTML",
+    "stars": 7632,
+    "stars_today": 21,
     "relevance_score": 75,
-    "summary": "该项目为Microduck机器人提供强化学习训练环境，值得关注因其结合了机器人控制与前沿RL技术。"
+    "summary": "reclip 是一个轻量级、可自托管的媒体下载工具，支持从几乎所有网站下载视频，并配有简洁的网页界面。它值得关注，因为无需依赖第三方服务，即可方便地保存网络视频。"
   },
   {
-    "id": "tt-a1i_archify",
-    "full_name": "tt-a1i/archify",
-    "owner": "tt-a1i",
-    "name": "archify",
-    "url": "https://github.com/tt-a1i/archify",
-    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        tt-a1i /\n\n      archify  \n\n    \n      Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
-    "language": "JavaScript",
-    "stars": 38762,
-    "stars_today": 3991,
+    "id": "sponsors_unclecode",
+    "full_name": "sponsors/unclecode",
+    "owner": "sponsors",
+    "name": "unclecode",
+    "url": "https://github.com/sponsors/unclecode",
+    "description": "Sponsor\n    \n  \n\n\n\n      \n            \n    \n\n    \n\n        \n          Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        unclecode /\n\n      crawl4ai  \n\n    \n      🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler &amp; Scraper. Don't be shy, join here: https://discord.gg/jP8KfhDhyN",
+    "language": "Python",
+    "stars": 80841,
+    "stars_today": 179,
+    "relevance_score": 70,
+    "summary": "crawl4ai 是一个面向大语言模型的开源网络爬虫与抓取工具，能高效提取网页数据并转换为 LLM 友好的格式。它值得关注，因为专为 AI 应用设计，支持智能解析和结构化输出，极大简化了模型训练和推理时的数据获取流程。"
+  },
+  {
+    "id": "browser-use_video-use",
+    "full_name": "browser-use/video-use",
+    "owner": "browser-use",
+    "name": "video-use",
+    "url": "https://github.com/browser-use/video-use",
+    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        browser-use /\n\n      video-use  \n\n    \n      Edit videos with coding agents",
+    "language": "Python",
+    "stars": 22914,
+    "stars_today": 509,
     "relevance_score": 60,
-    "summary": "该项目是一个用于生成美观、可验证的架构图、流程图、时序图、数据流图和生命周期图的工具，支持动态效果和高质量导出，值得关注因其能创建自包含的HTML图表并保持清晰展示。"
+    "summary": "video-use 是一个让编码代理通过编程方式编辑视频的 Python 项目，它值得关注，因为它将 AI 代理与视频处理无缝结合，大幅简化了自动化视频编辑流程。"
   },
   {
     "id": "K-Dense-AI_scientific-agent-skills",
@@ -85,22 +98,9 @@
     "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
     "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        K-Dense-AI /\n\n      scientific-agent-skills  \n\n    \n      Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
     "language": "Python",
-    "stars": 40737,
-    "stars_today": 1980,
+    "stars": 41519,
+    "stars_today": 914,
     "relevance_score": 60,
-    "summary": "该项目是一个科学AI技能库，能将任何AI代理转化为科学家助手，提供165种现成验证技能和100多个科学数据库，覆盖生物、化学、医药和药物发现领域，全球19万科学家使用。"
-  },
-  {
-    "id": "p-e-w_heretic",
-    "full_name": "p-e-w/heretic",
-    "owner": "p-e-w",
-    "name": "heretic",
-    "url": "https://github.com/p-e-w/heretic",
-    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        p-e-w /\n\n      heretic  \n\n    \n      Fully automatic censorship removal for language models",
-    "language": "Python",
-    "stars": 29661,
-    "stars_today": 537,
-    "relevance_score": 60,
-    "summary": "Heretic 是一个用于语言模型的自动审查移除工具，值得关注因为它能帮助用户绕过内容限制，实现更自由的文本生成。"
+    "summary": "该项目提供165个经过验证的科学技能和100多个科学数据库，可将任意AI代理转化为“AI科学家”，兼容Cursor、Claude Code等主流工具，已服务全球19万+科学家，是科学领域最全面的Agent技能库。"
   }
 ]
