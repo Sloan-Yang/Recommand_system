@@ -1,0 +1,146 @@
+[
+  {
+    "id": "2608.28206",
+    "title": "NumBench: Diagnosing Counting Failures in Text-to-Image Models",
+    "abstract": "Text-to-image (T2I) models often generate the wrong number of objects, yet existing benchmarks are too small or weakly controlled to explain why. We introduce \\textbf{NumBench}, a benchmark of 640{,}000 prompts spanning 1{,}600 categories and counts from 1 to 100. Its factorial design varies object composition, spatial guidance, and appearance conditions while balancing counts and category exposure. We also develop a process model in which requested instances compete for a finite set of resolvable image regions. The model predicts a near-quadratic collision deficit at low occupancy and shows how coordinated placement reduces it. For scalable evaluation, we propose the Confidence-Weighted Numeric Precision Score (\\cwnps), which aggregates three calibrated detectors and discounts uncertain proposals. Across five commercial systems, two open models, and two specialized counting methods, performance declines sharply with requested count; all evaluated methods are weak above 50 objects. Count range has the largest measured effect, followed by layout and composition. Grid guidance is strongest among guided layouts, consistent with the coordination prediction, although the analysis does not establish collision as the sole cause. A 14{,}400-image human study supports automated evaluation through count 50, while results on 243 natural-language prompts show transfer beyond NumBench templates.",
+    "authors": [
+      "Sandeep Wadhwa",
+      "Mayank Vatsa",
+      "Richa Singh",
+      "Parrva Chirag Shah",
+      "Prakhar Galriya"
+    ],
+    "published": "2026-08-28",
+    "updated": "2026-08-28",
+    "categories": [
+      "cs.CV",
+      "cs.DB"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.28206.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.28206",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "NumBench：文本到图像模型计数故障诊断",
+      "core_contribution": "提出了NumBench基准测试框架，用于系统评估文本到图像模型在生成对象数量上的准确性，并开发了竞争性区域解析的过程模型。",
+      "method": "1. 构建包含64万提示、覆盖1600个类别（数量1-100）的基准数据集，通过因子设计控制对象组合、空间引导和外观条件。\n2. 提出过程模型，假设请求的实例会竞争有限的可解析图像区域，预测低占用率下的近二次方碰撞缺陷。\n3. 设计置信加权数值精度评分（CWNP），整合三个校准检测器并降低不确定提案的权重。",
+      "findings": "1. 所有测试模型在生成超过50个对象时性能急剧下降。\n2. 数量范围对性能影响最大，其次是布局和对象组合。\n3. 网格引导在空间布局中效果最佳（符合过程模型的协调预测），但碰撞并非唯一原因。\n4. 自动化评估在50个对象内与人类研究结果一致，且在243个自然语言提示上展现泛化能力。"
+    }
+  },
+  {
+    "id": "2608.28082",
+    "title": "Attribute Token Arithmetic: Disentangled and Continuous Semantic Control for Visual Autoregressive Models",
+    "abstract": "Autoregressive text-to-image generation has recently achieved remarkable progress, offering high-fidelity synthesis via a unified generative framework. However, fine-grained semantic control remains challenging due to the attribute entanglement and the misalignment between textual and fine-grained visual representations. In this paper, we introduce Attribute Token Arithmetic (ATA), a method that enables disentangled and continuous attribute control in visual autoregressive modelling. Inspired by the vector arithmetic property observed in word embeddings, ATA identifies semantic directions corresponding to visual attributes (e.g., aging, fatness, emotion) directly within the pretrained autoregressive latent space. These directions are learned from a single reference image, without model retraining or large-scale supervision. During generation, attributes can be continuously adjusted and compositionally combined through simple arithmetic operations with other attribute tokens. Extensive experiments demonstrate that ATA achieves identity-preserving, fine-grained, and multi-attribute adjustment, outperforming existing autoregressive editing baselines in controllability, generality, and computational efficiency. Our code will be available at https://github.com/Madaoer/ATA.",
+    "authors": [
+      "Xindi Yang",
+      "Yicheng Wu",
+      "Cheng Zhang",
+      "Jianfei Cai",
+      "Tien-Tsin Wong"
+    ],
+    "published": "2026-08-28",
+    "updated": "2026-08-28",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.28082.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.28082",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "属性标记算术：视觉自回归模型中解耦与连续的语义控制",
+      "core_contribution": "提出属性标记算术（ATA）方法，实现了视觉自回归模型中解耦且连续的属性控制，无需模型重新训练或大规模监督。",
+      "method": "受词嵌入向量算术特性的启发，ATA在预训练自回归潜在空间中识别与视觉属性（如年龄、体型、情绪）对应的语义方向。这些方向仅需从单张参考图像学习，通过简单算术操作即可实现属性的连续调整和组合。",
+      "findings": "实验表明，ATA能实现身份保持、细粒度及多属性调整，在可控性、通用性和计算效率上优于现有自回归编辑基线方法。"
+    }
+  },
+  {
+    "id": "2608.27893",
+    "title": "CommerceVibe: Learning to Design E-Commerce Creatives as Executable Visual Code via Dual-Feedback Reinforcement Learning",
+    "abstract": "High-quality e-commerce creatives are essential for presenting products and conveying marketing messages. Recent diffusion models enable scalable creative generation and produce visually compelling images, but their flattened raster outputs often contain distorted text and inconsistent product details, requiring refinement before deployment. Moreover, without explicit structure, the resulting creatives are difficult to edit and reuse, while complex design requirements remain challenging to encode as verifiable training signals. To address these challenges, we present CommerceVibe, which represents creatives as executable visual code and formulates generation as conditional HTML/CSS program synthesis. Given product images, design requirements, and product information, it produces renderable, editable, and reusable creatives. We further introduce dual-feedback reinforcement learning, in which rule-based feedback evaluates rendered programs for text readability, product visibility, and layout validity, while visual feedback from a vision-language model (VLM) assesses rendered creatives against input specifications across six perceptual and commercial dimensions. Together, these complementary feedback signals improve both constraint satisfaction and perception-dependent quality. We perform supervised fine-tuning (SFT) of Qwen3.5-9B on over 28,000 e-commerce examples, followed by dual-feedback reinforcement learning. On a 1,300-case benchmark, the optimized CommerceVibe model achieves a weighted score of 94.0/100, compared with 87.3 for the SFT-only variant, and outperforms strong external models. Blind evaluations by five e-commerce design experts further validate these improvements. CommerceVibe supports controllable, editable, and scalable e-commerce creative production.",
+    "authors": [
+      "Yajiao Xu",
+      "Jin Zhang",
+      "Jiangbo Ai",
+      "Tao Jiang",
+      "Mo Xu",
+      "Lina Huang",
+      "Chengfu Huo"
+    ],
+    "published": "2026-08-28",
+    "updated": "2026-08-28",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.27893.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.27893",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "CommerceVibe：通过双反馈强化学习将电商创意设计转化为可执行视觉代码",
+      "core_contribution": "提出CommerceVibe框架，将电商创意表示为可执行的HTML/CSS视觉代码，并通过双反馈强化学习提升生成创意的可编辑性、可控性和感知质量。",
+      "method": "1. 将创意生成建模为条件式HTML/CSS程序合成任务，输出可渲染、可编辑的代码形式创意；2. 设计双反馈强化学习机制：规则反馈评估代码渲染后的文本可读性、产品可见性和布局有效性，视觉反馈通过视觉语言模型(VLM)从六个感知与商业维度评估创意与输入规格的匹配度；3. 基于28,000+电商案例对Qwen3.5-9B模型进行监督微调后实施强化学习优化。",
+      "findings": "1. 在1,300例测试集上，优化后的模型加权得分达94.0/100，显著优于仅监督微调的基线(87.3)；2. 盲测中五位电商设计专家一致认可生成质量；3. 生成的创意具备渲染精确性（无文本/产品失真）、结构可编辑性及商业需求符合度。"
+    }
+  },
+  {
+    "id": "2608.28339",
+    "title": "Abstract4D: A Large-Scale Dataset and Framework for Understanding the Visual Language of Abstract Art",
+    "abstract": "Artificial intelligence can classify artistic styles and synthesize images, but it still lacks a model of the visual language that gives art meaning. Abstract painting minimizes object semantics and foregrounds structural cues, making it an ideal testbed for computational perception. We introduce \\textbf{Abstract4D}, the largest dataset of abstract paintings to date: more than 120,000 images paired with rich metadata and multi-dimensional prompts that capture each work's perceptual attributes---\\textit{form, color, texture, and composition}. Annotations are produced by a hybrid human--VLM pipeline for quality and consistency. Using Abstract4D, we (i) analyze the semantic structure of abstract art through large-scale embedding visualization, uncovering how perceptual relationships organize artistic meaning, and (ii) establish benchmark tasks for classification, cross-modal retrieval, and text-to-image generation to evaluate how AI models perceive and reproduce abstract visual language. Together, these analyses demonstrate how Abstract4D enables both exploration and quantitative assessment of AI's ability to represent and interpret abstract art.",
+    "authors": [
+      "Haowei Zhang",
+      "Yuanpei Zhao",
+      "Ji-Zhe Zhou",
+      "Mao Li"
+    ],
+    "published": "2026-08-28",
+    "updated": "2026-08-28",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.28339.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.28339",
+    "primary_category": "cs.CV",
+    "score": 70,
+    "summary": {
+      "title_zh": "Abstract4D：大规模数据集与框架——理解抽象艺术的视觉语言",
+      "core_contribution": "提出了目前最大的抽象绘画数据集Abstract4D，并构建了多维度评估框架，用于探索AI对抽象艺术视觉语言的表征与解释能力。",
+      "method": "1. 通过混合人类-VLM（视觉语言模型）标注流程生成高质量数据集，包含12万+图像及描述形式、色彩、纹理、构图的元数据；2. 利用大规模嵌入可视化分析抽象艺术的语义结构；3. 设计分类、跨模态检索和文本生成图像三大基准任务评估模型性能。",
+      "findings": "1. 揭示了感知关系如何组织抽象艺术的意义结构；2. 验证了Abstract4D在定量评估AI模型对抽象视觉语言的感知与生成能力方面的有效性。"
+    }
+  },
+  {
+    "id": "2608.28122",
+    "title": "Agentic Artifact Creation: Systems, Evaluation, Principles, and Opportunities",
+    "abstract": "Generative models can turn natural-language prompts into images, text, code, and other content, lowering the cost of producing drafts and components. Their practical impact increasingly depends on whether those pieces can become complete, dependable deliverables. This survey examines agentic artifact creation, which we define as stateful construction in which an AI system materially constructs or revises a deliverable and intermediate observations redirect later work. Functionally, the process links an operational representation of the artifact, a construction policy, and runtime verification whose feedback can redirect later actions. We reviewed 259 works available through August 20, 2026: 230 systems meeting this definition and 29 benchmarks of agentic artifact construction. We compare six artifact families, then analyze application settings and evaluation practice as separate dimensions. Across families, construction challenges reflect not only modality but also how tightly decisions are coupled and whether failures become visible while they remain repairable. Decomposition can reduce local complexity while increasing coordination and reassembly costs. Learned judges may add little independent evidence when they share the generator's preferences or blind spots. We formulate principles for keeping commitments and responsibility explicit, turning feedback into targeted repair, and revalidating affected state after change. We also identify opportunities for sustaining coherent, accountable control as artifacts, creator intent, and construction systems evolve. A curated paper list is available at https://github.com/GeminiLight/awesome-agentic-artifact-creation.",
+    "authors": [
+      "Tianfu Wang",
+      "Zhezheng Hao",
+      "Xilin Xia",
+      "Lixin Liu",
+      "Mengkang Hu",
+      "Hongzhang Liu",
+      "Xi Chen",
+      "Ziyan Liu",
+      "Xiankun Lin",
+      "Weijia Zhang",
+      "Nicholas Jing Yuan",
+      "Hui Xiong"
+    ],
+    "published": "2026-08-28",
+    "updated": "2026-08-28",
+    "categories": [
+      "cs.MM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.28122.pdf",
+    "abs_url": "https://arxiv.org/abs/2608.28122",
+    "primary_category": "cs.MM",
+    "score": 70,
+    "summary": {
+      "title_zh": "能动性人工制品创建：系统、评估、原则与机遇",
+      "core_contribution": "该论文系统性地综述了AI系统在创建和修订可交付成果过程中的能动性角色，提出了将操作表示、构建策略和运行时验证相结合的框架，并分析了不同领域中的构建挑战与评估实践。",
+      "method": "研究通过分析截至2026年8月的259篇文献（包括230个符合定义的系统和29个基准测试），比较了六类人工制品家族的构建特点。方法上聚焦于状态化构建过程，其中AI系统通过中间观察反馈动态调整后续操作，整合了运行时验证与策略迭代机制。",
+      "findings": "关键发现包括：1) 构建挑战不仅取决于模态差异，还与决策耦合度及失败可修复性相关；2) 任务分解可能降低局部复杂度但增加协调成本；3) 若学习型评估者与生成器存在偏好或盲点重叠，其独立证据价值有限。论文还提出了保持责任显性化、反馈定向修复及变更后状态重验证等原则。"
+    }
+  }
+]
