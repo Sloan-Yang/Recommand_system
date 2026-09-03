@@ -1,5 +1,31 @@
 [
   {
+    "id": "addyosmani_agent-skills",
+    "full_name": "addyosmani/agent-skills",
+    "owner": "addyosmani",
+    "name": "agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        addyosmani /\n\n      agent-skills  \n\n    \n      Production-grade engineering skills for AI coding agents.",
+    "language": "JavaScript",
+    "stars": 92019,
+    "stars_today": 260,
+    "relevance_score": 85,
+    "summary": "这是一个为AI编程代理提供生产级工程技能的开源项目，能显著提升代理处理真实代码任务的能力，值得关注。"
+  },
+  {
+    "id": "magnitudedev_magnitude",
+    "full_name": "magnitudedev/magnitude",
+    "owner": "magnitudedev",
+    "name": "magnitude",
+    "url": "https://github.com/magnitudedev/magnitude",
+    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        magnitudedev /\n\n      magnitude  \n\n    \n      Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
+    "language": "TypeScript",
+    "stars": 1932,
+    "stars_today": 130,
+    "relevance_score": 85,
+    "summary": "Magnitude 是一个开源推理服务器，能根据你的硬件自动运行最佳本地模型，并无缝接入 Pi、OpenCode、Claude Code 等现有 AI 代理工具。它值得关注，因为它让你在本地轻松跑起最强模型，兼顾隐私与性能，且兼容主流代理生态。"
+  },
+  {
     "id": "debpalash_VoiceStudio",
     "full_name": "debpalash/VoiceStudio",
     "owner": "debpalash",
@@ -7,23 +33,36 @@
     "url": "https://github.com/debpalash/VoiceStudio",
     "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        debpalash /\n\n      VoiceStudio  \n\n    \n      VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription &amp; audiobook creation in 646 languages.",
     "language": "Python",
-    "stars": 14695,
-    "stars_today": 832,
+    "stars": 16228,
+    "stars_today": 1738,
     "relevance_score": 85,
-    "summary": "VoiceStudio 是一个开源、完全本地的 ElevenLabs 替代方案，支持语音克隆、语音设计、视频配音、听写、转录及 646 种语言的有声书制作，值得关注。"
+    "summary": "VoiceStudio 是一个开源的、完全本地运行的 ElevenLabs 替代品，支持646种语言的语音克隆、语音设计、视频配音、听写、转录和有声书制作。它因提供全功能、多语言且无需联网的本地化语音工具而值得关注。"
   },
   {
-    "id": "firecrawl_pdf-inspector",
-    "full_name": "firecrawl/pdf-inspector",
-    "owner": "firecrawl",
-    "name": "pdf-inspector",
-    "url": "https://github.com/firecrawl/pdf-inspector",
-    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        firecrawl /\n\n      pdf-inspector  \n\n    \n      Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
-    "language": "Rust",
-    "stars": 18503,
-    "stars_today": 586,
-    "relevance_score": 85,
-    "summary": "该项目是一个用Rust编写的快速PDF检查库，能智能识别扫描版和文本版PDF并进行分类和文本提取，支持智能路由决策。"
+    "id": "averygan_reclip",
+    "full_name": "averygan/reclip",
+    "owner": "averygan",
+    "name": "reclip",
+    "url": "https://github.com/averygan/reclip",
+    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        averygan /\n\n      reclip  \n\n    \n      Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
+    "language": "HTML",
+    "stars": 8346,
+    "stars_today": 123,
+    "relevance_score": 75,
+    "summary": "reclip 是一个轻量级、可自托管的媒体下载工具，提供简洁的网页界面，支持从几乎所有网站下载视频。它因无需复杂配置、界面清爽且功能强大而值得关注。"
+  },
+  {
+    "id": "sponsors_f",
+    "full_name": "sponsors/f",
+    "owner": "sponsors",
+    "name": "f",
+    "url": "https://github.com/sponsors/f",
+    "description": "Sponsor\n    \n  \n\n\n\n      \n            \n    \n\n    \n\n        \n          Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        f /\n\n      prompts.chat  \n\n    \n      f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+    "language": "HTML",
+    "stars": 168970,
+    "stars_today": 201,
+    "relevance_score": 75,
+    "summary": "该项目是“Awesome ChatGPT Prompts”的延续版，提供社区分享、发现和收藏ChatGPT提示词的平台，支持免费开源及私有化部署，便于组织在完全隐私的环境下使用。"
   },
   {
     "id": "NousResearch_hermes-agent",
@@ -33,23 +72,10 @@
     "url": "https://github.com/NousResearch/hermes-agent",
     "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        NousResearch /\n\n      hermes-agent  \n\n    \n      The agent that grows with you",
     "language": "Python",
-    "stars": 240119,
-    "stars_today": 533,
+    "stars": 240822,
+    "stars_today": 778,
     "relevance_score": 70,
-    "summary": "Hermes-Agent 是一个能随用户需求不断进化的智能代理项目，值得关注因其具备自适应学习能力，可动态优化任务处理效率。"
-  },
-  {
-    "id": "pacifio_atlas",
-    "full_name": "pacifio/atlas",
-    "owner": "pacifio",
-    "name": "atlas",
-    "url": "https://github.com/pacifio/atlas",
-    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        pacifio /\n\n      atlas  \n\n    \n      Source control for agents. Use multiple coding agents, track their changes and query them in one place",
-    "language": "Rust",
-    "stars": 2874,
-    "stars_today": 888,
-    "relevance_score": 65,
-    "summary": "Atlas是一个用Rust编写的多智能体代码管理工具，可同时追踪多个编程智能体的修改并集中查询，值得关注因为它为协作开发提供了高效的版本控制解决方案。"
+    "summary": "hermes-agent 是一个用 Python 构建的、可随用户需求持续扩展的智能体框架，主打“与你一同成长”的自适应能力。它值得关注，因为其设计强调长期可演进性，适合需要灵活定制和迭代的复杂AI代理场景。"
   },
   {
     "id": "sponsors_JuliusBrussee",
@@ -59,10 +85,10 @@
     "url": "https://github.com/sponsors/JuliusBrussee",
     "description": "Sponsor\n    \n  \n\n\n\n      \n            \n    \n\n    \n\n        \n          Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        JuliusBrussee /\n\n      caveman  \n\n    \n      🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
     "language": "Go",
-    "stars": 102630,
-    "stars_today": 238,
+    "stars": 103080,
+    "stars_today": 545,
     "relevance_score": 65,
-    "summary": "该项目是一个用Go语言开发的工具，通过模仿原始人简略表达方式大幅减少代码中的令牌使用量，能削减65%的令牌消耗，提升Claude代码效率。"
+    "summary": "这是一个通过“穴居人式”极简表达来压缩提示词 token 用量的 Claude Code 技能，平均可减少65%的 token 消耗，适合追求低成本、高效率使用大模型 API 的开发者。"
   },
   {
     "id": "fmtlib_fmt",
@@ -72,35 +98,9 @@
     "url": "https://github.com/fmtlib/fmt",
     "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        fmtlib /\n\n      fmt  \n\n    \n      A modern formatting library",
     "language": "C++",
-    "stars": 24240,
-    "stars_today": 14,
+    "stars": 25056,
+    "stars_today": 955,
     "relevance_score": 60,
-    "summary": "fmtlib/fmt 是一个现代化的 C++ 格式化库，提供高效、安全的字符串格式化功能，因其性能优越和易用性而备受关注。"
-  },
-  {
-    "id": "superlinked_sie",
-    "full_name": "superlinked/sie",
-    "owner": "superlinked",
-    "name": "sie",
-    "url": "https://github.com/superlinked/sie",
-    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        superlinked /\n\n      sie  \n\n    \n      Open-source inference server and production cluster for all the models your agent needs.",
-    "language": "Python",
-    "stars": 3057,
-    "stars_today": 60,
-    "relevance_score": 60,
-    "summary": "\"sie 是一个开源推理服务器和生产集群，专为智能代理所需的各种模型提供高效部署方案，值得关注因其支持多样化模型集成与高性能推理。\""
-  },
-  {
-    "id": "vercel-labs_portless",
-    "full_name": "vercel-labs/portless",
-    "owner": "vercel-labs",
-    "name": "portless",
-    "url": "https://github.com/vercel-labs/portless",
-    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        vercel-labs /\n\n      portless  \n\n    \n      Replace port numbers with stable, named local URLs. For humans and agents.",
-    "language": "TypeScript",
-    "stars": 11755,
-    "stars_today": 73,
-    "relevance_score": 60,
-    "summary": "Portless 是一个用 TypeScript 开发的项目，它能将本地端口号替换为稳定的命名 URL，方便开发者和自动化工具使用。"
+    "summary": "fmtlib/fmt 是一个现代、高效的 C++ 格式化库，提供类似 Python 的 `{}` 语法，替代 `printf` 和 `iostream`，并支持类型安全与性能优化。它因被广泛集成（如 C++20 标准库 `std::format` 的基础）而备受关注，是提升代码可读性与安全性的必备工具。"
   }
 ]

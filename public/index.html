@@ -316,7 +316,7 @@
         <div class="page-date">📅 2026-09-03</div>
         <h2>每日精选 · arXiv · Hacker News · GitHub Trending</h2>
         <p class="page-stats">
-            人工智能: 2 | 计算机视觉: 3
+            计算机视觉: 4 | 图形学: 1
             <a href="archive.html">归档 →</a>
         </p>
     </div>
@@ -328,30 +328,62 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge">计算机视觉</span>
-          <span class="paper-id">2609.01582</span>
+          <span class="paper-id">2609.02813</span>
         </div>
-        <span class="score-badge">相关性 85/100</span>
+        <span class="score-badge">相关性 95/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://arxiv.org/abs/2609.01582" target="_blank">SpatialGuard: Harness-Guided Verifiable Spatial Reasoning for Text-to-Image Generation</a>
+        <a href="https://arxiv.org/abs/2609.02813" target="_blank">GDB-Reward: From Evaluation Metrics to Training Rewards for Graphic Design</a>
       </h3>
-      <p class="paper-title-zh">SpatialGuard：基于引导约束的可验证空间推理文本到图像生成方法</p>
-      <p class="paper-authors">Ziyun Qian, Zizhi Chen, Yizhou Liu, Mingyang Sun, Dingkang Yang 等 (6 位作者)</p>
+      <p class="paper-title-zh">GDB-Reward：从评估指标到图形设计的训练奖励</p>
+      <p class="paper-authors">Adrienne Deganutti, Purvanshi Mehta, Simon Hadfield, Andrew Gilbert</p>
       
       <div class="paper-summary">
-        <div class="summary-section"><strong>核心贡献:</strong> 提出SpatialGuard框架，通过结构化布局引导和可验证的中间表示，解决复杂3D空间文本到图像生成中的几何一致性问题。</div>
-        <div class="summary-section"><strong>方法:</strong> 1. 使用空间布局架构师（Spatial Layout Architect）将文本解析为面向图像合成的3D布局；2. 通过视觉实现器（Visual Realizer）将布局转化为视觉条件和候选图像；3. 采用视觉对齐评判器（Visual Alignment Critic）验证文本、布局与图像的一致性；4. 引入布局约束系统（Layout Harness）整合规则约束、工具调用和反馈循环以维持迭代稳定性。</div>
-        <div class="summary-section"><strong>关键发现:</strong> 实验表明，SpatialGuard在复杂3D空间布局生成任务中达到最先进性能，显著提升了生成结果的空间忠实度，优于现有文本到图像和布局控制基线方法。</div>
+        <div class="summary-section"><strong>核心贡献:</strong> 提出GDB-Reward框架，将异构的图形设计评估指标系统性地转化为统一的强化学习奖励，从而在不微调扩散模型的情况下，通过优化提示词来提升生成图像对设计规范的遵循度。</div>
+        <div class="summary-section"><strong>方法:</strong> 该方法利用强化学习，将多种非可微的图形设计评估指标（如感知质量、渲染保真度、空间准确性）整合为统一的奖励信号。通过该奖励信号指导提示词的优化过程，同时保持图像生成器完全冻结，从而避免昂贵的扩散模型微调。</div>
+        <div class="summary-section"><strong>关键发现:</strong> 实验表明，GDB-Reward作为优化目标能显著提升生成图像在设计规范上的遵循度，包括感知质量、渲染保真度和空间准确性。这证明了非可微的异构评估指标不仅能用于被动基准测试，还能在缺乏可微监督的领域中作为有效的强化学习优化目标。</div>
       </div>
       
       <details class="paper-abstract">
         <summary>查看原文摘要</summary>
-        <p>Complex 3D spatial text to image generation requires models to convert natural language into stable visual geometry, not merely semantic appearance. Existing prompt-driven or layout-conditioned methods improve controllability, but often lack an optimizable and verifiable spatial intermediary before visual sampling. As a result, object relations, occlusion, visibility, and camera constraints can decay during multi-round generation. This paper presents SpatialGuard, a structured layout-guided framework for complex 3D spatial text-to-image generation. SpatialGuard parses prompts into image synthesis-oriented 3D layouts through a Spatial Layout Architect, realizes them as visual conditions and candidate images through a Visual Realizer, and uses a Visual Alignment Critic to validate consistency among prompt, layout, and image. To keep constraints stable across iterations, SpatialGuard introduces a Layout Harness that organizes rule constraints, tool invocation, shared knowledge, and feedback loops around the editable layout state. This design turns complex spatial generation from implicit prompt following into a verifiable process of planning, realization, validation, and repair. Comprehensive experiments show that SpatialGuard achieves state-of-the-art performance in complex 3D spatial layout generation and improves spatial faithfulness over existing text-to-image and layout control baselines.</p>
+        <p>Text-to-image models excel at natural image synthesis but struggle with graphic design, where success depends on satisfying precise constraints on typography, layout, color, and visual communication. While prompt optimization offers an attractive alternative to expensive diffusion model fine-tuning, learning prompts for frozen image generators requires informative reward functions despite the entirely non-differentiable generation process. Reinforcement learning does not require differentiable objectives; it requires only scalar rewards capable of ranking candidate outputs. This raises a simple question: can design evaluation metrics themselves become reinforcement learning rewards? Our central contribution is GDB-Reward, a framework that systematically transforms heterogeneous graphic design evaluation metrics into a unified reinforcement learning reward. Experiments demonstrate that GDB-Reward provides an effective optimization objective, substantially improving adherence to the design specification in perceptual quality, rendering fidelity, and spatial accuracy while keeping the image generator entirely frozen. More broadly, our results demonstrate that heterogeneous, non-differentiable evaluation metrics can move beyond passive benchmarking to become effective optimization objectives for reinforcement learning in domains where differentiable supervision is unavailable.</p>
       </details>
       
       <div class="paper-links">
-        <a href="https://arxiv.org/abs/2609.01582" target="_blank" class="link-btn">📄 arXiv</a>
-        <a href="https://arxiv.org/pdf/2609.01582.pdf" target="_blank" class="link-btn">📥 PDF</a>
+        <a href="https://arxiv.org/abs/2609.02813" target="_blank" class="link-btn">📄 arXiv</a>
+        <a href="https://arxiv.org/pdf/2609.02813.pdf" target="_blank" class="link-btn">📥 PDF</a>
+      </div>
+    </article>
+    
+
+    <article class="paper-card">
+      <div class="paper-header">
+        <div class="left-header">
+          <span class="category-badge">图形学</span>
+          <span class="paper-id">2609.02511</span>
+        </div>
+        <span class="score-badge">相关性 85/100</span>
+      </div>
+      <h3 class="paper-title">
+        <a href="https://arxiv.org/abs/2609.02511" target="_blank">Telligram: Text-Driven Calligram Generation via Diffusion-Guided Skeleton Optimization</a>
+      </h3>
+      <p class="paper-title-zh">Telligram：基于扩散引导骨架优化的文本驱动紧凑书法生成</p>
+      <p class="paper-authors">Tianci Shi, Pengfei Xu</p>
+      
+      <div class="paper-summary">
+        <div class="summary-section"><strong>核心贡献:</strong> 提出一种无需训练、低参数调整的两阶段框架Telligram，直接从文本提示生成语义形状与字母可读性兼顾的紧凑书法（calligram），解决了无输入轮廓条件下语义形状形成与字形可读性相互干扰的难题。</div>
+        <div class="summary-section"><strong>方法:</strong> Telligram采用两阶段方法：第一阶段通过变分分数蒸馏（VSD）结合结构化骨架优化和分层梯度投影，生成语义占用先验；第二阶段将该占用先验转换为逐字母区域，并通过轻量几何处理重建可读的字形布局。整个过程无需训练，仅需少量参数调整。</div>
+        <div class="summary-section"><strong>关键发现:</strong> 实验表明，Telligram能够从纯文本提示生成连贯且富有创意的词级语义书法，在保持字母可读性的同时有效形成目标语义形状，优于现有依赖输入轮廓的形状条件方法，且无需额外训练数据或轮廓输入。</div>
+      </div>
+      
+      <details class="paper-abstract">
+        <summary>查看原文摘要</summary>
+        <p>Compact calligram generation aims to form a semantic shape while keeping letters recognizable. Most existing methods are shape-conditioned and mainly solve downstream letter layout inside a given contour. We study text-only calligram generation without an input contour. This setting is difficult because semantic shape formation and letter readability strongly interfere with each other when optimized in a single stage. Pushing the word toward a clear figure can easily damage glyph structure, while preserving readable letters can weaken the target shape. To address this difficulty, we present Telligram, a training-free, low-tuning, two-stage framework composed of Semantic Occupancy Prior Formation and Readability-Constrained Glyph Realization. The first stage uses Variational Score Distillation (VSD) with structured skeleton optimization and hierarchical gradient projection to produce a semantic occupancy prior. The second stage converts this occupancy prior into per-letter regions and reconstructs readable glyph layouts through lightweight geometric processing. The framework generates coherent and creative word-level semantic calligrams directly from text prompts.</p>
+      </details>
+      
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2609.02511" target="_blank" class="link-btn">📄 arXiv</a>
+        <a href="https://arxiv.org/pdf/2609.02511.pdf" target="_blank" class="link-btn">📥 PDF</a>
       </div>
     </article>
     
@@ -360,62 +392,30 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge">计算机视觉</span>
-          <span class="paper-id">2609.01433</span>
+          <span class="paper-id">2609.02502</span>
         </div>
         <span class="score-badge">相关性 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://arxiv.org/abs/2609.01433" target="_blank">Gaussian Core LoRA: Distribution-Aware Dynamic Adaptation for Broad Concept Erasure</a>
+        <a href="https://arxiv.org/abs/2609.02502" target="_blank">Blending Concepts: Benchmarking Visual Metaphor Generation in Text-to-Image Models</a>
       </h3>
-      <p class="paper-title-zh">高斯核心LoRA：面向广泛概念擦除的分布感知动态适配方法</p>
-      <p class="paper-authors">Qinghui Gong, Xunlei Chen, Yu-Xuan Zhang, Hua Meng, Zhengchun Zhou</p>
+      <p class="paper-title-zh">融合概念：文本到图像模型中视觉隐喻生成的基准测试</p>
+      <p class="paper-authors">Chuer Chen, Zichen Wang, Yi He, Zhengxi Yu, Nan Cao</p>
       
       <div class="paper-summary">
-        <div class="summary-section"><strong>核心贡献:</strong> 提出高斯核心LoRA框架，通过分布感知的动态低秩适配实现复杂概念的细粒度语义擦除，解决了静态LoRA在广泛概念擦除中的过粗语义方向问题。</div>
-        <div class="summary-section"><strong>方法:</strong> 1. 在提示词特征空间拟合高斯混合模型，估计目标概念内的潜在语义原型；2. 推理时根据输入提示计算高斯后验权重，动态生成原型自适应的秩空间残差重构；3. 通过单一轻量适配器实现原型感知的擦除方向调整。</div>
-        <div class="summary-section"><strong>关键发现:</strong> 相比各指标最强基线：攻击成功率(ASR)降低7.95%，COCO FID下降14.72%，CLIP分数提升4.98%；实验验证其对对抗提示的鲁棒性、多身份/多风格擦除的扩展性，以及与SDXL/FLUX的兼容性。</div>
+        <div class="summary-section"><strong>核心贡献:</strong> 本文首次提出视觉隐喻生成基准VMetaphor-Bench，用于系统评估文本到图像（T2I）模型在生成视觉隐喻方面的能力，填补了该领域缺乏标准化评估的空白。</div>
+        <div class="summary-section"><strong>方法:</strong> 构建包含1,500个来自真实创意图像的视觉隐喻样本，按三个难度级别和十个类别组织，每个样本配有两个不同具体程度的提示词。评估采用混合框架，基于MLLM-as-judge范式，结合多选问题（MCQ）协议（涵盖9,594个问题，分四个隐喻保真度级别）和维度评分协议（沿三个感知维度）。对11个代表性T2I模型进行广泛评估。</div>
+        <div class="summary-section"><strong>关键发现:</strong> 即使最强的专有模型在组合结构和跨域映射（隐喻表达的关键方面）上仍存在困难，表明视觉隐喻生成是未来T2I研究的重要前沿方向。</div>
       </div>
       
       <details class="paper-abstract">
         <summary>查看原文摘要</summary>
-        <p>Concept erasure aims to suppress unsafe, privacy-sensitive, or undesirable generations in text-to-image diffusion models while preserving benign semantics, visual quality, and deployment efficiency. Existing adapter-based methods, such as Low-Rank Adaptation (LoRA), typically freeze the diffusion backbone and learn lightweight parameter updates to steer generation away from target semantics. However, these methods usually assign a static semantic erasure direction to each target concept. This assumption is overly coarse for broad and complex target concepts, since a concept often contains multiple latent semantic prototypes involving different objects, scenes, or relations, and requires different local erasure directions. A single LoRA update averages these heterogeneous erasure demands, leading to under-erasure on difficult prototypes and over-editing of nearby benign semantics. To address this limitation, we propose Gaussian Core LoRA, a distribution-aware low-rank adaptation framework. It fits a Gaussian mixture model in the prompt feature space to estimate latent semantic prototypes within the target concept. During inference, each input prompt is projected into this feature space to compute its Gaussian posterior responsibilities, which condition the core generator to produce a prompt-specific, norm-bounded residual reconfiguration of the shared LoRA rank space. This enables prototype-adaptive erasure with a single lightweight adapter. Compared with the strongest baseline on each metric, Gaussian Core LoRA reduces average Attack Success Rate (ASR) by 7.95%, lowers COCO Fr'echet Inception Distance (FID) by 14.72%, and improves CLIP Score by 4.98%. Further experiments show robustness to adversarial prompts, scalability to multi-identity and multi-style erasure, and compatibility with SDXL and FLUX.</p>
+        <p>Text-to-image (T2I) models have achieved remarkable success at faithfully rendering specified objects and attributes, yet their ability to produce visual metaphors, images that convey abstract ideas by combining elements from two distinct domains, remains largely unexamined. To bridge this gap, we introduce VMetaphor-Bench, the first benchmark for evaluating visual metaphor generation in T2I models. It comprises 1,500 visual metaphors curated from real-world creative imagery, organized into three levels and ten categories, with each sample paired with two prompts of differing specificity. For evaluation, we develop a hybrid framework within an MLLM-as-judge paradigm, combining a multiple-choice question (MCQ) based protocol of 9,594 questions across four levels of metaphorical fidelity with a dimension-based scoring protocol along three perceptual dimensions. Extensive evaluation of 11 representative T2I models reveals that even the strongest proprietary models struggle with compositional structuring and cross-domain mapping, key aspects of metaphorical expression, highlighting visual metaphor generation as an important frontier for future T2I research.</p>
       </details>
       
       <div class="paper-links">
-        <a href="https://arxiv.org/abs/2609.01433" target="_blank" class="link-btn">📄 arXiv</a>
-        <a href="https://arxiv.org/pdf/2609.01433.pdf" target="_blank" class="link-btn">📥 PDF</a>
-      </div>
-    </article>
-    
-
-    <article class="paper-card">
-      <div class="paper-header">
-        <div class="left-header">
-          <span class="category-badge">人工智能</span>
-          <span class="paper-id">2609.01409</span>
-        </div>
-        <span class="score-badge">相关性 85/100</span>
-      </div>
-      <h3 class="paper-title">
-        <a href="https://arxiv.org/abs/2609.01409" target="_blank">EdiTikZ: Scientific Figure Editing from Revision Trajectories</a>
-      </h3>
-      <p class="paper-title-zh">EdiTikZ：基于修订轨迹的科学图表编辑</p>
-      <p class="paper-authors">Christian Greisinger, Zhixue Zhao, Steffen Eger</p>
-      
-      <div class="paper-summary">
-        <div class="summary-section"><strong>核心贡献:</strong> 提出了首个基于自然修订轨迹的大规模科学图表编辑数据集DaEdiTikZ，并训练出性能超越主流大模型的紧凑型编辑模型EdiTikZ。</div>
-        <div class="summary-section"><strong>方法:</strong> 1. 从arXiv、GitHub和TeX SE挖掘39.1万组TikZ编辑对，利用视觉语言模型生成78.1万条编辑指令；2. 构建人工精校基准DaEdiTikZ-Bench；3. 采用联合学习重建与编辑任务，结合渲染保真度和编辑应用的强化学习训练4B/9B参数模型。</div>
-        <div class="summary-section"><strong>关键发现:</strong> 1. 自动评估中9B模型超越所有基线；2. 人类评估（9名标注者/4320次评分）显示其优于GPT-5.6-Sol，与Gemini-3.1-Pro相当；3. 在严重分布外偏移下仍保持竞争力。</div>
-      </div>
-      
-      <details class="paper-abstract">
-        <summary>查看原文摘要</summary>
-        <p>Vision-language models (VLMs) have shown strong performance in generating scientific figures from text or images. However, producing publication-ready figures requires iterative refinement, making scientific figure editing an important yet largely unexplored task. Existing approaches rely on costly proprietary agentic systems, focus primarily on evaluation, or construct training supervision from synthetically generated edits. Instead, we leverage naturally occurring scientific revision and development trajectories as a scalable source of supervision. To this end, we introduce DaEdiTikZ, the first large-scale dataset of revision-derived scientific figure edits, constructed by mining 391K plausible TikZ edit pairs from arXiv, GitHub, and TeX SE and inferring 781K directed edit instructions with a VLM conditioned on rendered figures and TikZ code. We further introduce DaEdiTikZ-Bench, a human-refined benchmark with 790 instances, and train two compact Qwen3.5-based EdiTikZ models (4B and 9B) by jointly learning reconstruction and editing, followed by reinforcement learning (RL) with complementary rewards for rendered fidelity and edit application. Automatic evaluation places our 9B model above all tested baselines, while human evaluation with 9 annotators and 4,320 ratings places it above GPT-5.6-Sol and on par with Gemini-3.1-Pro. Under severe out-of-distribution shifts, it remains competitive with GPT-5.6-Sol near its 2K training sequence-length regime. Models and datasets will be released.</p>
-      </details>
-      
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2609.01409" target="_blank" class="link-btn">📄 arXiv</a>
-        <a href="https://arxiv.org/pdf/2609.01409.pdf" target="_blank" class="link-btn">📥 PDF</a>
+        <a href="https://arxiv.org/abs/2609.02502" target="_blank" class="link-btn">📄 arXiv</a>
+        <a href="https://arxiv.org/pdf/2609.02502.pdf" target="_blank" class="link-btn">📥 PDF</a>
       </div>
     </article>
     
@@ -424,30 +424,30 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge">计算机视觉</span>
-          <span class="paper-id">2609.01147</span>
+          <span class="paper-id">2609.02349</span>
         </div>
         <span class="score-badge">相关性 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://arxiv.org/abs/2609.01147" target="_blank">On the Design Fundamentals of Pixel Text Representation Learning</a>
+        <a href="https://arxiv.org/abs/2609.02349" target="_blank">GlyphAnchor: Enhancing Visual Text Rendering via Position-Anchored Glyph Priors</a>
       </h3>
-      <p class="paper-title-zh">像素文本表示学习的基础设计原则</p>
-      <p class="paper-authors">Chaohao Yuan, Ruifeng Yuan, Zhuoxu Huang, Yu Rong, Hong Cheng 等 (7 位作者)</p>
+      <p class="paper-title-zh">GlyphAnchor：通过位置锚定字形先验增强视觉文本渲染</p>
+      <p class="paper-authors">Qiang Xiang, Shuang Sun, Binglei Li, Yibo Chen, Xu Tang 等 (7 位作者)</p>
       
       <div class="paper-summary">
-        <div class="summary-section"><strong>核心贡献:</strong> 提出了构建鲁棒视觉文本表示学习的四项关键设计原则，并基于此训练出高性能的像素级视觉编码器Pixel Linguist II。</div>
-        <div class="summary-section"><strong>方法:</strong> 通过系统控制变量实验，确定了四项核心设计：1) 可变图像分辨率和渲染字体大小作为高分辨率文档泛化的空间代理；2) 自然图文对用于视觉 grounding 并防止文本崩溃；3) 布局感知渲染避免像素级捷径学习；4) 两阶段多语言课程实现跨语言对齐。将这些原则整合到可扩展的训练方案中，训练了支持实时渲染、统一对比 grounding 和多语言课程的Pixel Linguist II模型。</div>
-        <div class="summary-section"><strong>关键发现:</strong> Pixel Linguist II在英语、跨语言和多语言的Visual STS、ViDoRe任务上达到SOTA性能；在80%视觉token压缩下仍保持鲁棒性，展现了光学上下文压缩潜力；同时能提升多模态大语言模型的下游评估表现。</div>
+        <div class="summary-section"><strong>核心贡献:</strong> 提出一种名为GlyphAnchor的文本渲染增强方法，通过位置锚定的字形补丁条件显著提升文本到图像和图像编辑扩散模型在长文本、复杂布局及稀有字符场景下的文本保真度，同时保持图像质量。</div>
+        <div class="summary-section"><strong>方法:</strong> GlyphAnchor在扩散Transformer骨干网络中引入轻量级字形补丁条件，其位置通过模型原生位置编码锚定到目标图像。训练过程采用分阶段监督微调，并辅以文本感知的后训练以增强鲁棒性。此外，构建了InfoTextBench基准，用于评估生成和编辑场景下的文本丰富视觉渲染。</div>
+        <div class="summary-section"><strong>关键发现:</strong> 在多个骨干网络和基准测试（包括长文本、复杂密集排列文本及稀有字符场景）上的实验表明，GlyphAnchor一致地提高了文本渲染的准确性，同时保持了整体图像质量，验证了其有效性和鲁棒性。</div>
       </div>
       
       <details class="paper-abstract">
         <summary>查看原文摘要</summary>
-        <p>Text-rich visual inputs require models that can read, retrieve, and compress language directly in pixel space, yet existing pixel-text encoders struggle with fixed resolution pretraining, visual shortcut learning, weak visual grounding, and multilingual visual text understanding. In this work, we investigate the fundamental design principles required for robust visual text representation learning. Through systematic controlled ablations, we identify four critical components: variable image resolutions and rendered font sizes provide spatial proxies for high-resolution document generalization; natural image-text pairs are indispensable for grounding and prevent text-only collapse; layout-aware rendering helps prevent pixel-level shortcuts; and a two-stage multilingual curriculum enables effective cross-lingual alignment. By integrating these principles into a scalable training recipe, we train Pixel Linguist II, a native-resolution vision encoder trained with on-the-fly rendering, unified contrastive grounding, and a multilingual curriculum over 280M training examples. Pixel Linguist II sets new state-of-the-art results on English, cross-lingual, and multilingual Visual STS and ViDoRe, while also enabling better MLLM downstream evaluation. Notably, Pixel Linguist II remains robust under 80\% visual token compression, showing great promise for optical context compression. Our code and resources are available at https://github.com/Pixel-Linguist/Pixel-Linguist-II.</p>
+        <p>Rendering accurate text remains difficult for image generation and editing models, especially when the target contains long, complex, and densely arranged text or rare characters. Existing approaches either improve native text rendering through stronger backbones and data-centric training without explicit glyph priors, or incorporate glyph priors through specialized designs that remain insufficiently accurate and robust under challenging scenarios. We introduce GlyphAnchor, a novel text-rendering enhancement method for both text-to-image and image-editing diffusion transformer models. GlyphAnchor enhances the backbone with lightweight glyph patch conditions whose positions are anchored to the target image through the model's native positional encoding. We train this capability with staged supervised finetuning and further refine it with text-aware post-training to improve robustness. We also introduce InfoTextBench, a benchmark for evaluating text-rich visual text rendering in both generation and editing settings. Experiments across multiple backbones and benchmarks, including long, complex, and densely arranged text and rare character scenarios, show that GlyphAnchor consistently improves text fidelity while preserving overall image quality.</p>
       </details>
       
       <div class="paper-links">
-        <a href="https://arxiv.org/abs/2609.01147" target="_blank" class="link-btn">📄 arXiv</a>
-        <a href="https://arxiv.org/pdf/2609.01147.pdf" target="_blank" class="link-btn">📥 PDF</a>
+        <a href="https://arxiv.org/abs/2609.02349" target="_blank" class="link-btn">📄 arXiv</a>
+        <a href="https://arxiv.org/pdf/2609.02349.pdf" target="_blank" class="link-btn">📥 PDF</a>
       </div>
     </article>
     
@@ -455,31 +455,31 @@
     <article class="paper-card">
       <div class="paper-header">
         <div class="left-header">
-          <span class="category-badge">人工智能</span>
-          <span class="paper-id">2609.01006</span>
+          <span class="category-badge">计算机视觉</span>
+          <span class="paper-id">2609.02036</span>
         </div>
         <span class="score-badge">相关性 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://arxiv.org/abs/2609.01006" target="_blank">Figures as Programs: Recursive Generation of Editable Scientific Figures</a>
+        <a href="https://arxiv.org/abs/2609.02036" target="_blank">SelfLift: Accelerating Few-Step Diffusion via Self-Recovering Resolution Transition</a>
       </h3>
-      <p class="paper-title-zh">图形即程序：可编辑科学图形的递归生成</p>
-      <p class="paper-authors">Yepeng Liu, Dasen Dai, Chengzhi Liu, Yiren Song, Hai Ci 等 (10 位作者)</p>
+      <p class="paper-title-zh">SelfLift：通过自恢复分辨率转换加速少步扩散模型</p>
+      <p class="paper-authors">Tingyan Wen, Chenqian Yan, Xurui Peng, Xiazhang Fang, Shuai Wang 等 (7 位作者)</p>
       
       <div class="paper-summary">
-        <div class="summary-section"><strong>核心贡献:</strong> 提出FigTree系统，将科学论文自动转化为结构化矢量图形，并通过递归生成和程序化编辑解决科学图形创建与修改的难题。</div>
-        <div class="summary-section"><strong>方法:</strong> 1. 将科学图形生成任务建模为递归SVG程序构建过程；2. 采用多智能体系统分解图形为局部区域层次结构，生成每个区域的SVG程序片段并组装；3. 通过渲染-批评循环联合检查图形与程序，实现缺陷定位与精准修复。</div>
-        <div class="summary-section"><strong>关键发现:</strong> 实验表明FigTree生成的图形质量优于现有方法，且支持更高效的编辑操作（基于矢量程序的修改比基于栅格的方法更精确）。</div>
+        <div class="summary-section"><strong>核心贡献:</strong> SelfLift提出了一种自恢复的渐进分辨率推理框架，解决了少步扩散模型中直接潜变量提升导致的分布不匹配和伪影问题，在不增加外部超分或额外去噪步骤的情况下实现高效晚期分辨率转换，显著降低端到端延迟。</div>
+        <div class="summary-section"><strong>方法:</strong> SelfLift包含两个变体：SelfLift-zero采用无需训练的伪影感知一致性提升方法，利用直接潜变量提升与像素-VAE重编码之间的差异作为局部伪影风险信号和模型原生修正方向，实现可靠的晚期转换；SelfLift-rich则在此基础上进行策略内自恢复，从内部自教师模型转移密集高分辨率指导，同时保持与渐进分辨率动态的一致性。</div>
+        <div class="summary-section"><strong>关键发现:</strong> 在FLUX.2-Klein和Z-Image-Turbo上，SelfLift分别将端到端延迟降低41.5%和44.1%，结合时间步蒸馏，相比对应的50步模型实现29.61倍和19.21倍的整体加速，同时保持竞争性的生成质量，建立了少步扩散模型更优的速度-质量边界。</div>
       </div>
       
       <details class="paper-abstract">
         <summary>查看原文摘要</summary>
-        <p>Scientific methodology figures are essential for communicating complex methods clearly, yet creating them remains labor-intensive and typically requires multiple rounds of refinement. Recent image-generation models can synthesize visually appealing raster figures, but producing a human-satisfactory result in a single generation step remains difficult. Moreover, precise edits to raster figures are challenging for both humans and models. We formulate scientific figure generation as recursive SVG program construction and propose \textsc{FigTree}, a \textit{multi-agent} system that automatically transforms a scientific paper into a structured vector figure. \textsc{FigTree} grounds figure content in the source paper, decomposes a figure into a hierarchy of local regions, generates each region as a short SVG program, and assembles the resulting fragments. A render-critic refinement loop jointly inspects the rendered figure and its underlying program, enabling visual defects to be traced to specific statements and accurately repaired. We conduct extensive evaluations of \textsc{FigTree} on figure quality and editability, showing that \textsc{FigTree} produces high-quality figures, while also enabling more effective editing than existing raster-based methods.</p>
+        <p>Few-step diffusion models substantially compress temporal computation, making the spatial cost of each model evaluation an increasingly dominant source of inference latency. Progressive-resolution inference reduces this cost by performing early denoising at low resolution and reserving high-resolution computation for refinement. However, existing methods typically lift intermediate latents directly and rely on subsequent steps to absorb the induced distribution mismatch. In the few-step regime, the limited recovery budget leaves these errors as visible artifacts, constraining how late the transition can occur and, consequently, how efficiently it can be performed. We introduce SelfLift, a self-recovering progressive-resolution framework that derives both transition-repair signals and trajectory-aligned supervision from the generative model itself. SelfLift-zero proposes a training-free Artifact-Aware Consistency Lift, using disagreement between direct latent lifting and pixel-VAE re-encoding as both a localized artifact-risk signal and a model-native correction direction. It enables reliable late transitions without external super-resolution, extra denoiser evaluations, or sampling-schedule modifications. Building on this robust transition, SelfLift-rich performs On-Policy Self Recovery on student-visited states, transferring dense high-resolution guidance from an internal self-teacher while remaining aligned with the altered progressive-resolution dynamics. Across FLUX.2-Klein and Z-Image-Turbo, SelfLift reduces end-to-end latency by 41.5% and 44.1%, respectively. Combined with timestep distillation, it delivers overall speedups of 29.61x and 19.21x over the corresponding 50-step models while preserving competitive generation quality, establishing a stronger speed-quality frontier for few-step diffusion.</p>
       </details>
       
       <div class="paper-links">
-        <a href="https://arxiv.org/abs/2609.01006" target="_blank" class="link-btn">📄 arXiv</a>
-        <a href="https://arxiv.org/pdf/2609.01006.pdf" target="_blank" class="link-btn">📥 PDF</a>
+        <a href="https://arxiv.org/abs/2609.02036" target="_blank" class="link-btn">📄 arXiv</a>
+        <a href="https://arxiv.org/pdf/2609.02036.pdf" target="_blank" class="link-btn">📥 PDF</a>
       </div>
     </article>
     
@@ -488,7 +488,45 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 84 &nbsp;💬 17</span>
+          <span class="paper-id">▲ 1158 &nbsp;💬 897</span>
+        </div>
+        <span class="score-badge">推荐度 95/100</span>
+      </div>
+      <h3 class="paper-title">
+        <a href="https://news.ycombinator.com/item?id=49554643" target="_blank">GPT-6 Astra</a>
+      </h3>
+      <p class="paper-authors">by kibae</p>
+      <div class="paper-summary"><div class="summary-section">OpenAI发布GPT-6 Astra，并附上系统安全卡及在ARC-AGI-3和编程智能体评测中的显著进展，看点在于其性能突破与安全评估的公开细节。</div></div>
+      <div class="paper-links">
+        <a href="https://news.ycombinator.com/item?id=49554643" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://openai.com/index/gpt-6-astra/" target="_blank" class="link-btn">🔗 原文</a>
+      </div>
+    </article>
+    
+    <article class="paper-card hn-card" style="border-left: 3px solid var(--hn-color);">
+      <div class="paper-header">
+        <div class="left-header">
+          <span class="category-badge hn-badge">HN</span>
+          <span class="paper-id">▲ 404 &nbsp;💬 123</span>
+        </div>
+        <span class="score-badge">推荐度 90/100</span>
+      </div>
+      <h3 class="paper-title">
+        <a href="https://news.ycombinator.com/item?id=49554520" target="_blank">Qwen 3.8 27B available on Cerebras at 1500 tokens/s</a>
+      </h3>
+      <p class="paper-authors">by altertable</p>
+      <div class="paper-summary"><div class="summary-section">Qwen 3.8 27B模型已在Cerebras平台上线，推理速度高达每秒1500个token，看点在于其超高速性能与开源模型的结合。</div></div>
+      <div class="paper-links">
+        <a href="https://news.ycombinator.com/item?id=49554520" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://inference-docs.cerebras.ai/models/overview" target="_blank" class="link-btn">🔗 原文</a>
+      </div>
+    </article>
+    
+    <article class="paper-card hn-card" style="border-left: 3px solid var(--hn-color);">
+      <div class="paper-header">
+        <div class="left-header">
+          <span class="category-badge hn-badge">HN</span>
+          <span class="paper-id">▲ 142 &nbsp;💬 24</span>
         </div>
         <span class="score-badge">推荐度 90/100</span>
       </div>
@@ -496,7 +534,7 @@
         <a href="https://news.ycombinator.com/item?id=49536411" target="_blank">WebLLM: high-performance in-browser LLM inference engine</a>
       </h3>
       <p class="paper-authors">by saikatsg</p>
-      <div class="paper-summary"><div class="summary-section">"WebLLM是一个高性能的浏览器内大型语言模型推理引擎，支持在网页端直接运行LLM而无需服务器。"</div></div>
+      <div class="paper-summary"><div class="summary-section">WebLLM是一个高性能的浏览器端大语言模型推理引擎，支持直接在网页中运行LLM而无需服务器。其看点在于利用WebGPU和硬件加速实现接近原生的推理速度，并支持多种主流模型。</div></div>
       <div class="paper-links">
         <a href="https://news.ycombinator.com/item?id=49536411" target="_blank" class="link-btn">💬 HN 讨论</a>
         <a href="https://github.com/mlc-ai/web-llm" target="_blank" class="link-btn">🔗 原文</a>
@@ -507,75 +545,18 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 269 &nbsp;💬 101</span>
-        </div>
-        <span class="score-badge">推荐度 90/100</span>
-      </div>
-      <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49531651" target="_blank">The Emergent Symbolic Structure of Artificial Neural Networks</a>
-      </h3>
-      <p class="paper-authors">by schmuhblaster</p>
-      <div class="paper-summary"><div class="summary-section">该论文探讨了人工神经网络中自发形成的符号结构及其对模型理解和解释的影响。</div></div>
-      <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49531651" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://arxiv.org/abs/2608.29530" target="_blank" class="link-btn">🔗 原文</a>
-      </div>
-    </article>
-    
-    <article class="paper-card hn-card" style="border-left: 3px solid var(--hn-color);">
-      <div class="paper-header">
-        <div class="left-header">
-          <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 21 &nbsp;💬 2</span>
-        </div>
-        <span class="score-badge">推荐度 90/100</span>
-      </div>
-      <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49539024" target="_blank">Tangle – Visual ML Pipeline Editor</a>
-      </h3>
-      <p class="paper-authors">by duck</p>
-      <div class="paper-summary"><div class="summary-section">Tangle 是一个可视化机器学习管道编辑器，帮助用户直观地设计和调整 ML 工作流程。</div></div>
-      <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49539024" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://tangleml.com/" target="_blank" class="link-btn">🔗 原文</a>
-      </div>
-    </article>
-    
-    <article class="paper-card hn-card" style="border-left: 3px solid var(--hn-color);">
-      <div class="paper-header">
-        <div class="left-header">
-          <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 10 &nbsp;💬 0</span>
-        </div>
-        <span class="score-badge">推荐度 90/100</span>
-      </div>
-      <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49537858" target="_blank">Qwen3.8-Max Checkpoint 0902</a>
-      </h3>
-      <p class="paper-authors">by fbrusch</p>
-      <div class="paper-summary"><div class="summary-section">该帖子介绍了Qwen3.8-Max模型的0902版本检查点，可能是关于模型性能更新或技术优化的发布。</div></div>
-      <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49537858" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://www.qwencloud.com/models/qwen3.8-max-0902" target="_blank" class="link-btn">🔗 原文</a>
-      </div>
-    </article>
-    
-    <article class="paper-card hn-card" style="border-left: 3px solid var(--hn-color);">
-      <div class="paper-header">
-        <div class="left-header">
-          <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 350 &nbsp;💬 240</span>
+          <span class="paper-id">▲ 64 &nbsp;💬 17</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49541256" target="_blank">Muse Spark 1.3</a>
+        <a href="https://news.ycombinator.com/item?id=49557206" target="_blank">Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out</a>
       </h3>
-      <p class="paper-authors">by bvaldivielso</p>
-      <div class="paper-summary"><div class="summary-section">Meta发布Muse Spark 1.3 AI模型，介绍其最新功能和性能提升。</div></div>
+      <p class="paper-authors">by screm</p>
+      <div class="paper-summary"><div class="summary-section">这篇帖子通过分析17,000次编码代理的运行数据，揭示了Claude、Codex和Cursor等AI工具实际安装和使用的第三方工具偏好，看点在于用真实数据对比了不同模型在编程任务中的工具选择差异。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49541256" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://developer.meta.com/ai/models/muse-spark/" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49557206" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://armature.tech/blog/which-tools-coding-agents-install" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -583,18 +564,18 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 801 &nbsp;💬 476</span>
+          <span class="paper-id">▲ 169 &nbsp;💬 56</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49537553" target="_blank">Gemini 3.8 Flash and 3.8 Flash Cyber</a>
+        <a href="https://news.ycombinator.com/item?id=49550375" target="_blank">Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly</a>
       </h3>
-      <p class="paper-authors">by bratao</p>
-      <div class="paper-summary"><div class="summary-section">谷歌发布Gemini 3.8 Flash和3.8 Flash Cyber模型，介绍其创新特性和研究进展。</div></div>
+      <p class="paper-authors">by rabahs</p>
+      <div class="paper-summary"><div class="summary-section">作者用LLM（Claude）将1993年用68000汇编写的Amiga游戏移植到Godot，仅用一晚完成核心移植，并分享了详细技术笔记与经验，亮点是AI辅助逆向老代码的实践。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49537553" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49550375" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -602,18 +583,18 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 128 &nbsp;💬 44</span>
+          <span class="paper-id">▲ 238 &nbsp;💬 79</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49541458" target="_blank">Fable 5.1 World Modeling</a>
+        <a href="https://news.ycombinator.com/item?id=49551760" target="_blank">K2 Horizon: A connected fleet of six open models</a>
       </h3>
-      <p class="paper-authors">by surreal_</p>
-      <div class="paper-summary"><div class="summary-section">Fable 5.1 发布了世界建模功能，展示了其开源项目在虚拟环境构建上的创新技术。</div></div>
+      <p class="paper-authors">by karimf</p>
+      <div class="paper-summary"><div class="summary-section">K2 Horizon 是 ifm.ai 推出的由六个开源模型组成的互联模型舰队，旨在通过协同分工提升复杂任务的处理能力。其看点在于打破单一模型局限，以多模型协作架构实现更灵活、高效的AI推理。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49541458" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://github.com/PhiloLabs/fable51-worlds" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49551760" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://ifm.ai/blog/k2/" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -621,18 +602,37 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 51 &nbsp;💬 24</span>
+          <span class="paper-id">▲ 149 &nbsp;💬 81</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49540415" target="_blank">Embedded Rust RTOS vs. C RTOS</a>
+        <a href="https://news.ycombinator.com/item?id=49555691" target="_blank">OpenAI's GPT-6 Astra on ARC-AGI-3</a>
       </h3>
-      <p class="paper-authors">by kooi</p>
-      <div class="paper-summary"><div class="summary-section">这篇帖子比较了嵌入式 Rust 实时操作系统（RTOS）与 C 语言 RTOS 的性能和优缺点，重点探讨异步 Rust 在实时系统中的表现。</div></div>
+      <p class="paper-authors">by vignesh_warar</p>
+      <div class="paper-summary"><div class="summary-section">OpenAI的GPT-6 Astra在ARC-AGI-3基准上表现突出，展示了接近通用人工智能的推理能力。看点在于其首次在抽象推理任务中超越人类平均水平，引发对AGI进展的讨论。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49540415" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://tweedegolf.nl/en/blog/65/async-rust-vs-rtos-showdown/" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49555691" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://arcprize.org/blog/astra" target="_blank" class="link-btn">🔗 原文</a>
+      </div>
+    </article>
+    
+    <article class="paper-card hn-card" style="border-left: 3px solid var(--hn-color);">
+      <div class="paper-header">
+        <div class="left-header">
+          <span class="category-badge hn-badge">HN</span>
+          <span class="paper-id">▲ 93 &nbsp;💬 21</span>
+        </div>
+        <span class="score-badge">推荐度 85/100</span>
+      </div>
+      <h3 class="paper-title">
+        <a href="https://news.ycombinator.com/item?id=49538069" target="_blank">Unusual Suspects</a>
+      </h3>
+      <p class="paper-authors">by beeperboy95</p>
+      <div class="paper-summary"><div class="summary-section">这是一个互动推理游戏，玩家通过观察一系列“可疑”特征来猜出神秘人物，考验观察力和逻辑推理。</div></div>
+      <div class="paper-links">
+        <a href="https://news.ycombinator.com/item?id=49538069" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://neal.fun/unusual-suspects/" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -640,8 +640,76 @@
     <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
       <div class="paper-header">
         <div class="left-header">
+          <span class="category-badge gh-badge">JavaScript</span>
+          <span class="paper-id">⭐ 92,019 &nbsp;+260 today</span>
+        </div>
+        <span class="score-badge">推荐度 85/100</span>
+      </div>
+      <h3 class="paper-title">
+        <a href="https://github.com/addyosmani/agent-skills" target="_blank">addyosmani/agent-skills</a>
+      </h3>
+      <p class="paper-authors">Star
+
+
+  
+
+  
+    
+    
+
+
+      
+        addyosmani /
+
+      agent-skills  
+
+    
+      Production-grade engineering skills for AI coding agents.</p>
+      <div class="paper-summary"><div class="summary-section">这是一个为AI编程代理提供生产级工程技能的开源项目，能显著提升代理处理真实代码任务的能力，值得关注。</div></div>
+      <div class="paper-links">
+        <a href="https://github.com/addyosmani/agent-skills" target="_blank" class="link-btn">⭐ GitHub</a>
+      </div>
+    </article>
+    
+    <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
+      <div class="paper-header">
+        <div class="left-header">
+          <span class="category-badge gh-badge">TypeScript</span>
+          <span class="paper-id">⭐ 1,932 &nbsp;+130 today</span>
+        </div>
+        <span class="score-badge">推荐度 85/100</span>
+      </div>
+      <h3 class="paper-title">
+        <a href="https://github.com/magnitudedev/magnitude" target="_blank">magnitudedev/magnitude</a>
+      </h3>
+      <p class="paper-authors">Star
+
+
+  
+
+  
+    
+    
+
+
+      
+        magnitudedev /
+
+      magnitude  
+
+    
+      Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.</p>
+      <div class="paper-summary"><div class="summary-section">Magnitude 是一个开源推理服务器，能根据你的硬件自动运行最佳本地模型，并无缝接入 Pi、OpenCode、Claude Code 等现有 AI 代理工具。它值得关注，因为它让你在本地轻松跑起最强模型，兼顾隐私与性能，且兼容主流代理生态。</div></div>
+      <div class="paper-links">
+        <a href="https://github.com/magnitudedev/magnitude" target="_blank" class="link-btn">⭐ GitHub</a>
+      </div>
+    </article>
+    
+    <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
+      <div class="paper-header">
+        <div class="left-header">
           <span class="category-badge gh-badge">Python</span>
-          <span class="paper-id">⭐ 14,695 &nbsp;+832 today</span>
+          <span class="paper-id">⭐ 16,228 &nbsp;+1738 today</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
@@ -665,7 +733,7 @@
 
     
       VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription &amp; audiobook creation in 646 languages.</p>
-      <div class="paper-summary"><div class="summary-section">VoiceStudio 是一个开源、完全本地的 ElevenLabs 替代方案，支持语音克隆、语音设计、视频配音、听写、转录及 646 种语言的有声书制作，值得关注。</div></div>
+      <div class="paper-summary"><div class="summary-section">VoiceStudio 是一个开源的、完全本地运行的 ElevenLabs 替代品，支持646种语言的语音克隆、语音设计、视频配音、听写、转录和有声书制作。它因提供全功能、多语言且无需联网的本地化语音工具而值得关注。</div></div>
       <div class="paper-links">
         <a href="https://github.com/debpalash/VoiceStudio" target="_blank" class="link-btn">⭐ GitHub</a>
       </div>
@@ -674,13 +742,13 @@
     <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
       <div class="paper-header">
         <div class="left-header">
-          <span class="category-badge gh-badge">Rust</span>
-          <span class="paper-id">⭐ 18,503 &nbsp;+586 today</span>
+          <span class="category-badge gh-badge">HTML</span>
+          <span class="paper-id">⭐ 8,346 &nbsp;+123 today</span>
         </div>
-        <span class="score-badge">推荐度 85/100</span>
+        <span class="score-badge">推荐度 75/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://github.com/firecrawl/pdf-inspector" target="_blank">firecrawl/pdf-inspector</a>
+        <a href="https://github.com/averygan/reclip" target="_blank">averygan/reclip</a>
       </h3>
       <p class="paper-authors">Star
 
@@ -693,15 +761,62 @@
 
 
       
-        firecrawl /
+        averygan /
 
-      pdf-inspector  
+      reclip  
 
     
-      Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.</p>
-      <div class="paper-summary"><div class="summary-section">该项目是一个用Rust编写的快速PDF检查库，能智能识别扫描版和文本版PDF并进行分类和文本提取，支持智能路由决策。</div></div>
+      Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.</p>
+      <div class="paper-summary"><div class="summary-section">reclip 是一个轻量级、可自托管的媒体下载工具，提供简洁的网页界面，支持从几乎所有网站下载视频。它因无需复杂配置、界面清爽且功能强大而值得关注。</div></div>
       <div class="paper-links">
-        <a href="https://github.com/firecrawl/pdf-inspector" target="_blank" class="link-btn">⭐ GitHub</a>
+        <a href="https://github.com/averygan/reclip" target="_blank" class="link-btn">⭐ GitHub</a>
+      </div>
+    </article>
+    
+    <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
+      <div class="paper-header">
+        <div class="left-header">
+          <span class="category-badge gh-badge">HTML</span>
+          <span class="paper-id">⭐ 168,970 &nbsp;+201 today</span>
+        </div>
+        <span class="score-badge">推荐度 75/100</span>
+      </div>
+      <h3 class="paper-title">
+        <a href="https://github.com/sponsors/f" target="_blank">sponsors/f</a>
+      </h3>
+      <p class="paper-authors">Sponsor
+    
+  
+
+
+
+      
+            
+    
+
+    
+
+        
+          Star
+
+
+  
+
+  
+    
+    
+
+
+      
+        f /
+
+      prompts.chat  
+
+    
+      f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.</p>
+      <div class="paper-summary"><div class="summary-section">该项目是“Awesome ChatGPT Prompts”的延续版，提供社区分享、发现和收藏ChatGPT提示词的平台，支持免费开源及私有化部署，便于组织在完全隐私的环境下使用。</div></div>
+      <div class="paper-links">
+        <a href="https://github.com/sponsors/f" target="_blank" class="link-btn">⭐ GitHub</a>
       </div>
     </article>
     
@@ -709,7 +824,7 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge gh-badge">Python</span>
-          <span class="paper-id">⭐ 240,119 &nbsp;+533 today</span>
+          <span class="paper-id">⭐ 240,822 &nbsp;+778 today</span>
         </div>
         <span class="score-badge">推荐度 70/100</span>
       </div>
@@ -733,7 +848,7 @@
 
     
       The agent that grows with you</p>
-      <div class="paper-summary"><div class="summary-section">Hermes-Agent 是一个能随用户需求不断进化的智能代理项目，值得关注因其具备自适应学习能力，可动态优化任务处理效率。</div></div>
+      <div class="paper-summary"><div class="summary-section">hermes-agent 是一个用 Python 构建的、可随用户需求持续扩展的智能体框架，主打“与你一同成长”的自适应能力。它值得关注，因为其设计强调长期可演进性，适合需要灵活定制和迭代的复杂AI代理场景。</div></div>
       <div class="paper-links">
         <a href="https://github.com/NousResearch/hermes-agent" target="_blank" class="link-btn">⭐ GitHub</a>
       </div>
@@ -742,42 +857,8 @@
     <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
       <div class="paper-header">
         <div class="left-header">
-          <span class="category-badge gh-badge">Rust</span>
-          <span class="paper-id">⭐ 2,874 &nbsp;+888 today</span>
-        </div>
-        <span class="score-badge">推荐度 65/100</span>
-      </div>
-      <h3 class="paper-title">
-        <a href="https://github.com/pacifio/atlas" target="_blank">pacifio/atlas</a>
-      </h3>
-      <p class="paper-authors">Star
-
-
-  
-
-  
-    
-    
-
-
-      
-        pacifio /
-
-      atlas  
-
-    
-      Source control for agents. Use multiple coding agents, track their changes and query them in one place</p>
-      <div class="paper-summary"><div class="summary-section">Atlas是一个用Rust编写的多智能体代码管理工具，可同时追踪多个编程智能体的修改并集中查询，值得关注因为它为协作开发提供了高效的版本控制解决方案。</div></div>
-      <div class="paper-links">
-        <a href="https://github.com/pacifio/atlas" target="_blank" class="link-btn">⭐ GitHub</a>
-      </div>
-    </article>
-    
-    <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
-      <div class="paper-header">
-        <div class="left-header">
           <span class="category-badge gh-badge">Go</span>
-          <span class="paper-id">⭐ 102,630 &nbsp;+238 today</span>
+          <span class="paper-id">⭐ 103,080 &nbsp;+545 today</span>
         </div>
         <span class="score-badge">推荐度 65/100</span>
       </div>
@@ -814,7 +895,7 @@
 
     
       🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman</p>
-      <div class="paper-summary"><div class="summary-section">该项目是一个用Go语言开发的工具，通过模仿原始人简略表达方式大幅减少代码中的令牌使用量，能削减65%的令牌消耗，提升Claude代码效率。</div></div>
+      <div class="paper-summary"><div class="summary-section">这是一个通过“穴居人式”极简表达来压缩提示词 token 用量的 Claude Code 技能，平均可减少65%的 token 消耗，适合追求低成本、高效率使用大模型 API 的开发者。</div></div>
       <div class="paper-links">
         <a href="https://github.com/sponsors/JuliusBrussee" target="_blank" class="link-btn">⭐ GitHub</a>
       </div>
@@ -824,7 +905,7 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge gh-badge">C++</span>
-          <span class="paper-id">⭐ 24,240 &nbsp;+14 today</span>
+          <span class="paper-id">⭐ 25,056 &nbsp;+955 today</span>
         </div>
         <span class="score-badge">推荐度 60/100</span>
       </div>
@@ -848,77 +929,9 @@
 
     
       A modern formatting library</p>
-      <div class="paper-summary"><div class="summary-section">fmtlib/fmt 是一个现代化的 C++ 格式化库，提供高效、安全的字符串格式化功能，因其性能优越和易用性而备受关注。</div></div>
+      <div class="paper-summary"><div class="summary-section">fmtlib/fmt 是一个现代、高效的 C++ 格式化库，提供类似 Python 的 `{}` 语法，替代 `printf` 和 `iostream`，并支持类型安全与性能优化。它因被广泛集成（如 C++20 标准库 `std::format` 的基础）而备受关注，是提升代码可读性与安全性的必备工具。</div></div>
       <div class="paper-links">
         <a href="https://github.com/fmtlib/fmt" target="_blank" class="link-btn">⭐ GitHub</a>
-      </div>
-    </article>
-    
-    <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
-      <div class="paper-header">
-        <div class="left-header">
-          <span class="category-badge gh-badge">Python</span>
-          <span class="paper-id">⭐ 3,057 &nbsp;+60 today</span>
-        </div>
-        <span class="score-badge">推荐度 60/100</span>
-      </div>
-      <h3 class="paper-title">
-        <a href="https://github.com/superlinked/sie" target="_blank">superlinked/sie</a>
-      </h3>
-      <p class="paper-authors">Star
-
-
-  
-
-  
-    
-    
-
-
-      
-        superlinked /
-
-      sie  
-
-    
-      Open-source inference server and production cluster for all the models your agent needs.</p>
-      <div class="paper-summary"><div class="summary-section">"sie 是一个开源推理服务器和生产集群，专为智能代理所需的各种模型提供高效部署方案，值得关注因其支持多样化模型集成与高性能推理。"</div></div>
-      <div class="paper-links">
-        <a href="https://github.com/superlinked/sie" target="_blank" class="link-btn">⭐ GitHub</a>
-      </div>
-    </article>
-    
-    <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
-      <div class="paper-header">
-        <div class="left-header">
-          <span class="category-badge gh-badge">TypeScript</span>
-          <span class="paper-id">⭐ 11,755 &nbsp;+73 today</span>
-        </div>
-        <span class="score-badge">推荐度 60/100</span>
-      </div>
-      <h3 class="paper-title">
-        <a href="https://github.com/vercel-labs/portless" target="_blank">vercel-labs/portless</a>
-      </h3>
-      <p class="paper-authors">Star
-
-
-  
-
-  
-    
-    
-
-
-      
-        vercel-labs /
-
-      portless  
-
-    
-      Replace port numbers with stable, named local URLs. For humans and agents.</p>
-      <div class="paper-summary"><div class="summary-section">Portless 是一个用 TypeScript 开发的项目，它能将本地端口号替换为稳定的命名 URL，方便开发者和自动化工具使用。</div></div>
-      <div class="paper-links">
-        <a href="https://github.com/vercel-labs/portless" target="_blank" class="link-btn">⭐ GitHub</a>
       </div>
     </article>
     
