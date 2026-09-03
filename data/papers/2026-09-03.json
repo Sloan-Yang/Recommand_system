@@ -1,0 +1,147 @@
+[
+  {
+    "id": "2609.01582",
+    "title": "SpatialGuard: Harness-Guided Verifiable Spatial Reasoning for Text-to-Image Generation",
+    "abstract": "Complex 3D spatial text to image generation requires models to convert natural language into stable visual geometry, not merely semantic appearance. Existing prompt-driven or layout-conditioned methods improve controllability, but often lack an optimizable and verifiable spatial intermediary before visual sampling. As a result, object relations, occlusion, visibility, and camera constraints can decay during multi-round generation. This paper presents SpatialGuard, a structured layout-guided framework for complex 3D spatial text-to-image generation. SpatialGuard parses prompts into image synthesis-oriented 3D layouts through a Spatial Layout Architect, realizes them as visual conditions and candidate images through a Visual Realizer, and uses a Visual Alignment Critic to validate consistency among prompt, layout, and image. To keep constraints stable across iterations, SpatialGuard introduces a Layout Harness that organizes rule constraints, tool invocation, shared knowledge, and feedback loops around the editable layout state. This design turns complex spatial generation from implicit prompt following into a verifiable process of planning, realization, validation, and repair. Comprehensive experiments show that SpatialGuard achieves state-of-the-art performance in complex 3D spatial layout generation and improves spatial faithfulness over existing text-to-image and layout control baselines.",
+    "authors": [
+      "Ziyun Qian",
+      "Zizhi Chen",
+      "Yizhou Liu",
+      "Mingyang Sun",
+      "Dingkang Yang",
+      "Lihua Zhang"
+    ],
+    "published": "2026-09-01",
+    "updated": "2026-09-01",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.01582.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.01582",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "SpatialGuard：基于引导约束的可验证空间推理文本到图像生成方法",
+      "core_contribution": "提出SpatialGuard框架，通过结构化布局引导和可验证的中间表示，解决复杂3D空间文本到图像生成中的几何一致性问题。",
+      "method": "1. 使用空间布局架构师（Spatial Layout Architect）将文本解析为面向图像合成的3D布局；2. 通过视觉实现器（Visual Realizer）将布局转化为视觉条件和候选图像；3. 采用视觉对齐评判器（Visual Alignment Critic）验证文本、布局与图像的一致性；4. 引入布局约束系统（Layout Harness）整合规则约束、工具调用和反馈循环以维持迭代稳定性。",
+      "findings": "实验表明，SpatialGuard在复杂3D空间布局生成任务中达到最先进性能，显著提升了生成结果的空间忠实度，优于现有文本到图像和布局控制基线方法。"
+    }
+  },
+  {
+    "id": "2609.01433",
+    "title": "Gaussian Core LoRA: Distribution-Aware Dynamic Adaptation for Broad Concept Erasure",
+    "abstract": "Concept erasure aims to suppress unsafe, privacy-sensitive, or undesirable generations in text-to-image diffusion models while preserving benign semantics, visual quality, and deployment efficiency. Existing adapter-based methods, such as Low-Rank Adaptation (LoRA), typically freeze the diffusion backbone and learn lightweight parameter updates to steer generation away from target semantics. However, these methods usually assign a static semantic erasure direction to each target concept. This assumption is overly coarse for broad and complex target concepts, since a concept often contains multiple latent semantic prototypes involving different objects, scenes, or relations, and requires different local erasure directions. A single LoRA update averages these heterogeneous erasure demands, leading to under-erasure on difficult prototypes and over-editing of nearby benign semantics. To address this limitation, we propose Gaussian Core LoRA, a distribution-aware low-rank adaptation framework. It fits a Gaussian mixture model in the prompt feature space to estimate latent semantic prototypes within the target concept. During inference, each input prompt is projected into this feature space to compute its Gaussian posterior responsibilities, which condition the core generator to produce a prompt-specific, norm-bounded residual reconfiguration of the shared LoRA rank space. This enables prototype-adaptive erasure with a single lightweight adapter. Compared with the strongest baseline on each metric, Gaussian Core LoRA reduces average Attack Success Rate (ASR) by 7.95%, lowers COCO Fr'echet Inception Distance (FID) by 14.72%, and improves CLIP Score by 4.98%. Further experiments show robustness to adversarial prompts, scalability to multi-identity and multi-style erasure, and compatibility with SDXL and FLUX.",
+    "authors": [
+      "Qinghui Gong",
+      "Xunlei Chen",
+      "Yu-Xuan Zhang",
+      "Hua Meng",
+      "Zhengchun Zhou"
+    ],
+    "published": "2026-09-01",
+    "updated": "2026-09-01",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.01433.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.01433",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "高斯核心LoRA：面向广泛概念擦除的分布感知动态适配方法",
+      "core_contribution": "提出高斯核心LoRA框架，通过分布感知的动态低秩适配实现复杂概念的细粒度语义擦除，解决了静态LoRA在广泛概念擦除中的过粗语义方向问题。",
+      "method": "1. 在提示词特征空间拟合高斯混合模型，估计目标概念内的潜在语义原型；2. 推理时根据输入提示计算高斯后验权重，动态生成原型自适应的秩空间残差重构；3. 通过单一轻量适配器实现原型感知的擦除方向调整。",
+      "findings": "相比各指标最强基线：攻击成功率(ASR)降低7.95%，COCO FID下降14.72%，CLIP分数提升4.98%；实验验证其对对抗提示的鲁棒性、多身份/多风格擦除的扩展性，以及与SDXL/FLUX的兼容性。"
+    }
+  },
+  {
+    "id": "2609.01409",
+    "title": "EdiTikZ: Scientific Figure Editing from Revision Trajectories",
+    "abstract": "Vision-language models (VLMs) have shown strong performance in generating scientific figures from text or images. However, producing publication-ready figures requires iterative refinement, making scientific figure editing an important yet largely unexplored task. Existing approaches rely on costly proprietary agentic systems, focus primarily on evaluation, or construct training supervision from synthetically generated edits. Instead, we leverage naturally occurring scientific revision and development trajectories as a scalable source of supervision. To this end, we introduce DaEdiTikZ, the first large-scale dataset of revision-derived scientific figure edits, constructed by mining 391K plausible TikZ edit pairs from arXiv, GitHub, and TeX SE and inferring 781K directed edit instructions with a VLM conditioned on rendered figures and TikZ code. We further introduce DaEdiTikZ-Bench, a human-refined benchmark with 790 instances, and train two compact Qwen3.5-based EdiTikZ models (4B and 9B) by jointly learning reconstruction and editing, followed by reinforcement learning (RL) with complementary rewards for rendered fidelity and edit application. Automatic evaluation places our 9B model above all tested baselines, while human evaluation with 9 annotators and 4,320 ratings places it above GPT-5.6-Sol and on par with Gemini-3.1-Pro. Under severe out-of-distribution shifts, it remains competitive with GPT-5.6-Sol near its 2K training sequence-length regime. Models and datasets will be released.",
+    "authors": [
+      "Christian Greisinger",
+      "Zhixue Zhao",
+      "Steffen Eger"
+    ],
+    "published": "2026-09-01",
+    "updated": "2026-09-01",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.01409.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.01409",
+    "primary_category": "cs.AI",
+    "score": 85,
+    "summary": {
+      "title_zh": "EdiTikZ：基于修订轨迹的科学图表编辑",
+      "core_contribution": "提出了首个基于自然修订轨迹的大规模科学图表编辑数据集DaEdiTikZ，并训练出性能超越主流大模型的紧凑型编辑模型EdiTikZ。",
+      "method": "1. 从arXiv、GitHub和TeX SE挖掘39.1万组TikZ编辑对，利用视觉语言模型生成78.1万条编辑指令；2. 构建人工精校基准DaEdiTikZ-Bench；3. 采用联合学习重建与编辑任务，结合渲染保真度和编辑应用的强化学习训练4B/9B参数模型。",
+      "findings": "1. 自动评估中9B模型超越所有基线；2. 人类评估（9名标注者/4320次评分）显示其优于GPT-5.6-Sol，与Gemini-3.1-Pro相当；3. 在严重分布外偏移下仍保持竞争力。"
+    }
+  },
+  {
+    "id": "2609.01147",
+    "title": "On the Design Fundamentals of Pixel Text Representation Learning",
+    "abstract": "Text-rich visual inputs require models that can read, retrieve, and compress language directly in pixel space, yet existing pixel-text encoders struggle with fixed resolution pretraining, visual shortcut learning, weak visual grounding, and multilingual visual text understanding. In this work, we investigate the fundamental design principles required for robust visual text representation learning. Through systematic controlled ablations, we identify four critical components: variable image resolutions and rendered font sizes provide spatial proxies for high-resolution document generalization; natural image-text pairs are indispensable for grounding and prevent text-only collapse; layout-aware rendering helps prevent pixel-level shortcuts; and a two-stage multilingual curriculum enables effective cross-lingual alignment. By integrating these principles into a scalable training recipe, we train Pixel Linguist II, a native-resolution vision encoder trained with on-the-fly rendering, unified contrastive grounding, and a multilingual curriculum over 280M training examples. Pixel Linguist II sets new state-of-the-art results on English, cross-lingual, and multilingual Visual STS and ViDoRe, while also enabling better MLLM downstream evaluation. Notably, Pixel Linguist II remains robust under 80\\% visual token compression, showing great promise for optical context compression. Our code and resources are available at https://github.com/Pixel-Linguist/Pixel-Linguist-II.",
+    "authors": [
+      "Chaohao Yuan",
+      "Ruifeng Yuan",
+      "Zhuoxu Huang",
+      "Yu Rong",
+      "Hong Cheng",
+      "Hou Pong Chan",
+      "Chenghao Xiao"
+    ],
+    "published": "2026-09-01",
+    "updated": "2026-09-01",
+    "categories": [
+      "cs.CV",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.01147.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.01147",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "像素文本表示学习的基础设计原则",
+      "core_contribution": "提出了构建鲁棒视觉文本表示学习的四项关键设计原则，并基于此训练出高性能的像素级视觉编码器Pixel Linguist II。",
+      "method": "通过系统控制变量实验，确定了四项核心设计：1) 可变图像分辨率和渲染字体大小作为高分辨率文档泛化的空间代理；2) 自然图文对用于视觉 grounding 并防止文本崩溃；3) 布局感知渲染避免像素级捷径学习；4) 两阶段多语言课程实现跨语言对齐。将这些原则整合到可扩展的训练方案中，训练了支持实时渲染、统一对比 grounding 和多语言课程的Pixel Linguist II模型。",
+      "findings": "Pixel Linguist II在英语、跨语言和多语言的Visual STS、ViDoRe任务上达到SOTA性能；在80%视觉token压缩下仍保持鲁棒性，展现了光学上下文压缩潜力；同时能提升多模态大语言模型的下游评估表现。"
+    }
+  },
+  {
+    "id": "2609.01006",
+    "title": "Figures as Programs: Recursive Generation of Editable Scientific Figures",
+    "abstract": "Scientific methodology figures are essential for communicating complex methods clearly, yet creating them remains labor-intensive and typically requires multiple rounds of refinement. Recent image-generation models can synthesize visually appealing raster figures, but producing a human-satisfactory result in a single generation step remains difficult. Moreover, precise edits to raster figures are challenging for both humans and models. We formulate scientific figure generation as recursive SVG program construction and propose \\textsc{FigTree}, a \\textit{multi-agent} system that automatically transforms a scientific paper into a structured vector figure. \\textsc{FigTree} grounds figure content in the source paper, decomposes a figure into a hierarchy of local regions, generates each region as a short SVG program, and assembles the resulting fragments. A render-critic refinement loop jointly inspects the rendered figure and its underlying program, enabling visual defects to be traced to specific statements and accurately repaired. We conduct extensive evaluations of \\textsc{FigTree} on figure quality and editability, showing that \\textsc{FigTree} produces high-quality figures, while also enabling more effective editing than existing raster-based methods.",
+    "authors": [
+      "Yepeng Liu",
+      "Dasen Dai",
+      "Chengzhi Liu",
+      "Yiren Song",
+      "Hai Ci",
+      "Yu Zhang",
+      "Qi Zhang",
+      "Mike Zheng Shou",
+      "Xin Eric Wang",
+      "Yuheng Bu"
+    ],
+    "published": "2026-09-01",
+    "updated": "2026-09-01",
+    "categories": [
+      "cs.AI",
+      "cs.GR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.01006.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.01006",
+    "primary_category": "cs.AI",
+    "score": 85,
+    "summary": {
+      "title_zh": "图形即程序：可编辑科学图形的递归生成",
+      "core_contribution": "提出FigTree系统，将科学论文自动转化为结构化矢量图形，并通过递归生成和程序化编辑解决科学图形创建与修改的难题。",
+      "method": "1. 将科学图形生成任务建模为递归SVG程序构建过程；2. 采用多智能体系统分解图形为局部区域层次结构，生成每个区域的SVG程序片段并组装；3. 通过渲染-批评循环联合检查图形与程序，实现缺陷定位与精准修复。",
+      "findings": "实验表明FigTree生成的图形质量优于现有方法，且支持更高效的编辑操作（基于矢量程序的修改比基于栅格的方法更精确）。"
+    }
+  }
+]
