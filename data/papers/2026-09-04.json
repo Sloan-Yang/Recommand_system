@@ -1,0 +1,177 @@
+[
+  {
+    "id": "2609.04034",
+    "title": "Editable Visual Design",
+    "abstract": "While diffusion base models such as GPT-Image-2 and Nano-Banana exhibit remarkable visual expressiveness, their end-to-end generation inherently yields flattened bitmaps with error-prone text, precluding layer-wise post-editing. Conversely, code-based visual generation via Coding Agents provides precise layout control and decoupled layers, yet remains constrained by a lack of global aesthetic intuition and the difficulty of coding complex visual assets. To address this, we propose Editable Visual Design, a new paradigm driven by a Coding Agent. We designate the VLM as the ``creative brain'' for requirement comprehension, task planning, and aesthetic judgment, while utilizing the image generation model as an on-demand ``visual world simulator'' to synthesize standalone visual assets. Operating under an ``imagine first, then act'' closed-loop workflow, the agent generates isolated assets, writes native HTML/CSS, and iteratively refines the design against visual rendering feedback. Furthermore, Agent Design Replay faithfully reproduces the creative and reasoning trajectory akin to that of professional human designers. Ultimately, the system delivers editable artifacts with decoupled layers and real text, enabling users to perform intuitive mouse dragging and layout adjustments on a graphical user interface. Validations on posters, infographics, and other scenarios show that this paradigm successfully achieves both refined aesthetics and production-grade editability.",
+    "authors": [
+      "Junyan Ye",
+      "Wei Liu",
+      "Dongzhi Jiang",
+      "Zichen Wen",
+      "HaoDong Li",
+      "Zhutao Lv",
+      "Jiaxin Lin",
+      "Jinhua Yu",
+      "Jun He",
+      "Zilong Huang",
+      "Rui Chen",
+      "Weijia Li"
+    ],
+    "published": "2026-09-03",
+    "updated": "2026-09-03",
+    "categories": [
+      "cs.CV",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.04034.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.04034",
+    "primary_category": "cs.CV",
+    "score": 90,
+    "summary": {
+      "title_zh": "可编辑视觉设计",
+      "core_contribution": "提出了一种由编码智能体驱动的新范式，将视觉生成模型与代码生成相结合，在保持精细美学的同时实现生产级的可编辑性（如分层和真实文本），克服了现有端到端生成和纯代码方法的局限。",
+      "method": "该方法将视觉语言模型（VLM）作为“创意大脑”，负责需求理解、任务规划和美学判断，而图像生成模型作为“视觉世界模拟器”按需生成独立视觉资产。系统采用“先想象后行动”的闭环流程：智能体生成孤立资产、编写原生HTML/CSS，并根据视觉渲染反馈迭代优化设计。此外，通过智能体设计回放（Agent Design Replay）再现专业设计师的创作与推理轨迹，最终输出具有解耦层和真实文本的可编辑工件，支持用户通过图形界面进行直观的拖拽和布局调整。",
+      "findings": "在海报、信息图及其他场景的验证中，该范式成功实现了精细美学与生产级可编辑性的统一，表明其能有效生成可编辑且美观的视觉设计，优于传统端到端生成和纯代码方法。"
+    }
+  },
+  {
+    "id": "2609.03806",
+    "title": "SVG-Score: Human-Aligned Evaluation of Text-to-SVG Generation",
+    "abstract": "Scalable Vector Graphics (SVG) generation is attracting increasing attention as generative models improve in expressiveness and controllability. Progress, however, is held back by the lack of domain-specific evaluation protocols: current practice relies on metrics designed for natural images, most notably CLIPScore, which was never trained on vector graphics and aligns only partially with human judgment. We introduce \\textbf{\\ours}, a human-aligned evaluation framework for text-to-SVG generation. Through controlled caption and image perturbations, we first show that CLIP-based scores barely react to the errors SVG generators actually make, such as wrong colors, counts, and spatial relations, and that off-the-shelf Vision-Language Model (VLM) judges, while more sensitive, respond unevenly across error types and SVG styles. We then introduce a human-annotated dataset for \\textit{Semantic Alignment}, measuring how faithfully a generated SVG reflects its caption. Building on it, we develop two complementary evaluators: CLIP scorers adapted to vector graphics and then aligned to human preferences, for fast large-scale evaluation, and a VLM judge trained with supervised fine-tuning and reward-shaped reinforcement learning, for more expressive and interpretable assessment. Using both, we benchmark major open-source, commercial, and optimization-based SVG generators on an independent caption set.",
+    "authors": [
+      "Marco Cipriano",
+      "Leonardo Zini",
+      "Alexandra Schild",
+      "Valentin Teutschbein",
+      "Afsana Mimi",
+      "Marcella Cornia",
+      "Lorenzo Baraldi",
+      "Gerard de Melo"
+    ],
+    "published": "2026-09-03",
+    "updated": "2026-09-03",
+    "categories": [
+      "cs.AI",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.03806.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.03806",
+    "primary_category": "cs.AI",
+    "score": 85,
+    "summary": {
+      "title_zh": "SVG-Score：面向文本到SVG生成的人类对齐评估框架",
+      "core_contribution": "本文提出了SVG-Score，首个针对文本到SVG生成任务的人类对齐评估框架，解决了现有基于自然图像设计的指标（如CLIPScore）无法有效评估SVG生成质量的问题。",
+      "method": "通过受控的标题和图像扰动实验，系统分析了CLIPScore和现成VLM评估器对SVG生成错误（如颜色、数量、空间关系）的敏感性差异。构建了人类标注的语义对齐数据集，并基于此开发了两个互补的评估器：一是针对矢量图形适配并对齐人类偏好的CLIP评分器，用于快速大规模评估；二是通过监督微调和奖励塑形强化学习训练的VLM评判器，用于更表达性和可解释性的评估。",
+      "findings": "CLIPScore对SVG生成中的常见错误（如颜色、数量、空间关系）几乎不敏感，而现成VLM评判器虽更敏感但不同错误类型和SVG风格间响应不均。所提出的两个评估器在人类对齐性上显著优于现有方法，并成功用于基准测试多个开源、商业和基于优化的SVG生成器。"
+    }
+  },
+  {
+    "id": "2609.03796",
+    "title": "LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes",
+    "abstract": "We introduce LLaDA-Image, a unified framework that pairs a 6B Diffusion Transformer (DiT) trained from scratch with a frozen vision-language understanding module built on the LLaDA2.0-Mini diffusion language model backbone. Instead of relying heavily on paired image-text data from the beginning, we first build a strong visual generative prior through image-only pre-training and mid-training. The generation pipeline comprises 220M samples, 98 of which are real images. For efficient and scalable optimization, we use parameter-free RMSNorm throughout the DiT together with the Muon optimizer. The resulting unified model produces highly photorealistic images while accurately following fine-grained editing instructions. We further distill LLaDA-Image into LLaDA-Image-Turbo, enabling fast inference in 2-4 sampling steps. On Qwen-Image-Bench, LLaDA-Image achieves overall scores of 53.53 and 53.38 on the English and Chinese tracks, respectively, setting a new state-of-the-art among open-source models on both tracks. To support further research on capable and efficient generative models, we release our model weights, training code, and detailed recipes.",
+    "authors": [
+      "Chuyan Chen",
+      "Haoxing Chen",
+      "Kun Chen",
+      "Zhenglin Cheng",
+      "Long Cui",
+      "Ruishan Fang",
+      "Zhangxuan Gu",
+      "Zhicheng Huang",
+      "Zhenzhong Lan",
+      "Yuanting Lei",
+      "Haoquan Li",
+      "Jianguo Li",
+      "Rongchuan Li",
+      "Sidu Li",
+      "Tao Lin",
+      "Deyuan Liu",
+      "Jiacheng Liu",
+      "Lin Liu",
+      "Yuxuan Lou",
+      "Zhisheng Lu",
+      "Yuxin Ma",
+      "Shuheng Shen",
+      "Peng Sun",
+      "Chaoyang Wang",
+      "Hongjun Wang",
+      "Xiaomei Wang",
+      "Yongxin Wang",
+      "Chengzhang Wu",
+      "Hongru Wu",
+      "Jun Xie"
+    ],
+    "published": "2026-09-03",
+    "updated": "2026-09-03",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.03796.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.03796",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "LLaDA-Image：构建具有完全开放训练方案的高性能图像生成器",
+      "core_contribution": "提出一个统一框架LLaDA-Image，结合从零训练的6B扩散Transformer与冻结的视觉语言理解模块，在图像生成和编辑指令遵循上达到开源模型的最先进水平，并公开全部权重、代码和训练细节。",
+      "method": "采用两阶段策略：先通过仅图像预训练和中训练（共220M样本，其中98M为真实图像）建立强大的视觉生成先验，再与基于LLaDA2.0-Mini扩散语言模型构建的冻结视觉语言模块结合。在DiT中使用无参数RMSNorm和Muon优化器以实现高效可扩展优化，并通过蒸馏得到Turbo版本支持2-4步快速采样。",
+      "findings": "在Qwen-Image-Bench上，LLaDA-Image在英文和中文赛道分别取得53.53和53.38的总体分数，均创下开源模型的新纪录，同时生成高度逼真的图像并准确遵循细粒度编辑指令，蒸馏后的Turbo模型在2-4步内实现快速推理。"
+    }
+  },
+  {
+    "id": "2609.03109",
+    "title": "SLIDEFORGE: An LLM Agent for Controllable Editing of Slides as Structured Artifacts",
+    "abstract": "Current AI agents compellingly describe slides. However, AI-assisted slide editing requires more than understanding: the output must retain layout, style, component structure, and native editability. Towards, AI-assisted slide editing, existing agents operate on screenshots or weak document representations and often fragment coherent visual units, rasterize editable content, or break layout. In contrast, for controllable slide editing, we introduce an agentic framework, SLIDEFORGE, which builds a Deck State Graph, an executable slide state that links visual decomposition, native pptx object structure, and perceptual organization. By recovering human-referable components while retaining fine-grained editable structure, SLIDEFORGE supports theme-preserving reconstruction through slide-native operations and rendered-state verification. We further introduce an evaluation paradigm for controllable slide transformation that jointly measures component recovery, preservation, restyling consistency, visual quality, and native editability. Experiments show that SLIDEFORGE outperforms direct prompting, screenshot-based agents, and generic code-agent baselines across these dimensions. Code is available at https://github.com/UIUC-MONET/SLIDEFORGE.",
+    "authors": [
+      "Haozhen Zheng",
+      "Fulin Wang",
+      "Tianhu Xiong",
+      "Yingjie Yu",
+      "Shengyi Qian",
+      "Hanchao Yu",
+      "Alex Schwing",
+      "Klara Nahrstedt",
+      "Mingyuan Wu"
+    ],
+    "published": "2026-09-02",
+    "updated": "2026-09-02",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.03109.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.03109",
+    "primary_category": "cs.CV",
+    "score": 85,
+    "summary": {
+      "title_zh": "SLIDEFORGE：一种用于可控编辑幻灯片作为结构化工件的LLM智能体",
+      "core_contribution": "提出了一种基于LLM智能体的框架SLIDEFORGE，通过构建可执行的幻灯片状态图（Deck State Graph）实现可控的幻灯片编辑，同时保持布局、风格、组件结构和原生可编辑性，并引入了一个联合评估范式来衡量组件恢复、保留、重样式一致性、视觉质量和原生可编辑性。",
+      "method": "SLIDEFORGE首先将幻灯片解析为Deck State Graph，该图链接了视觉分解、原生pptx对象结构和感知组织，从而恢复人类可引用的组件并保留细粒度的可编辑结构。然后，智能体通过幻灯片原生操作（如移动、调整大小、修改样式）执行编辑，并使用渲染状态验证确保输出符合预期。最后，通过一个多维度评估协议，比较SLIDEFORGE与直接提示、基于截图和通用代码智能体基线的性能。",
+      "findings": "实验表明，SLIDEFORGE在组件恢复、保留、重样式一致性、视觉质量和原生可编辑性方面均优于直接提示、基于截图的智能体以及通用代码智能体基线，证明了其可控编辑的有效性和优越性。"
+    }
+  },
+  {
+    "id": "2609.04151",
+    "title": "Persistent Identity Preservation in Generative Image Models: A Benchmark and Evaluation System",
+    "abstract": "Generative image models can now produce high-quality images, follow complex instructions, and support precise edits, but they still struggle to preserve who or what is being depicted. When generating or editing images of a specific subject, identity may drift as the pose, expression, appearance, viewpoint, or surrounding scene changes. Existing subject-driven methods make fundamentally different choices about where identity is represented: through the input context (GPT-Image-2, NB2), as trainable subject-specific model parameters (LoRA), or as a persistent identity layer (PHOTA IDENTITY) reusable across generations and edits. We systematically benchmark these paradigms across subject-driven generation, editing, restoration, and multi-subject settings, with tasks designed to increasingly stress identity preservation. Our results show that identity preservation remains a distinct limitation of current generative foundation models: strong image quality and instruction following do not necessarily imply strong identity fidelity, and identity degradation becomes more pronounced under iterative edits, small subject scales, severe image degradation, and multi-subject composition. Persistent identity substantially reduces this degradation across generation, editing, and restoration, consistently improving identity preservation when applied to different foundation models while maintaining comparable instruction adherence and perceptual image quality. These results suggest that identity does not simply emerge from increasingly capable generative models, but can instead be represented as persistent subject knowledge that is composed independently with the underlying generative model.",
+    "authors": [
+      "Mengwei Ren",
+      "Xuaner Zhang",
+      "Zhihao Xia"
+    ],
+    "published": "2026-09-03",
+    "updated": "2026-09-03",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.04151.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.04151",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "生成图像模型中的身份保持持久性：基准测试与评估系统",
+      "core_contribution": "本文系统性地基准测试了不同身份表示范式（输入上下文、可训练参数、持久身份层）在生成、编辑、修复及多主体场景下的身份保持能力，并提出了一种评估系统，揭示身份保持是当前生成模型独立于图像质量和指令遵循的独特局限。",
+      "method": "作者设计了多种任务（生成、编辑、修复、多主体）以逐步增加身份保持的难度，对三类方法（如GPT-Image-2、NB2、LoRA、PHOTA IDENTITY）进行对比评估。通过迭代编辑、小主体尺度、严重图像退化及多主体组合等压力测试，量化身份漂移程度，并比较不同方法在身份保真度、指令遵循度和感知图像质量上的表现。",
+      "findings": "研究发现，当前生成基础模型在身份保持上存在明显不足，图像质量和指令遵循能力并不等同于身份保真度；身份退化在迭代编辑、小主体、严重退化及多主体场景下加剧。持久身份层方法（如PHOTA IDENTITY）能显著减少退化，在不同基础模型上持续提升身份保持，同时维持指令遵循和图像质量，表明身份可作为独立于生成模型的持久知识进行组合，而非仅依赖模型能力的提升。"
+    }
+  }
+]
