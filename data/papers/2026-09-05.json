@@ -1,0 +1,137 @@
+[
+  {
+    "id": "2609.03688",
+    "title": "ToPO: Token-Conditioned Preference Routing for Attention-Based Latent Diffusion Models",
+    "abstract": "Pairwise preference labels rank complete images, yet Diffusion-DPO applies their effect over many spatial and denoising-time coordinates. For attention-based, noise-prediction latent diffusion, ToPO (Token-Oriented Preference Optimization) constructs a per-minibatch, detached, separable spatial-temporal route from branchwise squared-residual contrast in a frozen reference denoiser. Preferred-branch cross-attention uses content tokens to modulate the spatial factor, and an auxiliary pixel-midpoint ordering term is added without local labels or a learned reward model. In matched three-seed retrainings with a shared update schedule, ToPO has higher endpoint estimates than Diffusion-DPO on all five reported SD-1.5 metrics and on HPSv2, ImageReward, and CLIP for SDXL. It also receives larger raw win shares in an aggregate blind SDXL A/B study. These findings are scoped to the reported equal-update U-Net protocols rather than an equal-compute comparison.",
+    "authors": [
+      "Juntao Xu",
+      "Shihong Li",
+      "Hoi Fan Au",
+      "Ning Zhu"
+    ],
+    "published": "2026-09-03",
+    "updated": "2026-09-03",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.03688.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.03688",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "ToPO：基于注意力机制的潜在扩散模型的令牌条件偏好路由",
+      "core_contribution": "提出了一种新的偏好优化方法ToPO，通过令牌条件路由机制，在注意力机制和潜在扩散模型中实现了比现有Diffusion-DPO更优的图像生成质量，且无需局部标签或学习奖励模型。",
+      "method": "ToPO方法基于成对偏好标签，通过冻结的参考去噪器计算分支平方残差对比，构建每个小批量的、分离的、可分解的空间-时间路由。在偏好分支中，交叉注意力使用内容令牌调制空间因子，并添加辅助像素中点排序项，无需局部标签或学习奖励模型。该方法在训练中采用共享更新调度，与Diffusion-DPO进行公平比较。",
+      "findings": "在匹配的三次种子重训练中，ToPO在SD-1.5的所有五个报告指标以及SDXL的HPSv2、ImageReward和CLIP上均获得比Diffusion-DPO更高的端点估计值。此外，在聚合盲测SDXL A/B研究中，ToPO获得了更大的原始胜率份额。这些发现仅限于报告的等更新U-Net协议，而非等计算比较。"
+    }
+  },
+  {
+    "id": "2609.03641",
+    "title": "Tree-Structured Vector Quantization For Efficient And Progressive Image Compression",
+    "abstract": "Vector-quantization based image compression has achieved strong rate--distortion performance, yet most of them still produce a separate compressed representation for each target bitrate. Such variable-rate behavior allows one model to operate at multiple rates, but it does not necessarily provide a progressive bitstream whose prefixes are themselves decodable and can be refined by appending additional bits. We propose \\textbf{Tree-VQ}, a progressive tree-structured vector quantization framework for learned image compression. Tree-VQ organizes discrete codewords as a hierarchical binary tree and represents each latent token by a routed root-to-leaf path. Crucially, every prefix of this path corresponds to a valid quantized representation, so shallow internal nodes serve as coarse reconstruction codes and deeper nodes provide successive refinements. This allows a compressed image to be decoded from an early prefix and progressively improved as more branch symbols are received, rather than being re-encoded for different target rates. To make this structure practical for compression, we introduce a prefix-compatible tree entropy model that codes progressive continuation decisions and routed branch refinements using only causally available decoded contexts. We further use rate-aware refinement scheduling to decide which spatial blocks should receive additional tree bits under a given prefix budget, and hierarchical prefix supervision to ensure that internal nodes are directly decodable at low rates. Experiments show that Tree-VQ achieves a superior performance--efficiency trade-off, delivering the best perceptual compression results with much fewer parameters and lower latency than competing methods.",
+    "authors": [
+      "Xinkun Wang",
+      "Tianyi Xu",
+      "Qingyu Luo",
+      "Mingming Ma",
+      "Changzhe Jiao",
+      "Fu Li",
+      "Yi Niu"
+    ],
+    "published": "2026-09-03",
+    "updated": "2026-09-03",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.03641.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.03641",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "树结构向量量化用于高效且渐进式的图像压缩",
+      "core_contribution": "提出了一种新颖的渐进式树结构向量量化框架（Tree-VQ），使得压缩图像可以从早期前缀解码并逐步细化，无需针对不同码率重新编码，同时实现了优越的性能-效率权衡。",
+      "method": "Tree-VQ将离散码字组织为层次化二叉树，每个潜在token通过从根到叶的路径表示，路径的每个前缀对应有效的量化表示，从而实现渐进解码。为了压缩实用性，引入了前缀兼容的树熵模型，仅使用因果可用的解码上下文编码渐进决策和分支细化。此外，采用率感知的细化调度决定在给定前缀预算下哪些空间块应接收额外树位，并通过层次前缀监督确保内部节点在低码率下可直接解码。",
+      "findings": "实验表明，Tree-VQ在性能-效率权衡上优于现有方法，以更少的参数和更低的延迟实现了最佳的感知压缩结果，同时支持渐进式解码，无需为不同目标码率重新编码。"
+    }
+  },
+  {
+    "id": "2609.02864",
+    "title": "Thinking in Pictures: A Systematic Benchmark for Reasoning-driven Image Generation",
+    "abstract": "Recent advancements in unified generative models (UGMs) and world simulators have achieved unprecedented results in visual perception and synthesis. However, these models primarily rely on surface-level event alignment, leaving the capacity for high-level visual reasoning underexplored. True visual generative intelligence demands \"Reasoning-to-Generation\", an ability to infer latent rules from visual inputs and manifest solutions through precise, logically constrained visual outcomes. We introduce RIG-BENCH, a novel comprehensive benchmark that systematically evaluates Reasoning-driven Image Generation (RIG) across four cognitively demanding domains: Concept-based, Transformation-based, Pattern & Structure, and Scenario-based. Featuring 2000 curated samples, RIG-BENCH serves as a rigorous stress test for RIG. Our extensive evaluations of state-of-the-art UGMs and image/video generation models reveal a significant reasoning-generation gap, wherein models frequently produce locally plausible but globally illogical outputs. RIG-BENCH provides a vital diagnostic framework to guide the development of next-generation, logically grounded UGMs and world simulators.",
+    "authors": [
+      "Yutong Liu",
+      "Nan Huang",
+      "Xu Cao",
+      "James M. Rehg"
+    ],
+    "published": "2026-09-02",
+    "updated": "2026-09-02",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.02864.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.02864",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "图像中的思考：面向推理驱动图像生成的系统性基准",
+      "core_contribution": "本文提出了RIG-BENCH，一个全面评估推理驱动图像生成（RIG）能力的基准，填补了现有统一生成模型在高级视觉推理评估上的空白。",
+      "method": "RIG-BENCH包含2000个精心挑选的样本，覆盖四个认知要求高的领域：基于概念、基于变换、模式与结构、以及基于场景的推理。作者对当前最先进的统一生成模型和图像/视频生成模型进行了系统性评估，以测试其从视觉输入推断潜在规则并生成逻辑约束的视觉输出的能力。",
+      "findings": "评估揭示了显著的推理-生成差距：现有模型经常产生局部合理但全局不合逻辑的输出，表明它们在高级视觉推理方面存在明显不足。RIG-BENCH为开发下一代逻辑严谨的统一生成模型和世界模拟器提供了关键诊断框架。"
+    }
+  },
+  {
+    "id": "2609.02748",
+    "title": "Balancing Frequencies and Pixels in Flow Matching",
+    "abstract": "Natural images follow a $1/f^2$ spectral distribution: most signal energy lies in the low spatial frequencies, while the perceptually important structures such as textures and edges occupy sparse high-frequency bands. Pixel-space reconstruction objectives, however, treat all spatial errors uniformly, causing low frequencies to dominate the optimization signal and delaying the learning of fine-scale details. In this work, we identify this objective-level spectral imbalance as a key inefficiency in training pixel-space flow models. To address it, we propose a Focal Log-Frequency Loss (f-loss), a spectrally balanced objective that equalizes the learning signal across frequencies, emphasizing high-frequency components that are otherwise underrepresented in pixel-space objectives. Building on this, we introduce a simple training strategy that combines frequency and pixel supervision: we first emphasize frequency-domain learning early to capture all frequencies, and then transition to standard pixel-space v-loss for spatial refinement. This balancing mitigates the low-frequency bias of pixel losses and aligns the training signal with the evolving needs of the model. Our approach is conceptually simple, requires no architectural changes, and acts as a drop-in replacement for flow matching losses. Across multiple model scales, it accelerates convergence by up to 40% while consistently improving FID and perceptual fidelity. We will release code and models.",
+    "authors": [
+      "Lucas Degeorge",
+      "Paul Couairon",
+      "Arijit Ghosh",
+      "Alexei A. Efros",
+      "David Picard",
+      "Vicky Kalogeiton"
+    ],
+    "published": "2026-09-02",
+    "updated": "2026-09-02",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.02748.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.02748",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "流匹配中的频率与像素平衡",
+      "core_contribution": "本文提出了一种频谱平衡的损失函数（f-loss），用于解决像素空间流匹配模型中低频主导优化信号的问题，从而加速收敛并提升生成质量。",
+      "method": "方法包括两个阶段：首先使用Focal Log-Frequency Loss（f-loss）在频域中强调高频成分，以均衡各频率的学习信号；随后切换到标准的像素空间v-loss进行空间细化。该策略无需改变模型架构，可直接替换现有流匹配损失。",
+      "findings": "实验表明，该方法在多个模型规模下将收敛速度提升高达40%，并持续改善FID和感知保真度指标，验证了其有效性和通用性。"
+    }
+  },
+  {
+    "id": "2609.02504",
+    "title": "SR-Edit: Region-Aware Image Editing via Self-Refinement",
+    "abstract": "With the recent rapid progress in generative models, image editing has made remarkable advances, yet achieving faithful edits that precisely modify only the target regions while strictly preserving all other regions remains challenging. Since externally provided region annotations are often difficult to obtain in practice, a growing body of work seeks to improve preservation by automatically inferring edit and non-edit regions, and then enforcing consistency on the latter. However, these approaches still suffer from inaccurate region estimation and heuristic correction strategies that distort the native inference process, making methods designed for fidelity themselves a new source of artifacts. We propose SR-Edit, an image editing framework that overcomes these issues via iterative self-refinement. Specifically, at each iteration, SR-Edit first (i) extracts progressively precise and self-consistent region separation from the model's own predictions by lightweight post-processing, and then (ii) enforces preservation in non-edit areas through correction updates that remain aligned with the original sampling dynamics. Extensive experiments demonstrate that SR-Edit achieves superior preservation and overall image quality compared to existing editing techniques.",
+    "authors": [
+      "Andong Wang",
+      "Zehua Chen",
+      "Yuxuan Jiang",
+      "Jun Zhu"
+    ],
+    "published": "2026-09-02",
+    "updated": "2026-09-02",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.02504.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.02504",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "SR-Edit：通过自我精炼实现区域感知的图像编辑",
+      "core_contribution": "提出一种基于迭代自我精炼的图像编辑框架SR-Edit，无需外部区域标注即可精确编辑目标区域，同时严格保持非编辑区域不变，解决了现有方法因区域估计不准和启发式修正导致的新伪影问题。",
+      "method": "SR-Edit在每次迭代中首先从模型自身的预测中通过轻量级后处理提取逐步精确且自洽的区域分割（区分编辑区与非编辑区），然后通过保持与原始采样动态一致的修正更新来强制非编辑区域的保真度。该方法通过迭代精炼区域估计和修正策略，避免了对外部标注的依赖，并减少了编辑过程中的失真。",
+      "findings": "大量实验表明，SR-Edit在保持非编辑区域完整性和整体图像质量方面优于现有编辑技术，证明了迭代自我精炼机制能有效提升编辑的忠实度并减少伪影。"
+    }
+  }
+]
