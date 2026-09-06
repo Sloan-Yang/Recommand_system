@@ -656,5 +656,11 @@
   "humanlayer_skills": 75,
   "BraveOPotato_FckSignups": 75,
   "WorldFlowAI_everything-claude-code": 75,
-  "nvm-sh_nvm": 65
+  "nvm-sh_nvm": 65,
+  "openai_skills": 75,
+  "sponsors_llvm": 30,
+  "aipoch_open-science": 85,
+  "OpenWhispr_openwhispr": 85,
+  "The-Swarm-Corporation_AutoHedge": 35,
+  "Stremio_stremio-web": 35
 }

@@ -1,0 +1,140 @@
+[
+  {
+    "id": "2609.02255",
+    "title": "T2LSC-Bench: Benchmarking Localized Semantic Control in Text-to-Image Generation",
+    "abstract": "Recent text-to-image models have become increasingly capable of rendering explicit text, but reliable localized text control requires more than generating the correct string. In applications such as product labeling, signage, and interface design, target text should be rendered within a designated text-bearing region without altering the predefined subject identity or surrounding scene semantics. We refer to violations of this requirement as target-text-associated semantic leakage, in which target-text semantics are expressed through non-textual visual content beyond the designated anchor. Existing visual-text benchmarks primarily evaluate readability, spelling accuracy, and layout, leaving this form of semantic leakage largely unexamined. We introduce T2LSC-Bench, a controlled diagnostic benchmark comprising 50 seed subjects and 1,200 prompt cases per model, yielding 7,160 evaluated images across six models. Its factorized design varies semantic relation, scene openness, prompt mode, and language. A dual-branch protocol combines OCR-VLM text verification with structured VLM semantic judgments to measure Text-at-Anchor Accuracy (TAA), Semantic Subject Preservation (SSP), Semantic Leakage Rate (SLR), and Conditional Semantic Leakage Rate (cSLR). Under stress-test conditions, SLR increases from 1.2% to 18.1% and cSLR from 1.3% to 18.2%, whereas TAA decreases only from 91.4% to 90.9%. Anti-leakage prompting reduces SLR from 16.6% to 8.4% without degrading rendering accuracy. Human validation on 420 images shows strong agreement between automatic and adjudicated annotations. These results show that accurate text rendering does not guarantee local containment of target-text semantics.",
+    "authors": [
+      "Yan Wang",
+      "Xinyi Hou",
+      "Weiguo Lin",
+      "Junjun Si",
+      "Siwei Ma"
+    ],
+    "published": "2026-09-02",
+    "updated": "2026-09-02",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.02255.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.02255",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "T2LSC-Bench：文本到图像生成中局部语义控制的基准测试",
+      "core_contribution": "提出了首个专门评估文本到图像生成中目标文本语义泄漏问题的诊断基准T2LSC-Bench，揭示了即使文本渲染准确，也可能出现目标文本语义超出指定区域泄漏到非文本视觉内容中的现象。",
+      "method": "构建了包含50个种子主体和每模型1200个提示案例的受控诊断基准，通过因子化设计变化语义关系、场景开放性、提示模式和语言。采用双分支协议，结合OCR-VLM文本验证和结构化VLM语义判断，测量四个指标：文本锚定准确性(TAA)、语义主体保持(SSP)、语义泄漏率(SLR)和条件语义泄漏率(cSLR)。",
+      "findings": "在压力测试条件下，SLR从1.2%增至18.1%，cSLR从1.3%增至18.2%，而TAA仅从91.4%降至90.9%，表明准确文本渲染不保证语义局部包含。抗泄漏提示可将SLR从16.6%降至8.4%且不损害渲染精度。人工验证420张图像显示自动与裁定标注高度一致。"
+    }
+  },
+  {
+    "id": "2609.02251",
+    "title": "Handwriting Trajectory Recovery via Autoregressive Ordered Stroke Instance Prediction",
+    "abstract": "Handwriting trajectory recovery aims to infer the dynamic writing process hidden behind a static handwritten image. Since offline handwriting preserves only the final spatial ink pattern, temporal information such as stroke order, writing direction, and pen-tip motion is lost, making recovery inherently ambiguous. Existing learning-based methods often directly predict the complete character trajectory without explicitly exploiting the stroke-level organization of handwriting. We argue that recovering the writing process should follow the writing process itself. Accordingly, we propose a two-stage framework that first recovers ordered stroke instances and then reconstructs continuous within-stroke motion. The first stage integrates stroke extraction and stroke-order recovery through autoregressive ordered stroke prediction, while direction-related structural cues further support within-stroke trajectory generation. Experiments on Chinese handwriting show that the proposed ordered prediction is more effective than post-hoc stroke ordering. Even without trajectory simplification, our full-point model achieves numerically better results than those reported by all compared baselines, while a controlled analysis shows that trajectory sampling density substantially affects measured recovery performance. Additional experiments demonstrate generalization to unseen Chinese character categories and cross-language extensibility to English and Tamil handwriting.",
+    "authors": [
+      "En-Guang Wang",
+      "Yan-Ming Zhang",
+      "Fei Yin",
+      "Cheng-Lin Liu"
+    ],
+    "published": "2026-09-02",
+    "updated": "2026-09-02",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.02251.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.02251",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "通过自回归有序笔画实例预测实现手写轨迹恢复",
+      "core_contribution": "提出了一种两阶段框架，通过先恢复有序笔画实例再重建笔画内连续运动，有效解决了静态手写图像中轨迹恢复的时序歧义问题，并在中文手写数据集上取得了优于现有方法的性能。",
+      "method": "该方法首先采用自回归有序笔画预测，将笔画提取与笔画顺序恢复集成于同一阶段，利用方向相关结构线索辅助笔画内轨迹生成；随后在第二阶段重建连续笔画运动，无需轨迹简化即可直接输出完整点序列。",
+      "findings": "实验表明，自回归有序预测优于事后笔画排序方法；全点模型在数值上优于所有对比基线，且轨迹采样密度显著影响恢复性能的测量结果；该方法还能泛化到未见的中文字符类别，并扩展到英文和泰米尔文手写。"
+    }
+  },
+  {
+    "id": "2609.02088",
+    "title": "Rendering-in-the-Loop: An Execution-Driven Agent for Interactive Web Development",
+    "abstract": "Multimodal large language models have achieved remarkable progress in front-end web development, generating interactive webpages from multimodal references such as screenshots and interaction videos. However, existing work largely emphasizes visual metrics such as aesthetics and layout similarity, while overlooking the more critical validation of interactive functionality. We present RILA, an execution-driven agent that puts browser rendering in the loop, iteratively editing generated code from runtime interaction feedback. RILA introduces an Action Interaction Verification (AIV) module that replays the reference interaction trajectory on the generated webpage to collect grounded execution-aware observations, and an Execution-aware Rendering Score (ERS) that jointly measures interaction correctness and visual fidelity to guide iterative optimization. We further build an execution-verified data synthesis pipeline that produces diverse, high-quality training data, offering gains complementary to inference-time optimization. On IWR-Bench, RILA consistently improves both interaction and visual fidelity across foundation models. Notably, with our training pipeline, RILA lifts the compact Qwen3.5-9B backbone from 40.40% to 57.52%, surpassing far larger one-shot generators, including the 1T-parameter Kimi-K2.6 (55.61%) and the proprietary GPT-5.5 (55.74%).",
+    "authors": [
+      "Yilong Guo",
+      "Hanqi Chen",
+      "Zixiao Ye",
+      "Guanzhong Wang",
+      "Chen Yu",
+      "Zeyu Chen"
+    ],
+    "published": "2026-09-02",
+    "updated": "2026-09-02",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.02088.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.02088",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "渲染在环：一种用于交互式网页开发的执行驱动智能体",
+      "core_contribution": "提出了一种执行驱动的智能体RILA，将浏览器渲染纳入循环，通过运行时交互反馈迭代优化生成的网页代码，从而同时提升交互功能正确性和视觉保真度，弥补了现有工作仅关注视觉指标而忽视交互功能验证的不足。",
+      "method": "RILA包含两个关键模块：动作交互验证（AIV）模块，在生成的网页上重放参考交互轨迹，收集基于执行的观察数据；以及执行感知渲染评分（ERS），联合衡量交互正确性和视觉保真度以指导迭代优化。此外，构建了一个执行验证的数据合成流水线，生成多样化高质量训练数据，与推理时优化互补。",
+      "findings": "在IWR-Bench基准上，RILA一致提升了多种基础模型的交互和视觉保真度。通过训练流水线，RILA将紧凑的Qwen3.5-9B骨干模型从40.40%提升至57.52%，超越了远大于其的Kimi-K2.6（1T参数，55.61%）和专有GPT-5.5（55.74%）等一次性生成模型。"
+    }
+  },
+  {
+    "id": "2609.01997",
+    "title": "Linear Fusion MultiDiffusion for Fast Training-Free Spherical Panorama Generation",
+    "abstract": "We propose LF-MultiDiffusion, a training-free panorama generation method that extends MultiDiffusion to support linear projections between target and reference image spaces. Our key idea is to reformulate latent aggregation as a regularized least-squares problem and solve it efficiently with a Krylov-based iterative solver inside the denoising loop. This formulation enables denser and more natural mappings than prior training-free methods, yielding more stable generation with far fewer perspective views. As a result, LF-MultiDiffusion reduces the number of image generator evaluations during denoising and significantly improves inference efficiency. Experiments show that LF-MultiDiffusion achieves better visual quality, text alignment, and panoramic consistency than the strongest training-free baseline, while providing a 15.36$\\times$ speedup. Our project page is available at: https://ahykw.github.io/lfmd.",
+    "authors": [
+      "Akio Hayakawa",
+      "Yusuke Mukuta",
+      "Tatsuya Harada"
+    ],
+    "published": "2026-09-02",
+    "updated": "2026-09-02",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.01997.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.01997",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "线性融合多扩散用于快速免训练的球面全景图生成",
+      "core_contribution": "提出LF-MultiDiffusion方法，通过将多扩散扩展到线性投影空间，实现免训练的全景图生成，显著提升推理速度并保持高质量输出。",
+      "method": "将潜在空间聚合重新表述为正则化最小二乘问题，并在去噪循环内使用基于Krylov的迭代求解器高效求解。该方法支持目标图像空间与参考图像空间之间的线性映射，相比现有免训练方法，映射更密集且更自然，从而减少所需透视视图数量，降低生成过程中的图像生成器评估次数。",
+      "findings": "实验表明，LF-MultiDiffusion在视觉质量、文本对齐和全景一致性上优于最强免训练基线，同时实现了15.36倍的推理加速。"
+    }
+  },
+  {
+    "id": "2609.01479",
+    "title": "CameraEditor: Camera-Controlled Image Editing via Video-Prior Sequential Modeling",
+    "abstract": "Beyond semantic content, camera parameters play a pivotal role in dictating the geometric perspective and appearance of any given image. While recent image editing models excel at semantic and stylistic manipulation, they struggle with explicit camera parameter control. When handling large perspective shifts, instruction-driven models face a dilemma: they either suffer from structural tearing or generate conservative outputs that ignore geometric instructions. To address this, we introduce CameraEditor, a framework that reformulates camera-controlled editing from a spatial problem into a temporal sequence prediction task. By leveraging the temporal coherence of video diffusion models, our approach integrates an explicit geometric perception module with a dynamic reference routing mechanism. This allows us to construct geometrically rigorous visual reference pairs via dynamic panorama cropping, overcoming the ambiguity of text-based instructions. Furthermore, CameraEditor strategically inserts intermediate transition frames to decompose large perspective shifts, providing a robust temporal buffer that preserves content identity and spatial coherence. We construct a training dataset of 5,760 instances. As an independent contribution, we introduce CamEditor-Bench, a model-agnostic evaluation suite of 462 test cases. Extensive experiments demonstrate that CameraEditor achieves state-of-the-art camera control precision and source identity preservation, outperforming existing methods.",
+    "authors": [
+      "Xin Shen",
+      "Chengyou Jia",
+      "Keshuo Xing",
+      "Zifeng Zhu",
+      "Changliang Xia",
+      "Bowen Ping",
+      "Zhuohang Dang",
+      "Hangwei Qian",
+      "Minnan Luo"
+    ],
+    "published": "2026-09-01",
+    "updated": "2026-09-01",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.01479.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.01479",
+    "primary_category": "cs.CV",
+    "score": 75,
+    "summary": {
+      "title_zh": "CameraEditor：基于视频先验序列建模的相机控制图像编辑",
+      "core_contribution": "提出CameraEditor框架，将相机参数控制的图像编辑问题转化为时间序列预测任务，利用视频扩散模型的时间一致性实现精确的相机视角控制，同时保持源图像的内容身份和空间连贯性。",
+      "method": "方法包括三个关键组件：首先，集成显式几何感知模块，通过动态全景裁剪构建几何上严格的视觉参考对，以解决文本指令的模糊性；其次，采用动态参考路由机制，利用视频扩散模型的时间一致性增强编辑稳定性；最后，策略性地插入中间过渡帧，将大的视角变化分解为多个小步骤，提供时间缓冲以保持内容身份和空间连贯性。",
+      "findings": "实验表明，CameraEditor在相机控制精度和源身份保持方面达到最先进水平，优于现有方法。此外，作者构建了包含5760个实例的训练数据集和462个测试用例的CamEditor-Bench评估套件，验证了方法的有效性和泛化能力。"
+    }
+  }
+]
