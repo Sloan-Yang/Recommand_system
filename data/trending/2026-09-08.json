@@ -1,5 +1,18 @@
 [
   {
+    "id": "cathrynlavery_diagram-design",
+    "full_name": "cathrynlavery/diagram-design",
+    "owner": "cathrynlavery",
+    "name": "diagram-design",
+    "url": "https://github.com/cathrynlavery/diagram-design",
+    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        cathrynlavery /\n\n      diagram-design  \n\n    \n      38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+    "language": "HTML",
+    "stars": 34738,
+    "stars_today": 1020,
+    "relevance_score": 85,
+    "summary": "这是一个为Claude Code、Codex和Pi等AI工具设计的38种编辑级图表模板库，采用纯HTML+SVG实现，无阴影、无Mermaid冗余代码，值得关注是因为它能直接生成干净专业的矢量图表，避免AI绘图常见的“Mermaid风格”粗糙感。"
+  },
+  {
     "id": "heygen-com_hyperframes",
     "full_name": "heygen-com/hyperframes",
     "owner": "heygen-com",
@@ -7,10 +20,10 @@
     "url": "https://github.com/heygen-com/hyperframes",
     "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        heygen-com /\n\n      hyperframes  \n\n    \n      Write HTML. Render video. Built for agents.",
     "language": "TypeScript",
-    "stars": 45853,
-    "stars_today": 474,
+    "stars": 47733,
+    "stars_today": 2628,
     "relevance_score": 85,
-    "summary": "Hyperframes 是一个让AI代理通过编写HTML直接生成视频的工具，专为自动化内容创作设计。它简化了视频渲染流程，值得关注是因为能显著提升代理生成动态视觉内容的效率与灵活性。"
+    "summary": "Hyperframes 是一个用 TypeScript 编写的工具，让开发者直接通过 HTML 生成视频，专为 AI 代理设计，简化了动态内容渲染流程，值得关注因为它桥接了网页技术与视频输出，适合自动化生成交互式视频内容。"
   },
   {
     "id": "jo-inc_camofox-browser",
@@ -20,62 +33,10 @@
     "url": "https://github.com/jo-inc/camofox-browser",
     "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        jo-inc /\n\n      camofox-browser  \n\n    \n      Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement.",
     "language": "JavaScript",
-    "stars": 9674,
-    "stars_today": 135,
+    "stars": 10469,
+    "stars_today": 872,
     "relevance_score": 85,
-    "summary": "camofox-browser 是一个为 AI 代理设计的隐形无头浏览器，可绕过 Cloudflare 和反爬虫检测，并作为 Puppeteer/Playwright 的直接替代品。它值得关注，因为能显著提升自动化任务的隐蔽性和成功率。"
-  },
-  {
-    "id": "bytedance_deer-flow",
-    "full_name": "bytedance/deer-flow",
-    "owner": "bytedance",
-    "name": "deer-flow",
-    "url": "https://github.com/bytedance/deer-flow",
-    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        bytedance /\n\n      deer-flow  \n\n    \n      An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
-    "language": "Python",
-    "stars": 81844,
-    "stars_today": 195,
-    "relevance_score": 85,
-    "summary": "字节跳动开源的“DeerFlow”是一个面向长时间跨度复杂任务的智能体框架，能自主研究、编码和创作，并通过沙箱、记忆、工具与子代理协同处理耗时数分钟至数小时的任务。它值得关注，因为其设计聚焦于真实世界中的长周期自动化，代表了多智能体系统在工程化落地上的前沿探索。"
-  },
-  {
-    "id": "lightpanda-io_browser",
-    "full_name": "lightpanda-io/browser",
-    "owner": "lightpanda-io",
-    "name": "browser",
-    "url": "https://github.com/lightpanda-io/browser",
-    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        lightpanda-io /\n\n      browser  \n\n    \n      Lightpanda: the headless browser designed for AI and automation",
-    "language": "Zig",
-    "stars": 34839,
-    "stars_today": 58,
-    "relevance_score": 85,
-    "summary": "Lightpanda 是一个专为 AI 和自动化设计的无头浏览器，用 Zig 语言编写，主打极低资源占用和高性能。它值得关注，因为相比传统浏览器，它能为 AI 代理和爬虫任务提供更轻量、更快速的执行环境。"
-  },
-  {
-    "id": "ruvnet_ruflo",
-    "full_name": "ruvnet/ruflo",
-    "owner": "ruvnet",
-    "name": "ruflo",
-    "url": "https://github.com/ruvnet/ruflo",
-    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        ruvnet /\n\n      ruflo  \n\n    \n      🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
-    "language": "TypeScript",
-    "stars": 71386,
-    "stars_today": 394,
-    "relevance_score": 85,
-    "summary": "ruflo 是一个基于 TypeScript 的智能体“元框架”，用于部署多智能体协作集群、协调自主工作流并构建对话式 AI 系统，内置自适应记忆、自学习能力、RAG 集成及对 Claude Code、Codex 等主流工具的深度支持。它因提供开箱即用的复杂多智能体编排能力而值得关注。"
-  },
-  {
-    "id": "BraveOPotato_FckSignups",
-    "full_name": "BraveOPotato/FckSignups",
-    "owner": "BraveOPotato",
-    "name": "FckSignups",
-    "url": "https://github.com/BraveOPotato/FckSignups",
-    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        BraveOPotato /\n\n      FckSignups  \n\n    \n      A list of tools that are open-source, in-browser, and require no-signups!",
-    "language": "TypeScript",
-    "stars": 3809,
-    "stars_today": 501,
-    "relevance_score": 75,
-    "summary": "FckSignups 是一个收录无需注册、开源且可直接在浏览器中使用的工具清单，旨在帮助用户摆脱繁琐的账号注册流程。它值得关注，因为汇集了众多便捷的在线工具，能极大提升日常效率并保护隐私。"
+    "summary": "camofox-browser 是一个为 AI 代理设计的隐形无头浏览器，可绕过 Cloudflare 和反爬虫检测，并作为 Puppeteer/Playwright 的直接替代品，值得关注因为它能显著提升自动化任务的隐蔽性和成功率。"
   },
   {
     "id": "openai_skills",
@@ -85,10 +46,36 @@
     "url": "https://github.com/openai/skills",
     "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        openai /\n\n      skills  \n\n    \n      Skills Catalog for Codex",
     "language": "Python",
-    "stars": 26024,
-    "stars_today": 351,
+    "stars": 26496,
+    "stars_today": 490,
     "relevance_score": 75,
-    "summary": "OpenAI 的 Skills Catalog for Codex，为 Codex 提供可复用的技能库，帮助扩展其自动化编码与任务执行能力，值得关注因其由官方维护且能显著提升 AI 编程效率。"
+    "summary": "OpenAI 的 Skills 目录，为 Codex 提供可复用的技能集合，用于扩展 AI 编码代理的能力，值得关注因为它展示了官方如何标准化和共享复杂任务的工作流。"
+  },
+  {
+    "id": "viarotel-org_escrcpy",
+    "full_name": "viarotel-org/escrcpy",
+    "owner": "viarotel-org",
+    "name": "escrcpy",
+    "url": "https://github.com/viarotel-org/escrcpy",
+    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        viarotel-org /\n\n      escrcpy  \n\n    \n      📱 Display and control your Android device graphically with scrcpy.",
+    "language": "JavaScript",
+    "stars": 11375,
+    "stars_today": 173,
+    "relevance_score": 60,
+    "summary": "Escrcpy 是一个基于 scrcpy 的图形化工具，让你通过界面轻松显示和控制 Android 设备，无需命令行操作。它值得关注，因为为开发者与普通用户提供了更直观、高效的设备管理体验。"
+  },
+  {
+    "id": "openai_plugins",
+    "full_name": "openai/plugins",
+    "owner": "openai",
+    "name": "plugins",
+    "url": "https://github.com/openai/plugins",
+    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        openai /\n\n      plugins  \n\n    \n      OpenAI Plugins",
+    "language": "JavaScript",
+    "stars": 5773,
+    "stars_today": 176,
+    "relevance_score": 60,
+    "summary": "OpenAI 官方发布的插件（Plugins）示例与规范仓库，用于扩展 ChatGPT 等模型的能力，是理解并构建 AI 生态应用的关键参考。"
   },
   {
     "id": "microsoft_markitdown",
@@ -98,9 +85,22 @@
     "url": "https://github.com/microsoft/markitdown",
     "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        microsoft /\n\n      markitdown  \n\n    \n      Python tool for converting files and office documents to Markdown.",
     "language": "Python",
-    "stars": 180176,
-    "stars_today": 886,
+    "stars": 181651,
+    "stars_today": 2045,
     "relevance_score": 50,
-    "summary": "MarkItDown 是微软开源的 Python 工具，可将多种文件格式（如 Office 文档、PDF、图片等）转换为 Markdown，便于大模型处理和内容复用；它支持丰富格式且由微软维护，适合自动化文档预处理场景。"
+    "summary": "MarkItDown 是微软开源的 Python 工具，可将多种文件格式（如 Office 文档、PDF、图片等）转换为 Markdown，便于大模型处理与内容复用，因其官方维护且支持广泛格式而备受关注。"
+  },
+  {
+    "id": "The-Swarm-Corporation_AutoHedge",
+    "full_name": "The-Swarm-Corporation/AutoHedge",
+    "owner": "The-Swarm-Corporation",
+    "name": "AutoHedge",
+    "url": "https://github.com/The-Swarm-Corporation/AutoHedge",
+    "description": "Star\n\n\n  \n\n  \n    \n    \n\n\n      \n        The-Swarm-Corporation /\n\n      AutoHedge  \n\n    \n      Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution.",
+    "language": "Python",
+    "stars": 5688,
+    "stars_today": 494,
+    "relevance_score": 35,
+    "summary": "AutoHedge 是一个用Python构建的自动化对冲基金框架，利用群体智能和AI代理自动完成市场分析、风险管理和交易执行，让用户几分钟内搭建自己的自主对冲基金。它值得关注，因为将前沿的AI代理与量化交易结合，大幅降低了专业对冲策略的部署门槛。"
   }
 ]

@@ -316,7 +316,7 @@
         <div class="page-date">📅 2026-09-08</div>
         <h2>每日精选 · arXiv · Hacker News · GitHub Trending</h2>
         <p class="page-stats">
-            计算机视觉: 4 | 图形学: 1
+            自然语言处理: 1 | 计算机视觉: 4
             <a href="archive.html">归档 →</a>
         </p>
     </div>
@@ -328,158 +328,158 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge">计算机视觉</span>
-          <span class="paper-id">2609.05234</span>
-        </div>
-        <span class="score-badge">相关性 85/100</span>
-      </div>
-      <h3 class="paper-title">
-        <a href="https://arxiv.org/abs/2609.05234" target="_blank">Measured Sliders: Learning Continuous Controls from Differentiable Image Measurements</a>
-      </h3>
-      <p class="paper-title-zh">可测量滑块：从可微图像测量中学习连续控制</p>
-      <p class="paper-authors">Yijia Chen, Boyu Wei, Xuanhua Yin</p>
-      
-      <div class="paper-summary">
-        <div class="summary-section"><strong>核心贡献:</strong> 提出Measured Sliders框架，通过闭式可微图像测量定义连续生成控制，实现可预测、可比较、可组合的滑块控制，并统一了学习、诊断、校准和组合过程。</div>
-        <div class="summary-section"><strong>方法:</strong> 该方法首先构建统一的测量空间，并在训练前通过可观测性测试筛选可用的监督信号。训练时采用测量引导的目标函数，学习目标属性变化同时抑制非目标变化。训练后通过解码校准将控制轴表示为实际图像变化的可比单位。多个LoRA分支存储于同一检查点，无需联合激活训练即可进行组合。</div>
-        <div class="summary-section"><strong>关键发现:</strong> 在SDXL和FLUX.1-dev上，控制具有有序性、选择性和可组合性。在553个提示中，光照方向控制达到rho=0.995，98.9%的扫描单调。五属性检查点的平均选择性为2.59（最强基线为1.50），在96.7%的双属性和86.1%的三属性组合中保持了所有请求方向。可观测性测试成功区分了所有后续成功的测量与失败候选。</div>
-      </div>
-      
-      <details class="paper-abstract">
-        <summary>查看原文摘要</summary>
-        <p>Continuous sliders are useful only when coefficient changes produce predictable image changes. Yet most diffusion sliders derive their axes from text or learned representations, leaving their scales disconnected from observable image properties. Consequently, we cannot tell in advance which attributes are learnable, compare control strengths directly, or anticipate interference when multiple controls are combined. We propose Measured Sliders, a framework that defines continuous controls through closed-form differentiable image measurements. A common measurement space unifies the pipeline. Before training, an observability test identifies usable supervision. During training, a measurement-guided objective learns target movement while suppressing non-target changes. After training, decoded calibration expresses controls in comparable units of realized image change. Multiple LoRA branches are stored in one checkpoint and composed without training on joint activations. Across SDXL and FLUX.1-dev, the resulting controls are ordered, selective, and composable. On 553 prompts, lighting direction reaches rho = 0.995 and 98.9% monotone sweeps. A five-attribute checkpoint achieves average selectivity 2.59, compared with 1.50 for the strongest baseline, and preserves every requested direction in 96.7% of pair and 86.1% of triple compositions. The observability test also separates every subsequently successful measurement from the failed candidate. Overall, image-space measurement provides a common basis for learning, diagnosing, calibrating, and composing continuous generative controls.</p>
-      </details>
-      
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2609.05234" target="_blank" class="link-btn">📄 arXiv</a>
-        <a href="https://arxiv.org/pdf/2609.05234.pdf" target="_blank" class="link-btn">📥 PDF</a>
-      </div>
-    </article>
-    
-
-    <article class="paper-card">
-      <div class="paper-header">
-        <div class="left-header">
-          <span class="category-badge">计算机视觉</span>
-          <span class="paper-id">2609.05171</span>
-        </div>
-        <span class="score-badge">相关性 85/100</span>
-      </div>
-      <h3 class="paper-title">
-        <a href="https://arxiv.org/abs/2609.05171" target="_blank">WeAgent-MMGenEdit: A Full-Stack Recipe for Multimodal Agentic Image Generation and Editing</a>
-      </h3>
-      <p class="paper-title-zh">WeAgent-MMGenEdit：多模态智能体图像生成与编辑的全栈方案</p>
-      <p class="paper-authors">Hui Zhang, Zongkai Liu, Liqiang Niu, Juntao Liu, Han Li 等 (9 位作者)</p>
-      
-      <div class="paper-summary">
-        <div class="summary-section"><strong>核心贡献:</strong> 提出一个全栈式多模态智能体图像生成与编辑框架，通过引入多模态运行时、可扩展数据构建流程、综合基准及后训练方法，解决了现有方法在外部知识获取、视觉验证不足和策略模型过载等问题，显著提升了知识密集型图像生成与多图编辑的性能。</div>
-        <div class="summary-section"><strong>方法:</strong> 该方法包括四个主要部分：首先，构建WeAgent-Harness多模态运行时，支持持久化证据管理和专用的验证与集成工具，将检索到的多模态证据组织为密集载体；其次，开发可扩展的提示合成与智能体轨迹收集流程，生成23K监督轨迹和14.7K强化学习任务，并附带三层可验证检查清单；再次，引入双语基准WeBench-MMGenEdit，覆盖知识密集型图像生成和多图像编辑；最后，采用基于SFT和RL的双侧后训练方法，同时优化智能体策略和图像后端模型。</div>
-        <div class="summary-section"><strong>关键发现:</strong> 实验表明，所提方法使一个总参数量30B（激活3B）的策略模型在性能上超越同规模策略模型，并接近1T参数智能体的表现，验证了全栈方案在提升知识密集型图像生成与编辑任务中的有效性。</div>
-      </div>
-      
-      <details class="paper-abstract">
-        <summary>查看原文摘要</summary>
-        <p>Image generation and editing models have advanced rapidly, yet remain unreliable when prompts require external world knowledge. Bounded and long-tail parametric knowledge prevents direct or reason-then-generate approaches from recovering the required facts and visual appearances. Existing agentic generation and editing methods mitigate this limitation with retrieval tools, yet remain constrained by insufficient visual verification, overloaded policy models, and weak integration of retrieved textual and visual evidence. To address these limitations, we present WeAgent-MMGenEdit, a full-stack recipe including a multimodal harness, a scalable data construction pipeline, a comprehensive benchmark, and post-training methods for the agent policy and image backend. We first introduce WeAgent-Harness, a multimodal runtime with persistent evidence management and dedicated verification and integration tools that organize retrieved multimodal evidence into a dense carrier. Upon this, we develop a scalable pipeline for prompt synthesis and agentic trajectory collection, yielding 23K supervised trajectories and 14.7K RL tasks with three-layer verifiable checklists. We further introduce WeBench-MMGenEdit, a bilingual benchmark covering both knowledge-intensive image generation and multi-image editing. Finally, a two-sided post-training recipe based on SFT and RL improves the agent policy and image backend. Together, WeAgent-MMGenEdit enables a 30B-total/3B-active policy to outperform similarly sized policy models and approach the performance of a 1T-parameter agent.</p>
-      </details>
-      
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2609.05171" target="_blank" class="link-btn">📄 arXiv</a>
-        <a href="https://arxiv.org/pdf/2609.05171.pdf" target="_blank" class="link-btn">📥 PDF</a>
-      </div>
-    </article>
-    
-
-    <article class="paper-card">
-      <div class="paper-header">
-        <div class="left-header">
-          <span class="category-badge">计算机视觉</span>
-          <span class="paper-id">2609.04649</span>
-        </div>
-        <span class="score-badge">相关性 85/100</span>
-      </div>
-      <h3 class="paper-title">
-        <a href="https://arxiv.org/abs/2609.04649" target="_blank">ReaDiT Guidance: Control for Image and Video Generation using Diffusion Transformer Features</a>
-      </h3>
-      <p class="paper-title-zh">ReaDiT引导：利用扩散Transformer特征控制图像与视频生成</p>
-      <p class="paper-authors">Jay Mahajan, Chang Liu, Rauf Makharov, Viraj Shah, Alexander Schwing 等 (6 位作者)</p>
-      
-      <div class="paper-summary">
-        <div class="summary-section"><strong>核心贡献:</strong> 提出了一种轻量级框架ReaDiT Guidance，通过利用扩散Transformer（DiT）模型内部的特征表示来控制生成过程，无需额外训练即可实现基于空间目标（如深度、姿态或边缘图）的图像和视频生成控制，且参数效率高。</div>
-        <div class="summary-section"><strong>方法:</strong> 该方法从单个DiT块中提取内部特征，在测试时根据给定的空间目标（如深度图、姿态图或边缘图）引导生成过程。对于视频生成，该方法利用现代文本到视频模型基于DiT骨干架构的特性，自然扩展至视频领域，实现相机运动控制。整个框架轻量，仅需少量额外参数，不依赖外部适配器。</div>
-        <div class="summary-section"><strong>关键发现:</strong> 实验结果表明，与现有的基于特征的方法和现成的基于适配器的方法相比，ReaDiT Guidance在图像和视频生成控制任务上取得了具有竞争力或更优的结果，同时所需参数更少，验证了其高效性和有效性。</div>
-      </div>
-      
-      <details class="paper-abstract">
-        <summary>查看原文摘要</summary>
-        <p>We present DiT Readout (ReaDiT) Guidance, a lightweight framework for controlling generation with Diffusion Transformer (DiT) models via their internal feature representations. ReaDiT Guidance uses features from a single DiT block to steer the generative process according to spatial targets - like depth, pose, or edge maps - provided at test time. Furthermore, since modern text-to-video models are largely built on DiT backbones, ReaDiT Guidance naturally extends to video generation, enabling camera and motion control. Experimental results demonstrate that our approach achieves competitive or improved results compared to existing feature-based and off-the-shelf adapter-based approaches while requiring fewer parameters.</p>
-      </details>
-      
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2609.04649" target="_blank" class="link-btn">📄 arXiv</a>
-        <a href="https://arxiv.org/pdf/2609.04649.pdf" target="_blank" class="link-btn">📥 PDF</a>
-      </div>
-    </article>
-    
-
-    <article class="paper-card">
-      <div class="paper-header">
-        <div class="left-header">
-          <span class="category-badge">图形学</span>
-          <span class="paper-id">2609.05098</span>
-        </div>
-        <span class="score-badge">相关性 85/100</span>
-      </div>
-      <h3 class="paper-title">
-        <a href="https://arxiv.org/abs/2609.05098" target="_blank">LayoutShop: Content-Constrained Exploratory Design of Creative Article Layout</a>
-      </h3>
-      <p class="paper-title-zh">LayoutShop：面向创意文章版式的内容约束探索式设计</p>
-      <p class="paper-authors">Jialuo Li, Pengfei Xu</p>
-      
-      <div class="paper-summary">
-        <div class="summary-section"><strong>核心贡献:</strong> 提出了一种新颖的计算框架LayoutShop，能够在给定文章内容的约束下，帮助用户探索并生成高质量、有创意的文章版式设计。</div>
-        <div class="summary-section"><strong>方法:</strong> 该方法模拟实际版式设计流程，允许用户创建或选择版式模板进行概念构思，并基于这些模板构建版式设计空间以提取可行的版式结构。随后通过优化算法确定提取的版式结构的几何参数，以适配给定文章内容。最后，采用两个神经网络对生成的版式进行评估，并将高质量输出返回给用户进行选择。</div>
-        <div class="summary-section"><strong>关键发现:</strong> 用户研究结果表明，该框架能够有效帮助用户创建高质量的文章版式，验证了其可用性和生成版式的质量。</div>
-      </div>
-      
-      <details class="paper-abstract">
-        <summary>查看原文摘要</summary>
-        <p>We present LayoutShop, a novel computational framework for designing creative layouts that frame a given article. Inspired by the actual article layout design process, we enable users to create or select layout templates for conceptualization. These templates help construct a layout design space to extract eligible layout structures. Our algorithm then determines the geometry of the extracted layout structures to frame the given article via an optimization approach. We then employ two neural networks for layout assessment, and the high-quality outputs are returned to users for selection. We conducted a user study to evaluate the framework's usability and the quality of the article layouts it produces. The results of the user study confirmed that our framework can effectively help users create high-quality article layouts.</p>
-      </details>
-      
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2609.05098" target="_blank" class="link-btn">📄 arXiv</a>
-        <a href="https://arxiv.org/pdf/2609.05098.pdf" target="_blank" class="link-btn">📥 PDF</a>
-      </div>
-    </article>
-    
-
-    <article class="paper-card">
-      <div class="paper-header">
-        <div class="left-header">
-          <span class="category-badge">计算机视觉</span>
-          <span class="paper-id">2609.04976</span>
+          <span class="paper-id">2609.04646</span>
         </div>
         <span class="score-badge">相关性 75/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://arxiv.org/abs/2609.04976" target="_blank">RefDiT: Local Attribute Guidance in Reference-Based Image Generation</a>
+        <a href="https://arxiv.org/abs/2609.04646" target="_blank">Importance-Aware Low-Rank Distillation of Diffusion Transformers</a>
       </h3>
-      <p class="paper-title-zh">RefDiT：基于参考图像生成中的局部属性引导</p>
-      <p class="paper-authors">Rameshwar Mishra, Srikrishna Karanam, A V Subramanyam</p>
+      <p class="paper-title-zh">扩散Transformer的重要性感知低秩蒸馏</p>
+      <p class="paper-authors">Denis Zavadski, Sebastian Heid, Damjan Kalšan, Stefan Roth, Carsten Rother</p>
       
       <div class="paper-summary">
-        <div class="summary-section"><strong>核心贡献:</strong> 提出RefDiT框架，解决现有参考引导图像生成方法在复杂场景中无法对参考图像局部属性进行精细控制的问题，通过属性级分解和局部区域引导实现更精准的生成。</div>
-        <div class="summary-section"><strong>方法:</strong> RefDiT采用扩散变换器（DiT）作为基础生成模型，输入参考图像、文本提示和可选的用户引导上下文。首先对参考图像中的标识符令牌进行属性级分解，构建属性感知的条件信号；然后在推理提示中调整上下文，用于训练低秩适配器（LoRA）块。通过这种方式，RefDiT学习标识符令牌与参考图像局部区域之间的对应关系，从而实现有效的局部引导。</div>
-        <div class="summary-section"><strong>关键发现:</strong> 实验表明，RefDiT在包含多个不同属性对象的复杂真实场景中，能够有效定位参考图像中的相关局部元素，并基于这些局部属性生成新图像，克服了全局引导方法无法进行局部控制的局限，实现了属性级别的精细控制。</div>
+        <div class="summary-section"><strong>核心贡献:</strong> 提出了一种名为SVDtrunc的两步块级压缩方案，通过全局参数预算下的秩分配与截断SVD压缩，结合模块化知识蒸馏和整流流目标微调，在保持高性能的同时大幅压缩扩散Transformer（如FLUX.dev）的参数量，并验证了其在多个基准上的优越性。</div>
+        <div class="summary-section"><strong>方法:</strong> SVDtrunc首先在全局参数预算下，通过分析各块的重要性分配秩，对最不重要的块进行截断SVD压缩；随后，对所有块使用模块化知识蒸馏和整流流目标进行微调，以恢复压缩带来的性能损失。该方法还支持与步数蒸馏结合，并可在无微调情况下直接应用。</div>
+        <div class="summary-section"><strong>关键发现:</strong> 在GenEval、HPSv2和DPG三个基准上，SVDtrunc在压缩至原始参数量的40%-90%范围内均优于现有方法；在68%参数量时保持接近完整性能，在57%时仍具竞争力。此外，SVDtrunc与步数蒸馏互补，且无需微调即可获得强结果，表明其可作为大规模生成模型效率优化的实用扩展。</div>
       </div>
       
       <details class="paper-abstract">
         <summary>查看原文摘要</summary>
-        <p>Personalization models generate new images guided by a few subject references, while style transfer methods aim to produce images aligned with a global style derived from a reference image. Recent approaches perform well when the reference image contains a single object, effectively capturing a global style that encompasses all implicit attributes. However, when applied to complex real-world scenes containing multiple objects with distinct attribute characteristics, these methods, due to their global-level guidance, fail to localize relevant elements in the reference image. The global guidance restricts their ability to generate new images based on the local attributes in the reference image. Moreover, existing methods typically employ a single identifier token to capture all details from the reference, resulting in a lack of individual, attribute-level control. Motivated by these limitations, we propose RefDiT, a novel framework for reference-guided image generation. RefDiT takes as input a reference image, a text prompt, and an optional user-provided guidance context. RefDiT employs local region guidance using the attributes of local elements. It constructs an attribute-aware conditioning signal from the reference image by performing attribute-level decomposition of the identifier token and performs context adjustment in the inference prompt to train low-rank adapter (LoRA) blocks of a diffusion transformer (DiT)-based generative model. RefDiT learns the correspondence between identifier tokens and local regions in the reference image, enabling more effective local guidance.</p>
+        <p>Diffusion Transformers (DiTs) have emerged as a dominant architecture for high-quality text-to-image generation, yet their scale poses challenges for efficient deployment. While truncated singular value decomposition (SVD) is a principled tool for parameter reduction, evidence from large language models (LLMs) suggests that naive low-rank approximation can cause catastrophic failure. In contrast, we find that truncated SVD in DiTs produces smooth degradation even under substantial global compression, with redundancy distributed across projection matrices throughout the whole network rather than concentrated in a few transformer blocks. Building on these insights, we introduce SVDtrunc, a two-step block-level compression scheme, first allocating ranks across blocks and compressing the least important ones via truncated SVD under a global parameter budget, and then fine-tuning all blocks with modular knowledge distillation and a rectified-flow objective. We apply SVDtrunc to FLUX.dev across compression levels ranging from 40-90% of the original parameter count. Across three benchmarks, GenEval, HPSv2, and DPG, we outperform all competing approaches. Notably, and in contrast to prior work, we retain near-full performance at 68% and remain competitive even at 57% of the original parameter budget. Furthermore, we show that SVDtrunc complements step distillation and achieves strong results even without fine-tuning, positioning it as a practical continuation of efficiency improvements beyond diffusion step reduction for large-scale generative models. Project page: https://vislearn.github.io/SVDtrunc/</p>
       </details>
       
       <div class="paper-links">
-        <a href="https://arxiv.org/abs/2609.04976" target="_blank" class="link-btn">📄 arXiv</a>
-        <a href="https://arxiv.org/pdf/2609.04976.pdf" target="_blank" class="link-btn">📥 PDF</a>
+        <a href="https://arxiv.org/abs/2609.04646" target="_blank" class="link-btn">📄 arXiv</a>
+        <a href="https://arxiv.org/pdf/2609.04646.pdf" target="_blank" class="link-btn">📥 PDF</a>
+      </div>
+    </article>
+    
+
+    <article class="paper-card">
+      <div class="paper-header">
+        <div class="left-header">
+          <span class="category-badge">计算机视觉</span>
+          <span class="paper-id">2609.04282</span>
+        </div>
+        <span class="score-badge">相关性 75/100</span>
+      </div>
+      <h3 class="paper-title">
+        <a href="https://arxiv.org/abs/2609.04282" target="_blank">Step Back to Move Forward: Reflection-Aware Preference Optimization for Visual Generation</a>
+      </h3>
+      <p class="paper-title-zh">退一步以进：面向视觉生成的反思感知偏好优化</p>
+      <p class="paper-authors">Junlong Wu, Jiuzhou Lin, Jia Sun, Boheng Zhang, Huaiqing Wang 等 (10 位作者)</p>
+      
+      <div class="paper-summary">
+        <div class="summary-section"><strong>核心贡献:</strong> 提出一种新的基于强化学习的偏好对齐框架RA-GRPO，通过引入‘向后反思’机制改进扩散模型的‘向前生成’，有效缓解奖励黑客问题并提升泛化能力。</div>
+        <div class="summary-section"><strong>方法:</strong> RA-GRPO包含两个关键组件：一是扩散反思（Diffusion Reflection），利用弱估计器反转扩散过程，修正中间采样轨迹，引导潜状态朝向真实数据流形的高概率区域；二是反事实路径合成（Counterfactual Path Synthesis），将修正后的轨迹隐式蒸馏到策略中，使模型内化搜索式探索的优势而不增加推理开销。该方法与模型架构无关，可无缝集成到标准扩散模型流程中。</div>
+        <div class="summary-section"><strong>关键发现:</strong> 在文本到图像（T2I）和文本到视频（T2V）任务上的大量实验表明，RA-GRPO显著优于现有方法，尤其在缓解奖励黑客现象和提升泛化能力方面表现突出，同时保持了架构无关性和标准流程的兼容性。</div>
+      </div>
+      
+      <details class="paper-abstract">
+        <summary>查看原文摘要</summary>
+        <p>Diffusion models have become the mainstream paradigm for modern visual generation and have substantially advanced multimedia content synthesis, especially in text-to-image and text-to-video tasks. To further align such generative models with human preferences, reinforcement learning (RL) has recently shown strong potential as a post-training strategy. Nevertheless, existing policy gradient-based methods often explore inefficiently, making them vulnerable to local optima that may degrade semantic faithfulness and visual realism. To address these challenges, we present Reflection-Aware GRPO (RA-GRPO), a new RL-based preference alignment framework for diffusion generative models. The core idea is to improve "forward" generation by incorporating "backward" reflection during optimization. We first introduce Diffusion Reflection, which rectifies intermediate sampling trajectories by inverting the diffusion process with a weak estimator, guiding latent states toward higher-probability regions of the true data manifold. Furthermore, we introduce Counterfactual Path Synthesis to implicitly distill these rectified trajectories into the policy, enabling the model to internalize the benefits of search-based exploration without incurring inference-time overhead. Extensive experiments on T2I and T2V models demonstrate that RA-GRPO significantly outperforms existing methods, particularly in mitigating reward hacking and improving generalization. The method remains architecture-agnostic and integrates seamlessly with standard pipelines, suggesting a promising direction for stable preference alignment.</p>
+      </details>
+      
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2609.04282" target="_blank" class="link-btn">📄 arXiv</a>
+        <a href="https://arxiv.org/pdf/2609.04282.pdf" target="_blank" class="link-btn">📥 PDF</a>
+      </div>
+    </article>
+    
+
+    <article class="paper-card">
+      <div class="paper-header">
+        <div class="left-header">
+          <span class="category-badge">计算机视觉</span>
+          <span class="paper-id">2609.04603</span>
+        </div>
+        <span class="score-badge">相关性 55/100</span>
+      </div>
+      <h3 class="paper-title">
+        <a href="https://arxiv.org/abs/2609.04603" target="_blank">An Evaluation Framework for Generating Multi-View Images of a Person in a Scene</a>
+      </h3>
+      <p class="paper-title-zh">场景中人物多视角图像生成的评估框架</p>
+      <p class="paper-authors">Mahir Majid, Young Kyung Kim, Guillermo Sapiro</p>
+      
+      <div class="paper-summary">
+        <div class="summary-section"><strong>核心贡献:</strong> 本文提出了一种评估框架，用于解决生成式图像编辑模型在人物场景中相机角度变化时空间不一致的问题，并引入了新的评估指标HSRD，以量化相机围绕人物的运动，从而支持高质量多视角合成数据集的构建。</div>
+        <div class="summary-section"><strong>方法:</strong> 本文首先尝试使用多种最先进的图像编辑模型合成多视角数据，但发现输出常出现人物头部转向与背景不一致的幻觉。为解决此问题，提出了头部场景旋转差异（HSRD）指标，该指标通过将相机运动与局部头部姿态变化解耦，来定量评估围绕人物的相机移动。HSRD提供了必要的评估流程，用于验证3D空间视差效果。</div>
+        <div class="summary-section"><strong>关键发现:</strong> 实验表明，现有模型在生成人物多视角图像时容易产生环境不一致的幻觉，而HSRD指标能够有效评估相机移动的准确性，为可靠构建高质量多视角合成数据集提供了基础，并有望推动可提示相机角度变化的基础模型训练。</div>
+      </div>
+      
+      <details class="paper-abstract">
+        <summary>查看原文摘要</summary>
+        <p>Recent generative image-editing Diffusion Transformers (DiTs) demonstrate impressive semantic editing capabilities but still struggle with spatially consistent camera angle changes. A primary bottleneck in training foundation models to execute free-form, promptable camera angle changes is the lack of specialized training data. While multi-view datasets exist for generic 3D environments and objects, there remains an absence of paired, multi-view datasets featuring human subjects at fixed locations in natural scenes, including frontal and side-profile views. Capturing such multi-camera data in unconstrained environments is logistically challenging and unscalable. In this paper, we first experiment with multiple state-of-the-art image editing models to create this data synthetically, but find that the outputs are frequently prone to hallucinations involving how much the subject's head turns relative to the background, often producing inconsistent environments. To address this issue, we propose the Head Scene Rotation Difference (HSRD) metric to quantitatively evaluate camera movements around a person. The proposed metric operates by decoupling camera movement from localized head pose manipulation. As demonstrated by the extensive experimentation, HSRD provides the pipeline necessary to evaluate 3D spatial parallax for a person in a scene, paving the way to reliably construct high-quality multi-view synthetic datasets.</p>
+      </details>
+      
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2609.04603" target="_blank" class="link-btn">📄 arXiv</a>
+        <a href="https://arxiv.org/pdf/2609.04603.pdf" target="_blank" class="link-btn">📥 PDF</a>
+      </div>
+    </article>
+    
+
+    <article class="paper-card">
+      <div class="paper-header">
+        <div class="left-header">
+          <span class="category-badge">计算机视觉</span>
+          <span class="paper-id">2609.03740</span>
+        </div>
+        <span class="score-badge">相关性 55/100</span>
+      </div>
+      <h3 class="paper-title">
+        <a href="https://arxiv.org/abs/2609.03740" target="_blank">Fill My Mirror: Geometry-Constrained Mirror Inpainting</a>
+      </h3>
+      <p class="paper-title-zh">填充我的镜子：几何约束的镜子修复</p>
+      <p class="paper-authors">Ofek Basson, Shimon Vainer, Yacov Hel-Or, Ohad Fried</p>
+      
+      <div class="paper-summary">
+        <div class="summary-section"><strong>核心贡献:</strong> 提出了一种无需训练的镜子修复方法，通过显式利用场景几何约束来生成与场景几何一致的镜子反射内容，解决了生成模型难以合成几何一致反射的问题。</div>
+        <div class="summary-section"><strong>方法:</strong> 该方法首先估计场景的几何结构，并将可见场景内容投影到镜子区域，以恢复由几何决定的反射部分。然后，采用一种双掩码扩散策略，结合几何约束和生成模型的先验知识，对镜子区域进行补全，以减少投影伪影并提高反射一致性。整个过程无需训练，适用于复杂真实场景。</div>
+        <div class="summary-section"><strong>关键发现:</strong> 在MirrorBench-V2合成数据集和真实图像上的实验表明，显式使用场景几何信息能够显著提高镜子反射的几何一致性，在标准指标和几何感知指标上均优于现有方法。</div>
+      </div>
+      
+      <details class="paper-abstract">
+        <summary>查看原文摘要</summary>
+        <p>Mirrors are common in real-world images, yet producing geometrically consistent reflections with generative models remains challenging. Unlike most objects, mirror appearance depends on scene geometry and viewpoint, making it hard to synthesize using learned appearance priors alone. We address this in the mirror inpainting setting, where the scene is fixed and only the mirror region is generated. Our key insight is that much mirror content is geometrically constrained by the visible scene and need not be hallucinated. We estimate scene geometry and project visible content into the mirror to recover reflection regions determined by geometry. A generative model then completes the mirror region via a two-mask diffusion strategy balancing geometric constraints with the model's learned priors, reducing projection artifacts and improving reflection consistency. The method is training-free and applicable to complex real-world scenes. We evaluate on MirrorBench-V2 (synthetic) and real images. Using standard and geometry-aware metrics, we show that explicitly using scene geometry improves consistency.</p>
+      </details>
+      
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2609.03740" target="_blank" class="link-btn">📄 arXiv</a>
+        <a href="https://arxiv.org/pdf/2609.03740.pdf" target="_blank" class="link-btn">📥 PDF</a>
+      </div>
+    </article>
+    
+
+    <article class="paper-card">
+      <div class="paper-header">
+        <div class="left-header">
+          <span class="category-badge">自然语言处理</span>
+          <span class="paper-id">2609.03181</span>
+        </div>
+        <span class="score-badge">相关性 55/100</span>
+      </div>
+      <h3 class="paper-title">
+        <a href="https://arxiv.org/abs/2609.03181" target="_blank">Jina-OCR-v1: Efficient Document Parsing with Speculative Decoding and Dense Verifiable Rewards</a>
+      </h3>
+      <p class="paper-title-zh">Jina-OCR-v1：基于投机解码与密集可验证奖励的高效文档解析</p>
+      <p class="paper-authors">Alejandro Barón García, Feng Wang, Emilia Garcia Casademont, Han Xiao</p>
+      
+      <div class="paper-summary">
+        <div class="summary-section"><strong>核心贡献:</strong> 提出Jina-OCR-v1，一个端到端文档解析模型，在低预算GPU上实现高效解析，通过FastMTP投机解码和GRPO密集可验证奖励训练，兼顾速度与准确性。</div>
+        <div class="summary-section"><strong>方法:</strong> 模型结合DeepSeek-OCR的压缩视觉编码器和3B混合专家解码器（每token激活约570M参数），并采用FastMTP投机解码头，通过递归共享单个草稿块进行K=3步预测，贪婪验证保证无损解码。训练阶段结合指令对齐、困难文档鲁棒性微调，以及基于确定性公式、表格和结构检查的GRPO密集可验证奖励，训练数据混合清洗后的公共语料和针对性合成页面。</div>
+        <div class="summary-section"><strong>关键发现:</strong> 在默认动态分辨率下，Jina-OCR-v1在OmniDocBench v1.6上得分为91.14，在olmOCR-Bench上得分为83.4，页面吞吐量达2.57页/秒，为对比中最高。在NVIDIA L4等低预算GPU上，FastMTP使解码速度相比贪婪自回归解码提升一倍。</div>
+      </div>
+      
+      <details class="paper-abstract">
+        <summary>查看原文摘要</summary>
+        <p>We present Jina-OCR-v1, an end-to-end document parsing model built to serve on low-budget GPUs. It combines the compressed-vision encoder and the 3B mixture-of-experts decoder of DeepSeek-OCR, which activates about 570M parameters per token, with a FastMTP speculative decoding head that shares a single draft block recursively across K=3 prediction steps. Greedy verification makes decoding lossless. Post-training combines instruction alignment, robustness fine-tuning on difficult documents, and GRPO under dense verifiable rewards: deterministic formula, table, and structural checks that award partial credit. The training data mixes cleaned public corpora with targeted synthetic pages. At the default dynamic-resolution setting, Jina-OCR-v1 scores 91.14 on OmniDocBench v1.6 and 83.4 on olmOCR-Bench, and reaches the highest page throughput in our comparison at 2.57 pages per second. On a low-budget GPU such as the NVIDIA L4, FastMTP doubles decoding speed over greedy autoregressive decoding. The model is publicly available at https://huggingface.co/jinaai/jina-ocr-v1.</p>
+      </details>
+      
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2609.03181" target="_blank" class="link-btn">📄 arXiv</a>
+        <a href="https://arxiv.org/pdf/2609.03181.pdf" target="_blank" class="link-btn">📥 PDF</a>
       </div>
     </article>
     
@@ -488,18 +488,18 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 201 &nbsp;💬 41</span>
+          <span class="paper-id">▲ 262 &nbsp;💬 347</span>
         </div>
-        <span class="score-badge">推荐度 85/100</span>
+        <span class="score-badge">推荐度 90/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49552299" target="_blank">WeatherNext 3</a>
+        <a href="https://news.ycombinator.com/item?id=49614720" target="_blank">ChatGPT Images 2.5</a>
       </h3>
-      <p class="paper-authors">by matthieu_bl</p>
-      <div class="paper-summary"><div class="summary-section">DeepMind发布WeatherNext 3，一个基于扩散模型的第三代天气预报AI，能生成多套概率预报并提升极端天气预测精度，看点在于其技术突破与对传统数值预报的潜在替代性。</div></div>
+      <p class="paper-authors">by vertigoruntime</p>
+      <div class="paper-summary"><div class="summary-section">OpenAI 发布了 ChatGPT 图像生成功能 2.5 版本，提升了图像质量与指令遵循能力。看点在于其更精准的文本渲染和复杂场景生成效果。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49552299" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://deepmind.google/science/weathernext/" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49614720" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://openai.com/index/introducing-chatgpt-images-2-5/" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -507,18 +507,18 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 3 &nbsp;💬 1</span>
+          <span class="paper-id">▲ 60 &nbsp;💬 29</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49604150" target="_blank">TALA Is Open-Source</a>
+        <a href="https://news.ycombinator.com/item?id=49616968" target="_blank">Tao: Open math problems being non-renewably mined by AI</a>
       </h3>
-      <p class="paper-authors">by alixanderwang</p>
-      <div class="paper-summary"><div class="summary-section">D2语言团队宣布其可视化脚本语言TALA正式开源，看点在于它提供了一种用代码生成图表的轻量级新方案，并开放了核心引擎供开发者扩展。</div></div>
+      <p class="paper-authors">by _alternator_</p>
+      <div class="paper-summary"><div class="summary-section">陶哲轩提出“开放数学问题正被AI不可再生地开采”的观点，探讨AI在解决数学难题时可能耗尽经典问题库的隐患。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49604150" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://d2lang.com/blog/tala-is-open-source/" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49616968" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://mathstodon.xyz/@tao/117237320796901560" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -526,18 +526,18 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 136 &nbsp;💬 28</span>
+          <span class="paper-id">▲ 191 &nbsp;💬 94</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49571096" target="_blank">This Month in Ladybird – August 2026</a>
+        <a href="https://news.ycombinator.com/item?id=49616257" target="_blank">Kimi K3 (2.8T) at 1 token/s on a MacBook Pro, streamed from four SSDs</a>
       </h3>
-      <p class="paper-authors">by exploraz</p>
-      <div class="paper-summary"><div class="summary-section">Ladybird浏览器项目发布2026年8月月度更新，展示其独立浏览器开发进展与新增功能，看点在于非主流引擎的持续迭代与社区动态。</div></div>
+      <p class="paper-authors">by Argonautlabs</p>
+      <div class="paper-summary"><div class="summary-section">该帖介绍了一个名为DeltaFin的开源项目，演示了如何在MacBook Pro上通过四块SSD流式加载，以每秒1个token的极慢速度运行Kimi K3（2.8T参数）模型，看点在于探索超大规模模型在消费级硬件上的极限可行性。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49571096" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://ladybird.org/newsletter/2026-08-31/" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49616257" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://github.com/argonautlabsai/deltafin" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -545,18 +545,18 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 126 &nbsp;💬 46</span>
+          <span class="paper-id">▲ 202 &nbsp;💬 99</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49596054" target="_blank">Speculative Decoding in vLLM on AMD GPUs</a>
+        <a href="https://news.ycombinator.com/item?id=49611128" target="_blank">Benchmarking Qwen3.8 27B quantizations: 4-bit holds up, 1-bit collapses</a>
       </h3>
-      <p class="paper-authors">by ankitg12</p>
-      <div class="paper-summary"><div class="summary-section">vLLM 团队在 AMD GPU 上实现了投机解码，显著提升推理吞吐量并降低延迟，展示了该技术在多厂商硬件上的通用性与性能优化潜力。</div></div>
+      <p class="paper-authors">by stared</p>
+      <div class="paper-summary"><div class="summary-section">该帖评测了Qwen3.8 27B模型在不同量化精度下的性能，发现4-bit量化表现稳健，而1-bit量化则严重退化，为模型部署中的精度选择提供了参考。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49596054" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49611128" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://quesma.com/blog/qwen38-27b-quantizations-benchmarked/" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -564,18 +564,18 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 103 &nbsp;💬 88</span>
+          <span class="paper-id">▲ 37 &nbsp;💬 1</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49550276" target="_blank">I'm a seeing-eye dog for a computer</a>
+        <a href="https://news.ycombinator.com/item?id=49616272" target="_blank">Animation in Bevy: The Big Picture</a>
       </h3>
-      <p class="paper-authors">by claytonwramsey</p>
-      <div class="paper-summary"><div class="summary-section">一位视障开发者讲述自己如何借助AI工具“看见”代码，并开发出辅助其他视障者的程序，展现了人机协作的温情与技术创新。</div></div>
+      <p class="paper-authors">by ibobev</p>
+      <div class="paper-summary"><div class="summary-section">Bevy游戏引擎动画系统的全面架构解析，涵盖动画图、绑定、混合与播放流程，适合引擎开发者与Bevy用户理解其设计思路与未来方向。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49550276" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://claytonwramsey.com/blog/seeing-eye/" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49616272" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://glocq.com/en/blog/20260827/" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -583,18 +583,18 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 18 &nbsp;💬 16</span>
+          <span class="paper-id">▲ 113 &nbsp;💬 14</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49603011" target="_blank">The smallest edge AI device for local LLMs</a>
+        <a href="https://news.ycombinator.com/item?id=49616354" target="_blank">Mercury 2.5</a>
       </h3>
-      <p class="paper-authors">by alex-moon</p>
-      <div class="paper-summary"><div class="summary-section">这款名为tiiny.ai的微型设备专为本地运行大语言模型设计，主打极致小巧的尺寸，是边缘AI领域在硬件小型化上的突破性尝试。</div></div>
+      <p class="paper-authors">by Topfi</p>
+      <div class="paper-summary"><div class="summary-section">Inception Labs 发布了 Mercury 2.5，一款更快的扩散式大语言模型，主打低延迟推理和高效能。看点在于其性能提升与成本优势，可能对传统自回归模型构成竞争。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49603011" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://tiiny.ai/" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49616354" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://www.inceptionlabs.ai/blog/introducing-mercury-2-5" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -602,18 +602,18 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 51 &nbsp;💬 12</span>
+          <span class="paper-id">▲ 107 &nbsp;💬 19</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49593842" target="_blank">Coop – Isolated VM Environments for Running Claude Code and Codex</a>
+        <a href="https://news.ycombinator.com/item?id=49613068" target="_blank">Show HN: LLM Attention Visualization</a>
       </h3>
-      <p class="paper-authors">by aggrrrh</p>
-      <div class="paper-summary"><div class="summary-section">Coop 是一个为 Claude Code 和 Codex 提供隔离虚拟机环境的开源工具，旨在安全运行 AI 编码代理。其看点是利用轻量级 VM 防止 AI 操作对宿主机造成破坏，兼顾安全性与开发效率。</div></div>
+      <p class="paper-authors">by ifz</p>
+      <div class="paper-summary"><div class="summary-section">这是一个可视化大语言模型注意力机制的工具，让你直观看到模型在生成文本时如何“关注”不同词元。看点在于交互式展示注意力权重，帮助理解LLM内部运作。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49593842" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://github.com/trailofbits/coop" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49613068" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://ishamf.dev/p/llm-attention-visualizer/" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -621,18 +621,18 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge hn-badge">HN</span>
-          <span class="paper-id">▲ 6 &nbsp;💬 5</span>
+          <span class="paper-id">▲ 211 &nbsp;💬 205</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
       <h3 class="paper-title">
-        <a href="https://news.ycombinator.com/item?id=49602258" target="_blank">El Yayster – a resident LLM that inhabits Emacs</a>
+        <a href="https://news.ycombinator.com/item?id=49615537" target="_blank">Muse: Meta's personal AI agent, features and capabilities</a>
       </h3>
-      <p class="paper-authors">by dTal</p>
-      <div class="paper-summary"><div class="summary-section">El Yayster 是一个常驻 Emacs 的本地大语言模型（LLM），让用户在编辑器内直接获得AI辅助。看点在于它无需外部API，完全本地运行，兼顾隐私与离线使用。</div></div>
+      <p class="paper-authors">by yks</p>
+      <div class="paper-summary"><div class="summary-section">Meta推出个人AI助手Muse，主打个性化交互与多模态能力，看点在于其与用户深度绑定的记忆和任务执行功能。</div></div>
       <div class="paper-links">
-        <a href="https://news.ycombinator.com/item?id=49602258" target="_blank" class="link-btn">💬 HN 讨论</a>
-        <a href="https://github.com/yayster/yayster.el" target="_blank" class="link-btn">🔗 原文</a>
+        <a href="https://news.ycombinator.com/item?id=49615537" target="_blank" class="link-btn">💬 HN 讨论</a>
+        <a href="https://ai.meta.com/muse/" target="_blank" class="link-btn">🔗 原文</a>
       </div>
     </article>
     
@@ -640,8 +640,42 @@
     <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
       <div class="paper-header">
         <div class="left-header">
+          <span class="category-badge gh-badge">HTML</span>
+          <span class="paper-id">⭐ 34,738 &nbsp;+1020 today</span>
+        </div>
+        <span class="score-badge">推荐度 85/100</span>
+      </div>
+      <h3 class="paper-title">
+        <a href="https://github.com/cathrynlavery/diagram-design" target="_blank">cathrynlavery/diagram-design</a>
+      </h3>
+      <p class="paper-authors">Star
+
+
+  
+
+  
+    
+    
+
+
+      
+        cathrynlavery /
+
+      diagram-design  
+
+    
+      38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.</p>
+      <div class="paper-summary"><div class="summary-section">这是一个为Claude Code、Codex和Pi等AI工具设计的38种编辑级图表模板库，采用纯HTML+SVG实现，无阴影、无Mermaid冗余代码，值得关注是因为它能直接生成干净专业的矢量图表，避免AI绘图常见的“Mermaid风格”粗糙感。</div></div>
+      <div class="paper-links">
+        <a href="https://github.com/cathrynlavery/diagram-design" target="_blank" class="link-btn">⭐ GitHub</a>
+      </div>
+    </article>
+    
+    <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
+      <div class="paper-header">
+        <div class="left-header">
           <span class="category-badge gh-badge">TypeScript</span>
-          <span class="paper-id">⭐ 45,853 &nbsp;+474 today</span>
+          <span class="paper-id">⭐ 47,733 &nbsp;+2628 today</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
@@ -665,7 +699,7 @@
 
     
       Write HTML. Render video. Built for agents.</p>
-      <div class="paper-summary"><div class="summary-section">Hyperframes 是一个让AI代理通过编写HTML直接生成视频的工具，专为自动化内容创作设计。它简化了视频渲染流程，值得关注是因为能显著提升代理生成动态视觉内容的效率与灵活性。</div></div>
+      <div class="paper-summary"><div class="summary-section">Hyperframes 是一个用 TypeScript 编写的工具，让开发者直接通过 HTML 生成视频，专为 AI 代理设计，简化了动态内容渲染流程，值得关注因为它桥接了网页技术与视频输出，适合自动化生成交互式视频内容。</div></div>
       <div class="paper-links">
         <a href="https://github.com/heygen-com/hyperframes" target="_blank" class="link-btn">⭐ GitHub</a>
       </div>
@@ -675,7 +709,7 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge gh-badge">JavaScript</span>
-          <span class="paper-id">⭐ 9,674 &nbsp;+135 today</span>
+          <span class="paper-id">⭐ 10,469 &nbsp;+872 today</span>
         </div>
         <span class="score-badge">推荐度 85/100</span>
       </div>
@@ -699,7 +733,7 @@
 
     
       Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement.</p>
-      <div class="paper-summary"><div class="summary-section">camofox-browser 是一个为 AI 代理设计的隐形无头浏览器，可绕过 Cloudflare 和反爬虫检测，并作为 Puppeteer/Playwright 的直接替代品。它值得关注，因为能显著提升自动化任务的隐蔽性和成功率。</div></div>
+      <div class="paper-summary"><div class="summary-section">camofox-browser 是一个为 AI 代理设计的隐形无头浏览器，可绕过 Cloudflare 和反爬虫检测，并作为 Puppeteer/Playwright 的直接替代品，值得关注因为它能显著提升自动化任务的隐蔽性和成功率。</div></div>
       <div class="paper-links">
         <a href="https://github.com/jo-inc/camofox-browser" target="_blank" class="link-btn">⭐ GitHub</a>
       </div>
@@ -709,143 +743,7 @@
       <div class="paper-header">
         <div class="left-header">
           <span class="category-badge gh-badge">Python</span>
-          <span class="paper-id">⭐ 81,844 &nbsp;+195 today</span>
-        </div>
-        <span class="score-badge">推荐度 85/100</span>
-      </div>
-      <h3 class="paper-title">
-        <a href="https://github.com/bytedance/deer-flow" target="_blank">bytedance/deer-flow</a>
-      </h3>
-      <p class="paper-authors">Star
-
-
-  
-
-  
-    
-    
-
-
-      
-        bytedance /
-
-      deer-flow  
-
-    
-      An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.</p>
-      <div class="paper-summary"><div class="summary-section">字节跳动开源的“DeerFlow”是一个面向长时间跨度复杂任务的智能体框架，能自主研究、编码和创作，并通过沙箱、记忆、工具与子代理协同处理耗时数分钟至数小时的任务。它值得关注，因为其设计聚焦于真实世界中的长周期自动化，代表了多智能体系统在工程化落地上的前沿探索。</div></div>
-      <div class="paper-links">
-        <a href="https://github.com/bytedance/deer-flow" target="_blank" class="link-btn">⭐ GitHub</a>
-      </div>
-    </article>
-    
-    <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
-      <div class="paper-header">
-        <div class="left-header">
-          <span class="category-badge gh-badge">Zig</span>
-          <span class="paper-id">⭐ 34,839 &nbsp;+58 today</span>
-        </div>
-        <span class="score-badge">推荐度 85/100</span>
-      </div>
-      <h3 class="paper-title">
-        <a href="https://github.com/lightpanda-io/browser" target="_blank">lightpanda-io/browser</a>
-      </h3>
-      <p class="paper-authors">Star
-
-
-  
-
-  
-    
-    
-
-
-      
-        lightpanda-io /
-
-      browser  
-
-    
-      Lightpanda: the headless browser designed for AI and automation</p>
-      <div class="paper-summary"><div class="summary-section">Lightpanda 是一个专为 AI 和自动化设计的无头浏览器，用 Zig 语言编写，主打极低资源占用和高性能。它值得关注，因为相比传统浏览器，它能为 AI 代理和爬虫任务提供更轻量、更快速的执行环境。</div></div>
-      <div class="paper-links">
-        <a href="https://github.com/lightpanda-io/browser" target="_blank" class="link-btn">⭐ GitHub</a>
-      </div>
-    </article>
-    
-    <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
-      <div class="paper-header">
-        <div class="left-header">
-          <span class="category-badge gh-badge">TypeScript</span>
-          <span class="paper-id">⭐ 71,386 &nbsp;+394 today</span>
-        </div>
-        <span class="score-badge">推荐度 85/100</span>
-      </div>
-      <h3 class="paper-title">
-        <a href="https://github.com/ruvnet/ruflo" target="_blank">ruvnet/ruflo</a>
-      </h3>
-      <p class="paper-authors">Star
-
-
-  
-
-  
-    
-    
-
-
-      
-        ruvnet /
-
-      ruflo  
-
-    
-      🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, RAG integration, and native Claude Code / Codex / Hermes and many more Integrated</p>
-      <div class="paper-summary"><div class="summary-section">ruflo 是一个基于 TypeScript 的智能体“元框架”，用于部署多智能体协作集群、协调自主工作流并构建对话式 AI 系统，内置自适应记忆、自学习能力、RAG 集成及对 Claude Code、Codex 等主流工具的深度支持。它因提供开箱即用的复杂多智能体编排能力而值得关注。</div></div>
-      <div class="paper-links">
-        <a href="https://github.com/ruvnet/ruflo" target="_blank" class="link-btn">⭐ GitHub</a>
-      </div>
-    </article>
-    
-    <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
-      <div class="paper-header">
-        <div class="left-header">
-          <span class="category-badge gh-badge">TypeScript</span>
-          <span class="paper-id">⭐ 3,809 &nbsp;+501 today</span>
-        </div>
-        <span class="score-badge">推荐度 75/100</span>
-      </div>
-      <h3 class="paper-title">
-        <a href="https://github.com/BraveOPotato/FckSignups" target="_blank">BraveOPotato/FckSignups</a>
-      </h3>
-      <p class="paper-authors">Star
-
-
-  
-
-  
-    
-    
-
-
-      
-        BraveOPotato /
-
-      FckSignups  
-
-    
-      A list of tools that are open-source, in-browser, and require no-signups!</p>
-      <div class="paper-summary"><div class="summary-section">FckSignups 是一个收录无需注册、开源且可直接在浏览器中使用的工具清单，旨在帮助用户摆脱繁琐的账号注册流程。它值得关注，因为汇集了众多便捷的在线工具，能极大提升日常效率并保护隐私。</div></div>
-      <div class="paper-links">
-        <a href="https://github.com/BraveOPotato/FckSignups" target="_blank" class="link-btn">⭐ GitHub</a>
-      </div>
-    </article>
-    
-    <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
-      <div class="paper-header">
-        <div class="left-header">
-          <span class="category-badge gh-badge">Python</span>
-          <span class="paper-id">⭐ 26,024 &nbsp;+351 today</span>
+          <span class="paper-id">⭐ 26,496 &nbsp;+490 today</span>
         </div>
         <span class="score-badge">推荐度 75/100</span>
       </div>
@@ -869,7 +767,7 @@
 
     
       Skills Catalog for Codex</p>
-      <div class="paper-summary"><div class="summary-section">OpenAI 的 Skills Catalog for Codex，为 Codex 提供可复用的技能库，帮助扩展其自动化编码与任务执行能力，值得关注因其由官方维护且能显著提升 AI 编程效率。</div></div>
+      <div class="paper-summary"><div class="summary-section">OpenAI 的 Skills 目录，为 Codex 提供可复用的技能集合，用于扩展 AI 编码代理的能力，值得关注因为它展示了官方如何标准化和共享复杂任务的工作流。</div></div>
       <div class="paper-links">
         <a href="https://github.com/openai/skills" target="_blank" class="link-btn">⭐ GitHub</a>
       </div>
@@ -878,8 +776,76 @@
     <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
       <div class="paper-header">
         <div class="left-header">
+          <span class="category-badge gh-badge">JavaScript</span>
+          <span class="paper-id">⭐ 11,375 &nbsp;+173 today</span>
+        </div>
+        <span class="score-badge">推荐度 60/100</span>
+      </div>
+      <h3 class="paper-title">
+        <a href="https://github.com/viarotel-org/escrcpy" target="_blank">viarotel-org/escrcpy</a>
+      </h3>
+      <p class="paper-authors">Star
+
+
+  
+
+  
+    
+    
+
+
+      
+        viarotel-org /
+
+      escrcpy  
+
+    
+      📱 Display and control your Android device graphically with scrcpy.</p>
+      <div class="paper-summary"><div class="summary-section">Escrcpy 是一个基于 scrcpy 的图形化工具，让你通过界面轻松显示和控制 Android 设备，无需命令行操作。它值得关注，因为为开发者与普通用户提供了更直观、高效的设备管理体验。</div></div>
+      <div class="paper-links">
+        <a href="https://github.com/viarotel-org/escrcpy" target="_blank" class="link-btn">⭐ GitHub</a>
+      </div>
+    </article>
+    
+    <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
+      <div class="paper-header">
+        <div class="left-header">
+          <span class="category-badge gh-badge">JavaScript</span>
+          <span class="paper-id">⭐ 5,773 &nbsp;+176 today</span>
+        </div>
+        <span class="score-badge">推荐度 60/100</span>
+      </div>
+      <h3 class="paper-title">
+        <a href="https://github.com/openai/plugins" target="_blank">openai/plugins</a>
+      </h3>
+      <p class="paper-authors">Star
+
+
+  
+
+  
+    
+    
+
+
+      
+        openai /
+
+      plugins  
+
+    
+      OpenAI Plugins</p>
+      <div class="paper-summary"><div class="summary-section">OpenAI 官方发布的插件（Plugins）示例与规范仓库，用于扩展 ChatGPT 等模型的能力，是理解并构建 AI 生态应用的关键参考。</div></div>
+      <div class="paper-links">
+        <a href="https://github.com/openai/plugins" target="_blank" class="link-btn">⭐ GitHub</a>
+      </div>
+    </article>
+    
+    <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
+      <div class="paper-header">
+        <div class="left-header">
           <span class="category-badge gh-badge">Python</span>
-          <span class="paper-id">⭐ 180,176 &nbsp;+886 today</span>
+          <span class="paper-id">⭐ 181,651 &nbsp;+2045 today</span>
         </div>
         <span class="score-badge">推荐度 50/100</span>
       </div>
@@ -903,9 +869,43 @@
 
     
       Python tool for converting files and office documents to Markdown.</p>
-      <div class="paper-summary"><div class="summary-section">MarkItDown 是微软开源的 Python 工具，可将多种文件格式（如 Office 文档、PDF、图片等）转换为 Markdown，便于大模型处理和内容复用；它支持丰富格式且由微软维护，适合自动化文档预处理场景。</div></div>
+      <div class="paper-summary"><div class="summary-section">MarkItDown 是微软开源的 Python 工具，可将多种文件格式（如 Office 文档、PDF、图片等）转换为 Markdown，便于大模型处理与内容复用，因其官方维护且支持广泛格式而备受关注。</div></div>
       <div class="paper-links">
         <a href="https://github.com/microsoft/markitdown" target="_blank" class="link-btn">⭐ GitHub</a>
+      </div>
+    </article>
+    
+    <article class="paper-card gh-card" style="border-left: 3px solid var(--gh-color);">
+      <div class="paper-header">
+        <div class="left-header">
+          <span class="category-badge gh-badge">Python</span>
+          <span class="paper-id">⭐ 5,688 &nbsp;+494 today</span>
+        </div>
+        <span class="score-badge">推荐度 35/100</span>
+      </div>
+      <h3 class="paper-title">
+        <a href="https://github.com/The-Swarm-Corporation/AutoHedge" target="_blank">The-Swarm-Corporation/AutoHedge</a>
+      </h3>
+      <p class="paper-authors">Star
+
+
+  
+
+  
+    
+    
+
+
+      
+        The-Swarm-Corporation /
+
+      AutoHedge  
+
+    
+      Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution.</p>
+      <div class="paper-summary"><div class="summary-section">AutoHedge 是一个用Python构建的自动化对冲基金框架，利用群体智能和AI代理自动完成市场分析、风险管理和交易执行，让用户几分钟内搭建自己的自主对冲基金。它值得关注，因为将前沿的AI代理与量化交易结合，大幅降低了专业对冲策略的部署门槛。</div></div>
+      <div class="paper-links">
+        <a href="https://github.com/The-Swarm-Corporation/AutoHedge" target="_blank" class="link-btn">⭐ GitHub</a>
       </div>
     </article>
     

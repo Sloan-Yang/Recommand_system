@@ -1,135 +1,139 @@
 [
   {
-    "id": "2609.05234",
-    "title": "Measured Sliders: Learning Continuous Controls from Differentiable Image Measurements",
-    "abstract": "Continuous sliders are useful only when coefficient changes produce predictable image changes. Yet most diffusion sliders derive their axes from text or learned representations, leaving their scales disconnected from observable image properties. Consequently, we cannot tell in advance which attributes are learnable, compare control strengths directly, or anticipate interference when multiple controls are combined. We propose Measured Sliders, a framework that defines continuous controls through closed-form differentiable image measurements. A common measurement space unifies the pipeline. Before training, an observability test identifies usable supervision. During training, a measurement-guided objective learns target movement while suppressing non-target changes. After training, decoded calibration expresses controls in comparable units of realized image change. Multiple LoRA branches are stored in one checkpoint and composed without training on joint activations. Across SDXL and FLUX.1-dev, the resulting controls are ordered, selective, and composable. On 553 prompts, lighting direction reaches rho = 0.995 and 98.9% monotone sweeps. A five-attribute checkpoint achieves average selectivity 2.59, compared with 1.50 for the strongest baseline, and preserves every requested direction in 96.7% of pair and 86.1% of triple compositions. The observability test also separates every subsequently successful measurement from the failed candidate. Overall, image-space measurement provides a common basis for learning, diagnosing, calibrating, and composing continuous generative controls.",
+    "id": "2609.04646",
+    "title": "Importance-Aware Low-Rank Distillation of Diffusion Transformers",
+    "abstract": "Diffusion Transformers (DiTs) have emerged as a dominant architecture for high-quality text-to-image generation, yet their scale poses challenges for efficient deployment. While truncated singular value decomposition (SVD) is a principled tool for parameter reduction, evidence from large language models (LLMs) suggests that naive low-rank approximation can cause catastrophic failure. In contrast, we find that truncated SVD in DiTs produces smooth degradation even under substantial global compression, with redundancy distributed across projection matrices throughout the whole network rather than concentrated in a few transformer blocks. Building on these insights, we introduce SVDtrunc, a two-step block-level compression scheme, first allocating ranks across blocks and compressing the least important ones via truncated SVD under a global parameter budget, and then fine-tuning all blocks with modular knowledge distillation and a rectified-flow objective. We apply SVDtrunc to FLUX.dev across compression levels ranging from 40-90% of the original parameter count. Across three benchmarks, GenEval, HPSv2, and DPG, we outperform all competing approaches. Notably, and in contrast to prior work, we retain near-full performance at 68% and remain competitive even at 57% of the original parameter budget. Furthermore, we show that SVDtrunc complements step distillation and achieves strong results even without fine-tuning, positioning it as a practical continuation of efficiency improvements beyond diffusion step reduction for large-scale generative models. Project page: https://vislearn.github.io/SVDtrunc/",
     "authors": [
-      "Yijia Chen",
-      "Boyu Wei",
-      "Xuanhua Yin"
+      "Denis Zavadski",
+      "Sebastian Heid",
+      "Damjan Kalšan",
+      "Stefan Roth",
+      "Carsten Rother"
     ],
     "published": "2026-09-04",
     "updated": "2026-09-04",
     "categories": [
       "cs.CV"
     ],
-    "pdf_url": "https://arxiv.org/pdf/2609.05234.pdf",
-    "abs_url": "https://arxiv.org/abs/2609.05234",
+    "pdf_url": "https://arxiv.org/pdf/2609.04646.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.04646",
     "primary_category": "cs.CV",
-    "score": 85,
+    "score": 75,
     "summary": {
-      "title_zh": "可测量滑块：从可微图像测量中学习连续控制",
-      "core_contribution": "提出Measured Sliders框架，通过闭式可微图像测量定义连续生成控制，实现可预测、可比较、可组合的滑块控制，并统一了学习、诊断、校准和组合过程。",
-      "method": "该方法首先构建统一的测量空间，并在训练前通过可观测性测试筛选可用的监督信号。训练时采用测量引导的目标函数，学习目标属性变化同时抑制非目标变化。训练后通过解码校准将控制轴表示为实际图像变化的可比单位。多个LoRA分支存储于同一检查点，无需联合激活训练即可进行组合。",
-      "findings": "在SDXL和FLUX.1-dev上，控制具有有序性、选择性和可组合性。在553个提示中，光照方向控制达到rho=0.995，98.9%的扫描单调。五属性检查点的平均选择性为2.59（最强基线为1.50），在96.7%的双属性和86.1%的三属性组合中保持了所有请求方向。可观测性测试成功区分了所有后续成功的测量与失败候选。"
+      "title_zh": "扩散Transformer的重要性感知低秩蒸馏",
+      "core_contribution": "提出了一种名为SVDtrunc的两步块级压缩方案，通过全局参数预算下的秩分配与截断SVD压缩，结合模块化知识蒸馏和整流流目标微调，在保持高性能的同时大幅压缩扩散Transformer（如FLUX.dev）的参数量，并验证了其在多个基准上的优越性。",
+      "method": "SVDtrunc首先在全局参数预算下，通过分析各块的重要性分配秩，对最不重要的块进行截断SVD压缩；随后，对所有块使用模块化知识蒸馏和整流流目标进行微调，以恢复压缩带来的性能损失。该方法还支持与步数蒸馏结合，并可在无微调情况下直接应用。",
+      "findings": "在GenEval、HPSv2和DPG三个基准上，SVDtrunc在压缩至原始参数量的40%-90%范围内均优于现有方法；在68%参数量时保持接近完整性能，在57%时仍具竞争力。此外，SVDtrunc与步数蒸馏互补，且无需微调即可获得强结果，表明其可作为大规模生成模型效率优化的实用扩展。"
     }
   },
   {
-    "id": "2609.05171",
-    "title": "WeAgent-MMGenEdit: A Full-Stack Recipe for Multimodal Agentic Image Generation and Editing",
-    "abstract": "Image generation and editing models have advanced rapidly, yet remain unreliable when prompts require external world knowledge. Bounded and long-tail parametric knowledge prevents direct or reason-then-generate approaches from recovering the required facts and visual appearances. Existing agentic generation and editing methods mitigate this limitation with retrieval tools, yet remain constrained by insufficient visual verification, overloaded policy models, and weak integration of retrieved textual and visual evidence. To address these limitations, we present WeAgent-MMGenEdit, a full-stack recipe including a multimodal harness, a scalable data construction pipeline, a comprehensive benchmark, and post-training methods for the agent policy and image backend. We first introduce WeAgent-Harness, a multimodal runtime with persistent evidence management and dedicated verification and integration tools that organize retrieved multimodal evidence into a dense carrier. Upon this, we develop a scalable pipeline for prompt synthesis and agentic trajectory collection, yielding 23K supervised trajectories and 14.7K RL tasks with three-layer verifiable checklists. We further introduce WeBench-MMGenEdit, a bilingual benchmark covering both knowledge-intensive image generation and multi-image editing. Finally, a two-sided post-training recipe based on SFT and RL improves the agent policy and image backend. Together, WeAgent-MMGenEdit enables a 30B-total/3B-active policy to outperform similarly sized policy models and approach the performance of a 1T-parameter agent.",
+    "id": "2609.04282",
+    "title": "Step Back to Move Forward: Reflection-Aware Preference Optimization for Visual Generation",
+    "abstract": "Diffusion models have become the mainstream paradigm for modern visual generation and have substantially advanced multimedia content synthesis, especially in text-to-image and text-to-video tasks. To further align such generative models with human preferences, reinforcement learning (RL) has recently shown strong potential as a post-training strategy. Nevertheless, existing policy gradient-based methods often explore inefficiently, making them vulnerable to local optima that may degrade semantic faithfulness and visual realism. To address these challenges, we present Reflection-Aware GRPO (RA-GRPO), a new RL-based preference alignment framework for diffusion generative models. The core idea is to improve \"forward\" generation by incorporating \"backward\" reflection during optimization. We first introduce Diffusion Reflection, which rectifies intermediate sampling trajectories by inverting the diffusion process with a weak estimator, guiding latent states toward higher-probability regions of the true data manifold. Furthermore, we introduce Counterfactual Path Synthesis to implicitly distill these rectified trajectories into the policy, enabling the model to internalize the benefits of search-based exploration without incurring inference-time overhead. Extensive experiments on T2I and T2V models demonstrate that RA-GRPO significantly outperforms existing methods, particularly in mitigating reward hacking and improving generalization. The method remains architecture-agnostic and integrates seamlessly with standard pipelines, suggesting a promising direction for stable preference alignment.",
     "authors": [
-      "Hui Zhang",
-      "Zongkai Liu",
-      "Liqiang Niu",
-      "Juntao Liu",
-      "Han Li",
-      "Zhen Cao",
-      "Wenchao Chen",
-      "Chengduo Zhao",
-      "Fandong Meng"
-    ],
-    "published": "2026-09-04",
-    "updated": "2026-09-04",
-    "categories": [
-      "cs.CV"
-    ],
-    "pdf_url": "https://arxiv.org/pdf/2609.05171.pdf",
-    "abs_url": "https://arxiv.org/abs/2609.05171",
-    "primary_category": "cs.CV",
-    "score": 85,
-    "summary": {
-      "title_zh": "WeAgent-MMGenEdit：多模态智能体图像生成与编辑的全栈方案",
-      "core_contribution": "提出一个全栈式多模态智能体图像生成与编辑框架，通过引入多模态运行时、可扩展数据构建流程、综合基准及后训练方法，解决了现有方法在外部知识获取、视觉验证不足和策略模型过载等问题，显著提升了知识密集型图像生成与多图编辑的性能。",
-      "method": "该方法包括四个主要部分：首先，构建WeAgent-Harness多模态运行时，支持持久化证据管理和专用的验证与集成工具，将检索到的多模态证据组织为密集载体；其次，开发可扩展的提示合成与智能体轨迹收集流程，生成23K监督轨迹和14.7K强化学习任务，并附带三层可验证检查清单；再次，引入双语基准WeBench-MMGenEdit，覆盖知识密集型图像生成和多图像编辑；最后，采用基于SFT和RL的双侧后训练方法，同时优化智能体策略和图像后端模型。",
-      "findings": "实验表明，所提方法使一个总参数量30B（激活3B）的策略模型在性能上超越同规模策略模型，并接近1T参数智能体的表现，验证了全栈方案在提升知识密集型图像生成与编辑任务中的有效性。"
-    }
-  },
-  {
-    "id": "2609.04649",
-    "title": "ReaDiT Guidance: Control for Image and Video Generation using Diffusion Transformer Features",
-    "abstract": "We present DiT Readout (ReaDiT) Guidance, a lightweight framework for controlling generation with Diffusion Transformer (DiT) models via their internal feature representations. ReaDiT Guidance uses features from a single DiT block to steer the generative process according to spatial targets - like depth, pose, or edge maps - provided at test time. Furthermore, since modern text-to-video models are largely built on DiT backbones, ReaDiT Guidance naturally extends to video generation, enabling camera and motion control. Experimental results demonstrate that our approach achieves competitive or improved results compared to existing feature-based and off-the-shelf adapter-based approaches while requiring fewer parameters.",
-    "authors": [
-      "Jay Mahajan",
-      "Chang Liu",
-      "Rauf Makharov",
-      "Viraj Shah",
-      "Alexander Schwing",
-      "Svetlana Lazebnik"
-    ],
-    "published": "2026-09-04",
-    "updated": "2026-09-04",
-    "categories": [
-      "cs.CV"
-    ],
-    "pdf_url": "https://arxiv.org/pdf/2609.04649.pdf",
-    "abs_url": "https://arxiv.org/abs/2609.04649",
-    "primary_category": "cs.CV",
-    "score": 85,
-    "summary": {
-      "title_zh": "ReaDiT引导：利用扩散Transformer特征控制图像与视频生成",
-      "core_contribution": "提出了一种轻量级框架ReaDiT Guidance，通过利用扩散Transformer（DiT）模型内部的特征表示来控制生成过程，无需额外训练即可实现基于空间目标（如深度、姿态或边缘图）的图像和视频生成控制，且参数效率高。",
-      "method": "该方法从单个DiT块中提取内部特征，在测试时根据给定的空间目标（如深度图、姿态图或边缘图）引导生成过程。对于视频生成，该方法利用现代文本到视频模型基于DiT骨干架构的特性，自然扩展至视频领域，实现相机运动控制。整个框架轻量，仅需少量额外参数，不依赖外部适配器。",
-      "findings": "实验结果表明，与现有的基于特征的方法和现成的基于适配器的方法相比，ReaDiT Guidance在图像和视频生成控制任务上取得了具有竞争力或更优的结果，同时所需参数更少，验证了其高效性和有效性。"
-    }
-  },
-  {
-    "id": "2609.05098",
-    "title": "LayoutShop: Content-Constrained Exploratory Design of Creative Article Layout",
-    "abstract": "We present LayoutShop, a novel computational framework for designing creative layouts that frame a given article. Inspired by the actual article layout design process, we enable users to create or select layout templates for conceptualization. These templates help construct a layout design space to extract eligible layout structures. Our algorithm then determines the geometry of the extracted layout structures to frame the given article via an optimization approach. We then employ two neural networks for layout assessment, and the high-quality outputs are returned to users for selection. We conducted a user study to evaluate the framework's usability and the quality of the article layouts it produces. The results of the user study confirmed that our framework can effectively help users create high-quality article layouts.",
-    "authors": [
-      "Jialuo Li",
-      "Pengfei Xu"
+      "Junlong Wu",
+      "Jiuzhou Lin",
+      "Jia Sun",
+      "Boheng Zhang",
+      "Huaiqing Wang",
+      "Dewen Fan",
+      "Houde Liu",
+      "Qianqian Gan",
+      "Fan Yang",
+      "Tingting Gao"
     ],
     "published": "2026-09-03",
     "updated": "2026-09-03",
     "categories": [
-      "cs.GR"
+      "cs.CV"
     ],
-    "pdf_url": "https://arxiv.org/pdf/2609.05098.pdf",
-    "abs_url": "https://arxiv.org/abs/2609.05098",
-    "primary_category": "cs.GR",
-    "score": 85,
+    "pdf_url": "https://arxiv.org/pdf/2609.04282.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.04282",
+    "primary_category": "cs.CV",
+    "score": 75,
     "summary": {
-      "title_zh": "LayoutShop：面向创意文章版式的内容约束探索式设计",
-      "core_contribution": "提出了一种新颖的计算框架LayoutShop，能够在给定文章内容的约束下，帮助用户探索并生成高质量、有创意的文章版式设计。",
-      "method": "该方法模拟实际版式设计流程，允许用户创建或选择版式模板进行概念构思，并基于这些模板构建版式设计空间以提取可行的版式结构。随后通过优化算法确定提取的版式结构的几何参数，以适配给定文章内容。最后，采用两个神经网络对生成的版式进行评估，并将高质量输出返回给用户进行选择。",
-      "findings": "用户研究结果表明，该框架能够有效帮助用户创建高质量的文章版式，验证了其可用性和生成版式的质量。"
+      "title_zh": "退一步以进：面向视觉生成的反思感知偏好优化",
+      "core_contribution": "提出一种新的基于强化学习的偏好对齐框架RA-GRPO，通过引入‘向后反思’机制改进扩散模型的‘向前生成’，有效缓解奖励黑客问题并提升泛化能力。",
+      "method": "RA-GRPO包含两个关键组件：一是扩散反思（Diffusion Reflection），利用弱估计器反转扩散过程，修正中间采样轨迹，引导潜状态朝向真实数据流形的高概率区域；二是反事实路径合成（Counterfactual Path Synthesis），将修正后的轨迹隐式蒸馏到策略中，使模型内化搜索式探索的优势而不增加推理开销。该方法与模型架构无关，可无缝集成到标准扩散模型流程中。",
+      "findings": "在文本到图像（T2I）和文本到视频（T2V）任务上的大量实验表明，RA-GRPO显著优于现有方法，尤其在缓解奖励黑客现象和提升泛化能力方面表现突出，同时保持了架构无关性和标准流程的兼容性。"
     }
   },
   {
-    "id": "2609.04976",
-    "title": "RefDiT: Local Attribute Guidance in Reference-Based Image Generation",
-    "abstract": "Personalization models generate new images guided by a few subject references, while style transfer methods aim to produce images aligned with a global style derived from a reference image. Recent approaches perform well when the reference image contains a single object, effectively capturing a global style that encompasses all implicit attributes. However, when applied to complex real-world scenes containing multiple objects with distinct attribute characteristics, these methods, due to their global-level guidance, fail to localize relevant elements in the reference image. The global guidance restricts their ability to generate new images based on the local attributes in the reference image. Moreover, existing methods typically employ a single identifier token to capture all details from the reference, resulting in a lack of individual, attribute-level control. Motivated by these limitations, we propose RefDiT, a novel framework for reference-guided image generation. RefDiT takes as input a reference image, a text prompt, and an optional user-provided guidance context. RefDiT employs local region guidance using the attributes of local elements. It constructs an attribute-aware conditioning signal from the reference image by performing attribute-level decomposition of the identifier token and performs context adjustment in the inference prompt to train low-rank adapter (LoRA) blocks of a diffusion transformer (DiT)-based generative model. RefDiT learns the correspondence between identifier tokens and local regions in the reference image, enabling more effective local guidance.",
+    "id": "2609.04603",
+    "title": "An Evaluation Framework for Generating Multi-View Images of a Person in a Scene",
+    "abstract": "Recent generative image-editing Diffusion Transformers (DiTs) demonstrate impressive semantic editing capabilities but still struggle with spatially consistent camera angle changes. A primary bottleneck in training foundation models to execute free-form, promptable camera angle changes is the lack of specialized training data. While multi-view datasets exist for generic 3D environments and objects, there remains an absence of paired, multi-view datasets featuring human subjects at fixed locations in natural scenes, including frontal and side-profile views. Capturing such multi-camera data in unconstrained environments is logistically challenging and unscalable. In this paper, we first experiment with multiple state-of-the-art image editing models to create this data synthetically, but find that the outputs are frequently prone to hallucinations involving how much the subject's head turns relative to the background, often producing inconsistent environments. To address this issue, we propose the Head Scene Rotation Difference (HSRD) metric to quantitatively evaluate camera movements around a person. The proposed metric operates by decoupling camera movement from localized head pose manipulation. As demonstrated by the extensive experimentation, HSRD provides the pipeline necessary to evaluate 3D spatial parallax for a person in a scene, paving the way to reliably construct high-quality multi-view synthetic datasets.",
     "authors": [
-      "Rameshwar Mishra",
-      "Srikrishna Karanam",
-      "A V Subramanyam"
+      "Mahir Majid",
+      "Young Kyung Kim",
+      "Guillermo Sapiro"
     ],
     "published": "2026-09-04",
     "updated": "2026-09-04",
     "categories": [
       "cs.CV"
     ],
-    "pdf_url": "https://arxiv.org/pdf/2609.04976.pdf",
-    "abs_url": "https://arxiv.org/abs/2609.04976",
+    "pdf_url": "https://arxiv.org/pdf/2609.04603.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.04603",
     "primary_category": "cs.CV",
-    "score": 75,
+    "score": 55,
     "summary": {
-      "title_zh": "RefDiT：基于参考图像生成中的局部属性引导",
-      "core_contribution": "提出RefDiT框架，解决现有参考引导图像生成方法在复杂场景中无法对参考图像局部属性进行精细控制的问题，通过属性级分解和局部区域引导实现更精准的生成。",
-      "method": "RefDiT采用扩散变换器（DiT）作为基础生成模型，输入参考图像、文本提示和可选的用户引导上下文。首先对参考图像中的标识符令牌进行属性级分解，构建属性感知的条件信号；然后在推理提示中调整上下文，用于训练低秩适配器（LoRA）块。通过这种方式，RefDiT学习标识符令牌与参考图像局部区域之间的对应关系，从而实现有效的局部引导。",
-      "findings": "实验表明，RefDiT在包含多个不同属性对象的复杂真实场景中，能够有效定位参考图像中的相关局部元素，并基于这些局部属性生成新图像，克服了全局引导方法无法进行局部控制的局限，实现了属性级别的精细控制。"
+      "title_zh": "场景中人物多视角图像生成的评估框架",
+      "core_contribution": "本文提出了一种评估框架，用于解决生成式图像编辑模型在人物场景中相机角度变化时空间不一致的问题，并引入了新的评估指标HSRD，以量化相机围绕人物的运动，从而支持高质量多视角合成数据集的构建。",
+      "method": "本文首先尝试使用多种最先进的图像编辑模型合成多视角数据，但发现输出常出现人物头部转向与背景不一致的幻觉。为解决此问题，提出了头部场景旋转差异（HSRD）指标，该指标通过将相机运动与局部头部姿态变化解耦，来定量评估围绕人物的相机移动。HSRD提供了必要的评估流程，用于验证3D空间视差效果。",
+      "findings": "实验表明，现有模型在生成人物多视角图像时容易产生环境不一致的幻觉，而HSRD指标能够有效评估相机移动的准确性，为可靠构建高质量多视角合成数据集提供了基础，并有望推动可提示相机角度变化的基础模型训练。"
+    }
+  },
+  {
+    "id": "2609.03740",
+    "title": "Fill My Mirror: Geometry-Constrained Mirror Inpainting",
+    "abstract": "Mirrors are common in real-world images, yet producing geometrically consistent reflections with generative models remains challenging. Unlike most objects, mirror appearance depends on scene geometry and viewpoint, making it hard to synthesize using learned appearance priors alone. We address this in the mirror inpainting setting, where the scene is fixed and only the mirror region is generated. Our key insight is that much mirror content is geometrically constrained by the visible scene and need not be hallucinated. We estimate scene geometry and project visible content into the mirror to recover reflection regions determined by geometry. A generative model then completes the mirror region via a two-mask diffusion strategy balancing geometric constraints with the model's learned priors, reducing projection artifacts and improving reflection consistency. The method is training-free and applicable to complex real-world scenes. We evaluate on MirrorBench-V2 (synthetic) and real images. Using standard and geometry-aware metrics, we show that explicitly using scene geometry improves consistency.",
+    "authors": [
+      "Ofek Basson",
+      "Shimon Vainer",
+      "Yacov Hel-Or",
+      "Ohad Fried"
+    ],
+    "published": "2026-09-03",
+    "updated": "2026-09-03",
+    "categories": [
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.03740.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.03740",
+    "primary_category": "cs.CV",
+    "score": 55,
+    "summary": {
+      "title_zh": "填充我的镜子：几何约束的镜子修复",
+      "core_contribution": "提出了一种无需训练的镜子修复方法，通过显式利用场景几何约束来生成与场景几何一致的镜子反射内容，解决了生成模型难以合成几何一致反射的问题。",
+      "method": "该方法首先估计场景的几何结构，并将可见场景内容投影到镜子区域，以恢复由几何决定的反射部分。然后，采用一种双掩码扩散策略，结合几何约束和生成模型的先验知识，对镜子区域进行补全，以减少投影伪影并提高反射一致性。整个过程无需训练，适用于复杂真实场景。",
+      "findings": "在MirrorBench-V2合成数据集和真实图像上的实验表明，显式使用场景几何信息能够显著提高镜子反射的几何一致性，在标准指标和几何感知指标上均优于现有方法。"
+    }
+  },
+  {
+    "id": "2609.03181",
+    "title": "Jina-OCR-v1: Efficient Document Parsing with Speculative Decoding and Dense Verifiable Rewards",
+    "abstract": "We present Jina-OCR-v1, an end-to-end document parsing model built to serve on low-budget GPUs. It combines the compressed-vision encoder and the 3B mixture-of-experts decoder of DeepSeek-OCR, which activates about 570M parameters per token, with a FastMTP speculative decoding head that shares a single draft block recursively across K=3 prediction steps. Greedy verification makes decoding lossless. Post-training combines instruction alignment, robustness fine-tuning on difficult documents, and GRPO under dense verifiable rewards: deterministic formula, table, and structural checks that award partial credit. The training data mixes cleaned public corpora with targeted synthetic pages. At the default dynamic-resolution setting, Jina-OCR-v1 scores 91.14 on OmniDocBench v1.6 and 83.4 on olmOCR-Bench, and reaches the highest page throughput in our comparison at 2.57 pages per second. On a low-budget GPU such as the NVIDIA L4, FastMTP doubles decoding speed over greedy autoregressive decoding. The model is publicly available at https://huggingface.co/jinaai/jina-ocr-v1.",
+    "authors": [
+      "Alejandro Barón García",
+      "Feng Wang",
+      "Emilia Garcia Casademont",
+      "Han Xiao"
+    ],
+    "published": "2026-09-02",
+    "updated": "2026-09-02",
+    "categories": [
+      "cs.CL",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.03181.pdf",
+    "abs_url": "https://arxiv.org/abs/2609.03181",
+    "primary_category": "cs.CL",
+    "score": 55,
+    "summary": {
+      "title_zh": "Jina-OCR-v1：基于投机解码与密集可验证奖励的高效文档解析",
+      "core_contribution": "提出Jina-OCR-v1，一个端到端文档解析模型，在低预算GPU上实现高效解析，通过FastMTP投机解码和GRPO密集可验证奖励训练，兼顾速度与准确性。",
+      "method": "模型结合DeepSeek-OCR的压缩视觉编码器和3B混合专家解码器（每token激活约570M参数），并采用FastMTP投机解码头，通过递归共享单个草稿块进行K=3步预测，贪婪验证保证无损解码。训练阶段结合指令对齐、困难文档鲁棒性微调，以及基于确定性公式、表格和结构检查的GRPO密集可验证奖励，训练数据混合清洗后的公共语料和针对性合成页面。",
+      "findings": "在默认动态分辨率下，Jina-OCR-v1在OmniDocBench v1.6上得分为91.14，在olmOCR-Bench上得分为83.4，页面吞吐量达2.57页/秒，为对比中最高。在NVIDIA L4等低预算GPU上，FastMTP使解码速度相比贪婪自回归解码提升一倍。"
     }
   }
 ]
